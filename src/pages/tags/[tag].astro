@@ -1,0 +1,83 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Default from "@layouts/Default.astro";
+import FormattedDate from '@components/FormattedDate.astro';
+import Tags from '@components/Tags.astro';
+import Media from '@components/Media.astro';
+import getUniqueTags from "@utils/getUniqueTags";
+import getPostsByTag from "@utils/getPostsByTag";
+import slugify from "@utils/slugify";
+import getSortedPosts from "@utils/getSortedPosts";
+
+export interface Props {
+  post: CollectionEntry<"mentira">;
+  tag: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("mentira");
+
+  const tags = getUniqueTags(posts);
+
+  return tags.map(tag => {
+    return {
+      params: { tag },
+      props: { tag },
+    };
+  });
+}
+
+const { tag } = Astro.props;
+
+const posts = await getCollection("mentira", ({ data }) => !data.draft);
+
+const tagPosts = getPostsByTag(posts, tag);
+
+const sortTagsPost = getSortedPosts(tagPosts);
+---
+
+<Default title={`Tag: ${tag}`}>
+  <section>
+    <ul>
+      {
+        sortTagsPost.map((mentira) => (
+          <li class="mentira">
+            <div class="entry">
+              <h2>{mentira.data.title}</h2>
+              <FormattedDate date={mentira.data.lieDate} />
+              <Tags tags={mentira.data.tags} />
+              <a href={`/mentira/${mentira.slug}/`}>Ver la mentira <span class="sr-only">{mentira.data.title}</span></a>
+            </div>
+            <Media id={`${mentira.data.youtubeId}`} title={`${mentira.data.youtubeTitle}`} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>
+
+<style lang="scss">
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
+    a {
+      display: inline-flex;
+      margin-top: auto;
+    }
+  }
+  li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    &:not(:last-of-type) {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    @media (min-width: 576px) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+</style>

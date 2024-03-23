@@ -1,0 +1,25 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Picture } from 'astro:assets';
+import myImage from '@assets/img/300x200.png';
+
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<YouTube id={id} title={title} />
+
+<style is:inline>
+  lite-youtube {
+    max-width: 100%;
+  }
+  lite-youtube::before {
+    background-repeat: initial;
+    height: 100%;
+    padding-bottom: 0;
+  }
+</style>

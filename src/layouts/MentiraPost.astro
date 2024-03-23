@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Tags from '@components/Tags.astro';
+import FormattedDate from '@components/FormattedDate.astro';
+
+type Props = CollectionEntry<'mentira'>['data'];
+
+const { title, description, author, updatedDate, tags } = Astro.props;
+---
+
+<html lang="es">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div>
+					<div>
+						<div>
+							<!--<FormattedDate date={lieDate} />-->
+							{
+								updatedDate && (
+									<div>
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+							{ author && <span> {author}</span> }
+						</div>
+						<h2>{title}</h2>
+						<Tags tags={tags} />
+						<hr />
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,20 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import MentiraPost from '@layouts/MentiraPost.astro';
+
+export async function getStaticPaths() {
+	const mentiras = await getCollection('mentira');
+	return mentiras.map((mentira) => ({
+		params: { slug: mentira.slug },
+		props: mentira,
+	}));
+}
+type Props = CollectionEntry<'mentira'>;
+
+const mentira = Astro.props;
+const { Content } = await mentira.render();
+---
+
+<MentiraPost {...mentira.data}>
+	<Content />
+</MentiraPost>

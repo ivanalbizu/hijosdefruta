@@ -1,0 +1,23 @@
+<div class="video-blocks">
+  <div>
+    <slot name="before"/>
+  </div>
+  <div>
+    <slot name="after"/>
+  </div>
+</div>
+
+<style lang="scss">
+@use "../styles/breakpoints" as *;
+
+.video-blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+
+  @include breakpoint(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>

@@ -1,0 +1,58 @@
+---
+import Default from "@layouts/Default.astro";
+import FormattedDate from '@components/FormattedDate.astro';
+import Tags from '@components/Tags.astro';
+import Media from '@components/Media.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const mentiras = (await getCollection('mentira')).sort(
+  (a, b) => b.data.lieDate.valueOf() - a.data.lieDate.valueOf()
+);
+---
+
+<Default title={SITE_TITLE}>
+  <section>
+    <ul>
+      {
+        mentiras.map((mentira) => (
+          <li class="mentira">
+            <div class="entry">
+              <h2>{mentira.data.title}</h2>
+              <FormattedDate date={mentira.data.lieDate} />
+              <Tags tags={mentira.data.tags} />
+              <a href={`/mentira/${mentira.slug}/`}>Ver la mentira <span class="sr-only">{mentira.data.title}</span></a>
+            </div>
+            <Media id={`${mentira.data.youtubeId}`} title={`${mentira.data.youtubeTitle}`} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>
+
+<style lang="scss">
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
+    a {
+      display: inline-flex;
+      margin-top: auto;
+    }
+  }
+  li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    &:not(:last-of-type) {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    @media (min-width: 576px) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+</style>

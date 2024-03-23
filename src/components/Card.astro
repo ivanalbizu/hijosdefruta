@@ -1,0 +1,33 @@
+---
+
+---
+
+<div class="card">
+  <slot name="content" class="content"></slot>
+  <slot name="figure" class="figure"></slot>
+</div>
+
+<style lang="scss">
+  :host(.content) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
+    a {
+      margin-top: auto;
+    }
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    &:not(:last-of-type) {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    @media (min-width: 576px) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+</style>

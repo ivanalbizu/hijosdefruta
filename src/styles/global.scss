@@ -1,0 +1,171 @@
+@layer reset, variables, theme, util;
+
+@layer reset {
+  *:where(
+      :not(html, iframe, canvas, img, svg, video, pre, code):not(
+          svg *,
+          symbol *
+        )
+    ) {
+    all: unset;
+    display: revert;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  ul,
+  ol {
+    list-style-type: none;
+  }
+  button,
+  a {
+    cursor: pointer;
+    color: var(--accent-dark);
+    &:not([class]):focus {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
+  picture {
+    display: block;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+  }
+  iframe,
+  img {
+    max-width: 100%;
+  }
+  iframe {
+    border: 0;
+  }
+}
+
+@layer variables {
+  :root {
+    --accent: #2337ff;
+    --accent-dark: #000d8a;
+    --black: 15, 18, 25;
+    --gray: 96, 115, 159;
+    --gray-light: 229, 233, 240;
+    --gray-dark: 34, 41, 57;
+    --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+    --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
+      0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+
+    --font-size-h1: clamp(24px, 1.697vw + 17.6364px, 38px);
+    --font-size-h2: clamp(22px, 1.2121vw + 17.4545px, 32px);
+    --font-size-h3: clamp(20px, 0.9697vw + 16.3636px, 28px);
+    --font-size-h4: clamp(18px, 0.7273vw + 15.2727px, 24px);
+    --font-size-h5: clamp(16px, 0.7273vw + 13.2727px, 22px);
+    --font-size-h6: clamp(16px, 0.4848vw + 14.1818px, 20px);
+    --font-size-p: clamp(14px, 0.2424vw + 13.0909px, 16px);
+
+    --spacing-2xs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+  }
+}
+
+@layer theme {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    background-size: 100% 600px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: rgb(var(--gray-dark));
+  }
+  main {
+    width: 1200px;
+    max-width: calc(100% - var(--spacing-lg));
+    margin: auto;
+    padding: 3em 0;
+  }
+  .content-centered {
+    width: 100%;
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    margin-block-end: 0.5rem;
+    line-height: 1.2;
+    text-wrap: pretty;
+  }
+
+  .h1,
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+  .h2,
+  h2 {
+    font-size: var(--font-size-h2);
+  }
+  .h3,
+  h3 {
+    font-size: var(--font-size-h3);
+  }
+  .h4,
+  h4 {
+    font-size: var(--font-size-h4);
+  }
+  .h5,
+  h5 {
+    font-size: var(--font-size-h5);
+  }
+  .h6,
+  h6 {
+    font-size: var(--font-size-h6);
+  }
+  p {
+    &:not(:last-of-type) {
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+  iframe,
+  video {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+
+@layer util {
+  .sr-only {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

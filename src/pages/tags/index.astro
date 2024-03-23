@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import Default from "@layouts/Default.astro";
+import getUniqueTags from "@utils/getUniqueTags";
+import { SITE_TITLE } from '../../consts';
+
+const posts = await getCollection("mentira");
+
+let tags = getUniqueTags(posts);
+---
+
+<Default title={`Tags | ${SITE_TITLE}`}>
+  <section>
+    <ul>
+      {tags.map(tag => 
+        <li>
+          <a href={`/tags/${tag}/`}>{tag}</a>
+        </li>
+      )}
+    </ul>
+  </section>
+</Default>
