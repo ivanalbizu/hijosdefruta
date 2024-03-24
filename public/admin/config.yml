@@ -10,7 +10,7 @@ collections: # A list of collections the CMS should be able to edit
     label: 'Mentira' # Used in the UI, ie.: "New Post"
     folder: 'src/content/mentira' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: {{slug}}
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - { label: "Layout", name: "layout", widget: "hidden", default: "$/layouts/MentiraPost.astro"}
       - { label: 'Title', name: 'title', widget: 'string' }
