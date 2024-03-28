@@ -16,7 +16,6 @@
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
     "astro": "^4.5.9",
-    "netlify-cms-widget-mdx": "^0.5.0",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
