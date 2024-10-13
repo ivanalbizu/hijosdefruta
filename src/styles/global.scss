@@ -41,9 +41,13 @@
   iframe,
   img {
     max-width: 100%;
+    height: auto;
   }
   iframe {
     border: 0;
+  }
+  p {
+    max-width: 90ch;
   }
 }
 

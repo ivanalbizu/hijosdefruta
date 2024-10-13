@@ -19,26 +19,44 @@ import VideoBlocks from '@components/VideoBlocks.astro';
 import Media from '@components/Media.astro';
 import Timeline from '@components/Timeline.astro';
 import TimelineItem from '@components/TimelineItem.astro';
+import { Image } from 'astro:assets';
 
 <VideoBlocks>
-	<div slot="before">
-    <a href="https://www.pscm-psoe.com/noticias/2015-03/patxi-lopez-el-24-de-mayo-sera-el-dia-de-la-dignidad-porque-c-lm-no-se-merece-tener-a-una-presidenta-como-cospedal" target="_blank">Fuente</a>
-		<h3>Patxi López dijo que Dolores Cospedal estaba pendiente de perpetrar un golpe de Estado</h3>
-	</div>
-	<div slot="after">
+  <div slot="before">
+    <a
+      href="https://www.pscm-psoe.com/noticias/2015-03/patxi-lopez-el-24-de-mayo-sera-el-dia-de-la-dignidad-porque-c-lm-no-se-merece-tener-a-una-presidenta-como-cospedal"
+      target="_blank">
+    <Image src="/images/patxi-acto-en-La-Solana.jpg" alt="Patxi López en acto La Solana" width="600" height="336" loading="lazy" />
+    </a>
+    <h3>
+      Patxi López dijo que Dolores Cospedal estaba pendiente de perpetrar un
+      golpe de Estado
+    </h3>
+  </div>
+  <div slot="after">
     <Media id="rE1gLlKHsx4" title="TODO" />
-		<h3>TODO</h3>
-	</div>
+    <h3>Patxi López se escandaliza por la interveción de Santiago Abascal</h3>
+  </div>
 </VideoBlocks>
 
 <Timeline>
-  <TimelineItem title="El ministro I" date="8 noviembre 2023">
+  <TimelineItem title="Patxi López sobre Dolores de Cospedal" date="marzo 2015">
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text
-      ever since the 1500s, when an unknown printer took a galley of type
-      and scrambled it to make a type specimen book. It has survived not
-      only five centuries, but also the leap into electroni
+      Patxi López, secretario de Acción Política, Ciudadanía y Libertades de la
+      Ejecutiva Federal del PSOE definió a Dolores de Cospedal como una
+      presidenta a tiempo parcial más pendiente de los escándalos de su partido
+      que de gobernar y a perpetrar un golpe de Estado para amarrarse al poder
+      como sea.
+    </p>
+  </TimelineItem>
+  <TimelineItem title="Patxi López tras discurso de Abascal" date="8 noviembre 2023">
+    <p>
+      Patxi López, sobre el discurso previo de Santiago Abascal: "acabamos de
+      escuchar una serie de expresiones que en sí mismas son un discurso de
+      incitación al odio con lo cual ya debieran estar en sí mismo no permiti no
+      tolerar pero pero cuando se va más allá y se refieren al presidente
+      legítimo de este país, hoy candidato, como golpista y a los socialistas
+      como preparadores de un golpe".
     </p>
   </TimelineItem>
 </Timeline>
