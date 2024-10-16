@@ -1,7 +1,7 @@
 export default {
   build: {
     rollupOptions: {
-      external: ['$/layouts/MentiraPost.astro']
+      external: ['../../layouts/MentiraPost.astro']
     }
   }
 }
