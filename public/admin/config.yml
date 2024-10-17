@@ -24,3 +24,5 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Publish Date", name: "pubDate", widget: "datetime" }
       - { label: "Lie Date", name: "lieDate", widget: "datetime" }
       - { label: "Lie Date Digo", name: "lieDateDigo", widget: "datetime" }
+      - { label: "Youtube id", name: "youtubeId", widget: "string" }
+      - { label: "Youtube title", name: "youtubeTitle", widget: "string" }
