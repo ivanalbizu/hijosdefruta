@@ -1,0 +1,68 @@
+---
+import Fecha from '@components/Fecha.astro';
+import Media from '@components/Media.astro';
+import type { Hito } from '@utils/mentiras';
+
+interface Props {
+	hito: Hito;
+}
+
+const { hito } = Astro.props;
+const { fecha, quien, cita, hecho, contexto, fuente, video } = hito;
+---
+
+<div class="hito">
+	<p class="fecha"><Fecha fecha={fecha} /></p>
+	<h3 class="quien h5">{quien}</h3>
+	<p class="contexto">{contexto}</p>
+	{
+		video && (
+			<Media id={video.id} title={video.titulo ?? cita ?? hecho ?? quien} start={video.start} end={video.end} />
+		)
+	}
+	{
+		cita && (
+			<blockquote cite={fuente.url}>
+				<p>«{cita}»</p>
+			</blockquote>
+		)
+	}
+	{hecho && <p class="hecho">{hecho}</p>}
+	<p class="fuente">
+		Fuente: <a href={fuente.url} rel="noopener noreferrer" target="_blank">{fuente.medio}</a>
+		{fuente.archivo && (
+			<>
+				· <a href={fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>
+			</>
+		)}
+	</p>
+</div>
+
+<style>
+	.hito {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+	}
+	.fecha {
+		font-weight: 600;
+		color: var(--accent-dark);
+	}
+	.quien {
+		margin: 0;
+	}
+	.contexto,
+	.fuente {
+		font-size: 14px;
+		color: rgb(var(--gray));
+	}
+	blockquote {
+		display: block;
+		padding-left: var(--spacing-md);
+		border-left: 4px solid var(--accent);
+		font-style: italic;
+	}
+	p {
+		margin: 0;
+	}
+</style>

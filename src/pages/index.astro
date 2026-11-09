@@ -2,18 +2,15 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import Tags from '@components/Tags.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
 import Media from '@components/Media.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import TipoBadge from '@components/TipoBadge.astro';
+import { getMentiras, getFeatured, getTags, getVideoPrincipal } from '@utils/mentiras';
 
-const mentiras = await getCollection("mentira");
-
-const mentira = mentiras.find(
-  (el) => el.data.featured
-) as any;
-
-const tags = [...new Set(mentiras.map((mentira) => mentira.data.tags).flat())];
+const mentiras = await getMentiras();
+const mentira = getFeatured(mentiras);
+const video = mentira && getVideoPrincipal(mentira);
+const tags = getTags(mentiras).slice(0, 20);
 ---
 
 <!doctype html>
@@ -22,20 +19,30 @@ const tags = [...new Set(mentiras.map((mentira) => mentira.data.tags).flat())];
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
+    <Header />
     <main>
       <h1>Mentirosos</h1>
       <div class="row">
-        <div>
-          <h2 class="h3">{mentira.data.title}</h2>
-          <Media id={mentira.data.youtubeId} title={mentira.data.title} />
-          <a href={`/mentira/${mentira.slug}/`}>
-            Ver la mentira <span class="sr-only">{mentira.data.title}</span>
-          </a>
-        </div>
+        {
+          mentira && (
+            <div>
+              <TipoBadge tipo={mentira.data.tipo} />
+              <h2 class="h3">{mentira.data.title}</h2>
+              {video && <Media id={video.id} title={video.titulo ?? mentira.data.title} start={video.start} end={video.end} />}
+              <p>{mentira.data.description}</p>
+              <a href={`/mentira/${mentira.slug}/`}>
+                Ver la mentira <span class="sr-only">{mentira.data.title}</span>
+              </a>
+            </div>
+          )
+        }
         <div>
           <h2 class="h3">Trending mentirosos</h2>
-          <Tags tags={tags} />
+          <ul class="tags">
+            {tags.map(tag => (
+              <li><a href={`/tags/${tag.slug}/`}>{tag.name} <span class="count">({tag.count})</span></a></li>
+            ))}
+          </ul>
         </div>
       </div>
     </main>
@@ -50,6 +57,19 @@ const tags = [...new Set(mentiras.map((mentira) => mentira.data.tags).flat())];
 
     @media (min-width: 576px) {
       grid-template-columns: 2fr 3fr;
+    }
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2xs);
+    a {
+      display: inline-block;
+      font-size: 14px;
+      padding: var(--spacing-2xs) var(--spacing-xs);
+      background-color: var(--accent-dark);
+      border-radius: 2px;
+      color: #fff;
     }
   }
 </style>

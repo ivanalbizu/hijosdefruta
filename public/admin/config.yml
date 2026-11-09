@@ -2,28 +2,68 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "src/assets/img" # Ubicación donde se almacenarán los archivos en el repositorio
-public_folder: "src/assets/img" # El atributo src para los medios cargados
+locale: es
+media_folder: "public/images"
+public_folder: "/images"
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "mentira" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Mentira" # Used in the UI, ie.: "New Post"
-    folder: "src/content/mentira" # The path to the folder where the documents are stored
-    preview_path: "src/content/mentira/{{slug}}"
-    create: true # Allow users to create new documents in this collection
+collections:
+  - name: "mentira"
+    label: "Mentiras"
+    label_singular: "Mentira"
+    folder: "src/content/mentira"
+    create: true
     slug: "{{slug}}"
     extension: "mdx"
     format: "frontmatter"
-    fields: # The fields each document in this collection have
-      - { label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/MentiraPost.astro" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Slug", name: "postSlug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
-      - { label: "Lie Date", name: "lieDate", widget: "datetime" }
-      - { label: "Lie Date Digo", name: "lieDateDigo", widget: "datetime" }
-      - { label: "Youtube id", name: "youtubeId", widget: "string" }
-      - { label: "Youtube title", name: "youtubeTitle", widget: "string" }
+    summary: "{{title}}"
+    preview_path: "mentira/{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text", hint: "Resume el antes y el después (mínimo 20 caracteres)" }
+      - label: "Tipo"
+        name: "tipo"
+        widget: "select"
+        options:
+          - { label: "Falsedad", value: "falsedad" }
+          - { label: "Promesa incumplida", value: "promesa-incumplida" }
+          - { label: "Cambio de postura", value: "cambio-de-postura" }
+          - { label: "Doble rasero", value: "doble-rasero" }
+      - { label: "Fecha de publicación", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Revisado el", name: "revisado", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, hint: "Última vez que se comprobaron citas, fechas y enlaces" }
+      - { label: "Destacada en la portada", name: "featured", widget: "boolean", default: false }
+      - { label: "Borrador (no se publica)", name: "draft", widget: "boolean", default: true }
+      - { label: "Tags (políticos y partidos)", name: "tags", widget: "list" }
+      # Campos de un hito; se reutilizan en «Después» y «Cronología» con *hito_fields.
+      # Deben coincidir con src/content/config.ts: si falta algo, el build falla.
+      - label: "Antes"
+        name: "antes"
+        widget: "object"
+        fields: &hito_fields
+          - label: "Fecha"
+            name: "fecha"
+            widget: "string"
+            pattern: ['^\d{4}(-\d{2}(-\d{2})?)?$', "Usa AAAA-MM-DD; si no se conoce el día, AAAA-MM; si tampoco el mes, AAAA"]
+          - { label: "Quién", name: "quien", widget: "string", hint: "Nombre y cargo en ese momento" }
+          - { label: "Cita literal", name: "cita", widget: "text", required: false, hint: "Palabras exactas, sin comillas. Rellena esto o «Hecho»." }
+          - { label: "Hecho", name: "hecho", widget: "text", required: false, hint: "Lo que ocurrió, si no es una declaración" }
+          - { label: "Contexto", name: "contexto", widget: "string", hint: "Dónde y en qué situación: «Pleno del Congreso», «Entrevista en RNE»…" }
+          - label: "Fuente"
+            name: "fuente"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string", pattern: ['^https?://', "Debe ser una URL"] }
+              - { label: "Medio", name: "medio", widget: "string", hint: "Diario de Sesiones, La Moncloa, BOE, agencia o periódico" }
+              - { label: "Copia archivada", name: "archivo", widget: "string", required: false, hint: "Enlace de web.archive.org o archive.today" }
+          - label: "Vídeo de YouTube"
+            name: "video"
+            widget: "object"
+            required: false
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string", pattern: ['^[\w-]{11}$', "Los 11 caracteres tras watch?v="] }
+              - { label: "Título", name: "titulo", widget: "string", required: false }
+              - { label: "Empieza en (segundos)", name: "start", widget: "number", value_type: "int", required: false }
+              - { label: "Termina en (segundos)", name: "end", widget: "number", value_type: "int", required: false }
+      - { label: "Después", name: "despues", widget: "object", fields: *hito_fields }
+      - { label: "Cronología", name: "cronologia", widget: "list", required: false, summary: "{{fields.fecha}} · {{fields.quien}}", fields: *hito_fields }
+      - { label: "Comentario", name: "body", widget: "markdown", required: false, hint: "Matices o contexto adicional (opcional)" }

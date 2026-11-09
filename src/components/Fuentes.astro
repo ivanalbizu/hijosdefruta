@@ -1,0 +1,40 @@
+---
+import Fecha from '@components/Fecha.astro';
+import type { Hito } from '@utils/mentiras';
+
+interface Props {
+	hitos: Hito[];
+}
+
+const { hitos } = Astro.props;
+
+// Una fila por URL, aunque varios hitos compartan fuente.
+const fuentes = [...new Map(hitos.map(h => [h.fuente.url, h])).values()];
+---
+
+<ol class="fuentes">
+	{
+		fuentes.map(({ fecha, quien, fuente }) => (
+			<li>
+				<Fecha fecha={fecha} /> · {quien} ·{' '}
+				<a href={fuente.url} rel="noopener noreferrer" target="_blank">{fuente.medio}</a>
+				{fuente.archivo ? (
+					<>
+						{' '}(<a href={fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>)
+					</>
+				) : null}
+			</li>
+		))
+	}
+</ol>
+
+<style>
+	.fuentes {
+		list-style: decimal;
+		padding-left: var(--spacing-lg);
+		font-size: 14px;
+	}
+	li + li {
+		margin-top: var(--spacing-2xs);
+	}
+</style>

@@ -1,20 +1,23 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
 import MentiraPost from '@layouts/MentiraPost.astro';
+import { getMentiras, type Mentira } from '@utils/mentiras';
 
 export async function getStaticPaths() {
-	const mentiras = await getCollection('mentira');
-	return mentiras.map((mentira) => ({
+	const mentiras = await getMentiras();
+	return mentiras.map(mentira => ({
 		params: { slug: mentira.slug },
-		props: mentira,
+		props: { mentira },
 	}));
 }
-type Props = CollectionEntry<'mentira'>;
 
-const mentira = Astro.props;
+interface Props {
+	mentira: Mentira;
+}
+
+const { mentira } = Astro.props;
 const { Content } = await mentira.render();
 ---
 
-<MentiraPost {...mentira.data}>
+<MentiraPost mentira={mentira}>
 	<Content />
 </MentiraPost>

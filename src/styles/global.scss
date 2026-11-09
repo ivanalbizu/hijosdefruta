@@ -143,6 +143,7 @@
     font-size: var(--font-size-h6);
   }
   p {
+    text-wrap: pretty;
     &:not(:last-of-type) {
       margin-bottom: var(--spacing-sm);
     }

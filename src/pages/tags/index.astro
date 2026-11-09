@@ -1,22 +1,16 @@
 ---
-import { getCollection } from "astro:content";
-import Default from "@layouts/Default.astro";
-import getUniqueTags from "@utils/getUniqueTags";
-import { SITE_TITLE } from '../../consts';
+import Default from '@layouts/Default.astro';
+import { getMentiras, getTags } from '@utils/mentiras';
 
-const posts = await getCollection("mentira");
-
-let tags = getUniqueTags(posts);
+const tags = getTags(await getMentiras());
 ---
 
-<Default title={`Tags | ${SITE_TITLE}`}>
-  <section>
-    <ul>
-      {tags.map(tag => 
-        <li>
-          <a href={`/tags/${tag}/`}>{tag}</a>
-        </li>
-      )}
-    </ul>
-  </section>
+<Default title="Tags" description="Mentiras agrupadas por político y partido">
+  <ul>
+    {tags.map(tag => (
+      <li>
+        <a href={`/tags/${tag.slug}/`}>{tag.name}</a> ({tag.count})
+      </li>
+    ))}
+  </ul>
 </Default>

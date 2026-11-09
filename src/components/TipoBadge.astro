@@ -1,0 +1,37 @@
+---
+import { TIPOS } from '../consts';
+import type { Mentira } from '@utils/mentiras';
+
+interface Props {
+	tipo: Mentira['data']['tipo'];
+}
+
+const { tipo } = Astro.props;
+---
+
+<a class="tipo" data-tipo={tipo} href={`/metodologia/#${tipo}`} title={TIPOS[tipo].descripcion}>{TIPOS[tipo].nombre}</a>
+
+<style>
+	.tipo {
+		display: inline-block;
+		align-self: flex-start;
+		padding: 2px var(--spacing-xs);
+		border-radius: 2px;
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		text-decoration: none;
+		color: #fff;
+		background: #8a1c1c;
+	}
+	[data-tipo='promesa-incumplida'] {
+		background: #8a4b00;
+	}
+	[data-tipo='cambio-de-postura'] {
+		background: #4a3a8a;
+	}
+	[data-tipo='doble-rasero'] {
+		background: #005f5f;
+	}
+</style>

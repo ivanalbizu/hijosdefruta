@@ -5,13 +5,26 @@ interface Props {
   id: string;
   title: string;
   poster?: string;
-  paramsYoutube?: string;
+  /** Parámetros extra del embed de YouTube, p. ej. "start=57&end=75". */
+  params?: string;
+  /** Segundo en el que empieza la cita. */
+  start?: number;
+  /** Segundo en el que termina la cita. */
+  end?: number;
 }
 
-const { id, title, poster, paramsYoutube } = Astro.props;
+const { id, title, poster, params, start, end } = Astro.props;
+
+const query = [
+  params,
+  start !== undefined && `start=${start}`,
+  end !== undefined && `end=${end}`,
+]
+  .filter(Boolean)
+  .join('&');
 ---
 
-<YouTube id={id} title={title} poster={poster} params={paramsYoutube} />
+<YouTube id={id} title={title} playlabel={`Reproducir: ${title}`} poster={poster} params={query || undefined} />
 
 <style is:inline>
   lite-youtube {

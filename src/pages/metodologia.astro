@@ -1,0 +1,82 @@
+---
+import Default from '@layouts/Default.astro';
+import { TIPOS } from '../consts';
+
+const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
+---
+
+<Default
+  title="Metodología"
+  description="Cómo se seleccionan, documentan y corrigen las mentiras y cambios de opinión recogidos en hijosdefruta">
+  <div class="content-centered">
+    <p>
+      Cada caso compara lo que un político dijo o hizo <strong>antes</strong> con lo que dijo o hizo
+      <strong>después</strong>. Solo se publica si las dos partes se pueden comprobar con una fuente
+      enlazada.
+    </p>
+
+    <h2>Tipos de caso</h2>
+    <p>No todo es una mentira. Cada caso se clasifica según lo que las pruebas permiten afirmar:</p>
+    <dl>
+      {
+        Object.entries(TIPOS).map(([id, tipo]) => (
+          <>
+            <dt id={id}>{tipo.nombre}</dt>
+            <dd>{tipo.descripcion}</dd>
+          </>
+        ))
+      }
+    </dl>
+
+    <h2>Fuentes</h2>
+    <ul>
+      <li>
+        Cada declaración incluye la cita literal, la fecha, el lugar y un enlace a la fuente. Cuando la
+        fecha exacta no se conoce, se indica solo el mes o el año.
+      </li>
+      <li>
+        Se prefieren las fuentes primarias: Diarios de Sesiones del Congreso y del Senado,
+        transcripciones de La Moncloa, el BOE y los vídeos institucionales. Cuando no existen, se usan
+        agencias, verificadores y prensa.
+      </li>
+      <li>
+        Siempre que es posible se enlaza una copia en
+        <a href="https://web.archive.org/" rel="noopener noreferrer" target="_blank">Wayback Machine</a>,
+        por si el original desaparece.
+      </li>
+      <li>
+        Se incluye la justificación del propio político cuando la hay, aunque matice el caso.
+      </li>
+      <li>No se atribuyen delitos: los hechos judiciales se citan tal y como los recogen las resoluciones.</li>
+    </ul>
+
+    <h2 id="correcciones">Correcciones</h2>
+    <p>
+      Cada caso indica la fecha de su última revisión. Si encuentras un error, una cita fuera de
+      contexto o un enlace roto, <a href={`${REPO}/issues/new`} rel="noopener noreferrer" target="_blank">abre
+      una incidencia en GitHub</a> con la fuente que lo demuestre. Los cambios quedan registrados en el
+      <a href={`${REPO}/commits/main`} rel="noopener noreferrer" target="_blank">historial público del
+      proyecto</a>.
+    </p>
+  </div>
+</Default>
+
+<style>
+  h2 {
+    margin-top: var(--spacing-lg);
+  }
+  ul {
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+  }
+  li + li {
+    margin-top: var(--spacing-xs);
+  }
+  dt {
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+  }
+  dd {
+    margin-left: var(--spacing-md);
+  }
+</style>

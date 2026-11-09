@@ -1,46 +1,123 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Tags from '@components/Tags.astro';
-import FormattedDate from '@components/FormattedDate.astro';
+import Fecha from '@components/Fecha.astro';
+import Hito from '@components/Hito.astro';
+import Cronologia from '@components/Cronologia.astro';
+import Fuentes from '@components/Fuentes.astro';
+import TipoBadge from '@components/TipoBadge.astro';
+import { getHitos, getVideoPrincipal, type Mentira } from '@utils/mentiras';
 
-type Props = CollectionEntry<'mentira'>['data'];
+interface Props {
+	mentira: Mentira;
+}
 
-const { title, description, author, updatedDate, tags } = Astro.props;
+const { mentira } = Astro.props;
+const { title, description, tipo, tags, antes, despues, cronologia, revisado } = mentira.data;
+const video = getVideoPrincipal(mentira);
+const image = video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : undefined;
 ---
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={image} type="article" />
 	</head>
 
 	<body>
 		<Header />
 		<main>
 			<article>
-				<div>
+				<header class="cabecera">
+					<TipoBadge tipo={tipo} />
+					<h1>{title}</h1>
+					<p class="description">{description}</p>
+					<Tags tags={tags} />
+				</header>
+
+				<section class="antes-despues" aria-label="Antes y después">
 					<div>
-						<div>
-							<!--<FormattedDate date={lieDate} />-->
-							{
-								updatedDate && (
-									<div>
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-							{ author && <span> {author}</span> }
-						</div>
-						<h2>{title}</h2>
-						<Tags tags={tags} />
-						<hr />
+						<h2 class="h4 etiqueta">Antes</h2>
+						<Hito hito={antes} />
 					</div>
+					<div>
+						<h2 class="h4 etiqueta">Después</h2>
+						<Hito hito={despues} />
+					</div>
+				</section>
+
+				{
+					cronologia.length > 0 && (
+						<section class="bloque">
+							<h2>Cronología</h2>
+							<Cronologia hitos={cronologia} />
+						</section>
+					)
+				}
+
+				<div class="comentario">
 					<slot />
 				</div>
+
+				<section class="bloque">
+					<h2 class="h4">Fuentes</h2>
+					<Fuentes hitos={getHitos(mentira)} />
+					<p class="revisado">
+						Citas, fechas y enlaces revisados el <Fecha fecha={revisado} />.
+						¿Ves un error? <a href="/metodologia/#correcciones">Así se corrige</a>.
+					</p>
+				</section>
 			</article>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style lang="scss">
+	@use '../styles/breakpoints' as *;
+
+	.cabecera {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+		margin-bottom: var(--spacing-lg);
+	}
+	.description {
+		font-size: var(--font-size-h6);
+		max-width: 70ch;
+	}
+	.antes-despues {
+		display: grid;
+		gap: var(--spacing-lg);
+		margin-bottom: var(--spacing-lg);
+
+		@include breakpoint(sm) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		> div {
+			padding: var(--spacing-md);
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+		}
+	}
+	.etiqueta {
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--accent-dark);
+	}
+	.bloque {
+		margin-top: var(--spacing-lg);
+		padding-top: var(--spacing-lg);
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.comentario:not(:empty) {
+		max-width: 840px;
+		margin: var(--spacing-lg) auto 0;
+	}
+	.revisado {
+		margin-top: var(--spacing-md);
+		font-size: 14px;
+		color: rgb(var(--gray));
+	}
+</style>

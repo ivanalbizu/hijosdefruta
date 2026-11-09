@@ -1,0 +1,22 @@
+---
+import type { Fecha } from '@utils/mentiras';
+
+interface Props {
+	fecha: Fecha | Date;
+}
+
+const { fecha } = Astro.props;
+const { valor, precision } = fecha instanceof Date ? { valor: fecha, precision: 'dia' as const } : fecha;
+
+const formatos: Record<typeof precision, Intl.DateTimeFormatOptions> = {
+	dia: { year: 'numeric', month: 'long', day: 'numeric' },
+	mes: { year: 'numeric', month: 'long' },
+	anio: { year: 'numeric' },
+};
+
+// UTC para que la fecha no cambie según la zona horaria de la máquina que compila.
+const texto = valor.toLocaleDateString('es-ES', { ...formatos[precision], timeZone: 'UTC' });
+const iso = valor.toISOString().slice(0, { dia: 10, mes: 7, anio: 4 }[precision]);
+---
+
+<time datetime={iso}>{texto}</time>

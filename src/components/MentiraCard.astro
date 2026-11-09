@@ -1,0 +1,57 @@
+---
+import Fecha from '@components/Fecha.astro';
+import Tags from '@components/Tags.astro';
+import Media from '@components/Media.astro';
+import TipoBadge from '@components/TipoBadge.astro';
+import { getVideoPrincipal, type Mentira } from '@utils/mentiras';
+
+interface Props {
+  mentira: Mentira;
+}
+
+const { mentira } = Astro.props;
+const { title, description, tipo, antes, despues, tags } = mentira.data;
+const video = getVideoPrincipal(mentira);
+---
+
+<li class="mentira-card">
+  <div class="entry">
+    <TipoBadge tipo={tipo} />
+    <h2 class="h3">{title}</h2>
+    <p class="fechas"><Fecha fecha={antes.fecha} /> → <Fecha fecha={despues.fecha} /></p>
+    <p>{description}</p>
+    <Tags tags={tags} />
+    <a href={`/mentira/${mentira.slug}/`}>Ver la mentira <span class="sr-only">{title}</span></a>
+  </div>
+  {video && <Media id={video.id} title={video.titulo ?? title} start={video.start} end={video.end} />}
+</li>
+
+<style lang="scss">
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
+    a:last-child {
+      display: inline-flex;
+      margin-top: auto;
+    }
+  }
+  .fechas {
+    font-size: 14px;
+    color: rgb(var(--gray));
+  }
+  .mentira-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    &:not(:last-of-type) {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    @media (min-width: 576px) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+</style>
