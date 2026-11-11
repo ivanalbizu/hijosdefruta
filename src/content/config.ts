@@ -34,6 +34,17 @@ function esPosterior(a: Fecha, b: Fecha) {
 	return clave(a.valor) > clave(b.valor);
 }
 
+/** ¿Cada trozo de `fragmento` (separados por "[...]") aparece literalmente en `texto`? */
+function esFragmentoDe(fragmento: string, texto: string) {
+	const norma = (s: string) => s.toLowerCase().replace(/\s+/g, ' ').trim();
+	const completo = norma(texto);
+	return fragmento
+		.split('[...]')
+		.map(norma)
+		.filter(Boolean)
+		.every(trozo => completo.includes(trozo.replace(/^[.,;:]+|[.,;:]+$/g, '').trim()));
+}
+
 /** Opcional que además acepta los "" y null que escribe Decap CMS en campos vacíos. */
 const opcional = <T extends z.ZodTypeAny>(schema: T) =>
 	z.preprocess(v => (v === '' || v === null ? undefined : v), schema.optional());
@@ -66,13 +77,22 @@ const hito = z
 		cita: opcional(z.string()),
 		/** Lo que ocurrió, cuando el hito no es una declaración. */
 		hecho: opcional(z.string()),
+		/**
+		 * Fragmento corto para la imagen de redes. Solo puede contener trozos literales
+		 * de `cita` (o de `hecho`), unidos con "[...]".
+		 */
+		destacado: opcional(z.string()),
 		/** Dónde y en qué situación: "Debate electoral en RTVE", "Pleno del Senado"... */
 		contexto: z.string().min(1),
 		fuente,
 		// Un vídeo sin ID (bloque vacío en el CMS) cuenta como ausente.
 		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
 	})
-	.refine(h => h.cita || h.hecho, { message: 'Cada hito necesita `cita` o `hecho`' });
+	.refine(h => h.cita || h.hecho, { message: 'Cada hito necesita `cita` o `hecho`' })
+	.refine(h => !h.destacado || esFragmentoDe(h.destacado, h.cita ?? h.hecho ?? ''), {
+		message: '`destacado` solo puede contener trozos literales de `cita` (o `hecho`) separados por "[...]"',
+		path: ['destacado'],
+	});
 
 const mentira = defineCollection({
 	type: 'content',

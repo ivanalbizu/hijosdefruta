@@ -8,7 +8,7 @@ import Hito from '@components/Hito.astro';
 import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
-import { getHitos, getVideoPrincipal, type Mentira } from '@utils/mentiras';
+import { getHitos, type Mentira } from '@utils/mentiras';
 
 interface Props {
 	mentira: Mentira;
@@ -16,13 +16,13 @@ interface Props {
 
 const { mentira } = Astro.props;
 const { title, description, tipo, tags, antes, despues, cronologia, revisado } = mentira.data;
-const video = getVideoPrincipal(mentira);
-const image = video ? `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg` : undefined;
+// Generada en src/pages/og/[slug].png.ts
+const image = `/og/${mentira.slug}.png`;
 ---
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} image={image} type="article" />
+		<BaseHead title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article" />
 	</head>
 
 	<body>

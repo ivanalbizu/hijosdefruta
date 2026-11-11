@@ -5,6 +5,23 @@ export type Mentira = CollectionEntry<"mentira">;
 export type Hito = Mentira["data"]["antes"];
 export type Fecha = Hito["fecha"];
 
+const FORMATOS: Record<Fecha["precision"], Intl.DateTimeFormatOptions> = {
+  dia: { year: "numeric", month: "long", day: "numeric" },
+  mes: { year: "numeric", month: "long" },
+  anio: { year: "numeric" },
+};
+
+/**
+ * "4 de noviembre de 2019", "marzo de 2015" o "2015" según la precisión.
+ * En UTC para que la fecha no cambie con la zona horaria de la máquina que compila.
+ */
+export const formatFecha = ({ valor, precision }: Fecha) =>
+  valor.toLocaleDateString("es-ES", { ...FORMATOS[precision], timeZone: "UTC" });
+
+/** Fecha ISO recortada a la precisión conocida, para el atributo `datetime`. */
+export const isoFecha = ({ valor, precision }: Fecha) =>
+  valor.toISOString().slice(0, { dia: 10, mes: 7, anio: 4 }[precision]);
+
 export interface TagInfo {
   slug: string;
   name: string;

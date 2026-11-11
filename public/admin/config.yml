@@ -46,6 +46,7 @@ collections:
           - { label: "Quién", name: "quien", widget: "string", hint: "Nombre y cargo en ese momento" }
           - { label: "Cita literal", name: "cita", widget: "text", required: false, hint: "Palabras exactas, sin comillas. Rellena esto o «Hecho»." }
           - { label: "Hecho", name: "hecho", widget: "text", required: false, hint: "Lo que ocurrió, si no es una declaración" }
+          - { label: "Destacado para la imagen", name: "destacado", widget: "string", required: false, hint: "Opcional. Trozos literales de la cita (o del hecho) unidos con [...]; se muestra en la imagen para redes" }
           - { label: "Contexto", name: "contexto", widget: "string", hint: "Dónde y en qué situación: «Pleno del Congreso», «Entrevista en RNE»…" }
           - label: "Fuente"
             name: "fuente"
