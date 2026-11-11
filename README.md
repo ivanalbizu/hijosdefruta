@@ -5,6 +5,8 @@ Sitio estático hecho con [Astro](https://astro.build), publicado en <https://hi
 
 ## Comandos
 
+El proyecto usa **npm**: el único lockfile es `package-lock.json`.
+
 | Comando           | Acción                                                  |
 | :---------------- | :------------------------------------------------------ |
 | `npm install`     | Instala dependencias                                    |
