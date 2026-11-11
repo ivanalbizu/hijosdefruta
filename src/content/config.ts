@@ -127,4 +127,30 @@ const mentira = defineCollection({
 		}),
 });
 
-export const collections = { mentira };
+/**
+ * Archivo de promesas electorales: se guardan cuando se hacen, con su fuente,
+ * para poder contrastarlas en el futuro (y convertirlas en un caso si se incumplen).
+ */
+const promesa = defineCollection({
+	type: 'data',
+	schema: z.object({
+		fecha,
+		quien: z.string().min(1),
+		partido: z.string().min(1),
+		/** Qué se prometió, tal como lo recoge la fuente. */
+		compromiso: z.string().min(10),
+		/** Palabras literales, si la fuente las recoge. */
+		cita: opcional(z.string()),
+		contexto: z.string().min(1),
+		tema: z.string().min(1),
+		/** Campaña o convocatoria a la que pertenece, p. ej. "Generales 29N 2026". */
+		campana: z.string().min(1),
+		fuente,
+		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
+		estado: z.enum(['pendiente', 'cumplida', 'incumplida', 'parcial']).default('pendiente'),
+		/** Slug de la ficha de /mentira que la contrasta, si existe. */
+		caso: opcional(z.string()),
+	}),
+});
+
+export const collections = { mentira, promesa };

@@ -48,6 +48,14 @@ cronologia: [] # hitos intermedios (mismos campos), en orden
 
 El cuerpo del `.mdx` es opcional y sirve para matices o contexto.
 
+## Archivo de promesas
+
+`src/content/promesa/*.yaml` guarda promesas electorales en el momento en que se hacen, con su
+fuente, y se publican en `/promesas`. Campos: `fecha`, `quien`, `partido`, `compromiso` (lo prometido,
+tal como lo recoge la fuente), `cita` opcional (literal), `contexto`, `tema`, `campana`, `fuente`,
+`video` opcional, `estado` (`pendiente`, `cumplida`, `incumplida`, `parcial`) y `caso` (el slug de la
+ficha que la contrasta, cuando la haya).
+
 ## Imagen para redes
 
 Al compilar se genera `/og/<slug>.png` (1200×630) para cada caso, con el antes y el después

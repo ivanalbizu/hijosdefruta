@@ -15,7 +15,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const DIR = path.resolve("src/content/mentira");
+const DIRS = ["src/content/mentira", "src/content/promesa"].map(d => path.resolve(d));
 const RAPIDO = process.argv.includes("--rapido");
 const CONCURRENCIA = 6;
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36";
@@ -24,7 +24,8 @@ const valor = s => s.trim().replace(/^(['"])(.*)\1$/, "$2");
 
 /** Extrae fuentes y vídeos del frontmatter sin depender de un parser YAML. */
 function extraer(texto) {
-  const frontmatter = texto.split(/^---\s*$/m)[1] ?? "";
+  // .mdx: frontmatter entre "---"; .yaml: el archivo entero.
+  const frontmatter = texto.startsWith("---") ? (texto.split(/^---\s*$/m)[1] ?? "") : texto;
   const fuentes = [];
   const videos = [];
   for (const linea of frontmatter.split("\n")) {
@@ -138,11 +139,16 @@ async function enParalelo(tareas, limite) {
   return resultados;
 }
 
-const archivos = (await fs.readdir(DIR)).filter(f => f.endsWith(".mdx")).sort();
+const archivos = (
+  await Promise.all(
+    DIRS.map(async dir => (await fs.readdir(dir)).filter(f => /\.(mdx|ya?ml)$/.test(f)).map(f => path.join(dir, f)))
+  )
+).flat().sort();
 const tareas = [];
 for (const archivo of archivos) {
-  const { fuentes, videos, draft } = extraer(await fs.readFile(path.join(DIR, archivo), "utf8"));
-  const caso = draft ? `${archivo} (borrador)` : archivo;
+  const { fuentes, videos, draft } = extraer(await fs.readFile(archivo, "utf8"));
+  const nombre = path.relative("src/content", archivo);
+  const caso = draft ? `${nombre} (borrador)` : nombre;
   for (const { url, archivo: copia } of fuentes) {
     tareas.push(async () => [caso, "fuente", url, await una(url, () => comprobarEnlace(url))]);
     if (copia) {

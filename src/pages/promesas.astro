@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '@layouts/Default.astro';
+import Fecha from '@components/Fecha.astro';
+
+const ESTADOS = {
+  pendiente: 'Pendiente',
+  cumplida: 'Cumplida',
+  incumplida: 'Incumplida',
+  parcial: 'Cumplida en parte',
+} as const;
+
+const promesas = (await getCollection('promesa')).sort(
+  (a, b) => b.data.fecha.valor.valueOf() - a.data.fecha.valor.valueOf()
+);
+
+// Agrupadas por campaña, de la más reciente a la más antigua.
+const campanas = [...new Set(promesas.map(p => p.data.campana))];
+---
+
+<Default
+  title="Promesas"
+  description="Archivo de promesas electorales con su fuente, guardadas cuando se hicieron para poder contrastarlas después">
+  <p class="intro">
+    Promesas guardadas en el momento en que se hacen, con su fuente. Cuando se cumplan o se incumplan,
+    se actualiza su estado y, si se incumplen, pasan a ser un caso.
+  </p>
+
+  {
+    campanas.map(campana => (
+      <section>
+        <h2>{campana}</h2>
+        <ul class="promesas">
+          {promesas
+            .filter(p => p.data.campana === campana)
+            .map(({ data }) => (
+              <li>
+                <p class="meta">
+                  <Fecha fecha={data.fecha} /> · {data.tema} ·{' '}
+                  <span class="estado" data-estado={data.estado}>{ESTADOS[data.estado]}</span>
+                </p>
+                <p class="quien">{data.quien}</p>
+                <p class="compromiso">{data.compromiso}</p>
+                {data.cita && <blockquote>«{data.cita}»</blockquote>}
+                <p class="fuente">
+                  {data.contexto} · Fuente:{' '}
+                  <a href={data.fuente.url} rel="noopener noreferrer" target="_blank">{data.fuente.medio}</a>
+                  {data.fuente.archivo && (
+                    <>
+                      {' '}· <a href={data.fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>
+                    </>
+                  )}
+                  {data.caso && (
+                    <>
+                      {' '}· <a href={`/mentira/${data.caso}/`}>Ver el caso</a>
+                    </>
+                  )}
+                </p>
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+</Default>
+
+<style>
+  .intro {
+    max-width: 70ch;
+    margin-bottom: var(--spacing-lg);
+  }
+  .promesas {
+    display: grid;
+    gap: var(--spacing-md);
+  }
+  li {
+    padding: var(--spacing-md);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
+  }
+  .meta,
+  .fuente {
+    font-size: 14px;
+    color: rgb(var(--gray));
+  }
+  .quien {
+    font-weight: 600;
+  }
+  blockquote {
+    display: block;
+    padding-left: var(--spacing-md);
+    border-left: 4px solid var(--accent);
+    font-style: italic;
+  }
+  .estado {
+    padding: 0 var(--spacing-2xs);
+    border-radius: 2px;
+    color: #fff;
+    background: #4a5568;
+  }
+  [data-estado='cumplida'] {
+    background: #1f6f3a;
+  }
+  [data-estado='incumplida'] {
+    background: #8a1c1c;
+  }
+  [data-estado='parcial'] {
+    background: #8a4b00;
+  }
+</style>
