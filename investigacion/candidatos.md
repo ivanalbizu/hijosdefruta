@@ -10,7 +10,8 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Prometedor (listo para proponer) | arch-03 nucleares, arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias, arch-33 elecciones en 2027 |
+| Publicado | arch-03 nucleares |
+| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias, arch-33 elecciones en 2027 |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -42,7 +43,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** la frase de 2024 que cita la pista no es de Marlaska tal cual, y jurídicamente «exclusiva» y «delegable por 150.2» no se contradicen. Contradicción no limpia salvo que aparezca una afirmación de que tampoco se podía *delegar*. Pendiente: ¿se aprobó la ley?
 
 ### arch-03 · Las nucleares del apagón
-- **Estado:** prometedor
+- **Estado:** publicado — `/casos/sanchez-apagon-dos-reactores-nucleares/` (12-11-2026)
 - **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno) / falsedad
 - **Antes:** 29-04-2025 · rueda de prensa tras el Consejo de Seguridad Nacional y el Consejo de Ministros. Transcripción oficial: «desde hace varios días hay cinco reactores nucleares de los siete (los dos que estaban operativos y que cayeron, pero los otros cinco, a esos cinco me refiero) que están parados. Por tanto, no están generando energía por decisión de las propias empresas operadoras». · https://www.lamoncloa.gob.es/presidente/intervenciones/Paginas/2025/20250429-sanchez-rueda-prensa-consejo-ministros.aspx · vídeo: https://www.lamoncloa.gob.es/multimedia/videos/presidente/Paginas/2025/290425-consejo-seguridad-nacional.aspx
 - **Después:** CSN, «Informe resumen sobre los eventos y las actuaciones de las CCNN y del CSN […] durante la pérdida total de potencia eléctrica acaecida el 28 de abril de 2025», tabla del estado previo: en operación Almaraz II (70 %, 680 MWe), Ascó I (70 %, 719), Ascó II (100 %, 1.034) y Vandellós II (100 %, 1.089); Almaraz I y Cofrentes en parada fría; Trillo en recarga. · https://www.csn.es/documents/d/portal-csn/informe-sobre-perdida-total-potencia-electrica · notas del CSN del 30-04-2025 por central.
