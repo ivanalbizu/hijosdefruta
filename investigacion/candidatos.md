@@ -10,8 +10,8 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos |
-| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-24 puertas giratorias |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias |
+| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -184,6 +184,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** el RDL 4/2018 del primer Gobierno de Sánchez ya permitía la mayoría absoluta en segunda votación para la renovación, así que no es un giro de 2024. Que el consejo lo elija el Parlamento por mayoría absoluta no equivale a estar «al dictado» del Gobierno: es una valoración, no una contradicción limpia.
 
 ### arch-24 · Puertas giratorias de cinco años
+- **Publicado (12-11-2026):** `sanchez-puertas-giratorias-exministros-consejos`, con deb-03. El «después» pasa a ser lo que hace su Gobierno: la SEPI propone exministros como consejeros dominicales de Redeia (González Laya, junta del 30-06-2025, CNMV reg. 35570, pág. 7) y Enagás (Caamaño, consejo del 29-07-2026, CNMV reg. 42189). Descartados como «después» principal: Blanco y Montilla (Enagás, 2020) entraron como consejeros **independientes**, no a propuesta de la SEPI (eldiario.es, 30-06-2020); Corredor (Red Eléctrica, 2020) la propuso la comisión de nombramientos de la empresa. RDL 21/2026: añadía al art. 15 de la Ley 3/2015 un apartado 3 bis (dos años sin *lobby*) y el Congreso lo derogó (BOE-A-2026-19419, 18-09-2026); el art. 15 sigue en dos años.
 - **Plan (12-11-2026):** caso combinado con deb-03. Antes: vídeo del debate de primarias de 2014 (46:55, segundo 2815) y programas de 2015 (pág. 77) y 2016 (pág. 76) con recorte. Después: exministros del PSOE (Montilla, Blanco) en el consejo de Enagás a propuesta de la SEPI en 2020 (fuente primaria pendiente: CNMV o junta de Enagás) y el plazo de incompatibilidad, que sigue en dos años (Ley 3/2015, art. 15; RDL 21/2026, comprobar en el BOE y su convalidación).
 - **Estado:** prometedor
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
@@ -282,7 +283,7 @@ artículo 135, parece Pérez Tapias).
 - **Notas:** la LO 3/2015 es del Gobierno del PP; habría que ver si con Sánchez se propuso algo.
 
 ### deb-03 · Exministros en consejos de empresas estratégicas
-- **Estado:** en preparación — se une con arch-24 en un solo caso (aprobado por el usuario el 12-11-2026). Minuto 46:59–47:24 confirmado por el usuario viendo el vídeo: el vídeo del caso empieza en el segundo 2815 (46:55).
+- **Estado:** publicado con arch-24 (`sanchez-puertas-giratorias-exministros-consejos`) — se une con arch-24 en un solo caso (aprobado por el usuario el 12-11-2026). Minuto 46:59–47:24 confirmado por el usuario viendo el vídeo: el vídeo del caso empieza en el segundo 2815 (46:55).
 - **Persona / tipo propuesto:** Pedro Sánchez / doble rasero o promesa incumplida
 - **Antes:** 46:59–47:24, a una pregunta sobre puertas giratorias: «ni los expresidentes del gobierno ni tampoco los exministros de cualquier gobierno podían formar parte de un consejo de administración de una empresa vinculada a un sector estratégico como pueda ser las telecomunicaciones o como pueda ser la energía y ese es mi compromiso […] las vamos a cerrar pero no solamente para los de enfrente también las vamos a cerrar para los compañeros y compañeras que son militantes del Partido Socialista sobre todo para ellos»
 - **Después:** 2020 · los exministros socialistas José Montilla y José Blanco entran en el consejo de Enagás como consejeros propuestos por la SEPI (prensa: El Independiente, 31-05-2020). Pendiente: fuente primaria (comunicación a la CNMV o acuerdos de la junta de accionistas de Enagás) y otros casos (Red Eléctrica/Redeia, Indra, Correos…).
