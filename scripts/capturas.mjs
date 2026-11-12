@@ -31,7 +31,7 @@ const DIR_CASOS = 'src/content/casos';
 const DIR_PRUEBAS = 'src/assets/pruebas';
 const ESCALA = 2; // píxeles por punto PDF
 const MARGEN_X = 14; // puntos a los lados de lo que se recorta
-const MARGEN_Y = 5; // arriba y abajo: menos que el interlineado, para no cortar líneas vecinas
+const MARGEN_Y = 6; // arriba y abajo cuando no hay línea vecina (si la hay, se corta a medio camino)
 const RESALTE = 'rgba(255, 214, 0, 0.45)';
 const UA = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36' };
 
@@ -112,8 +112,21 @@ function rectangulos({ items, chars }, inicio, fin) {
 			x1: e + (it.width * (hasta + 1)) / largo,
 			y0: f - alto * 0.25,
 			y1: f + alto * 0.9,
+			base: f,
+			alto,
 		};
 	});
+}
+
+/** Une los rectángulos de una misma línea en una sola franja (sin huecos en comas o palabras partidas). */
+function unirPorLinea(rects) {
+	const lineas = [];
+	for (const r of rects) {
+		const l = lineas.find(l => Math.abs(l.base - r.base) < Math.max(2, r.alto * 0.3));
+		if (!l) lineas.push({ ...r });
+		else Object.assign(l, { x0: Math.min(l.x0, r.x0), x1: Math.max(l.x1, r.x1), y0: Math.min(l.y0, r.y0), y1: Math.max(l.y1, r.y1), alto: Math.max(l.alto, r.alto) });
+	}
+	return lineas;
 }
 
 /** Busca todos los fragmentos; devuelve la primera página donde aparecen todos. */
@@ -131,12 +144,42 @@ async function localizar(pdf, buscar, incluir) {
 		const contexto = incluir.map(encontrar).filter(Boolean);
 		// Límites horizontales de la columna de texto de la página.
 		const xs = t.items.filter(i => i.str.trim()).flatMap(i => [i.transform[4], i.transform[4] + i.width]);
-		return { n, pagina, resaltes: resaltes.flat(), contexto: contexto.flat(), xMin: Math.min(...xs), xMax: Math.max(...xs) };
+		const lineas = t.items.filter(i => i.str.trim()).map(i => ({ base: i.transform[5], alto: Math.hypot(i.transform[2], i.transform[3]) || i.height || 10 }));
+		return {
+			n,
+			pagina,
+			resaltes: unirPorLinea(resaltes.flat()),
+			contexto: contexto.flat(),
+			lineas,
+			xMin: Math.min(...xs),
+			xMax: Math.max(...xs),
+		};
 	}
 	return null;
 }
 
-async function recortar({ pagina, resaltes, contexto, xMin, xMax }) {
+/** Parte superior e inferior aproximadas de los glifos de una línea (coordenadas PDF, y hacia arriba). */
+const techo = l => l.base + l.alto * 0.78;
+const suelo = l => l.base - l.alto * 0.22;
+
+/**
+ * Límites verticales del recorte (coordenadas PDF): a medio camino entre lo que se
+ * muestra y la línea vecina, para no cortar ninguna línea por la mitad.
+ */
+function limitesVerticales(zona, lineas) {
+	const arriba = Math.max(...zona.map(techo));
+	const abajo = Math.min(...zona.map(suelo));
+	const baseArriba = Math.max(...zona.map(z => z.base));
+	const baseAbajo = Math.min(...zona.map(z => z.base));
+	const encima = lineas.filter(l => l.base > baseArriba + 1).sort((a, b) => a.base - b.base)[0];
+	const debajo = lineas.filter(l => l.base < baseAbajo - 1).sort((a, b) => b.base - a.base)[0];
+	return {
+		top: encima ? (arriba + suelo(encima)) / 2 : arriba + MARGEN_Y,
+		bottom: debajo ? (abajo + techo(debajo)) / 2 : abajo - MARGEN_Y,
+	};
+}
+
+async function recortar({ pagina, resaltes, contexto, lineas, xMin, xMax }) {
 	const viewport = pagina.getViewport({ scale: ESCALA });
 	const canvas = createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height));
 	const ctx = canvas.getContext('2d');
@@ -155,15 +198,18 @@ async function recortar({ pagina, resaltes, contexto, xMin, xMax }) {
 	for (const r of resaltes.map(aPixeles)) ctx.fillRect(r.x - 2, r.y - 1, r.w + 4, r.h + 2);
 	ctx.restore();
 
-	const zona = [...resaltes, ...contexto].map(aPixeles);
+	const zonaPdf = [...resaltes, ...contexto];
+	const zona = zonaPdf.map(aPixeles);
 	const mx = MARGEN_X * ESCALA;
-	const my = MARGEN_Y * ESCALA;
 	const [cx0] = viewport.convertToViewportPoint(xMin, 0);
 	const [cx1] = viewport.convertToViewportPoint(xMax, 0);
+	const { top, bottom } = limitesVerticales(zonaPdf, lineas);
+	const [, yTop] = viewport.convertToViewportPoint(0, top);
+	const [, yBottom] = viewport.convertToViewportPoint(0, bottom);
 	const x = Math.max(0, Math.floor(Math.min(cx0, ...zona.map(r => r.x)) - mx));
-	const y = Math.max(0, Math.floor(Math.min(...zona.map(r => r.y)) - my));
+	const y = Math.max(0, Math.floor(Math.min(yTop, yBottom)));
 	const x2 = Math.min(canvas.width, Math.ceil(Math.max(cx1, ...zona.map(r => r.x + r.w)) + mx));
-	const y2 = Math.min(canvas.height, Math.ceil(Math.max(...zona.map(r => r.y + r.h)) + my));
+	const y2 = Math.min(canvas.height, Math.ceil(Math.max(yTop, yBottom)));
 
 	const salida = createCanvas(x2 - x, y2 - y);
 	salida.getContext('2d').drawImage(canvas, x, y, x2 - x, y2 - y, 0, 0, x2 - x, y2 - y);
