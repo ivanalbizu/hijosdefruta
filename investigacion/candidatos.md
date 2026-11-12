@@ -10,8 +10,8 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027 |
-| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos |
+| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-24 puertas giratorias |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -168,7 +168,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** el Gobierno acabó rectificando a los pocos días, así que la promesa terminó cumpliéndose: no es una contradicción limpia. Pista abierta: contrato adjudicado en 12-2024 a Elbit (matriz de IMI) para piezas de mortero del Ejército de Tierra; si existe en la Plataforma de Contratación, podría ser un caso propio.
 
 ### arch-22 · Limitar los mandatos
-- **Estado:** prometedor
+- **Estado:** publicado — `/casos/sanchez-limitar-mandatos-dos-legislaturas/` (12-11-2026). Después: proclamación de candidaturas, BOE-A-2026-23103, pág. 120. Vídeo del debate de primarias (canal del PSOE, 07-07-2014, youtu.be/uOwZHE7Vy1g): minuto 27:38 verificado por el usuario; el vídeo empieza en el segundo 1654.
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 04-07-2014 · tuit de @sanchezcastejon: «Vamos a limitar el mandato a dos legislaturas para la Presidencia del Gobierno» · https://x.com/sanchezcastejon/status/485088151774711808 (copia: archive.ph/Kbhar) · Programa PSOE 2015, pág. 77, y 2016, pág. 76: «Establecer un límite de dos mandatos consecutivos para ejercer la Presidencia del Gobierno.» · https://web.archive.org/web/20151223180208/http://www.psoe.es:80/media-content/2015/12/PSOE_Programa_Electoral_2015.pdf · https://web.archive.org/web/2016/https://www.psoe.es/media-content/2016/05/PSOE-Programa-Electoral-2016.pdf · Debate de primarias 2014, vídeo https://youtu.be/uOwZHE7Vy1g?t=1658 (min. 27:38).
 - **Después:** la medida desaparece de los programas posteriores; 24-09-2025 (Bloomberg): se presentará en 2027, «Lo haré sin duda»; 10-2026: candidato del PSOE a la Presidencia para el 29N (pendiente: proclamación de candidaturas en el BOE). Preside el Gobierno desde 06-2018 (legislaturas XII, XIII, XIV y XV).
