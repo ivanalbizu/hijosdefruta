@@ -153,4 +153,39 @@ const promesa = defineCollection({
 	}),
 });
 
-export const collections = { mentira, promesa };
+/**
+ * Ficha de cada tag (persona o partido): nombre, foto o logo y su crédito.
+ * El nombre del archivo es el slug del tag (`Pedro Sánchez` → `pedro-sanchez.yaml`).
+ * `npm run perfiles` descarga la imagen de Wikimedia Commons y rellena `imagen`.
+ */
+const perfil = defineCollection({
+	type: 'data',
+	schema: ({ image }) =>
+		z.object({
+			/** Igual que el tag que usan los casos. */
+			nombre: z.string().min(1),
+			tipo: z.enum(['persona', 'partido']),
+			/** Nombre largo de un partido: "Partido Socialista Obrero Español". */
+			nombreCompleto: opcional(z.string()),
+			/** Slug del perfil del partido, solo cuando la afiliación es clara y estable. */
+			partido: opcional(z.string()),
+			/** Color corporativo del partido; solo decorativo, nunca como fondo de texto. */
+			color: opcional(z.string().regex(/^#[0-9a-f]{6}$/i, 'Color hexadecimal: #rrggbb')),
+			/** Elemento de Wikidata del que sale la imagen. */
+			wikidata: opcional(z.string().regex(/^Q\d+$/)),
+			imagen: z
+				.object({
+					archivo: image(),
+					/** Nombre del archivo en Wikimedia Commons. */
+					commons: z.string(),
+					autor: z.string(),
+					licencia: z.string(),
+					licenciaUrl: opcional(z.string().url()),
+					/** Página del archivo en Commons, con la licencia completa. */
+					url: z.string().url(),
+				})
+				.optional(),
+		}),
+});
+
+export const collections = { mentira, promesa, perfil };

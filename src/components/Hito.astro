@@ -1,68 +1,127 @@
 ---
+import Avatar from '@components/Avatar.astro';
+import ExtLink from '@components/ExtLink.astro';
 import Fecha from '@components/Fecha.astro';
 import Media from '@components/Media.astro';
 import type { Hito } from '@utils/mentiras';
+import { getPerfil, nombreSinCargo } from '@utils/perfiles';
 
 interface Props {
 	hito: Hito;
+	/** Nivel del encabezado con el nombre de quien habla. */
+	nivel?: 3 | 4;
+	/** Cita en grande (paneles Antes/Después) o normal (cronología). */
+	grande?: boolean;
 }
 
-const { hito } = Astro.props;
+const { hito, nivel = 3, grande = false } = Astro.props;
 const { fecha, quien, cita, hecho, contexto, fuente, video } = hito;
+const perfil = await getPerfil(quien);
+const nombre = nombreSinCargo(quien);
+const cargo = quien.slice(nombre.length).trim().replace(/^\((.*)\)$/, '$1');
+const Nombre = `h${nivel}` as 'h3' | 'h4';
 ---
 
-<div class="hito">
+<div class:list={['hito', { 'hito--grande': grande }]}>
 	<p class="fecha"><Fecha fecha={fecha} /></p>
-	<h3 class="quien h5">{quien}</h3>
-	<p class="contexto">{contexto}</p>
-	{
-		video && (
-			<Media id={video.id} title={video.titulo ?? cita ?? hecho ?? quien} start={video.start} end={video.end} />
-		)
-	}
+	<div class="autor">
+		<Avatar nombre={nombre} perfil={perfil} size={grande ? 'md' : 'sm'} />
+		<div>
+			<Nombre class="nombre">{nombre}</Nombre>
+			{cargo && <p class="cargo">{cargo}</p>}
+		</div>
+	</div>
 	{
 		cita && (
 			<blockquote cite={fuente.url}>
-				<p>«{cita}»</p>
+				<p class="cita">«{cita}»</p>
 			</blockquote>
 		)
 	}
 	{hecho && <p class="hecho">{hecho}</p>}
-	<p class="fuente">
-		Fuente: <a href={fuente.url} rel="noopener noreferrer" target="_blank">{fuente.medio}</a>
-		{fuente.archivo && (
-			<>
-				· <a href={fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>
-			</>
-		)}
-	</p>
+	{video && <Media id={video.id} title={video.titulo ?? cita ?? hecho ?? quien} start={video.start} end={video.end} />}
+	<dl class="detalles">
+		<div>
+			<dt>Contexto</dt>
+			<dd>{contexto}</dd>
+		</div>
+		<div>
+			<dt>Fuente</dt>
+			<dd>
+				<ExtLink href={fuente.url}>{fuente.medio}</ExtLink>
+				{
+					fuente.archivo && (
+						<>
+							{' · '}
+							<ExtLink href={fuente.archivo}>copia archivada</ExtLink>
+						</>
+					)
+				}
+			</dd>
+		</div>
+	</dl>
 </div>
 
-<style>
+<style lang="scss">
 	.hito {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-xs);
+		gap: var(--space-4);
 	}
 	.fecha {
-		font-weight: 600;
-		color: var(--accent-dark);
+		font-size: var(--text-sm);
+		font-weight: var(--weight-semibold);
+		color: var(--color-text-muted);
 	}
-	.quien {
-		margin: 0;
+	.autor {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
 	}
-	.contexto,
-	.fuente {
-		font-size: 14px;
-		color: rgb(var(--gray));
+	.nombre {
+		font-size: var(--text-base);
+		font-weight: var(--weight-semibold);
+		letter-spacing: 0;
+		line-height: var(--leading-snug);
+	}
+	.cargo {
+		font-size: var(--text-sm);
+		color: var(--color-text-muted);
+		line-height: var(--leading-snug);
 	}
 	blockquote {
-		display: block;
-		padding-left: var(--spacing-md);
-		border-left: 4px solid var(--accent);
-		font-style: italic;
+		margin: 0;
 	}
-	p {
+	.cita {
+		font-family: var(--font-serif);
+		font-size: var(--text-lg);
+		font-style: italic;
+		line-height: 1.5;
+	}
+	.hito--grande .cita {
+		font-size: var(--text-xl);
+		line-height: 1.45;
+	}
+	.hecho {
+		font-size: var(--text-md);
+	}
+	.detalles {
+		display: grid;
+		gap: var(--space-2);
+		padding-top: var(--space-4);
+		border-top: 1px solid var(--color-border);
+		font-size: var(--text-sm);
+
+		> div {
+			display: grid;
+			grid-template-columns: 5.5rem 1fr;
+			gap: var(--space-2);
+		}
+	}
+	dt {
+		color: var(--color-text-muted);
+	}
+	dd {
 		margin: 0;
 	}
 </style>

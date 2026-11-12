@@ -1,0 +1,33 @@
+---
+/**
+ * Enlace a una web externa. Se abre en otra pestaña y lo anuncia
+ * con un icono y un texto para lectores de pantalla.
+ */
+interface Props {
+	href: string;
+	class?: string;
+}
+
+const { href, class: className } = Astro.props;
+---
+
+<a href={href} class:list={['ext', className]} target="_blank" rel="noopener noreferrer"
+	><slot /><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"
+		><path
+			d="M6.5 3.5h-3v9h9v-3M9.5 2.5h4v4M13.5 2.5 7.5 8.5"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.6"
+			stroke-linecap="round"
+			stroke-linejoin="round"></path></svg
+	><span class="sr-only"> (se abre en otra pestaña)</span></a
+>
+
+<style>
+	.ext svg {
+		display: inline-block;
+		margin-left: 0.25em;
+		vertical-align: -0.05em;
+		opacity: 0.75;
+	}
+</style>

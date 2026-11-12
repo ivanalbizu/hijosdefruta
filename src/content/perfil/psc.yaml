@@ -1,0 +1,11 @@
+nombre: PSC
+tipo: partido
+nombreCompleto: Partit dels Socialistes de Catalunya
+color: '#e30613'
+wikidata: Q2055003
+imagen:
+  archivo: ../../assets/perfiles/psc.png
+  commons: Logo PSC oficial 2021.svg
+  autor: Partit dels Socialistes de Catalunya
+  licencia: Public domain
+  url: https://commons.wikimedia.org/wiki/File:Logo_PSC_oficial_2021.svg

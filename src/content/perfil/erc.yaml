@@ -1,0 +1,11 @@
+nombre: ERC
+tipo: partido
+nombreCompleto: Esquerra Republicana de Catalunya
+color: '#f5a623'
+wikidata: Q150068
+imagen:
+  archivo: ../../assets/perfiles/erc.png
+  commons: ERC logo 2025.svg
+  autor: Esquerra Republicana de Catalunya
+  licencia: Public domain
+  url: https://commons.wikimedia.org/wiki/File:ERC_logo_2025.svg

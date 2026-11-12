@@ -3,7 +3,8 @@ import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
 import { TIPOS } from "../consts";
-import { formatFecha, type Hito, type Mentira } from "@utils/mentiras";
+import { formatFecha, recortar, resumenHito, type Hito, type Mentira } from "@utils/mentiras";
+import { nombreSinCargo as nombre } from "@utils/perfiles";
 
 export const OG_WIDTH = 1200;
 export const OG_HEIGHT = 630;
@@ -39,16 +40,6 @@ const cargarFuentes = () =>
     }))
   ));
 
-/** Recorta en el último espacio antes de `max` caracteres y añade "…". */
-function recortar(texto: string, max: number) {
-  if (texto.length <= max) return texto;
-  const corte = texto.slice(0, max);
-  return corte.slice(0, corte.lastIndexOf(" ")).replace(/[\s,.;:]+$/, "") + "…";
-}
-
-/** "Pedro Sánchez (candidato del PSOE)" → "Pedro Sánchez". */
-const nombre = (quien: string) => quien.split(" (")[0];
-
 type Nodo = { type: string; props: { style?: Record<string, unknown>; children?: unknown } };
 const div = (style: Record<string, unknown>, children?: unknown): Nodo => ({
   type: "div",
@@ -56,8 +47,7 @@ const div = (style: Record<string, unknown>, children?: unknown): Nodo => ({
 });
 
 function columna(etiqueta: string, color: string, hito: Hito): Nodo {
-  const fragmento = recortar(hito.destacado ?? hito.cita ?? hito.hecho ?? "", 185);
-  const texto = hito.cita ? `«${fragmento}»` : fragmento;
+  const texto = resumenHito(hito, 185);
   return div({ flex: 1, flexDirection: "column", borderTop: `6px solid ${color}`, paddingTop: 18 }, [
     div({ fontSize: 20, fontWeight: 700, letterSpacing: 2, color }, `${etiqueta} · ${formatFecha(hito.fecha).toUpperCase()}`),
     div({ fontSize: 29, lineHeight: 1.3, marginTop: 14, color: COLORES.texto }, texto),

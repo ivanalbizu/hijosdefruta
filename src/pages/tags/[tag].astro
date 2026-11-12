@@ -1,7 +1,12 @@
 ---
-import Default from '@layouts/Default.astro';
+import Base from '@layouts/Base.astro';
+import Avatar from '@components/Avatar.astro';
+import ExtLink from '@components/ExtLink.astro';
 import MentiraCard from '@components/MentiraCard.astro';
+import TipoBadge from '@components/TipoBadge.astro';
 import { getMentiras, getMentirasByTag, getTags, type Mentira, type TagInfo } from '@utils/mentiras';
+import { getPerfiles } from '@utils/perfiles';
+import { TIPOS } from '../../consts';
 
 export async function getStaticPaths() {
   const mentiras = await getMentiras();
@@ -17,10 +22,222 @@ interface Props {
 }
 
 const { tag, mentiras } = Astro.props;
+const perfiles = await getPerfiles();
+const perfil = perfiles.get(tag.slug);
+const datos = perfil?.data;
+const esPartido = datos?.tipo === 'partido';
+const partido = datos?.partido ? perfiles.get(datos.partido) : undefined;
+
+// Personas de este partido que tienen casos en la web.
+const tagsConCasos = new Set(getTags(await getMentiras()).map(t => t.slug));
+const miembros = esPartido
+  ? [...perfiles.values()].filter(p => p.data.partido === tag.slug && tagsConCasos.has(p.id))
+  : [];
+
+const porTipo = (Object.keys(TIPOS) as (keyof typeof TIPOS)[])
+  .map(tipo => ({ tipo, n: mentiras.filter(m => m.data.tipo === tipo).length }))
+  .filter(({ n }) => n > 0);
+
+const casos = `${mentiras.length} ${mentiras.length === 1 ? 'caso' : 'casos'}`;
+const imagen = datos?.imagen;
 ---
 
-<Default title={`Mentiras: ${tag.name}`} description={`Mentiras y cambios de opinión de ${tag.name}`}>
-  <ul>
-    {mentiras.map(mentira => <MentiraCard mentira={mentira} />)}
-  </ul>
-</Default>
+<Base title={`${tag.name}: ${casos}`} description={`Mentiras y cambios de opinión de ${tag.name}, con sus fuentes`}>
+  <div class="container page">
+    <nav class="migas meta" aria-label="Migas de pan">
+      <a href="/tags/">Políticos y partidos</a>
+    </nav>
+
+    <header class="perfil surface" style={datos?.color ? `--color-partido:${datos.color}` : undefined}>
+      <Avatar
+        nombre={tag.name}
+        perfil={perfil}
+        size="xl"
+        alt={imagen ? (esPartido ? `Logotipo de ${tag.name}` : `Fotografía de ${tag.name}`) : ''}
+      />
+      <div class="datos">
+        <p class="eyebrow">{esPartido ? 'Partido' : 'Persona'}</p>
+        <h1>{tag.name}</h1>
+        {datos?.nombreCompleto && <p class="completo">{datos.nombreCompleto}</p>}
+        {
+          partido && (
+            <p class="partido">
+              <a href={`/tags/${partido.id}/`}>
+                <Avatar nombre={partido.data.nombre} perfil={partido} size="xs" />
+                {partido.data.nombre}
+              </a>
+            </p>
+          )
+        }
+        <p class="resumen">
+          <strong>{casos}</strong>
+          <span class="tipos">
+            {
+              porTipo.map(({ tipo, n }) => (
+                <span class="tipo">
+                  <TipoBadge tipo={tipo} /> <span class="n">{n}</span>
+                </span>
+              ))
+            }
+          </span>
+        </p>
+      </div>
+      {
+        imagen && (
+          <p class="credito">
+            {esPartido ? 'Logo' : 'Foto'}: {imagen.autor} ·{' '}
+            {imagen.licenciaUrl ? <ExtLink href={imagen.licenciaUrl}>{imagen.licencia}</ExtLink> : imagen.licencia} ·{' '}
+            <ExtLink href={imagen.url}>Wikimedia Commons</ExtLink>
+          </p>
+        )
+      }
+    </header>
+
+    {
+      miembros.length > 0 && (
+        <section class="miembros" aria-labelledby="titulo-miembros">
+          <h2 id="titulo-miembros" class="eyebrow">
+            Personas de {tag.name} con casos
+          </h2>
+          <ul class="lista-miembros">
+            {miembros.map(m => (
+              <li>
+                <a href={`/tags/${m.id}/`}>
+                  <Avatar nombre={m.data.nombre} perfil={m} size="sm" />
+                  {m.data.nombre}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="section" aria-labelledby="titulo-casos">
+      <h2 id="titulo-casos" class="h3 titulo-casos">Casos</h2>
+      <ul class="grid-cards">
+        {
+          mentiras.map(mentira => (
+            <li>
+              <MentiraCard mentira={mentira} nivel={3} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .migas {
+    margin-bottom: var(--space-6);
+    a {
+      color: var(--color-text-muted);
+      &::before {
+        content: '← ';
+      }
+    }
+  }
+
+  .perfil {
+    position: relative;
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+    padding: clamp(var(--space-6), 4vw, var(--space-10));
+    overflow: hidden;
+
+    /* Franja con el color del partido: solo decorativa. */
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: var(--color-partido, var(--color-accent));
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+  .datos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  .completo {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+  .partido a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .resumen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    margin-top: var(--space-2);
+  }
+  .tipos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+  }
+  .tipo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+  .n {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    font-variant-numeric: tabular-nums;
+  }
+  .credito {
+    grid-column: 1 / -1;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .miembros {
+    margin-top: var(--space-8);
+    h2 {
+      margin-bottom: var(--space-3);
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      min-height: var(--target-min);
+      padding: var(--space-1) var(--space-4) var(--space-1) var(--space-1);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-weight: var(--weight-medium);
+      text-decoration: none;
+      &:hover {
+        border-color: var(--color-border-control);
+      }
+    }
+  }
+  .titulo-casos {
+    margin-bottom: var(--space-6);
+  }
+</style>

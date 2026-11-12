@@ -20,76 +20,42 @@ const { hitos } = Astro.props;
 </ol>
 
 <style lang="scss">
-	@use '../styles/breakpoints' as *;
-
-	$dot: 12px;
-	$line: 2px;
+	$punto: 14px;
+	$linea: 2px;
 
 	.cronologia {
 		position: relative;
 		display: grid;
-		gap: var(--spacing-lg);
-		padding-left: var(--spacing-lg);
+		gap: var(--space-6);
+		padding-left: var(--space-8);
 
 		&::before {
 			content: '';
 			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: calc(($dot - $line) / 2);
-			width: $line;
-			background: #c5c5c5;
+			top: 6px;
+			bottom: 6px;
+			left: calc(($punto - $linea) / 2);
+			width: $linea;
+			background: var(--color-border-strong);
 		}
 	}
-
 	li {
 		position: relative;
+		padding: var(--space-5);
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
 
 		&::before {
 			content: '';
 			position: absolute;
-			top: 4px;
-			left: calc(-1 * var(--spacing-lg));
-			width: $dot;
-			height: $dot;
+			top: calc(var(--space-5) + 4px);
+			left: calc(-1 * var(--space-8));
+			width: $punto;
+			height: $punto;
 			border-radius: 50%;
-			background: var(--accent);
-			box-shadow: 0 0 0 3px rgba(35, 55, 255, 0.2);
-		}
-	}
-
-	@include breakpoint(md) {
-		.cronologia {
-			padding-left: 0;
-			gap: 0;
-
-			&::before {
-				left: calc(50% - $line / 2);
-			}
-		}
-
-		li {
-			width: 50%;
-			padding: var(--spacing-sm) 40px;
-
-			&:nth-child(odd) {
-				text-align: right;
-
-				&::before {
-					left: auto;
-					right: calc(-1 * $dot / 2);
-					top: calc(var(--spacing-sm) + 4px);
-				}
-			}
-
-			&:nth-child(even) {
-				margin-left: 50%;
-
-				&::before {
-					left: calc(-1 * $dot / 2);
-					top: calc(var(--spacing-sm) + 4px);
-				}
-			}
+			background: var(--color-surface);
+			border: 3px solid var(--color-accent);
 		}
 	}
 </style>

@@ -8,5 +8,5 @@ const site = process.env.SITE_URL || process.env.URL || 'https://hijosdefruta.ne
 // https://astro.build/config
 export default defineConfig({
 	site,
-	integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap({ filter: page => !page.includes('/sistema-diseno') })],
 });

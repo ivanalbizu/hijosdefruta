@@ -1,0 +1,11 @@
+nombre: EH Bildu
+tipo: partido
+nombreCompleto: Euskal Herria Bildu
+color: '#a8c200'
+wikidata: Q1029761
+imagen:
+  archivo: ../../assets/perfiles/eh-bildu.png
+  commons: Logo de EH Bildu (2023).svg
+  autor: EH Bildu
+  licencia: Public domain
+  url: https://commons.wikimedia.org/wiki/File:Logo_de_EH_Bildu_(2023).svg

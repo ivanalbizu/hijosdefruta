@@ -1,0 +1,11 @@
+nombre: PSOE
+tipo: partido
+nombreCompleto: Partido Socialista Obrero Español
+color: '#e30613'
+wikidata: Q138198
+imagen:
+  archivo: ../../assets/perfiles/psoe.png
+  commons: Logo PSOE 41 Congreso.svg
+  autor: Partido Socialista Obrero Español
+  licencia: Public domain
+  url: https://commons.wikimedia.org/wiki/File:Logo_PSOE_41_Congreso.svg

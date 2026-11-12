@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+import { iniciales, type Perfil } from '@utils/perfiles';
+
+/**
+ * Foto (persona, circular) o logo (partido, cuadrado sobre blanco) de un perfil.
+ * Sin perfil o sin imagen muestra las iniciales.
+ * Por defecto es decorativa (alt=""), porque siempre va junto al nombre.
+ */
+interface Props {
+	nombre: string;
+	perfil?: Perfil;
+	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+	/** Texto alternativo cuando la imagen aporta información (p. ej. en la ficha). */
+	alt?: string;
+	class?: string;
+}
+
+const PX = { xs: 24, sm: 32, md: 48, lg: 72, xl: 128 } as const;
+
+const { nombre, perfil, size = 'sm', alt = '', class: className } = Astro.props;
+const px = PX[size];
+const tipo = perfil?.data.tipo ?? 'persona';
+const imagen = perfil?.data.imagen;
+// Los logos son apaisados: el contenedor de un partido es 1,5 veces más ancho que alto.
+const ancho = tipo === 'partido' ? Math.round(px * 1.5) : px;
+---
+
+<span class:list={['avatar', `avatar--${size}`, `avatar--${tipo}`, className]} style={`--avatar-size:${px}px`}>
+	{
+		imagen ? (
+			<Image
+				src={imagen.archivo}
+				alt={alt}
+				width={ancho}
+				densities={[1, 2]}
+				loading="lazy"
+				decoding="async"
+			/>
+		) : (
+			<span class="iniciales" aria-hidden="true">
+				{iniciales(nombre)}
+			</span>
+		)
+	}
+</span>
+
+<style>
+	.avatar {
+		flex: none;
+		display: inline-grid;
+		place-items: center;
+		width: var(--avatar-size);
+		height: var(--avatar-size);
+		overflow: hidden;
+		background: var(--color-surface-sunken);
+		box-shadow: inset 0 0 0 1px rgb(0 0 0 / 8%);
+	}
+	.avatar--persona {
+		border-radius: var(--radius-full);
+	}
+	.avatar--persona img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 15%;
+	}
+	/* Los logos van sobre blanco también en modo oscuro: es su fondo original. */
+	.avatar--partido {
+		width: calc(var(--avatar-size) * 1.5);
+		border-radius: calc(var(--avatar-size) * 0.18);
+		background: #fff;
+		padding: calc(var(--avatar-size) * 0.1);
+	}
+	.avatar--partido img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	.iniciales {
+		font-size: calc(var(--avatar-size) * 0.38);
+		font-weight: var(--weight-semibold);
+		color: var(--color-text-muted);
+		line-height: 1;
+	}
+</style>

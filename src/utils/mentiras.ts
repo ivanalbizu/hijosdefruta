@@ -80,3 +80,23 @@ export function getTags(mentiras: Mentira[]): TagInfo[] {
 
 export const getMentirasByTag = (mentiras: Mentira[], slug: string) =>
   mentiras.filter(({ data }) => data.tags.some(tag => slugifyStr(tag) === slug));
+
+/** Recorta en el último espacio antes de `max` caracteres y añade "…". */
+export function recortar(texto: string, max: number) {
+  if (texto.length <= max) return texto;
+  const corte = texto.slice(0, max);
+  return corte.slice(0, corte.lastIndexOf(" ")).replace(/[\s,.;:]+$/, "") + "…";
+}
+
+/**
+ * Lo esencial de un hito para tarjetas e imágenes: el `destacado` o la cita (o el
+ * hecho) recortada. Las citas van entre comillas latinas; los hechos, sin ellas.
+ */
+export function resumenHito(hito: Hito, max: number) {
+  const fragmento = recortar(hito.destacado ?? hito.cita ?? hito.hecho ?? "", max);
+  return hito.cita ? `«${fragmento}»` : fragmento;
+}
+
+/** Número de fuentes distintas (por URL) de un caso. */
+export const contarFuentes = (mentira: Mentira) =>
+  new Set(getHitos(mentira).map(h => h.fuente.url)).size;

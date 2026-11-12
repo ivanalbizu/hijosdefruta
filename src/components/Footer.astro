@@ -1,15 +1,95 @@
 ---
-const today = new Date();
+import Logo from '@components/Logo.astro';
+import { SITE_TITLE } from '../consts';
+
+const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
+const anio = new Date().getFullYear();
 ---
 
-<footer>
-	🤥 {today.getFullYear()} Miénteme.
+<footer class="site-footer">
+	<div class="container rejilla">
+		<div class="marca">
+			<p class="nombre"><Logo size={26} /> {SITE_TITLE}</p>
+			<p class="meta">
+				Lo que dijeron y lo que hicieron, con la cita literal, la fecha y la fuente de cada declaración.
+			</p>
+		</div>
+		<nav aria-labelledby="pie-secciones">
+			<h2 id="pie-secciones" class="eyebrow">Secciones</h2>
+			<ul>
+				<li><a href="/mentira/">Casos</a></li>
+				<li><a href="/tags/">Políticos y partidos</a></li>
+				<li><a href="/promesas/">Promesas</a></li>
+			</ul>
+		</nav>
+		<nav aria-labelledby="pie-proyecto">
+			<h2 id="pie-proyecto" class="eyebrow">Proyecto</h2>
+			<ul>
+				<li><a href="/metodologia/">Metodología</a></li>
+				<li><a href="/metodologia/#correcciones">Correcciones</a></li>
+				<li><a href="/about/">Sobre la web</a></li>
+				<li><a href="/creditos/">Créditos de imágenes</a></li>
+				<li><a href="/sistema-diseno/">Sistema de diseño</a></li>
+				<li><a href="/rss.xml">RSS</a></li>
+				<li><a href={REPO}>Código en GitHub</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container legal meta">
+		<p>© {anio} {SITE_TITLE}. Fotos y logos de Wikimedia Commons, con su autor y licencia en cada perfil.</p>
+	</div>
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
+
+<style lang="scss">
+	@use '../styles/breakpoints' as *;
+
+	.site-footer {
+		margin-top: var(--space-16);
+		padding-block: var(--space-12) var(--space-8);
+		background: var(--color-surface);
+		border-top: 1px solid var(--color-border);
+	}
+	.rejilla {
+		display: grid;
+		gap: var(--space-8);
+
+		@include breakpoint(md) {
+			grid-template-columns: 2fr 1fr 1fr;
+		}
+	}
+	.nombre {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		margin-bottom: var(--space-3);
+		font-weight: var(--weight-bold);
+	}
+	.marca .meta {
+		max-width: 36ch;
+	}
+	h2 {
+		margin-bottom: var(--space-2);
+		font-size: var(--text-xs);
+		letter-spacing: 0.08em;
+	}
+	ul {
+		display: grid;
+	}
+	nav a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2.25rem;
+		font-size: var(--text-sm);
+		color: var(--color-text);
+		text-decoration: none;
+		&:hover {
+			color: var(--color-accent);
+			text-decoration: underline;
+		}
+	}
+	.legal {
+		margin-top: var(--space-10);
+		padding-top: var(--space-6);
+		border-top: 1px solid var(--color-border);
 	}
 </style>

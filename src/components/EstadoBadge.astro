@@ -1,0 +1,41 @@
+---
+import { ESTADOS } from '../consts';
+
+interface Props {
+	estado: keyof typeof ESTADOS;
+}
+
+const { estado } = Astro.props;
+---
+
+<span class="badge" data-estado={estado}>
+	<span class="sr-only">Estado:</span>
+	{ESTADOS[estado]}
+</span>
+
+<style>
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.2em 0.65em;
+		border-radius: var(--radius-full);
+		font-size: var(--text-xs);
+		font-weight: var(--weight-semibold);
+		line-height: 1.5;
+		white-space: nowrap;
+		color: var(--estado-pendiente-fg);
+		background: var(--estado-pendiente-bg);
+	}
+	[data-estado='cumplida'] {
+		color: var(--estado-cumplida-fg);
+		background: var(--estado-cumplida-bg);
+	}
+	[data-estado='incumplida'] {
+		color: var(--estado-incumplida-fg);
+		background: var(--estado-incumplida-bg);
+	}
+	[data-estado='parcial'] {
+		color: var(--estado-parcial-fg);
+		background: var(--estado-parcial-bg);
+	}
+</style>

@@ -1,5 +1,7 @@
 ---
 import Default from '@layouts/Default.astro';
+import ExtLink from '@components/ExtLink.astro';
+import TipoBadge from '@components/TipoBadge.astro';
 import { TIPOS } from '../consts';
 
 const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
@@ -7,23 +9,21 @@ const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
 
 <Default
   title="Metodología"
-  description="Cómo se seleccionan, documentan y corrigen las mentiras y cambios de opinión recogidos en hijosdefruta">
-  <div class="content-centered">
-    <p>
-      Cada caso compara lo que un político dijo o hizo <strong>antes</strong> con lo que dijo o hizo
-      <strong>después</strong>. Solo se publica si las dos partes se pueden comprobar con una fuente
-      enlazada.
-    </p>
+  description="Cómo se seleccionan, documentan y corrigen las mentiras y cambios de opinión recogidos en hijosdefruta"
+  eyebrow="Cómo trabajamos"
+  lead="Cada caso compara lo que un político dijo o hizo antes con lo que dijo o hizo después. Solo se publica si las dos partes se pueden comprobar con una fuente enlazada."
+  ancho="narrow">
+  <div class="prose">
 
     <h2>Tipos de caso</h2>
     <p>No todo es una mentira. Cada caso se clasifica según lo que las pruebas permiten afirmar:</p>
-    <dl>
+    <dl class="tipos">
       {
         Object.entries(TIPOS).map(([id, tipo]) => (
-          <>
-            <dt id={id}>{tipo.nombre}</dt>
+          <div id={id}>
+            <dt><TipoBadge tipo={id as keyof typeof TIPOS} enlace={false} /></dt>
             <dd>{tipo.descripcion}</dd>
-          </>
+          </div>
         ))
       }
     </dl>
@@ -41,7 +41,7 @@ const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
       </li>
       <li>
         Siempre que es posible se enlaza una copia en
-        <a href="https://web.archive.org/" rel="noopener noreferrer" target="_blank">Wayback Machine</a>,
+        <ExtLink href="https://web.archive.org/">Wayback Machine</ExtLink>,
         por si el original desaparece.
       </li>
       <li>
@@ -53,30 +53,40 @@ const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
     <h2 id="correcciones">Correcciones</h2>
     <p>
       Cada caso indica la fecha de su última revisión. Si encuentras un error, una cita fuera de
-      contexto o un enlace roto, <a href={`${REPO}/issues/new`} rel="noopener noreferrer" target="_blank">abre
-      una incidencia en GitHub</a> con la fuente que lo demuestre. Los cambios quedan registrados en el
-      <a href={`${REPO}/commits/main`} rel="noopener noreferrer" target="_blank">historial público del
-      proyecto</a>.
+      contexto o un enlace roto, <ExtLink href={`${REPO}/issues/new`}>abre
+      una incidencia en GitHub</ExtLink> con la fuente que lo demuestre. Los cambios quedan registrados en el
+      <ExtLink href={`${REPO}/commits/main`}>historial público del
+      proyecto</ExtLink>.
     </p>
   </div>
 </Default>
 
 <style>
-  h2 {
-    margin-top: var(--spacing-lg);
+  .prose > h2:first-child {
+    margin-top: 0;
   }
-  ul {
-    list-style: disc;
-    padding-left: var(--spacing-lg);
+  .tipos {
+    display: grid;
+    gap: var(--space-3);
   }
-  li + li {
-    margin-top: var(--spacing-xs);
+  .tipos > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
   }
-  dt {
-    font-weight: 600;
-    margin-top: var(--spacing-sm);
+  .tipos > div:target {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
   }
-  dd {
-    margin-left: var(--spacing-md);
+  .tipos dt {
+    margin: 0;
+  }
+  #correcciones {
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
   }
 </style>

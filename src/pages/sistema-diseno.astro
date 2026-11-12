@@ -1,0 +1,291 @@
+---
+import Default from '@layouts/Default.astro';
+import Avatar from '@components/Avatar.astro';
+import EstadoBadge from '@components/EstadoBadge.astro';
+import ExtLink from '@components/ExtLink.astro';
+import Logo from '@components/Logo.astro';
+import MentiraCard from '@components/MentiraCard.astro';
+import PerfilCard from '@components/PerfilCard.astro';
+import Tags from '@components/Tags.astro';
+import TipoBadge from '@components/TipoBadge.astro';
+import { ESTADOS, TIPOS } from '../consts';
+import { getMentiras, getTags } from '@utils/mentiras';
+import { getPerfiles } from '@utils/perfiles';
+
+const mentiras = await getMentiras();
+const ejemplo = mentiras[0];
+const perfiles = await getPerfiles();
+const tag = getTags(mentiras)[0];
+
+const colores = [
+  ['--color-bg', 'Fondo de página'],
+  ['--color-surface', 'Superficie (tarjetas)'],
+  ['--color-surface-sunken', 'Superficie hundida'],
+  ['--color-border', 'Borde'],
+  ['--color-border-control', 'Borde de controles (≥ 3:1)'],
+  ['--color-text', 'Texto'],
+  ['--color-text-muted', 'Texto secundario'],
+  ['--color-accent', 'Acento / enlaces'],
+  ['--color-antes', 'Antes'],
+  ['--color-antes-soft', 'Antes (fondo)'],
+  ['--color-despues', 'Después'],
+  ['--color-despues-soft', 'Después (fondo)'],
+];
+const textos = [
+  ['--text-4xl', 'h1'],
+  ['--text-3xl', 'h2'],
+  ['--text-2xl', 'h3'],
+  ['--text-xl', 'h4 / títulos de tarjeta'],
+  ['--text-lg', 'Entradilla, citas'],
+  ['--text-md', 'Texto largo'],
+  ['--text-base', 'Texto base'],
+  ['--text-sm', 'Metadatos'],
+  ['--text-xs', 'Etiquetas'],
+];
+const espacios = ['1', '2', '3', '4', '6', '8', '12', '16'];
+---
+
+<Default
+  title="Sistema de diseño"
+  description="Tokens y componentes de la interfaz de hijosdefruta"
+  eyebrow="Interno"
+  lead="Tokens y componentes con los que se construye la web. Los componentes solo usan tokens semánticos, así que el modo oscuro y los cambios de marca se hacen en un único sitio: src/styles/global.scss."
+  noindex>
+  <nav class="indice surface" aria-label="Secciones del sistema de diseño">
+    <ul>
+      <li><a href="#principios">Principios</a></li>
+      <li><a href="#color">Color</a></li>
+      <li><a href="#tipografia">Tipografía</a></li>
+      <li><a href="#espaciado">Espaciado y forma</a></li>
+      <li><a href="#componentes">Componentes</a></li>
+      <li><a href="#accesibilidad">Accesibilidad</a></li>
+    </ul>
+  </nav>
+
+  <section id="principios" class="bloque">
+    <h2 class="h3">Principios</h2>
+    <ul class="principios">
+      <li><strong>La prueba primero.</strong> La cita literal y su fuente tienen más peso visual que cualquier adorno.</li>
+      <li><strong>Antes en azul, después en rojo.</strong> El par de colores se usa siempre con el mismo significado y nunca como única pista: va acompañado de la etiqueta escrita.</li>
+      <li><strong>Sobrio y legible.</strong> Inter para la interfaz, Source Serif 4 en cursiva solo para las citas.</li>
+      <li><strong>Accesible por defecto.</strong> Contraste AA en claro y oscuro, foco visible y objetivos táctiles de al menos 44 px en la navegación y los botones.</li>
+    </ul>
+  </section>
+
+  <section id="color" class="bloque">
+    <h2 class="h3">Color</h2>
+    <p class="meta">Tokens semánticos. Cambian solos en modo oscuro (<code>prefers-color-scheme</code>).</p>
+    <ul class="muestras">
+      {
+        colores.map(([token, uso]) => (
+          <li>
+            <span class="muestra" style={`background: var(${token})`} />
+            <code>{token}</code>
+            <span class="meta">{uso}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h3 class="h4 sub">Tipos de caso</h3>
+    <ul class="fila">
+      {(Object.keys(TIPOS) as (keyof typeof TIPOS)[]).map(t => <li><TipoBadge tipo={t} enlace={false} /></li>)}
+    </ul>
+    <h3 class="h4 sub">Estados de promesa</h3>
+    <ul class="fila">
+      {(Object.keys(ESTADOS) as (keyof typeof ESTADOS)[]).map(e => <li><EstadoBadge estado={e} /></li>)}
+    </ul>
+  </section>
+
+  <section id="tipografia" class="bloque">
+    <h2 class="h3">Tipografía</h2>
+    <ul class="escala">
+      {
+        textos.map(([token, uso]) => (
+          <li>
+            <span class="meta">
+              <code>{token}</code> · {uso}
+            </span>
+            <span style={`font-size: var(${token}); line-height: 1.2; font-weight: ${token.match(/[234]xl|-xl/) ? 700 : 400}`}>
+              Lo que dijeron, lo que hicieron
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <h3 class="h4 sub">Cita</h3>
+    <blockquote class="surface ejemplo-cita">
+      <p class="cita">«Las citas van en Source Serif 4 cursiva, entre comillas latinas y con la fuente enlazada.»</p>
+    </blockquote>
+  </section>
+
+  <section id="espaciado" class="bloque">
+    <h2 class="h3">Espaciado y forma</h2>
+    <p class="meta">Escala de 4 px. Radios: 4, 8 y 14 px, y completo para pastillas.</p>
+    <ul class="espacios">
+      {
+        espacios.map(n => (
+          <li>
+            <span class="barra" style={`width: var(--space-${n})`} />
+            <code>--space-{n}</code>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="fila radios">
+      {['sm', 'md', 'lg', 'full'].map(r => <li style={`border-radius: var(--radius-${r})`}><code>--radius-{r}</code></li>)}
+    </ul>
+  </section>
+
+  <section id="componentes" class="bloque">
+    <h2 class="h3">Componentes</h2>
+
+    <h3 class="h4 sub">Marca</h3>
+    <div class="fila"><Logo size={48} /><Logo size={32} /><Logo size={20} /></div>
+
+    <h3 class="h4 sub">Botones y enlaces</h3>
+    <div class="fila">
+      <a class="btn btn--primary" href="#componentes">Principal</a>
+      <a class="btn btn--secondary" href="#componentes">Secundario</a>
+      <a class="link-arrow" href="#componentes">Enlace con flecha</a>
+      <ExtLink href="https://commons.wikimedia.org/">Enlace externo</ExtLink>
+    </div>
+
+    <h3 class="h4 sub">Avatar</h3>
+    <p class="meta">Foto circular para personas; logo apaisado sobre blanco para partidos; iniciales si no hay imagen.</p>
+    <div class="fila">
+      {(['xs', 'sm', 'md', 'lg', 'xl'] as const).map(s => <Avatar nombre="Pedro Sánchez" perfil={perfiles.get('pedro-sanchez')} size={s} />)}
+    </div>
+    <div class="fila">
+      {(['xs', 'sm', 'md', 'lg'] as const).map(s => <Avatar nombre="PSOE" perfil={perfiles.get('psoe')} size={s} />)}
+      <Avatar nombre="Sin Imagen" size="md" />
+    </div>
+
+    <h3 class="h4 sub">Tags</h3>
+    <Tags tags={['PSOE', 'Pedro Sánchez', 'Podemos', 'Sin perfil']} label="Ejemplo de tags" />
+
+    <h3 class="h4 sub">Tarjeta de perfil</h3>
+    <div class="ancho-tarjeta">
+      {tag && <PerfilCard tag={tag} perfil={perfiles.get(tag.slug)} />}
+    </div>
+
+    <h3 class="h4 sub">Tarjeta de caso</h3>
+    <div class="ancho-tarjeta">{ejemplo && <MentiraCard mentira={ejemplo} nivel={4} />}</div>
+  </section>
+
+  <section id="accesibilidad" class="bloque prose">
+    <h2 class="h3">Accesibilidad</h2>
+    <ul>
+      <li>Enlace «Saltar al contenido» al principio de cada página y <code>aria-current</code> en la navegación.</li>
+      <li>Foco visible de 3 px en todos los elementos interactivos (<code>:focus-visible</code>).</li>
+      <li>Parejas de texto y fondo con contraste AA (≥ 4,5:1) en modo claro y oscuro; bordes de controles ≥ 3:1.</li>
+      <li>Las tarjetas son enteras clicables, pero el enlace es el título: los lectores de pantalla no repiten «Ver más».</li>
+      <li>Los enlaces externos avisan de que se abren en otra pestaña.</li>
+      <li>Las imágenes junto a un nombre son decorativas (<code>alt=""</code>); en la ficha llevan texto alternativo y crédito.</li>
+      <li>Se respeta <code>prefers-reduced-motion</code>.</li>
+    </ul>
+  </section>
+</Default>
+
+<style lang="scss">
+  .indice {
+    padding: var(--space-3) var(--space-5);
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1) var(--space-5);
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--target-min);
+      font-weight: var(--weight-medium);
+    }
+  }
+  .bloque {
+    margin-top: var(--space-16);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+    > h2 {
+      margin-bottom: var(--space-2);
+    }
+  }
+  .sub {
+    margin: var(--space-8) 0 var(--space-3);
+    font-size: var(--text-lg);
+  }
+  code {
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.85em;
+  }
+  .principios {
+    display: grid;
+    gap: var(--space-3);
+    max-width: var(--measure);
+    margin-top: var(--space-4);
+  }
+  .muestras {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    margin-top: var(--space-6);
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+  }
+  .muestra {
+    height: 4rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    & + .fila {
+      margin-top: var(--space-4);
+    }
+  }
+  .escala {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    li {
+      display: grid;
+      gap: var(--space-1);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+  .ejemplo-cita {
+    padding: var(--space-6);
+  }
+  .espacios {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+  }
+  .barra {
+    height: 1rem;
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
+  .radios {
+    margin-top: var(--space-6);
+    li {
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-control);
+    }
+  }
+  .ancho-tarjeta {
+    max-width: 26rem;
+  }
+</style>

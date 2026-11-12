@@ -1,17 +1,26 @@
 ---
 import { getCollection } from 'astro:content';
 import Default from '@layouts/Default.astro';
+import Avatar from '@components/Avatar.astro';
+import EstadoBadge from '@components/EstadoBadge.astro';
+import ExtLink from '@components/ExtLink.astro';
 import Fecha from '@components/Fecha.astro';
-
-const ESTADOS = {
-  pendiente: 'Pendiente',
-  cumplida: 'Cumplida',
-  incumplida: 'Incumplida',
-  parcial: 'Cumplida en parte',
-} as const;
+import { getPerfil, getPerfiles, nombreSinCargo } from '@utils/perfiles';
+import { slugifyStr } from '@utils/slugify';
 
 const promesas = (await getCollection('promesa')).sort(
   (a, b) => b.data.fecha.valor.valueOf() - a.data.fecha.valor.valueOf()
+);
+const perfiles = await getPerfiles();
+
+const items = await Promise.all(
+  promesas.map(async ({ data }) => ({
+    data,
+    nombre: nombreSinCargo(data.quien),
+    cargo: data.quien.slice(nombreSinCargo(data.quien).length).trim().replace(/^\((.*)\)$/, '$1'),
+    perfil: await getPerfil(data.quien),
+    partido: perfiles.get(slugifyStr(data.partido)),
+  }))
 );
 
 // Agrupadas por campaña, de la más reciente a la más antigua.
@@ -20,93 +29,133 @@ const campanas = [...new Set(promesas.map(p => p.data.campana))];
 
 <Default
   title="Promesas"
-  description="Archivo de promesas electorales con su fuente, guardadas cuando se hicieron para poder contrastarlas después">
-  <p class="intro">
-    Promesas guardadas en el momento en que se hacen, con su fuente. Cuando se cumplan o se incumplan,
-    se actualiza su estado y, si se incumplen, pasan a ser un caso.
-  </p>
-
+  description="Archivo de promesas electorales con su fuente, guardadas cuando se hicieron para poder contrastarlas después"
+  eyebrow="Archivo"
+  lead="Promesas guardadas en el momento en que se hacen, con su fuente. Cuando se cumplan o se incumplan se actualiza su estado y, si se incumplen, pasan a ser un caso.">
   {
-    campanas.map(campana => (
-      <section>
-        <h2>{campana}</h2>
-        <ul class="promesas">
-          {promesas
-            .filter(p => p.data.campana === campana)
-            .map(({ data }) => (
+    campanas.map(campana => {
+      const lista = items.filter(i => i.data.campana === campana);
+      return (
+        <section class="campana" aria-labelledby={`campana-${slugifyStr(campana)}`}>
+          <div class="section-header">
+            <h2 id={`campana-${slugifyStr(campana)}`} class="h3">{campana}</h2>
+            <p class="meta">{lista.length} {lista.length === 1 ? 'promesa' : 'promesas'}</p>
+          </div>
+          <ul class="promesas">
+            {lista.map(({ data, nombre, cargo, perfil, partido }) => (
               <li>
-                <p class="meta">
-                  <Fecha fecha={data.fecha} /> · {data.tema} ·{' '}
-                  <span class="estado" data-estado={data.estado}>{ESTADOS[data.estado]}</span>
-                </p>
-                <p class="quien">{data.quien}</p>
-                <p class="compromiso">{data.compromiso}</p>
-                {data.cita && <blockquote>«{data.cita}»</blockquote>}
-                <p class="fuente">
-                  {data.contexto} · Fuente:{' '}
-                  <a href={data.fuente.url} rel="noopener noreferrer" target="_blank">{data.fuente.medio}</a>
-                  {data.fuente.archivo && (
-                    <>
-                      {' '}· <a href={data.fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>
-                    </>
+                <article class="promesa">
+                  <div class="cabecera">
+                    <span class="tema">{data.tema}</span>
+                    <EstadoBadge estado={data.estado} />
+                  </div>
+                  <h3 class="compromiso">{data.compromiso}</h3>
+                  {data.cita && (
+                    <blockquote cite={data.fuente.url}>
+                      <p class="cita">«{data.cita}»</p>
+                    </blockquote>
                   )}
-                  {data.caso && (
-                    <>
-                      {' '}· <a href={`/mentira/${data.caso}/`}>Ver el caso</a>
-                    </>
-                  )}
-                </p>
+                  <div class="autor">
+                    <Avatar nombre={nombre} perfil={perfil} size="sm" />
+                    <p>
+                      <span class="nombre">{nombre}</span>
+                      {partido && <span class="meta"> · {partido.data.nombre}</span>}
+                      {cargo && (
+                        <>
+                          <br />
+                          <span class="meta">{cargo}</span>
+                        </>
+                      )}
+                      <br />
+                      <span class="meta">
+                        <Fecha fecha={data.fecha} /> · {data.contexto}
+                      </span>
+                    </p>
+                  </div>
+                  <p class="pie meta">
+                    Fuente: <ExtLink href={data.fuente.url}>{data.fuente.medio}</ExtLink>
+                    {data.fuente.archivo && (
+                      <>
+                        {' · '}
+                        <ExtLink href={data.fuente.archivo}>copia archivada</ExtLink>
+                      </>
+                    )}
+                    {data.caso && (
+                      <>
+                        {' · '}
+                        <a href={`/mentira/${data.caso}/`}>Ver el caso</a>
+                      </>
+                    )}
+                  </p>
+                </article>
               </li>
             ))}
-        </ul>
-      </section>
-    ))
+          </ul>
+        </section>
+      );
+    })
   }
 </Default>
 
 <style>
-  .intro {
-    max-width: 70ch;
-    margin-bottom: var(--spacing-lg);
+  .campana + .campana {
+    margin-top: var(--space-16);
   }
   .promesas {
     display: grid;
-    gap: var(--spacing-md);
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
   }
-  li {
-    padding: var(--spacing-md);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  .promesa {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-2xs);
+    gap: var(--space-4);
+    height: 100%;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
   }
-  .meta,
-  .fuente {
-    font-size: 14px;
-    color: rgb(var(--gray));
+  .cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
   }
-  .quien {
-    font-weight: 600;
+  .tema {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .compromiso {
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    letter-spacing: 0;
   }
   blockquote {
-    display: block;
-    padding-left: var(--spacing-md);
-    border-left: 4px solid var(--accent);
-    font-style: italic;
+    padding-left: var(--space-4);
+    border-left: 3px solid var(--color-antes);
   }
-  .estado {
-    padding: 0 var(--spacing-2xs);
-    border-radius: 2px;
-    color: #fff;
-    background: #4a5568;
+  .cita {
+    font-size: var(--text-base);
   }
-  [data-estado='cumplida'] {
-    background: #1f6f3a;
+  .autor {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: auto;
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
   }
-  [data-estado='incumplida'] {
-    background: #8a1c1c;
+  .nombre {
+    font-weight: var(--weight-semibold);
   }
-  [data-estado='parcial'] {
-    background: #8a4b00;
+  .pie {
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
   }
 </style>

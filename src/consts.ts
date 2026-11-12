@@ -24,3 +24,11 @@ export const TIPOS = {
 		descripcion: 'Exigió o criticó en otros lo que después no se aplicó a sí mismo.',
 	},
 } as const;
+
+/** Estados de una promesa del archivo (/promesas). */
+export const ESTADOS = {
+	pendiente: 'Pendiente',
+	cumplida: 'Cumplida',
+	incumplida: 'Incumplida',
+	parcial: 'Cumplida en parte',
+} as const;

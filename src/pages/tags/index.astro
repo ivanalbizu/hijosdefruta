@@ -1,16 +1,47 @@
 ---
 import Default from '@layouts/Default.astro';
+import PerfilCard from '@components/PerfilCard.astro';
 import { getMentiras, getTags } from '@utils/mentiras';
+import { getPerfiles } from '@utils/perfiles';
 
 const tags = getTags(await getMentiras());
+const perfiles = await getPerfiles();
+
+const items = tags.map(tag => {
+  const perfil = perfiles.get(tag.slug);
+  return { tag, perfil, partido: perfil?.data.partido ? perfiles.get(perfil.data.partido) : undefined };
+});
+const partidos = items.filter(i => i.perfil?.data.tipo === 'partido');
+const personas = items.filter(i => i.perfil?.data.tipo !== 'partido');
 ---
 
-<Default title="Tags" description="Mentiras agrupadas por político y partido">
-  <ul>
-    {tags.map(tag => (
-      <li>
-        <a href={`/tags/${tag.slug}/`}>{tag.name}</a> ({tag.count})
-      </li>
-    ))}
-  </ul>
+<Default
+  title="Políticos y partidos"
+  description="Mentiras y cambios de opinión agrupados por político y partido"
+  eyebrow="Índice"
+  lead="Todos los casos agrupados por las personas y los partidos que aparecen en ellos.">
+  <section aria-labelledby="titulo-partidos">
+    <h2 id="titulo-partidos" class="h4 subtitulo">Partidos</h2>
+    <ul class="rejilla">
+      {partidos.map(i => <li><PerfilCard {...i} /></li>)}
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="titulo-personas">
+    <h2 id="titulo-personas" class="h4 subtitulo">Personas</h2>
+    <ul class="rejilla">
+      {personas.map(i => <li><PerfilCard {...i} /></li>)}
+    </ul>
+  </section>
 </Default>
+
+<style>
+  .subtitulo {
+    margin-bottom: var(--space-4);
+  }
+  .rejilla {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+</style>

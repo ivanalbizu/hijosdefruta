@@ -1,6 +1,8 @@
 ---
+import ExtLink from '@components/ExtLink.astro';
 import Fecha from '@components/Fecha.astro';
 import type { Hito } from '@utils/mentiras';
+import { nombreSinCargo } from '@utils/perfiles';
 
 interface Props {
 	hitos: Hito[];
@@ -16,13 +18,18 @@ const fuentes = [...new Map(hitos.map(h => [h.fuente.url, h])).values()];
 	{
 		fuentes.map(({ fecha, quien, fuente }) => (
 			<li>
-				<Fecha fecha={fecha} /> · {quien} ·{' '}
-				<a href={fuente.url} rel="noopener noreferrer" target="_blank">{fuente.medio}</a>
-				{fuente.archivo ? (
-					<>
-						{' '}(<a href={fuente.archivo} rel="noopener noreferrer" target="_blank">copia archivada</a>)
-					</>
-				) : null}
+				<p class="medio">
+					<ExtLink href={fuente.url}>{fuente.medio}</ExtLink>
+				</p>
+				<p class="meta">
+					<Fecha fecha={fecha} /> · {nombreSinCargo(quien)}
+					{fuente.archivo && (
+						<>
+							{' · '}
+							<ExtLink href={fuente.archivo}>copia archivada</ExtLink>
+						</>
+					)}
+				</p>
 			</li>
 		))
 	}
@@ -30,11 +37,29 @@ const fuentes = [...new Map(hitos.map(h => [h.fuente.url, h])).values()];
 
 <style>
 	.fuentes {
-		list-style: decimal;
-		padding-left: var(--spacing-lg);
-		font-size: 14px;
+		counter-reset: fuente;
+		display: grid;
 	}
-	li + li {
-		margin-top: var(--spacing-2xs);
+	li {
+		counter-increment: fuente;
+		display: grid;
+		grid-template-columns: 2rem 1fr;
+		column-gap: var(--space-2);
+		padding-block: var(--space-3);
+		border-bottom: 1px solid var(--color-border);
+	}
+	li:last-child {
+		border-bottom: 0;
+	}
+	li::before {
+		content: counter(fuente);
+		grid-row: span 2;
+		font-size: var(--text-sm);
+		font-weight: var(--weight-semibold);
+		font-variant-numeric: tabular-nums;
+		color: var(--color-text-muted);
+	}
+	.medio {
+		font-weight: var(--weight-medium);
 	}
 </style>

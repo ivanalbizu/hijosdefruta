@@ -1,35 +1,58 @@
 ---
-import { slugifyStr } from "@utils/slugify";
+import Avatar from '@components/Avatar.astro';
+import { slugifyStr } from '@utils/slugify';
+import { getPerfiles } from '@utils/perfiles';
 
 interface Props {
 	tags: string[];
+	/** Texto para lectores de pantalla que describe la lista. */
+	label?: string;
 }
 
-const { tags } = Astro.props;
+const { tags, label = 'Políticos y partidos' } = Astro.props;
+const perfiles = await getPerfiles();
+const items = tags.map(tag => ({ tag, slug: slugifyStr(tag), perfil: perfiles.get(slugifyStr(tag)) }));
 ---
 
-<ul>
-  {tags.map(tag => <li><a href={`/tags/${slugifyStr(tag)}/`}>{tag}</a></li>)}
+<ul class="chips" aria-label={label}>
+	{
+		items.map(({ tag, slug, perfil }) => (
+			<li>
+				<a class="chip" href={`/tags/${slug}/`}>
+					<Avatar nombre={tag} perfil={perfil} size="xs" />
+					{tag}
+				</a>
+			</li>
+		))
+	}
 </ul>
 
 <style lang="scss">
-  ul {
-    --padding-x: var(--spacing-xs);
-    --padding-y: var(--spacing-sm);
-    display: flex;
-    gap: var(--spacing-2xs);
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-xs);
-    a {
-      display: inline-block;
-      font-size: 14px;
-      padding: var(--padding-y) var(--padding-x);
-      background-color: var(--accent-dark);
-      border-radius: 2px;
-      color: #fff;
-    }
-    @media (min-width: 576px) {
-      --padding-y: var(--spacing-2xs);
-    }
-  }
+	.chips {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+	}
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		min-height: 2rem;
+		padding: 0.2rem 0.75rem 0.2rem 0.25rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-full);
+		background: var(--color-surface);
+		font-size: var(--text-sm);
+		font-weight: var(--weight-medium);
+		color: var(--color-text);
+		text-decoration: none;
+		transition: border-color var(--duration-fast) var(--ease);
+
+		&:hover {
+			border-color: var(--color-border-control);
+			color: var(--color-text);
+		}
+	}
 </style>

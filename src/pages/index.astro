@@ -1,75 +1,216 @@
 ---
-import BaseHead from '@components/BaseHead.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import Media from '@components/Media.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import TipoBadge from '@components/TipoBadge.astro';
-import { getMentiras, getFeatured, getTags, getVideoPrincipal } from '@utils/mentiras';
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import MentiraCard from '@components/MentiraCard.astro';
+import PerfilCard from '@components/PerfilCard.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, TIPOS } from '../consts';
+import { getMentiras, getFeatured, getTags, getHitos } from '@utils/mentiras';
+import { getPerfiles } from '@utils/perfiles';
 
 const mentiras = await getMentiras();
-const mentira = getFeatured(mentiras);
-const video = mentira && getVideoPrincipal(mentira);
-const tags = getTags(mentiras).slice(0, 20);
+const destacada = getFeatured(mentiras);
+const recientes = mentiras.filter(m => m !== destacada).slice(0, 6);
+const tags = getTags(mentiras);
+const perfiles = await getPerfiles();
+const promesas = await getCollection('promesa');
+
+const fuentes = new Set(mentiras.flatMap(m => getHitos(m).map(h => h.fuente.url))).size;
+const cifras = [
+  { valor: mentiras.length, texto: 'casos documentados' },
+  { valor: fuentes, texto: 'fuentes enlazadas' },
+  { valor: tags.length, texto: 'políticos y partidos' },
+  { valor: promesas.length, texto: 'promesas archivadas' },
+];
+
+const top = tags.slice(0, 8).map(tag => {
+  const perfil = perfiles.get(tag.slug);
+  return { tag, perfil, partido: perfil?.data.partido ? perfiles.get(perfil.data.partido) : undefined };
+});
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>Mentirosos</h1>
-      <div class="row">
-        {
-          mentira && (
-            <div>
-              <TipoBadge tipo={mentira.data.tipo} />
-              <h2 class="h3">{mentira.data.title}</h2>
-              {video && <Media id={video.id} title={video.titulo ?? mentira.data.title} start={video.start} end={video.end} />}
-              <p>{mentira.data.description}</p>
-              <a href={`/mentira/${mentira.slug}/`}>
-                Ver la mentira <span class="sr-only">{mentira.data.title}</span>
-              </a>
-            </div>
-          )
-        }
-        <div>
-          <h2 class="h3">Trending mentirosos</h2>
-          <ul class="tags">
-            {tags.map(tag => (
-              <li><a href={`/tags/${tag.slug}/`}>{tag.name} <span class="count">({tag.count})</span></a></li>
-            ))}
-          </ul>
-        </div>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Hemeroteca con fuentes</p>
+      <h1>Lo que dijeron.<br /><span class="despues">Lo que hicieron.</span></h1>
+      <p class="lead">
+        Declaraciones de políticos enfrentadas a lo que dijeron o hicieron después, con la cita literal, la fecha
+        y un enlace a la fuente primaria de cada una.
+      </p>
+      <div class="acciones">
+        <a class="btn btn--primary" href="/mentira/">Ver los casos</a>
+        <a class="btn btn--secondary" href="/metodologia/">Cómo se verifican</a>
       </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+      <dl class="cifras">
+        {
+          cifras.map(({ valor, texto }) => (
+            <div>
+              <dt>{texto}</dt>
+              <dd>{valor}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <div class="container">
+    {
+      destacada && (
+        <section class="section" aria-labelledby="titulo-destacado">
+          <h2 id="titulo-destacado" class="eyebrow">Caso destacado</h2>
+          <div class="destacado">
+            <MentiraCard mentira={destacada} nivel={3} destacada />
+          </div>
+        </section>
+      )
+    }
+
+    <section class="section" aria-labelledby="titulo-recientes">
+      <div class="section-header">
+        <h2 id="titulo-recientes" class="h3">Últimos casos</h2>
+        <a class="link-arrow" href="/mentira/">Todos los casos <span class="sr-only">({mentiras.length})</span></a>
+      </div>
+      <ul class="grid-cards">
+        {
+          recientes.map(mentira => (
+            <li>
+              <MentiraCard mentira={mentira} nivel={3} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-perfiles">
+      <div class="section-header">
+        <h2 id="titulo-perfiles" class="h3">Con más casos</h2>
+        <a class="link-arrow" href="/tags/">Todos los políticos y partidos</a>
+      </div>
+      <ul class="perfiles">
+        {top.map(i => <li><PerfilCard {...i} /></li>)}
+      </ul>
+    </section>
+
+    <section class="section tipos surface" aria-labelledby="titulo-tipos">
+      <div>
+        <h2 id="titulo-tipos" class="h3">No todo es una mentira</h2>
+        <p class="meta">Cada caso se clasifica según lo que las pruebas permiten afirmar.</p>
+        <a class="link-arrow" href="/metodologia/">Metodología completa</a>
+      </div>
+      <dl>
+        {
+          Object.entries(TIPOS).map(([id, tipo]) => (
+            <div data-tipo={id}>
+              <dt>{tipo.nombre}</dt>
+              <dd>{tipo.descripcion}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+  </div>
+</Base>
 
 <style lang="scss">
-  .row {
-    display: grid;
-    gap: var(--spacing-sm);
+  @use '../styles/breakpoints' as *;
 
-    @media (min-width: 576px) {
-      grid-template-columns: 2fr 3fr;
+  .hero {
+    padding-block: clamp(var(--space-12), 8vw, var(--space-20)) var(--space-10);
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, var(--color-despues-soft), transparent 70%),
+      radial-gradient(50rem 30rem at 0% 0%, var(--color-antes-soft), transparent 70%);
+    border-bottom: 1px solid var(--color-border);
+
+    h1 {
+      margin-top: var(--space-3);
+      font-size: clamp(2.25rem, 5vw + 1rem, 4.25rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
     }
   }
-  .tags {
+  .despues {
+    color: var(--color-despues);
+  }
+  .acciones {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-2xs);
-    a {
-      display: inline-block;
-      font-size: 14px;
-      padding: var(--spacing-2xs) var(--spacing-xs);
-      background-color: var(--accent-dark);
-      border-radius: 2px;
-      color: #fff;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+  }
+  .cifras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    dt {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    dd {
+      margin: 0;
+      font-size: var(--text-3xl);
+      font-weight: var(--weight-bold);
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  .destacado {
+    margin-top: var(--space-4);
+  }
+
+  .perfiles {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+
+  .tipos {
+    display: grid;
+    gap: var(--space-8);
+    padding: clamp(var(--space-6), 4vw, var(--space-10));
+
+    @include breakpoint(lg) {
+      grid-template-columns: 1fr 2fr;
+    }
+    .meta {
+      margin-block: var(--space-2) var(--space-4);
+    }
+    dl {
+      display: grid;
+      gap: var(--space-5);
+      @include breakpoint(sm) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    dl > div {
+      padding-left: var(--space-4);
+      border-left: 3px solid var(--fg);
+    }
+    dt {
+      font-weight: var(--weight-semibold);
+      color: var(--fg);
+    }
+    dd {
+      margin: var(--space-1) 0 0;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    @each $tipo in falsedad, promesa-incumplida, cambio-de-postura, doble-rasero {
+      [data-tipo='#{$tipo}'] {
+        --fg: var(--tipo-#{$tipo}-fg);
+      }
     }
   }
 </style>

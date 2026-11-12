@@ -1,0 +1,88 @@
+---
+import Default from '@layouts/Default.astro';
+import Avatar from '@components/Avatar.astro';
+import ExtLink from '@components/ExtLink.astro';
+import { getPerfiles } from '@utils/perfiles';
+
+const perfiles = [...(await getPerfiles()).values()]
+  .filter(p => p.data.imagen)
+  .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+---
+
+<Default
+  title="Créditos de imágenes"
+  description="Autoría y licencia de las fotografías y logotipos usados en hijosdefruta"
+  eyebrow="Créditos"
+  lead="Las fotografías y los logotipos proceden de Wikimedia Commons y se usan según su licencia. Los logotipos son marcas de sus partidos y se muestran solo para identificarlos."
+  ancho="narrow">
+  <div class="surface tabla">
+    <table>
+      <caption class="sr-only">Imágenes usadas en los perfiles, con su autor y licencia</caption>
+      <thead>
+        <tr>
+          <th scope="col">Perfil</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Licencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          perfiles.map(p => {
+            const img = p.data.imagen!;
+            return (
+              <tr>
+                <th scope="row">
+                  <span class="perfil">
+                    <Avatar nombre={p.data.nombre} perfil={p} size="sm" />
+                    <a href={`/tags/${p.id}/`}>{p.data.nombre}</a>
+                  </span>
+                </th>
+                <td>{img.autor}</td>
+                <td>
+                  <ExtLink href={img.url}>{img.licencia}</ExtLink>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</Default>
+
+<style>
+  .tabla {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+  th,
+  td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-border);
+  }
+  thead th {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    background: var(--color-surface-sunken);
+  }
+  tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+  tbody th {
+    font-weight: var(--weight-medium);
+  }
+  .perfil {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+</style>

@@ -1,4 +1,10 @@
 ---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/source-serif-4/400.css';
+import '@fontsource/source-serif-4/400-italic.css';
 import '../styles/global.scss';
 import { SITE_TITLE } from '../consts';
 
@@ -9,6 +15,8 @@ interface Props {
 	image?: string;
 	imageAlt?: string;
 	type?: 'website' | 'article';
+	/** Páginas internas que no deben aparecer en buscadores. */
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -19,6 +27,7 @@ const {
 	image = '/images/og-default.png',
 	imageAlt = 'hijosdefruta: lo que dijeron, lo que hicieron',
 	type = 'website',
+	noindex = false,
 } = Astro.props;
 
 const imageURL = new URL(image, Astro.site);
@@ -27,7 +36,11 @@ const imageURL = new URL(image, Astro.site);
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.95em%22 font-size=%2282%22>🤥</text></svg>">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#f4f5f8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0f1219" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
+{noindex && <meta name="robots" content="noindex" />}
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 

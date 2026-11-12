@@ -1,14 +1,12 @@
 ---
-import BaseHead from '@components/BaseHead.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+import Base from '@layouts/Base.astro';
 import Tags from '@components/Tags.astro';
 import Fecha from '@components/Fecha.astro';
 import Hito from '@components/Hito.astro';
 import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
-import { getHitos, type Mentira } from '@utils/mentiras';
+import { contarFuentes, getHitos, type Mentira } from '@utils/mentiras';
 
 interface Props {
 	mentira: Mentira;
@@ -16,108 +14,181 @@ interface Props {
 
 const { mentira } = Astro.props;
 const { title, description, tipo, tags, antes, despues, cronologia, revisado } = mentira.data;
+const numFuentes = contarFuentes(mentira);
 // Generada en src/pages/og/[slug].png.ts
 const image = `/og/${mentira.slug}.png`;
 ---
 
-<html lang="es">
-	<head>
-		<BaseHead title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article" />
-	</head>
+<Base title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article">
+	<article class="container page">
+		<nav class="migas meta" aria-label="Migas de pan">
+			<ol>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/mentira/">Casos</a></li>
+				<li><span aria-current="page">{title}</span></li>
+			</ol>
+		</nav>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<header class="cabecera">
-					<TipoBadge tipo={tipo} />
-					<h1>{title}</h1>
-					<p class="description">{description}</p>
-					<Tags tags={tags} />
-				</header>
+		<header class="cabecera">
+			<TipoBadge tipo={tipo} />
+			<h1>{title}</h1>
+			<p class="lead">{description}</p>
+			<Tags tags={tags} />
+			<p class="meta">
+				{numFuentes} {numFuentes === 1 ? 'fuente' : 'fuentes'} · Revisado el <Fecha fecha={revisado} />
+			</p>
+		</header>
 
-				<section class="antes-despues" aria-label="Antes y después">
-					<div>
-						<h2 class="h4 etiqueta">Antes</h2>
-						<Hito hito={antes} />
-					</div>
-					<div>
-						<h2 class="h4 etiqueta">Después</h2>
-						<Hito hito={despues} />
-					</div>
-				</section>
+		<section class="versus" aria-labelledby="titulo-antes-despues">
+			<h2 id="titulo-antes-despues" class="sr-only">Antes y después</h2>
+			<div class="panel antes">
+				<h3 class="etiqueta">Antes</h3>
+				<Hito hito={antes} nivel={4} grande />
+			</div>
+			<div class="panel despues">
+				<h3 class="etiqueta">Después</h3>
+				<Hito hito={despues} nivel={4} grande />
+			</div>
+		</section>
 
-				{
-					cronologia.length > 0 && (
-						<section class="bloque">
-							<h2>Cronología</h2>
-							<Cronologia hitos={cronologia} />
-						</section>
-					)
-				}
+		<div class="cuerpo">
+			{
+				cronologia.length > 0 && (
+					<section class="bloque" aria-labelledby="titulo-cronologia">
+						<h2 id="titulo-cronologia" class="h3">Cronología</h2>
+						<p class="meta">Lo que pasó entre una declaración y la otra.</p>
+						<Cronologia hitos={cronologia} />
+					</section>
+				)
+			}
 
-				<div class="comentario">
-					<slot />
-				</div>
+			<div class="comentario prose">
+				<slot />
+			</div>
 
-				<section class="bloque">
-					<h2 class="h4">Fuentes</h2>
+			<section class="bloque" aria-labelledby="titulo-fuentes">
+				<h2 id="titulo-fuentes" class="h3">Fuentes</h2>
+				<div class="surface fuentes">
 					<Fuentes hitos={getHitos(mentira)} />
-					<p class="revisado">
-						Citas, fechas y enlaces revisados el <Fecha fecha={revisado} />.
-						¿Ves un error? <a href="/metodologia/#correcciones">Así se corrige</a>.
-					</p>
-				</section>
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+				</div>
+				<p class="meta revisado">
+					Citas, fechas y enlaces revisados el <Fecha fecha={revisado} />. ¿Ves un error?
+					<a href="/metodologia/#correcciones">Así se corrige</a>.
+				</p>
+			</section>
+		</div>
+	</article>
+</Base>
 
 <style lang="scss">
 	@use '../styles/breakpoints' as *;
 
+	.migas {
+		margin-bottom: var(--space-6);
+
+		ol {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--space-1) var(--space-2);
+		}
+		li:not(:last-child)::after {
+			content: '/';
+			margin-left: var(--space-2);
+			color: var(--color-border-strong);
+		}
+		li:last-child {
+			max-width: 40ch;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		a {
+			color: var(--color-text-muted);
+			&:hover {
+				color: var(--color-text);
+			}
+		}
+	}
+
 	.cabecera {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-xs);
-		margin-bottom: var(--spacing-lg);
-	}
-	.description {
-		font-size: var(--font-size-h6);
-		max-width: 70ch;
-	}
-	.antes-despues {
-		display: grid;
-		gap: var(--spacing-lg);
-		margin-bottom: var(--spacing-lg);
+		align-items: flex-start;
+		gap: var(--space-4);
+		max-width: 56rem;
+		margin-bottom: var(--space-10);
 
-		@include breakpoint(sm) {
+		h1 {
+			font-size: clamp(1.75rem, 2.2vw + 1.2rem, 2.75rem);
+		}
+		.lead {
+			margin-top: 0;
+		}
+	}
+
+	.versus {
+		position: relative;
+		display: grid;
+		gap: var(--space-6);
+
+		@include breakpoint(md) {
 			grid-template-columns: 1fr 1fr;
 		}
-
-		> div {
-			padding: var(--spacing-md);
-			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-		}
+	}
+	.panel {
+		position: relative;
+		padding: var(--space-6);
+		padding-top: var(--space-8);
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-top: 4px solid var(--lado);
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-sm);
+	}
+	.antes {
+		--lado: var(--color-antes);
+		--lado-bg: var(--color-antes-soft);
+	}
+	.despues {
+		--lado: var(--color-despues);
+		--lado-bg: var(--color-despues-soft);
 	}
 	.etiqueta {
+		position: absolute;
+		top: -0.85rem;
+		left: var(--space-6);
+		padding: 0.15rem 0.7rem;
+		border-radius: var(--radius-full);
+		background: var(--lado-bg);
+		border: 1px solid var(--lado);
+		color: var(--lado);
+		font-size: var(--text-xs);
+		font-weight: var(--weight-bold);
+		line-height: 1.5;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: var(--accent-dark);
+	}
+
+	.cuerpo {
+		max-width: 52rem;
 	}
 	.bloque {
-		margin-top: var(--spacing-lg);
-		padding-top: var(--spacing-lg);
-		border-top: 1px solid rgb(var(--gray-light));
+		margin-top: var(--space-16);
+
+		> .meta {
+			margin-block: var(--space-1) var(--space-6);
+		}
+		> h2 + .surface {
+			margin-top: var(--space-4);
+		}
 	}
 	.comentario:not(:empty) {
-		max-width: 840px;
-		margin: var(--spacing-lg) auto 0;
+		margin-top: var(--space-12);
+	}
+	.fuentes {
+		padding: var(--space-2) var(--space-5);
 	}
 	.revisado {
-		margin-top: var(--spacing-md);
-		font-size: 14px;
-		color: rgb(var(--gray));
+		margin-top: var(--space-4);
 	}
 </style>

@@ -1,25 +1,21 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 
-type Props = HTMLAttributes<'a'>;
+type Props = HTMLAttributes<'a'> & { href: string };
 
 const { href, class: className, ...props } = Astro.props;
 
-const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, '');
+const actual = Astro.url.pathname.replace(/\/$/, '') || '/';
+const destino = href.replace(/\/$/, '') || '/';
+// Página exacta → aria-current="page"; subpágina de la sección → solo resaltado.
+const esPagina = actual === destino;
+const enSeccion = !esPagina && destino !== '/' && actual.startsWith(`${destino}/`);
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a
+	href={href}
+	class:list={[className, { active: esPagina || enSeccion }]}
+	aria-current={esPagina ? 'page' : undefined}
+	{...props}>
 	<slot />
 </a>
-
-<style>
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
-	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
-	}
-</style>

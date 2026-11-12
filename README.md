@@ -14,6 +14,7 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 | `npm run build`   | Valida el contenido y genera el sitio en `./dist/`      |
 | `npm run preview` | Sirve el build localmente                               |
 | `npm run fuentes` | Comprueba que fuentes, copias archivadas y vídeos siguen vivos |
+| `npm run perfiles` | Descarga de Wikimedia Commons la foto o el logo de los perfiles que no la tienen |
 
 ## Añadir un caso
 
@@ -55,6 +56,32 @@ fuente, y se publican en `/promesas`. Campos: `fecha`, `quien`, `partido`, `comp
 tal como lo recoge la fuente), `cita` opcional (literal), `contexto`, `tema`, `campana`, `fuente`,
 `video` opcional, `estado` (`pendiente`, `cumplida`, `incumplida`, `parcial`) y `caso` (el slug de la
 ficha que la contrasta, cuando la haya).
+
+## Perfiles de políticos y partidos
+
+Cada tag puede tener una ficha en `src/content/perfil/<slug-del-tag>.yaml` (`Pedro Sánchez` →
+`pedro-sanchez.yaml`) con su foto o logo, que se muestra en `/tags/<slug>/`, en los tags de las
+tarjetas y junto a cada cita. Sin ficha se muestran las iniciales.
+
+```yaml
+nombre: Pedro Sánchez # igual que el tag
+tipo: persona # persona | partido
+partido: psoe # opcional: slug del partido, solo si la afiliación es clara y estable
+wikidata: Q6070218 # elemento de Wikidata del que sale la imagen
+# nombreCompleto y color (#rrggbb, decorativo) para partidos
+```
+
+`npm run perfiles` busca la imagen en Wikidata (P18 para personas, P154 para partidos), la guarda en
+`src/assets/perfiles/` y añade al YAML el bloque `imagen` con el archivo de Commons, el autor y la
+licencia, que se muestran en la ficha y en `/creditos`. Para usar otra imagen, cambia
+`imagen.commons` por el nombre del archivo en Commons y ejecuta `npm run perfiles -- <slug>`.
+
+## Sistema de diseño
+
+Los tokens (color, tipografía, espaciado, radios, sombras) están en
+[`src/styles/global.scss`](src/styles/global.scss). Los componentes solo usan los tokens semánticos
+(`--color-text`, `--color-antes`…), así que el modo oscuro y los cambios de marca se hacen allí. El
+catálogo visual está en `/sistema-diseno` (no se indexa ni sale en el sitemap).
 
 ## Imagen para redes
 

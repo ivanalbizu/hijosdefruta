@@ -1,31 +1,29 @@
 ---
-import BaseHead from '@components/BaseHead.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+import Base from '@layouts/Base.astro';
 
 interface Props {
 	title: string;
 	description: string;
+	/** Texto pequeño sobre el título: sección o categoría. */
+	eyebrow?: string;
+	/** Entradilla bajo el título. Si no se pasa, no se muestra. */
+	lead?: string;
+	/** `narrow` para páginas de texto; `wide` para listados. */
+	ancho?: 'narrow' | 'wide';
+	noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, eyebrow, lead, ancho = 'wide', noindex } = Astro.props;
 ---
 
-<html lang="es">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
-
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div>
-					<h1>{title}</h1>
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Base title={title} description={description} noindex={noindex}>
+	<div class:list={['container page', { 'container--narrow': ancho === 'narrow' }]}>
+		<header class="page-header">
+			{eyebrow && <p class="eyebrow">{eyebrow}</p>}
+			<h1>{title}</h1>
+			{lead && <p class="lead">{lead}</p>}
+			<slot name="header" />
+		</header>
+		<slot />
+	</div>
+</Base>
