@@ -21,8 +21,9 @@ Un solo error o una cita sacada de contexto desacredita toda la web.
 - Se incluye la justificación del político cuando la hay.
 - Datos de perfiles (cargo, partido): solo lo que sea claro y estable. Ante la duda, se deja vacío.
 - Las imágenes de personas y partidos vienen de Wikimedia Commons, siempre con autor y licencia.
-- Los recortes de documentos (`documento` en un hito, `npm run capturas`) solo de organismos oficiales:
-  BOE, Diarios de Sesiones, La Moncloa, informes de organismos públicos. **Nunca capturas de prensa.**
+- Los recortes de documentos (`documento` en un hito, `npm run capturas`) solo de organismos oficiales
+  (BOE, Diarios de Sesiones, La Moncloa, informes de organismos públicos) y de documentos públicos de los
+  partidos (programas electorales, ponencias, códigos éticos). **Nunca capturas de prensa.**
   El recorte es la prueba visible; lo que la hace verificable es el enlace a la página, la copia en Web
   Archive y la huella SHA-256 del PDF.
 

@@ -61,9 +61,10 @@ ficha que la contrasta, cuando la haya).
 
 ## Recortes de documentos oficiales
 
-Un hito puede mostrar un recorte del documento oficial con el fragmento citado resaltado. Solo se usan
+Un hito puede mostrar un recorte del documento original con el fragmento citado resaltado. Se usan
 documentos de organismos oficiales (BOE, Diarios de Sesiones, transcripciones de La Moncloa, informes
-de organismos públicos), **nunca capturas de prensa**.
+de organismos públicos) y documentos públicos de los partidos (programas electorales, ponencias,
+códigos éticos), **nunca capturas de prensa**.
 
 ```yaml
 antes:

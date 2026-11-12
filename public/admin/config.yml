@@ -70,7 +70,7 @@ collections:
             widget: "object"
             required: false
             collapsed: true
-            hint: "Solo PDF de organismos oficiales (BOE, Diario de Sesiones, La Moncloa…), nunca prensa. Tras guardar, ejecuta npm run capturas -- <slug>"
+            hint: "Solo PDF de organismos oficiales (BOE, Diario de Sesiones, La Moncloa…) o documentos públicos de partidos (programas, ponencias), nunca prensa. Tras guardar, ejecuta npm run capturas -- <slug>"
             fields:
               - { label: "URL del PDF", name: "url", widget: "string", required: false, pattern: ['^https?://', "Debe ser una URL"] }
               - { label: "Texto a resaltar", name: "buscar", widget: "list", required: false, hint: "Fragmentos literales del PDF; si se deja vacío, se usa la cita" }

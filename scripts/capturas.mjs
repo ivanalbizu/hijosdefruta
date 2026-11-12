@@ -17,7 +17,8 @@
  * escribe en el caso `imagen`, `pagina` y `sha256`. La búsqueda ignora espacios,
  * signos y mayúsculas, porque la extracción de texto de los PDF parte palabras.
  *
- * Solo documentos de organismos oficiales: nunca capturas de prensa.
+ * Solo documentos de organismos oficiales o documentos públicos de los partidos
+ * (programas, ponencias, códigos éticos): nunca capturas de prensa.
  */
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
@@ -240,7 +241,9 @@ async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 	if (!zona) throw new Error(`${etiqueta}: no se encuentra el texto en ${doc.url}`);
 
 	const png = await recortar(zona);
-	const rutaPng = path.join(DIR_PRUEBAS, slug, `${etiqueta}.png`);
+	// Nombre derivado del contenido: reordenar la cronología no puede pisar otro recorte.
+	const clave = crypto.createHash('sha1').update(JSON.stringify([doc.url, buscar, doc.incluir ?? []])).digest('hex').slice(0, 12);
+	const rutaPng = path.join(DIR_PRUEBAS, slug, `${clave}.png`);
 	await fs.mkdir(path.dirname(rutaPng), { recursive: true });
 	await fs.writeFile(rutaPng, png);
 
@@ -279,5 +282,18 @@ for (const slug of slugs) {
 	}
 	if (cambios) {
 		await fs.writeFile(ruta, `---\n${doc.toString({ lineWidth: 0 })}---\n${texto.slice(m[0].length)}`);
+	}
+	await limpiar(slug, doc.toString());
+}
+
+/** Borra los recortes del caso que ya no usa ningún hito. */
+async function limpiar(slug, frontmatter) {
+	const dir = path.join(DIR_PRUEBAS, slug);
+	const archivos = await fs.readdir(dir).catch(() => []);
+	for (const f of archivos) {
+		if (f.endsWith('.png') && !frontmatter.includes(`/${slug}/${f}`)) {
+			await fs.rm(path.join(dir, f));
+			console.log(`  borrado ${path.join(dir, f)} (ya no lo usa ningún hito)`);
+		}
 	}
 }

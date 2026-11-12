@@ -74,7 +74,8 @@ type ImageFn = SchemaContext['image'];
 /**
  * Recorte de un documento oficial (PDF) con el fragmento citado resaltado.
  * Lo genera `npm run capturas -- <slug>` a partir de `url` y `buscar`.
- * Solo documentos de organismos oficiales: nunca capturas de prensa.
+ * Solo documentos de organismos oficiales o documentos públicos de los partidos
+ * (programas, ponencias, códigos éticos): nunca capturas de prensa.
  */
 const documento = (image: ImageFn) =>
 	z.object({
