@@ -11,7 +11,8 @@ haberlo encontrado antes en la fuente primaria.
 | Estado | Candidatos |
 | --- | --- |
 | Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias |
-| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral |
+| Borrador (falta la cita del vídeo) | arch-17 ley mordaza (`sanchez-derogar-ley-mordaza`) |
+| Prometedor (listo para proponer) | arch-18 reforma laboral |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -133,7 +134,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Para reabrirlo hace falta:** la fecha y la fuente primaria de la frase del «antes», y una declaración de la propia Mínguez (no de terceros) sobre los pisos. Aun así, el caso sería sobre la coherencia de su discurso, no sobre la actividad legal de su pareja.
 
 ### arch-17 · Derogar la ley mordaza
-- **Estado:** prometedor
+- **Estado:** borrador `sanchez-derogar-ley-mordaza` (12-11-2026). Falta: transcribir la cita del vídeo de laSexta (canal oficial, publicado el 29-11-2015) con su minuto, y copia en Web Archive del acuerdo PSOE–Sumar de 2023 sin el parámetro `utm_source`. Fuentes leídas: programas 2015 (pág. 113) y 2016 (pág. 112); acuerdo PSOE–UP 2019, pág. 32; acuerdo PSOE–Sumar 2023, pág. 43 (rebaja a «aquellos aspectos»); BOCG-14-B-28-6 y DSCD-14-CO-864 (dictamen de la reforma del PNV rechazado 18–19 el 14-03-2023, sin detalle por grupos); BOCG-15-B-148-1 a 148-5 (proposición 122/000131, firmada por el Grupo Socialista, sin trámites tras las enmiendas); RD 806/2026 de disolución (BOE-A-2026-20742); Reglamento del Congreso, art. 207. La nota del PSOE del 26-03-2015 solo parafrasea a Sánchez; en el debate del estado de la nación de 2015 (DSCD-10-PL-262) critica la ley pero no promete derogarla.
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 2015 · laSexta Noche: «¿La 'ley mordaza'? Vamos, que la vamos a derogar en cuanto entremos en el Gobierno» · vídeo https://www.youtube.com/watch?v=sJnxW-khK5g (min. 1:59, según Maldita; fecha de emisión pendiente) · Programa electoral PSOE 2015, pág. 113 (y 2016, pág. 112): «Derogar la Ley de seguridad ciudadana y aprobar una nueva Ley…» · https://web.archive.org/web/20151223180208/http://www.psoe.es:80/media-content/2015/12/PSOE_Programa_Electoral_2015.pdf
 - **Cronología posible:** 09-2018 Europa Press: «derogando la 'ley mordaza'»; 12-2019 acuerdo PSOE–UP, pág. 31: «una nueva Ley de seguridad ciudadana, que sustituya a la "Ley mordaza"»; 03-2023 decae la reforma del PNV en la Comisión de Interior; 2025 se toma en consideración otra reforma; 10-2026 decae con el fin de la legislatura.
