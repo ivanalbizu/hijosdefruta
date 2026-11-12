@@ -13,8 +13,8 @@ haberlo encontrado antes en la fuente primaria.
 | Prometedor (listo para proponer) | arch-03 nucleares, arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias, arch-33 elecciones en 2027 |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
-| Para el archivo de promesas | arch-06, arch-11, arch-13 |
-| Bloqueado (decide el usuario) | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
+| En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
+| En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
 
@@ -67,7 +67,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** la frase se refería al acuerdo político y él mismo dijo que lo técnico seguía en curso; el cierre posterior lo decide Marruecos. Sirve como «lo que prometió frente a lo que pasó», pero no prueba que mintiera. Haría falta una afirmación posterior de Albares negando el cierre.
 
 ### arch-06 · Las 50.000 viviendas de la Sareb
-- **Estado:** débil como caso → propuesto para el archivo de promesas
+- **Estado:** en el archivo de promesas (`src/content/promesa/2023-04-25-*.yaml`, estado `pendiente`); sigue abierto como candidato si aparecen datos oficiales de ejecución
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 16-04-2023 · anuncio de la «movilización» de 50.000 viviendas de la Sareb (fuente primaria pendiente: La Moncloa).
 - **Después:** solo la estimación de una plataforma de afectados (20-04-2023); no hay balance oficial.
@@ -95,7 +95,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** es una previsión técnica hecha tres años y medio antes, en el contexto del temor a un apagón europeo del invierno de 2021, no una promesa ni un dato falso en su momento. Además, Corredor preside una empresa (Redeia), no ejerce un cargo político. Más sólido sería una afirmación de Red Eléctrica de 04-2025 (la prensa cita una del 09-04-2025 descartando riesgo): pista abierta.
 
 ### arch-11 · 183.000 viviendas
-- **Estado:** débil como caso → propuesto para el archivo de promesas
+- **Estado:** en el archivo de promesas (`src/content/promesa/2023-04-25-*.yaml`, estado `pendiente`); sigue abierto como candidato si aparecen datos oficiales de ejecución
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 07-2023 · campaña del 23J: 183.000 viviendas entre 2024 y 2027 (fuente primaria pendiente: programa 2023 o acto de campaña).
 - **Después:** Ministerio de Vivienda, datos a 30-04-2026: 120.479 viviendas «movilizadas» (fondos transferidos); prensa: 47.000–49.000 entregadas.
@@ -106,7 +106,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas:** valorar añadir el levantamiento de la orden de detención por el juez Llarena (10-2026), con el auto del Supremo como fuente.
 
 ### arch-13 · 20.000 viviendas en suelo de Defensa
-- **Estado:** débil como caso → propuesto para el archivo de promesas
+- **Estado:** en el archivo de promesas (`src/content/promesa/2023-04-25-*.yaml`, estado `pendiente`); sigue abierto como candidato si aparecen datos oficiales de ejecución
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 25-04-2023 · 20.000 viviendas públicas en terrenos del Ministerio de Defensa (fuente primaria pendiente).
 - **Después:** sin balance público (El Independiente, 17-02-2026).
@@ -123,11 +123,12 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Estado:** ya existe — `caso-abalos-koldo-delcy-PSOE`
 
 ### arch-16 · Montse Mínguez y la vivienda
-- **Estado:** bloqueado — afecta a la vida familiar (actividad de su pareja)
-- **Persona / tipo propuesto:** Montse Mínguez / doble rasero
-- **Antes:** sin fecha · «Aquí de lo que se trata es de fondos buitres o de familias»
-- **Después:** 14-10-2026 · admite que su pareja es «gran tenedor»
-- **Notas:** la propia pista reconoce que la actividad es legal y que no es un fondo. Decide el usuario.
+- **Estado:** en espera — no se publica de momento (decisión del usuario, 12-11-2026). Motivo del bloqueo: afecta a la vida familiar (actividad de su pareja).
+- **Persona / tipo propuesto:** Montse Mínguez (portavoz del PSOE) / doble rasero
+- **Antes:** sin fecha · «Aquí de lo que se trata es de fondos buitres o de familias» · fuente que cita la pista: El Debate, 15-10-2026, https://www.eldebate.com/espana/20261015/cuando-montse-minguez-ruborizaba-especulacion-buitres-vivienda-forrarse_469813.html · fuente primaria pendiente (vídeo o transcripción con fecha).
+- **Después:** 14-10-2026 · admite que su pareja es un «gran tenedor», con al menos 30 pisos en alquiler según la prensa · Última Hora, https://www.ultimahora.es/noticias/elecciones-29n/2026/10/14/2729035/polemica-inmobiliaria-salpica-portavoz-del-psoe-montse-minguez-pisos-pareja-criticas-discurso-sobre-vivienda.html; El Español, 16-10-2026, https://www.elespanol.com/espana/politica/20261016/sindicato-inquilinas-redirige-huelga-general-psoe-montse-minguez-partido-rentista/1003744421237_0.html
+- **Matiz:** según la propia pista, la pareja no es un fondo de inversión sino una empresa familiar, y su actividad es legal.
+- **Para reabrirlo hace falta:** la fecha y la fuente primaria de la frase del «antes», y una declaración de la propia Mínguez (no de terceros) sobre los pisos. Aun así, el caso sería sobre la coherencia de su discurso, no sobre la actividad legal de su pareja.
 
 ### arch-17 · Derogar la ley mordaza
 - **Estado:** prometedor
@@ -188,11 +189,11 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** promesa concreta (cinco años) con programa y debate; ocho años de Gobierno y el plazo sigue en dos.
 
 ### arch-25 · Responsabilidades «cuando se sienta en el banquillo»
-- **Estado:** bloqueado — proceso judicial abierto (Miguel Ángel Gallardo)
+- **Estado:** en espera — no se publica de momento (decisión del usuario, 12-11-2026). Motivo del bloqueo: proceso judicial abierto (Miguel Ángel Gallardo, secretario general del PSOE de Extremadura).
 - **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
-- **Antes:** 26-06-2016 · asumir responsabilidades cuando un político se sienta en el banquillo
-- **Después:** 05-2025 · Gallardo, con juicio oral abierto, sigue al frente del PSOE extremeño
-- **Notas:** la regla excluye procesos abiertos; podría plantearse solo con hechos procesales (auto de apertura de juicio oral) sin valorar el fondo. Decide el usuario.
+- **Antes:** 26-06-2016 · debate electoral a cuatro: «asumir responsabilidades cuando un político se sienta en el banquillo» · vídeo https://youtu.be/67rqA7Yl_Ho?t=5610 (min. 1:33:30, según Maldita) · Código ético del PSOE (marzo de 2023), pág. 11: ante la apertura de juicio oral, quien tenga responsabilidad pública «deberá solicitar baja voluntaria como afiliado/a y dimitir de su cargo» · https://www.psoe.es/media-content/2023/03/PSOEcodigo_Etico.pdf#page=11 (usar copia de Web Archive: psoe.es bloquea accesos automáticos).
+- **Después:** 22-05-2025 · se abre juicio oral contra Gallardo, que sigue al frente del PSOE extremeño y se afora al entrar en la Asamblea de Extremadura (Maldita, https://maldita.es/malditahemeroteca/20250523/psoe-aforamientos-extremadura/; fuente primaria pendiente: auto de apertura de juicio oral y acta de la Asamblea).
+- **Para reabrirlo hace falta:** que haya sentencia firme, o plantearlo solo con hechos procesales (auto de apertura de juicio oral) frente al código ético del propio PSOE, sin valorar el fondo del proceso.
 
 ### arch-26 · Reforma de la publicidad institucional
 - **Estado:** débil

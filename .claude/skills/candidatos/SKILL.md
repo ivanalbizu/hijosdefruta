@@ -67,6 +67,8 @@ Estados posibles en el registro:
 - `prometedor`: antes y después con fuente verificable; listo para proponer.
 - `débil`: hay pruebas pero la contradicción no es limpia o depende de una sola fuente secundaria.
 - `bloqueado`: choca con una regla (principio 4); decide el usuario.
+- `en espera`: bloqueado y el usuario ha decidido no publicarlo de momento. Se conserva toda la
+  información (fuentes, citas y qué haría falta para reabrirlo); no se borra ni se descarta.
 - `descartado`: con motivo y lista de búsquedas hechas.
 - `publicado` / `ya existe`: con el slug del caso.
 
