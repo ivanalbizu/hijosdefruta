@@ -32,6 +32,12 @@ empezar: puede que el candidato ya esté investigado o descartado.
 Lee la URL (con el agente `web-fetch` si no hay WebFetch). Para cada entrada anota: tema, persona,
 «dijo» (fecha, cita o paráfrasis), «hizo» (fecha, hecho), matiz y las fuentes que cita la pista.
 
+Si la pista es un vídeo largo (debate, entrevista, mitin), trabaja con su transcripción en
+`investigacion/material/transcripciones/` (carpeta fuera de git): busca compromisos con forma de
+promesa («vamos a», «me comprometo», «nunca», «derogar»…), deduce quién habla por el contexto y anota
+el minuto. La transcripción automática no tiene puntuación ni hablantes: **toda frase se confirma
+viendo el vídeo** y el vídeo del caso empieza unos 4 segundos antes de la frase.
+
 ### 2. Cribar
 Para cada candidato, en este orden:
 - **¿Ya existe?** Busca en `src/content/casos/*.mdx` por persona, tema y cita. Si existe, valora si la

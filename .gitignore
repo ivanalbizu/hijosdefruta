@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# material de trabajo temporal (transcripciones, PDF descargados…): no se publica
+investigacion/material/
