@@ -17,6 +17,7 @@ haberlo encontrado antes en la fuente primaria.
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
+| Por investigar (debate de primarias 2014) | deb-01 aforamiento cero, deb-02 donaciones de 2.000 €, deb-03 exministros en consejos de empresas energéticas, deb-04 políticos en instituciones de control, deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
 
 Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
@@ -183,6 +184,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** el RDL 4/2018 del primer Gobierno de Sánchez ya permitía la mayoría absoluta en segunda votación para la renovación, así que no es un giro de 2024. Que el consejo lo elija el Parlamento por mayoría absoluta no equivale a estar «al dictado» del Gobierno: es una valoración, no una contradicción limpia.
 
 ### arch-24 · Puertas giratorias de cinco años
+- **Plan (12-11-2026):** caso combinado con deb-03. Antes: vídeo del debate de primarias de 2014 (46:55, segundo 2815) y programas de 2015 (pág. 77) y 2016 (pág. 76) con recorte. Después: exministros del PSOE (Montilla, Blanco) en el consejo de Enagás a propuesta de la SEPI en 2020 (fuente primaria pendiente: CNMV o junta de Enagás) y el plazo de incompatibilidad, que sigue en dos años (Ley 3/2015, art. 15; RDL 21/2026, comprobar en el BOE y su convalidación).
 - **Estado:** prometedor
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 07-12-2015 · debate de Atresmedia: «Vamos a endurecer las puertas giratorias de dos a cinco años» (tuit @A3Noticias https://twitter.com/A3Noticias/status/673990036346576897; vídeo del debate pendiente) · Programa PSOE 2015, pág. 77 (y 2016, pág. 76): «fijando un periodo de incompatibilidad de cinco años para quienes pretendan incorporarse ex novo a empresas del sector sobre el que hayan tenido responsabilidades de regulación o gestión» · https://web.archive.org/web/20151223180208/http://www.psoe.es:80/media-content/2015/12/PSOE_Programa_Electoral_2015.pdf · Tuit @sanchezcastejon 21-09-2014: «cuando gobernemos cerraremos las puertas giratorias» (https://twitter.com/sanchezcastejon/status/513667883851730944). Debate a cuatro 2016, min. 1:19:51 (https://youtu.be/67rqA7Yl_Ho?t=4791).
@@ -257,3 +259,47 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 
 ### arch-38 · El estado del tren
 - **Estado:** fusionado en arch-07
+
+## Origen: debate de primarias del PSOE (07-07-2014)
+
+Vídeo del canal oficial del PSOE: https://www.youtube.com/watch?v=uOwZHE7Vy1g («Debate entre los
+candidatos a la Secretaría General del PSOE», publicado el 07-07-2014). Transcripción automática en
+`investigacion/material/transcripciones/` (no está en git). La transcripción no indica quién habla: se
+ha deducido por cómo se mencionan los candidatos entre sí, y **cada frase se confirma viendo el vídeo**
+antes de citarla. Descartados por no ser de Sánchez: 1:15:03 (Madina) y 1:34:54–1:38 (Santa Sede y
+artículo 135, parece Pérez Tapias).
+
+### deb-01 · «Aforamiento cero»
+- **Estado:** por investigar — posible hito de 2014 para `sanchez-suprimir-aforamientos`
+- **Antes:** 27:40 · «que haya aforamiento cero de diputados y diputadas» (dentro de la nueva ley de partidos que proponía).
+- **Notas:** el caso publicado arranca en 2018; este hito lo adelanta a 2014. Confirmar el minuto viéndolo.
+
+### deb-02 · Donaciones privadas de 2.000 € al año
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
+- **Antes:** 27:40–27:55 · «que se acabe con la financiación privada de los partidos políticos y las donaciones privadas de las personas físicas solamente sean de 2,000 € al año como máximo y no el techo que se fija ahora de 100,000 € al año»
+- **Después:** pendiente: límite vigente en la Ley Orgánica 8/2007 de financiación de los partidos (texto consolidado del BOE; la LO 3/2015 lo bajó a 50.000 €, comprobar si ha cambiado).
+- **Notas:** la LO 3/2015 es del Gobierno del PP; habría que ver si con Sánchez se propuso algo.
+
+### deb-03 · Exministros en consejos de empresas estratégicas
+- **Estado:** en preparación — se une con arch-24 en un solo caso (aprobado por el usuario el 12-11-2026). Minuto 46:59–47:24 confirmado por el usuario viendo el vídeo: el vídeo del caso empieza en el segundo 2815 (46:55).
+- **Persona / tipo propuesto:** Pedro Sánchez / doble rasero o promesa incumplida
+- **Antes:** 46:59–47:24, a una pregunta sobre puertas giratorias: «ni los expresidentes del gobierno ni tampoco los exministros de cualquier gobierno podían formar parte de un consejo de administración de una empresa vinculada a un sector estratégico como pueda ser las telecomunicaciones o como pueda ser la energía y ese es mi compromiso […] las vamos a cerrar pero no solamente para los de enfrente también las vamos a cerrar para los compañeros y compañeras que son militantes del Partido Socialista sobre todo para ellos»
+- **Después:** 2020 · los exministros socialistas José Montilla y José Blanco entran en el consejo de Enagás como consejeros propuestos por la SEPI (prensa: El Independiente, 31-05-2020). Pendiente: fuente primaria (comunicación a la CNMV o acuerdos de la junta de accionistas de Enagás) y otros casos (Red Eléctrica/Redeia, Indra, Correos…).
+- **Notas:** muy relacionado con arch-24; valorar un caso propio («exministros del PSOE en consejos de empresas energéticas») con este vídeo como «antes».
+
+### deb-04 · Fuera los políticos de las instituciones de control
+- **Estado:** por investigar
+- **Antes:** 28:11–28:28 · «pongamos fin a la presencia de políticos en los en las instituciones que son garantes de la higiene y la limpieza democrática no entiendo que haya representantes de partidos políticos por ejemplo en el Tribunal de Cuentas»
+- **Después:** pendiente. Posibles: nombramientos en el Tribunal de Cuentas durante sus Gobiernos; Dolores Delgado (exministra de Justicia) fiscal general en 2020; Juan Carlos Campo (exministro de Justicia) magistrado del Constitucional en 2023.
+- **Notas:** riesgo de interpretación: «instituciones garantes» es amplio; el ejemplo que da es el Tribunal de Cuentas. Empezar por ahí.
+
+### deb-05 · Cataluña: ni referéndum pactado ni legal; reforma federal
+- **Estado:** débil
+- **Antes:** 1:10:27–1:10:50 · «no creo en que se tenga que hacer un referéndum ni pactado ni legal creo que tenemos que afrontar un proceso de reforma constitucional que alumbre el verdadero ser de España que es la España Federal»
+- **Notas:** no consta que haya aceptado después un referéndum; la reforma federal nunca se planteó, pero no fijó plazo. Útil como contexto para casos de Cataluña.
+
+### deb-06 · Primarias abiertas en noviembre de 2014
+- **Estado:** débil — asunto interno del partido
+- **Antes:** 20:06–21:27 · «voy a hacer primarias abiertas y las voy a proponer en el mes de noviembre de este año»
+- **Notas:** comprobar qué pasó (en 2015 fue proclamado candidato); interés limitado para la web.
