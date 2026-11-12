@@ -77,6 +77,9 @@ Estados posibles en el registro:
 - `quien` con el cargo que tenía en ese momento; `contexto` con dónde y cuándo.
 - `cronologia` con la justificación del político si la hay.
 - `npm run build` (valida el esquema y el orden de fechas) y `npm run fuentes -- --rapido`.
+- Si la prueba es un PDF de un organismo oficial (Diario de Sesiones, BOE, La Moncloa, CSN…), añade al
+  hito `documento: { url, buscar?, incluir? }` y ejecuta `npm run capturas -- <slug>`. Revisa el recorte
+  generado (que se lea y que el resalte caiga donde debe). Nunca recortes de prensa.
 - Si aparece una persona o partido nuevo en `tags`, crea su `src/content/perfil/<slug>.yaml` y ejecuta
   `npm run perfiles -- <slug>`.
 - Actualiza el estado en el registro con el slug. No se pasa a `draft: false` sin que el usuario lo

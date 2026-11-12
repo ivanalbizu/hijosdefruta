@@ -1,0 +1,212 @@
+---
+import { Image, getImage } from 'astro:assets';
+import ExtLink from '@components/ExtLink.astro';
+import type { Hito } from '@utils/casos';
+
+/**
+ * Recorte de un documento oficial con el fragmento citado resaltado.
+ * El recorte es la prueba visible; el enlace a la página original, la copia
+ * archivada y la huella SHA-256 son lo que permite comprobarla.
+ *
+ * Al pulsarlo se amplía en un <dialog> nativo (Esc, botón Cerrar o clic fuera
+ * para cerrar; el foco vuelve al recorte). Sin JavaScript, el enlace abre la imagen.
+ */
+interface Props {
+	documento: NonNullable<Hito['documento']>;
+	medio: string;
+	/** Copia archivada de la fuente, si existe. */
+	archivo?: string;
+}
+
+const { documento, medio, archivo } = Astro.props;
+const { imagen, pagina, url, sha256 } = documento;
+const copia = documento.archivo ?? archivo;
+const conPagina = pagina ? `${url}#page=${pagina}` : url;
+const ampliada = imagen && (await getImage({ src: imagen, format: 'webp', width: Math.min(imagen.width, 1600) }));
+const descripcion = `${medio}${pagina ? `, página ${pagina}` : ''}`;
+const alt = `Recorte del documento original, ${descripcion}, con el fragmento citado resaltado en amarillo`;
+const id = `documento-${crypto.randomUUID().slice(0, 8)}`;
+---
+
+{
+	imagen && ampliada && (
+		<figure class="documento">
+			<a class="recorte" href={ampliada.src} data-ampliar aria-haspopup="dialog" aria-controls={id}>
+				<Image src={imagen} alt={alt} widths={[480, 800, 1200]} sizes="(min-width: 48rem) 40rem, 100vw" />
+				<span class="lupa" aria-hidden="true">
+					<svg viewBox="0 0 24 24" width="18" height="18">
+						<circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+						<path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</span>
+				<span class="sr-only">(ampliar)</span>
+			</a>
+			<figcaption class="meta">
+				<span>{medio}{pagina && `, pág. ${pagina}`}</span>
+				<span>
+					<ExtLink href={conPagina}>Ver en el original</ExtLink>
+					{copia && (
+						<>
+							{' · '}
+							<ExtLink href={copia}>copia archivada</ExtLink>
+						</>
+					)}
+				</span>
+				{sha256 && (
+					<span class="huella">
+						SHA-256 del PDF: <code title={sha256}>{sha256.slice(0, 16)}…</code>
+					</span>
+				)}
+			</figcaption>
+
+			<dialog id={id} class="visor" aria-labelledby={`${id}-titulo`}>
+				<div class="visor-cuerpo">
+					<header class="visor-cabecera">
+						<p id={`${id}-titulo`} class="visor-titulo">{descripcion}</p>
+						<form method="dialog">
+							<button class="btn btn--secondary cerrar" autofocus>
+								<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+									<path d="M3 3l10 10M13 3 3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								</svg>
+								Cerrar
+							</button>
+						</form>
+					</header>
+					<div class="visor-imagen">
+						<img src={ampliada.src} alt={alt} width={ampliada.attributes.width} height={ampliada.attributes.height} loading="lazy" decoding="async" />
+					</div>
+				</div>
+			</dialog>
+		</figure>
+	)
+}
+
+<script>
+	// Mejora progresiva: sin soporte de <dialog>, el enlace sigue abriendo la imagen.
+	for (const enlace of document.querySelectorAll<HTMLAnchorElement>('a[data-ampliar]')) {
+		const dialogo = document.getElementById(enlace.getAttribute('aria-controls') ?? '');
+		if (!(dialogo instanceof HTMLDialogElement) || typeof dialogo.showModal !== 'function') continue;
+		enlace.addEventListener('click', evento => {
+			if (evento.metaKey || evento.ctrlKey || evento.shiftKey) return; // abrir en pestaña nueva sigue funcionando
+			evento.preventDefault();
+			dialogo.showModal();
+		});
+		// Pulsar el fondo (fuera del contenido) cierra el diálogo.
+		dialogo.addEventListener('click', evento => {
+			if (evento.target === dialogo) dialogo.close();
+		});
+	}
+</script>
+
+<style>
+	.documento {
+		margin: 0;
+	}
+	.recorte {
+		position: relative;
+		display: block;
+		border: 1px solid var(--color-border-strong);
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		background: #fff;
+		box-shadow: var(--shadow-sm);
+		cursor: zoom-in;
+		transition: box-shadow var(--duration) var(--ease);
+	}
+	.recorte:hover {
+		box-shadow: var(--shadow-md);
+	}
+	.recorte img {
+		width: 100%;
+		height: auto;
+	}
+	.lupa {
+		position: absolute;
+		right: var(--space-2);
+		bottom: var(--space-2);
+		display: grid;
+		place-items: center;
+		width: 2rem;
+		height: 2rem;
+		border-radius: var(--radius-full);
+		/* Fijo en claro y oscuro: el recorte siempre va sobre el blanco del documento. */
+		background: rgb(21 25 35 / 85%);
+		color: #fff;
+		opacity: 0.85;
+	}
+	.recorte:hover .lupa,
+	.recorte:focus-visible .lupa {
+		opacity: 1;
+	}
+	figcaption {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-1) var(--space-3);
+		margin-top: var(--space-2);
+	}
+	.huella code {
+		font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+		font-size: 0.95em;
+	}
+
+	/* Visor */
+	.visor {
+		width: min(100% - 2 * var(--space-4), 72rem);
+		max-width: none;
+		max-height: calc(100dvh - 2 * var(--space-4));
+		padding: 0;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		background: var(--color-surface);
+		color: var(--color-text);
+		box-shadow: var(--shadow-md);
+	}
+	.visor::backdrop {
+		background: rgb(15 18 25 / 75%);
+	}
+	.visor-cuerpo {
+		display: flex;
+		flex-direction: column;
+		max-height: calc(100dvh - 2 * var(--space-4));
+	}
+	.visor-cabecera {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-4);
+		padding: var(--space-3) var(--space-4);
+		border-bottom: 1px solid var(--color-border);
+	}
+	.visor-titulo {
+		font-size: var(--text-sm);
+		font-weight: var(--weight-semibold);
+	}
+	.cerrar {
+		min-height: 2.5rem;
+		padding-inline: var(--space-4);
+		font-size: var(--text-sm);
+	}
+	.visor-imagen {
+		overflow: auto;
+		background: #fff;
+	}
+	.visor-imagen img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	:global(html:has(dialog.visor[open])) {
+		overflow: hidden;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.visor[open] {
+			animation: aparecer var(--duration) var(--ease);
+		}
+		@keyframes aparecer {
+			from {
+				opacity: 0;
+				transform: scale(0.98);
+			}
+		}
+	}
+</style>

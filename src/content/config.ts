@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type SchemaContext } from 'astro:content';
 import { TIPOS } from '../consts';
 
 type Tipo = keyof typeof TIPOS;
@@ -69,7 +69,31 @@ const video = z
 		message: '`end` debe ser mayor que `start`',
 	});
 
-const hito = z
+type ImageFn = SchemaContext['image'];
+
+/**
+ * Recorte de un documento oficial (PDF) con el fragmento citado resaltado.
+ * Lo genera `npm run capturas -- <slug>` a partir de `url` y `buscar`.
+ * Solo documentos de organismos oficiales: nunca capturas de prensa.
+ */
+const documento = (image: ImageFn) =>
+	z.object({
+		/** PDF oficial del que sale el recorte (puede ser distinto de `fuente.url`, p. ej. la versión PDF de una transcripción). */
+		url: z.string().url(),
+		/** Fragmentos que se resaltan; por defecto, la cita. Literales, tal como aparecen en el documento. */
+		buscar: z.preprocess(v => (Array.isArray(v) && !v.length ? undefined : v), z.array(z.string().min(3)).optional()),
+		/** Fragmentos que entran en el recorte sin resaltar, como contexto (p. ej. la frase que presenta una tabla). */
+		incluir: z.preprocess(v => (Array.isArray(v) && !v.length ? undefined : v), z.array(z.string().min(3)).optional()),
+		/** Lo rellena el script. */
+		imagen: opcional(image()),
+		pagina: opcional(z.number().int().positive()),
+		/** Huella del PDF descargado, para que cualquiera pueda comprobar que es el mismo documento. */
+		sha256: opcional(z.string().regex(/^[0-9a-f]{64}$/)),
+		/** Copia del PDF en Web Archive; la busca el script. */
+		archivo: opcional(z.string().url()),
+	});
+
+const hito = (image: ImageFn) => z
 	.object({
 		fecha,
 		quien: z.string().min(1),
@@ -87,6 +111,8 @@ const hito = z
 		fuente,
 		// Un vídeo sin ID (bloque vacío en el CMS) cuenta como ausente.
 		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
+		// Un documento sin URL (bloque vacío en el CMS) cuenta como ausente.
+		documento: z.preprocess(v => (v && typeof v === 'object' && !('url' in v && v.url) ? undefined : v), documento(image).optional()),
 	})
 	.refine(h => h.cita || h.hecho, { message: 'Cada hito necesita `cita` o `hecho`' })
 	.refine(h => !h.destacado || esFragmentoDe(h.destacado, h.cita ?? h.hecho ?? ''), {
@@ -96,7 +122,8 @@ const hito = z
 
 const casos = defineCollection({
 	type: 'content',
-	schema: z
+	schema: ({ image }) =>
+		z
 		.object({
 			title: z.string(),
 			description: z.string().min(20),
@@ -108,11 +135,11 @@ const casos = defineCollection({
 			draft: z.boolean().default(false),
 			tags: z.array(z.string()).min(1),
 			/** Lo que dijo o hizo primero. */
-			antes: hito,
+			antes: hito(image),
 			/** Lo que lo contradice. */
-			despues: hito,
+			despues: hito(image),
 			/** Contexto adicional, en orden cronológico. */
-			cronologia: z.array(hito).default([]),
+			cronologia: z.array(hito(image)).default([]),
 		})
 		.superRefine((data, ctx) => {
 			if (esPosterior(data.antes.fecha, data.despues.fecha)) {

@@ -16,6 +16,7 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 | `npm run preview` | Sirve el build localmente                               |
 | `npm run fuentes` | Comprueba que fuentes, copias archivadas y vídeos siguen vivos |
 | `npm run perfiles` | Descarga de Wikimedia Commons la foto o el logo de los perfiles que no la tienen |
+| `npm run capturas -- <slug>` | Genera los recortes resaltados de los documentos oficiales de un caso |
 
 ## Añadir un caso
 
@@ -57,6 +58,27 @@ fuente, y se publican en `/promesas`. Campos: `fecha`, `quien`, `partido`, `comp
 tal como lo recoge la fuente), `cita` opcional (literal), `contexto`, `tema`, `campana`, `fuente`,
 `video` opcional, `estado` (`pendiente`, `cumplida`, `incumplida`, `parcial`) y `caso` (el slug de la
 ficha que la contrasta, cuando la haya).
+
+## Recortes de documentos oficiales
+
+Un hito puede mostrar un recorte del documento oficial con el fragmento citado resaltado. Solo se usan
+documentos de organismos oficiales (BOE, Diarios de Sesiones, transcripciones de La Moncloa, informes
+de organismos públicos), **nunca capturas de prensa**.
+
+```yaml
+antes:
+  cita: '…'
+  fuente: { … }
+  documento:
+    url: https://…/documento.pdf # PDF oficial (puede ser distinto de fuente.url)
+    buscar: ['fragmento literal'] # opcional: lo que se resalta; por defecto, la cita
+    incluir: ['frase de contexto'] # opcional: entra en el recorte sin resaltar
+```
+
+`npm run capturas -- <slug>` descarga el PDF (o su copia en Web Archive), localiza el texto, resalta
+el fragmento, guarda el recorte en `src/assets/pruebas/<slug>/` y añade al hito `imagen`, `pagina` y
+`sha256`. En la ficha se muestra con un enlace a la página del original, la copia archivada y la huella
+SHA-256 del PDF, para que cualquiera pueda comprobar que es el mismo documento.
 
 ## Perfiles de políticos y partidos
 

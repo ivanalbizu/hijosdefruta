@@ -221,6 +221,10 @@
   * {
     margin: 0;
   }
+  /* El navegador centra los <dialog> modales con margin: auto; el reset anterior lo anula. */
+  dialog {
+    margin: auto;
+  }
   ul[class],
   ol[class],
   nav ul,

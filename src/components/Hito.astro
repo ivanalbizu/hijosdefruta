@@ -1,5 +1,6 @@
 ---
 import Avatar from '@components/Avatar.astro';
+import Documento from '@components/Documento.astro';
 import ExtLink from '@components/ExtLink.astro';
 import Fecha from '@components/Fecha.astro';
 import Media from '@components/Media.astro';
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const { hito, nivel = 3, grande = false } = Astro.props;
-const { fecha, quien, cita, hecho, contexto, fuente, video } = hito;
+const { fecha, quien, cita, hecho, contexto, fuente, video, documento } = hito;
 const perfil = await getPerfil(quien);
 const nombre = nombreSinCargo(quien);
 const cargo = quien.slice(nombre.length).trim().replace(/^\((.*)\)$/, '$1');
@@ -39,6 +40,7 @@ const Nombre = `h${nivel}` as 'h3' | 'h4';
 		)
 	}
 	{hecho && <p class="hecho">{hecho}</p>}
+	{documento?.imagen && <Documento documento={documento} medio={fuente.medio} archivo={documento.url === fuente.url ? fuente.archivo : undefined} />}
 	{video && <Media id={video.id} title={video.titulo ?? cita ?? hecho ?? quien} start={video.start} end={video.end} />}
 	<dl class="detalles">
 		<div>

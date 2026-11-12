@@ -21,6 +21,10 @@ Un solo error o una cita sacada de contexto desacredita toda la web.
 - Se incluye la justificación del político cuando la hay.
 - Datos de perfiles (cargo, partido): solo lo que sea claro y estable. Ante la duda, se deja vacío.
 - Las imágenes de personas y partidos vienen de Wikimedia Commons, siempre con autor y licencia.
+- Los recortes de documentos (`documento` en un hito, `npm run capturas`) solo de organismos oficiales:
+  BOE, Diarios de Sesiones, La Moncloa, informes de organismos públicos. **Nunca capturas de prensa.**
+  El recorte es la prueba visible; lo que la hace verificable es el enlace a la página, la copia en Web
+  Archive y la huella SHA-256 del PDF.
 
 ## Estructura
 
@@ -31,13 +35,14 @@ src/content/
   perfil/*.yaml     ficha de cada tag: persona o partido, imagen y crédito
   config.ts         esquemas Zod: el build falla si falta una fuente o una fecha no cuadra
 src/assets/perfiles/  fotos y logos descargados por `npm run perfiles`
+src/assets/pruebas/   recortes de documentos oficiales generados por `npm run capturas`
 src/utils/
   casos.ts          consultas y formato: getCasos, getTags, getHitos, resumenHito…
   perfiles.ts       getPerfiles (Map por slug), getPerfil(quien), nombreSinCargo
   og.ts             imagen 1200×630 para redes (satori + sharp)
 src/layouts/        Base (html, skip link, header, footer) → Default (página con cabecera) y CasoPost
 src/components/     ver "Componentes"
-scripts/            fuentes.mjs (comprueba enlaces), perfiles.mjs (descarga imágenes)
+scripts/            fuentes.mjs (comprueba enlaces), perfiles.mjs (descarga imágenes), capturas.mjs (recortes de PDF)
 public/admin/       Decap CMS (aún no edita perfiles)
 ```
 
@@ -70,7 +75,8 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 | Componente | Uso |
 | --- | --- |
 | `CasoCard` | Tarjeta de caso con antes/después; `nivel` del título y `destacada` para portada. Enlace extendido desde el título. |
-| `Hito` | Una declaración o hecho: fecha, avatar, cita, vídeo, contexto y fuente. |
+| `Hito` | Una declaración o hecho: fecha, avatar, cita, recorte del documento, vídeo, contexto y fuente. |
+| `Documento` | Recorte de un documento oficial con el fragmento resaltado, enlace a la página, copia archivada y SHA-256. |
 | `Avatar` | Foto circular (persona), logo apaisado sobre blanco (partido) o iniciales. Decorativo por defecto (`alt=""`). |
 | `Tags` | Chips con mini-avatar que enlazan a `/tags/<slug>/`. |
 | `PerfilCard` | Persona o partido en los índices. |

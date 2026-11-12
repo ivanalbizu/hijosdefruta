@@ -65,6 +65,19 @@ collections:
               - { label: "Título", name: "titulo", widget: "string", required: false }
               - { label: "Empieza en (segundos)", name: "start", widget: "number", value_type: "int", required: false }
               - { label: "Termina en (segundos)", name: "end", widget: "number", value_type: "int", required: false }
+          - label: "Documento oficial (recorte)"
+            name: "documento"
+            widget: "object"
+            required: false
+            collapsed: true
+            hint: "Solo PDF de organismos oficiales (BOE, Diario de Sesiones, La Moncloa…), nunca prensa. Tras guardar, ejecuta npm run capturas -- <slug>"
+            fields:
+              - { label: "URL del PDF", name: "url", widget: "string", required: false, pattern: ['^https?://', "Debe ser una URL"] }
+              - { label: "Texto a resaltar", name: "buscar", widget: "list", required: false, hint: "Fragmentos literales del PDF; si se deja vacío, se usa la cita" }
+              - { label: "Texto de contexto (sin resaltar)", name: "incluir", widget: "list", required: false }
+              - { label: "Imagen (la genera el script)", name: "imagen", widget: "string", required: false }
+              - { label: "Página (la rellena el script)", name: "pagina", widget: "number", value_type: "int", required: false }
+              - { label: "SHA-256 (lo rellena el script)", name: "sha256", widget: "string", required: false }
       - { label: "Después", name: "despues", widget: "object", fields: *hito_fields }
       - { label: "Cronología", name: "cronologia", widget: "list", required: false, summary: "{{fields.fecha}} · {{fields.quien}}", fields: *hito_fields }
       - { label: "Comentario", name: "body", widget: "markdown", required: false, hint: "Matices o contexto adicional (opcional)" }
