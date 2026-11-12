@@ -10,8 +10,8 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares |
-| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias, arch-33 elecciones en 2027 |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027 |
+| Prometedor (listo para proponer) | arch-17 ley mordaza, arch-18 reforma laboral, arch-22 limitar mandatos, arch-24 puertas giratorias |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -222,12 +222,13 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Estado:** ya existe — `sanchez-limitar-decretos-ley`
 
 ### arch-33 · «Habrá elecciones en 2027»
-- **Estado:** prometedor (absorbe arch-09)
+- **Estado:** publicado — `/casos/sanchez-habra-elecciones-en-2027/` (12-11-2026); absorbe arch-09
 - **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno) / cambio de postura
-- **Antes:** 20-05-2026 · sesión de control en el Congreso, transcripción de La Moncloa: a Feijóo, «Habrá elecciones en 2027. Habrá elecciones en 2027.»; a Rufián, «vamos a seguir haciendo hasta el año 2027, donde habrá de nuevo elecciones» · https://www.lamoncloa.gob.es/presidente/intervenciones/Paginas/2026/20260520-sanchez-sesion-control-congreso.aspx · pendiente: Diario de Sesiones de esa fecha. Repetido el 19-06-2026 en Bruselas («Presentaremos los presupuestos en 2026 y habrá elecciones en 2027», según prensa; transcripción pendiente). Antecedente de arch-09: 09-07-2025, «Lo fácil sería tirar la toalla…» (fuente primaria pendiente).
-- **Después:** 05-10-2026 · declaración institucional: «he decidido convocar un Consejo de Ministros y Ministras extraordinario esta misma mañana para disolver las Cortes Generales y convocar unas elecciones generales que se celebrarán el domingo 29 de noviembre» · https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/051026-sanchez-convocatoria-elecciones.aspx · Real Decreto 806/2026, de 5 de octubre (BOE 06-10-2026): pendiente URL del BOE.
-- **Justificación del político:** en la misma declaración: un Congreso «muy bronco», una oposición «sin sentido de Estado»; la prensa lo vincula a la derrota de los decretos de vivienda (pendiente de fuente).
-- **Notas / veredicto:** contradicción limpia entre una afirmación tajante y un hecho oficial. Adelantar elecciones es una prerrogativa legal: el caso es el cambio de postura, no una ilegalidad. El límite legal de la legislatura era julio de 2027.
+- **Antes:** 20-05-2026 · Diario de Sesiones del Congreso núm. 186, pág. 7: «Habrá elecciones en 2027 y, si los españoles quieren, aquí seguiremos ocho años o cuatro años más para seguir haciendo avanzar a España»; pág. 10, a Rufián: «hasta el año 2027, cuando habrá de nuevo elecciones».
+- **Cronología:** 19-06-2026, Bruselas (transcripción y PDF de La Moncloa): «presentaremos los presupuestos en 2026 y habrá elecciones en 2027», con el matiz «la realidad es muy dinámica»; 05-10-2026, declaración institucional con la decisión y la justificación («necesitamos renovar y ampliar el apoyo de la gente»).
+- **Después:** Real Decreto 806/2026, de 5 de octubre (BOE núm. 248, 06-10-2026, BOE-A-2026-20742), refrendado por Sánchez: disuelve las Cortes y convoca elecciones para el 29-11-2026.
+- **Búsquedas:** DSCD 15-PL-186 (leído), BOE (leído), transcripciones de La Moncloa del 20-05, 19-06 y 05-10 (leídas).
+- **Notas:** la transcripción de La Moncloa del 20-05 no coincide con el Diario de Sesiones (repite «Habrá elecciones en 2027» y desordena el resto): se cita el Diario de Sesiones. La prensa vinculaba el adelanto a la derrota de los decretos de vivienda; la declaración oficial no lo menciona y el caso no lo afirma. La rueda de prensa de Bruselas no tiene copia en Web Archive; copia solicitada el 12-11-2026 con autorización del usuario (página y PDF).
 
 ### arch-34 · Elecciones (duplicado de arch-20)
 - **Estado:** duplicado — ver arch-20
