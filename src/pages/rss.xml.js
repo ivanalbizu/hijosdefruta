@@ -1,20 +1,20 @@
 import rss from '@astrojs/rss';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getMentiras } from '@utils/mentiras';
+import { getCasos } from '@utils/casos';
 
 export async function GET(context) {
-	const mentiras = await getMentiras();
+	const casos = await getCasos();
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
 		site: context.site,
 		customData: '<language>es-es</language>',
-		items: mentiras.map(({ slug, data }) => ({
+		items: casos.map(({ slug, data }) => ({
 			title: data.title,
 			description: data.description,
 			pubDate: data.pubDate,
 			categories: data.tags,
-			link: `/mentira/${slug}/`,
+			link: `/casos/${slug}/`,
 		})),
 	});
 }

@@ -3,7 +3,7 @@ import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
 import { TIPOS } from "../consts";
-import { formatFecha, recortar, resumenHito, type Hito, type Mentira } from "@utils/mentiras";
+import { formatFecha, recortar, resumenHito, type Hito, type Caso } from "@utils/casos";
 import { nombreSinCargo as nombre } from "@utils/perfiles";
 
 export const OG_WIDTH = 1200;
@@ -19,7 +19,7 @@ const COLORES = {
 };
 
 /** Mismos colores que TipoBadge.astro. */
-const COLOR_TIPO: Record<Mentira["data"]["tipo"], string> = {
+const COLOR_TIPO: Record<Caso["data"]["tipo"], string> = {
   "falsedad": "#8a1c1c",
   "promesa-incumplida": "#8a4b00",
   "cambio-de-postura": "#4a3a8a",
@@ -56,8 +56,8 @@ function columna(etiqueta: string, color: string, hito: Hito): Nodo {
 }
 
 /** Imagen 1200×630 para redes sociales con el antes y el después del caso. */
-export async function renderOg(mentira: Mentira): Promise<Buffer> {
-  const { title, tipo, antes, despues } = mentira.data;
+export async function renderOg(caso: Caso): Promise<Buffer> {
+  const { title, tipo, antes, despues } = caso.data;
 
   const arbol = div(
     { width: OG_WIDTH, height: OG_HEIGHT, flexDirection: "column", background: COLORES.fondo, fontFamily: "Inter" },

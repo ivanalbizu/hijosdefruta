@@ -7,16 +7,16 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "mentira"
-    label: "Mentiras"
-    label_singular: "Mentira"
-    folder: "src/content/mentira"
+  - name: "casos"
+    label: "Casos"
+    label_singular: "Caso"
+    folder: "src/content/casos"
     create: true
     slug: "{{slug}}"
     extension: "mdx"
     format: "frontmatter"
     summary: "{{title}}"
-    preview_path: "mentira/{{slug}}"
+    preview_path: "casos/{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text", hint: "Resume el antes y el después (mínimo 20 caracteres)" }

@@ -2,7 +2,7 @@
 import Fecha from '@components/Fecha.astro';
 import Tags from '@components/Tags.astro';
 import TipoBadge from '@components/TipoBadge.astro';
-import { resumenHito, type Mentira } from '@utils/mentiras';
+import { resumenHito, type Caso } from '@utils/casos';
 import { nombreSinCargo } from '@utils/perfiles';
 
 /**
@@ -11,15 +11,15 @@ import { nombreSinCargo } from '@utils/perfiles';
  * y el tipo siguen siendo enlaces independientes.
  */
 interface Props {
-	mentira: Mentira;
+	caso: Caso;
 	/** Nivel del título: h2 en listados, h3 dentro de secciones. */
 	nivel?: 2 | 3 | 4;
 	/** Tarjeta grande para la portada. */
 	destacada?: boolean;
 }
 
-const { mentira, nivel = 2, destacada = false } = Astro.props;
-const { title, description, tipo, antes, despues, tags } = mentira.data;
+const { caso, nivel = 2, destacada = false } = Astro.props;
+const { title, description, tipo, antes, despues, tags } = caso.data;
 const Titulo = `h${nivel}` as 'h2' | 'h3' | 'h4';
 const max = destacada ? 220 : 140;
 ---
@@ -31,7 +31,7 @@ const max = destacada ? 220 : 140;
 	</div>
 
 	<Titulo class="titulo">
-		<a href={`/mentira/${mentira.slug}/`}>{title}</a>
+		<a href={`/casos/${caso.slug}/`}>{title}</a>
 	</Titulo>
 	{destacada && <p class="resumen">{description}</p>}
 

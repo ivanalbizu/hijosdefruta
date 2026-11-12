@@ -1,22 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
-import MentiraCard from '@components/MentiraCard.astro';
+import CasoCard from '@components/CasoCard.astro';
 import PerfilCard from '@components/PerfilCard.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, TIPOS } from '../consts';
-import { getMentiras, getFeatured, getTags, getHitos } from '@utils/mentiras';
+import { getCasos, getFeatured, getTags, getHitos } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
 
-const mentiras = await getMentiras();
-const destacada = getFeatured(mentiras);
-const recientes = mentiras.filter(m => m !== destacada).slice(0, 6);
-const tags = getTags(mentiras);
+const casos = await getCasos();
+const destacado = getFeatured(casos);
+const recientes = casos.filter(c => c !== destacado).slice(0, 6);
+const tags = getTags(casos);
 const perfiles = await getPerfiles();
 const promesas = await getCollection('promesa');
 
-const fuentes = new Set(mentiras.flatMap(m => getHitos(m).map(h => h.fuente.url))).size;
+const fuentes = new Set(casos.flatMap(c => getHitos(c).map(h => h.fuente.url))).size;
 const cifras = [
-  { valor: mentiras.length, texto: 'casos documentados' },
+  { valor: casos.length, texto: 'casos documentados' },
   { valor: fuentes, texto: 'fuentes enlazadas' },
   { valor: tags.length, texto: 'políticos y partidos' },
   { valor: promesas.length, texto: 'promesas archivadas' },
@@ -38,7 +38,7 @@ const top = tags.slice(0, 8).map(tag => {
         y un enlace a la fuente primaria de cada una.
       </p>
       <div class="acciones">
-        <a class="btn btn--primary" href="/mentira/">Ver los casos</a>
+        <a class="btn btn--primary" href="/casos/">Ver los casos</a>
         <a class="btn btn--secondary" href="/metodologia/">Cómo se verifican</a>
       </div>
       <dl class="cifras">
@@ -56,11 +56,11 @@ const top = tags.slice(0, 8).map(tag => {
 
   <div class="container">
     {
-      destacada && (
+      destacado && (
         <section class="section" aria-labelledby="titulo-destacado">
           <h2 id="titulo-destacado" class="eyebrow">Caso destacado</h2>
           <div class="destacado">
-            <MentiraCard mentira={destacada} nivel={3} destacada />
+            <CasoCard caso={destacado} nivel={3} destacada />
           </div>
         </section>
       )
@@ -69,13 +69,13 @@ const top = tags.slice(0, 8).map(tag => {
     <section class="section" aria-labelledby="titulo-recientes">
       <div class="section-header">
         <h2 id="titulo-recientes" class="h3">Últimos casos</h2>
-        <a class="link-arrow" href="/mentira/">Todos los casos <span class="sr-only">({mentiras.length})</span></a>
+        <a class="link-arrow" href="/casos/">Todos los casos <span class="sr-only">({casos.length})</span></a>
       </div>
       <ul class="grid-cards">
         {
-          recientes.map(mentira => (
+          recientes.map(caso => (
             <li>
-              <MentiraCard mentira={mentira} nivel={3} />
+              <CasoCard caso={caso} nivel={3} />
             </li>
           ))
         }

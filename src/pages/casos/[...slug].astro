@@ -1,0 +1,23 @@
+---
+import CasoPost from '@layouts/CasoPost.astro';
+import { getCasos, type Caso } from '@utils/casos';
+
+export async function getStaticPaths() {
+	const casos = await getCasos();
+	return casos.map(caso => ({
+		params: { slug: caso.slug },
+		props: { caso },
+	}));
+}
+
+interface Props {
+	caso: Caso;
+}
+
+const { caso } = Astro.props;
+const { Content } = await caso.render();
+---
+
+<CasoPost caso={caso}>
+	<Content />
+</CasoPost>

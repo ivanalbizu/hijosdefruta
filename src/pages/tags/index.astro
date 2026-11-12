@@ -1,10 +1,10 @@
 ---
 import Default from '@layouts/Default.astro';
 import PerfilCard from '@components/PerfilCard.astro';
-import { getMentiras, getTags } from '@utils/mentiras';
+import { getCasos, getTags } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
 
-const tags = getTags(await getMentiras());
+const tags = getTags(await getCasos());
 const perfiles = await getPerfiles();
 
 const items = tags.map(tag => {
@@ -17,7 +17,7 @@ const personas = items.filter(i => i.perfil?.data.tipo !== 'partido');
 
 <Default
   title="Políticos y partidos"
-  description="Mentiras y cambios de opinión agrupados por político y partido"
+  description="Casos agrupados por político y partido, con la cita literal y la fuente de cada declaración"
   eyebrow="Índice"
   lead="Todos los casos agrupados por las personas y los partidos que aparecen en ellos.">
   <section aria-labelledby="titulo-partidos">

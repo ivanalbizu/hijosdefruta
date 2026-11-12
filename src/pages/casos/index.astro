@@ -1,0 +1,23 @@
+---
+import Default from '@layouts/Default.astro';
+import CasoCard from '@components/CasoCard.astro';
+import { getCasos } from '@utils/casos';
+
+const casos = await getCasos();
+---
+
+<Default
+  title="Casos"
+  description="Contradicciones de políticos españoles clasificadas en falsedades, promesas incumplidas, cambios de postura y dobles raseros, con la cita literal y la fuente de cada declaración"
+  eyebrow={`${casos.length} casos documentados`}
+  lead="Cada caso enfrenta lo que se dijo antes con lo que se dijo o hizo después. Ordenados por la fecha de la contradicción, de la más reciente a la más antigua.">
+  <ul class="grid-cards">
+    {
+      casos.map(caso => (
+        <li>
+          <CasoCard caso={caso} />
+        </li>
+      ))
+    }
+  </ul>
+</Default>

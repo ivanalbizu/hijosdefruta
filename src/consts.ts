@@ -1,5 +1,6 @@
 export const SITE_TITLE = 'hijosdefruta';
-export const SITE_DESCRIPTION = 'Recopilación de Mentiras de nuestros políticos, para algunos denominado: Cambios de opinión';
+export const SITE_DESCRIPTION =
+	'Lo que dijeron los políticos españoles frente a lo que dijeron o hicieron después, con la cita literal, la fecha y la fuente de cada declaración.';
 
 /**
  * Tipos de contradicción. Llamar "mentira" a todo resta credibilidad:

@@ -1,6 +1,7 @@
 # hijosdefruta
 
-Recopilación de mentiras y cambios de opinión de políticos, con fuentes enlazadas.
+Hemeroteca de contradicciones de políticos españoles: lo que dijeron frente a lo que dijeron o hicieron
+después, con la cita literal y la fuente de cada declaración.
 Sitio estático hecho con [Astro](https://astro.build), publicado en <https://hijosdefruta.netlify.app>.
 
 ## Comandos
@@ -18,7 +19,7 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 
 ## Añadir un caso
 
-Cada caso es un archivo en `src/content/mentira/*.mdx`. Las pruebas van en el frontmatter y el
+Cada caso es un archivo en `src/content/casos/*.mdx` y se publica en `/casos/<nombre-del-archivo>/`. Las pruebas van en el frontmatter y el
 esquema de [`src/content/config.ts`](src/content/config.ts) las valida: **si falta una fuente, una
 fecha está mal o la cronología está desordenada, el build falla**.
 

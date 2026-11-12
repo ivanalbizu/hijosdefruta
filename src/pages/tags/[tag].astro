@@ -2,26 +2,26 @@
 import Base from '@layouts/Base.astro';
 import Avatar from '@components/Avatar.astro';
 import ExtLink from '@components/ExtLink.astro';
-import MentiraCard from '@components/MentiraCard.astro';
+import CasoCard from '@components/CasoCard.astro';
 import TipoBadge from '@components/TipoBadge.astro';
-import { getMentiras, getMentirasByTag, getTags, type Mentira, type TagInfo } from '@utils/mentiras';
+import { getCasos, getCasosByTag, getTags, type Caso, type TagInfo } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
 import { TIPOS } from '../../consts';
 
 export async function getStaticPaths() {
-  const mentiras = await getMentiras();
-  return getTags(mentiras).map(tag => ({
+  const casos = await getCasos();
+  return getTags(casos).map(tag => ({
     params: { tag: tag.slug },
-    props: { tag, mentiras: getMentirasByTag(mentiras, tag.slug) },
+    props: { tag, casos: getCasosByTag(casos, tag.slug) },
   }));
 }
 
 interface Props {
   tag: TagInfo;
-  mentiras: Mentira[];
+  casos: Caso[];
 }
 
-const { tag, mentiras } = Astro.props;
+const { tag, casos } = Astro.props;
 const perfiles = await getPerfiles();
 const perfil = perfiles.get(tag.slug);
 const datos = perfil?.data;
@@ -29,20 +29,20 @@ const esPartido = datos?.tipo === 'partido';
 const partido = datos?.partido ? perfiles.get(datos.partido) : undefined;
 
 // Personas de este partido que tienen casos en la web.
-const tagsConCasos = new Set(getTags(await getMentiras()).map(t => t.slug));
+const tagsConCasos = new Set(getTags(await getCasos()).map(t => t.slug));
 const miembros = esPartido
   ? [...perfiles.values()].filter(p => p.data.partido === tag.slug && tagsConCasos.has(p.id))
   : [];
 
 const porTipo = (Object.keys(TIPOS) as (keyof typeof TIPOS)[])
-  .map(tipo => ({ tipo, n: mentiras.filter(m => m.data.tipo === tipo).length }))
+  .map(tipo => ({ tipo, n: casos.filter(c => c.data.tipo === tipo).length }))
   .filter(({ n }) => n > 0);
 
-const casos = `${mentiras.length} ${mentiras.length === 1 ? 'caso' : 'casos'}`;
+const totalCasos = `${casos.length} ${casos.length === 1 ? 'caso' : 'casos'}`;
 const imagen = datos?.imagen;
 ---
 
-<Base title={`${tag.name}: ${casos}`} description={`Mentiras y cambios de opinión de ${tag.name}, con sus fuentes`}>
+<Base title={`${tag.name}: ${totalCasos}`} description={`${tag.name}: ${totalCasos} con la cita literal, la fecha y la fuente de cada declaración`}>
   <div class="container page">
     <nav class="migas meta" aria-label="Migas de pan">
       <a href="/tags/">Políticos y partidos</a>
@@ -70,7 +70,7 @@ const imagen = datos?.imagen;
           )
         }
         <p class="resumen">
-          <strong>{casos}</strong>
+          <strong>{totalCasos}</strong>
           <span class="tipos">
             {
               porTipo.map(({ tipo, n }) => (
@@ -117,9 +117,9 @@ const imagen = datos?.imagen;
       <h2 id="titulo-casos" class="h3 titulo-casos">Casos</h2>
       <ul class="grid-cards">
         {
-          mentiras.map(mentira => (
+          casos.map(caso => (
             <li>
-              <MentiraCard mentira={mentira} nivel={3} />
+              <CasoCard caso={caso} nivel={3} />
             </li>
           ))
         }

@@ -6,17 +6,17 @@ import Hito from '@components/Hito.astro';
 import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
-import { contarFuentes, getHitos, type Mentira } from '@utils/mentiras';
+import { contarFuentes, getHitos, type Caso } from '@utils/casos';
 
 interface Props {
-	mentira: Mentira;
+	caso: Caso;
 }
 
-const { mentira } = Astro.props;
-const { title, description, tipo, tags, antes, despues, cronologia, revisado } = mentira.data;
-const numFuentes = contarFuentes(mentira);
+const { caso } = Astro.props;
+const { title, description, tipo, tags, antes, despues, cronologia, revisado } = caso.data;
+const numFuentes = contarFuentes(caso);
 // Generada en src/pages/og/[slug].png.ts
-const image = `/og/${mentira.slug}.png`;
+const image = `/og/${caso.slug}.png`;
 ---
 
 <Base title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article">
@@ -24,7 +24,7 @@ const image = `/og/${mentira.slug}.png`;
 		<nav class="migas meta" aria-label="Migas de pan">
 			<ol>
 				<li><a href="/">Inicio</a></li>
-				<li><a href="/mentira/">Casos</a></li>
+				<li><a href="/casos/">Casos</a></li>
 				<li><span aria-current="page">{title}</span></li>
 			</ol>
 		</nav>
@@ -69,7 +69,7 @@ const image = `/og/${mentira.slug}.png`;
 			<section class="bloque" aria-labelledby="titulo-fuentes">
 				<h2 id="titulo-fuentes" class="h3">Fuentes</h2>
 				<div class="surface fuentes">
-					<Fuentes hitos={getHitos(mentira)} />
+					<Fuentes hitos={getHitos(caso)} />
 				</div>
 				<p class="meta revisado">
 					Citas, fechas y enlaces revisados el <Fecha fecha={revisado} />. ¿Ves un error?

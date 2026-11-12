@@ -4,18 +4,18 @@ import Avatar from '@components/Avatar.astro';
 import EstadoBadge from '@components/EstadoBadge.astro';
 import ExtLink from '@components/ExtLink.astro';
 import Logo from '@components/Logo.astro';
-import MentiraCard from '@components/MentiraCard.astro';
+import CasoCard from '@components/CasoCard.astro';
 import PerfilCard from '@components/PerfilCard.astro';
 import Tags from '@components/Tags.astro';
 import TipoBadge from '@components/TipoBadge.astro';
 import { ESTADOS, TIPOS } from '../consts';
-import { getMentiras, getTags } from '@utils/mentiras';
+import { getCasos, getTags } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
 
-const mentiras = await getMentiras();
-const ejemplo = mentiras[0];
+const casos = await getCasos();
+const ejemplo = casos[0];
 const perfiles = await getPerfiles();
-const tag = getTags(mentiras)[0];
+const tag = getTags(casos)[0];
 
 const colores = [
   ['--color-bg', 'Fondo de página'],
@@ -170,7 +170,7 @@ const espacios = ['1', '2', '3', '4', '6', '8', '12', '16'];
     </div>
 
     <h3 class="h4 sub">Tarjeta de caso</h3>
-    <div class="ancho-tarjeta">{ejemplo && <MentiraCard mentira={ejemplo} nivel={4} />}</div>
+    <div class="ancho-tarjeta">{ejemplo && <CasoCard caso={ejemplo} nivel={4} />}</div>
   </section>
 
   <section id="accesibilidad" class="bloque prose">

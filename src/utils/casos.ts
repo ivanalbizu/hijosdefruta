@@ -1,8 +1,8 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 
-export type Mentira = CollectionEntry<"mentira">;
-export type Hito = Mentira["data"]["antes"];
+export type Caso = CollectionEntry<"casos">;
+export type Hito = Caso["data"]["antes"];
 export type Fecha = Hito["fecha"];
 
 const FORMATOS: Record<Fecha["precision"], Intl.DateTimeFormatOptions> = {
@@ -29,22 +29,22 @@ export interface TagInfo {
 }
 
 /**
- * Todas las mentiras publicables, ordenadas por la fecha de la contradicción
- * (`despues`), de la más reciente a la más antigua.
+ * Todos los casos publicables, ordenados por la fecha de la contradicción
+ * (`despues`), del más reciente al más antiguo.
  * Los borradores se ven en `astro dev` pero nunca en el build de producción.
  */
-export async function getMentiras(): Promise<Mentira[]> {
-  const mentiras = await getCollection(
-    "mentira",
+export async function getCasos(): Promise<Caso[]> {
+  const casos = await getCollection(
+    "casos",
     ({ data }) => import.meta.env.DEV || !data.draft
   );
-  return mentiras.sort(
+  return casos.sort(
     (a, b) => b.data.despues.fecha.valor.valueOf() - a.data.despues.fecha.valor.valueOf()
   );
 }
 
 /** Antes, cronología y después, en orden cronológico. */
-export const getHitos = ({ data }: Mentira): Hito[] =>
+export const getHitos = ({ data }: Caso): Hito[] =>
   [data.antes, ...data.cronologia, data.despues].sort(
     (a, b) => a.fecha.valor.valueOf() - b.fecha.valor.valueOf()
   );
@@ -53,19 +53,19 @@ export const getHitos = ({ data }: Mentira): Hito[] =>
  * Vídeo que mejor resume el caso: lo que dijo primero; si no hay, la
  * contradicción; si tampoco, el último vídeo de la cronología.
  */
-export const getVideoPrincipal = ({ data }: Mentira) =>
+export const getVideoPrincipal = ({ data }: Caso) =>
   data.antes.video ??
   data.despues.video ??
   data.cronologia.findLast(hito => hito.video)?.video;
 
-/** La destacada; si no hay ninguna, la más reciente. */
-export const getFeatured = (mentiras: Mentira[]): Mentira | undefined =>
-  mentiras.find(({ data }) => data.featured) ?? mentiras[0];
+/** El destacado (`featured`); si no hay ninguno, el más reciente. */
+export const getFeatured = (casos: Caso[]): Caso | undefined =>
+  casos.find(({ data }) => data.featured) ?? casos[0];
 
 /** Tags únicos por slug, conservando el nombre legible, ordenados por uso. */
-export function getTags(mentiras: Mentira[]): TagInfo[] {
+export function getTags(casos: Caso[]): TagInfo[] {
   const tags = new Map<string, TagInfo>();
-  for (const { data } of mentiras) {
+  for (const { data } of casos) {
     for (const name of data.tags) {
       const slug = slugifyStr(name);
       const tag = tags.get(slug) ?? { slug, name, count: 0 };
@@ -78,8 +78,8 @@ export function getTags(mentiras: Mentira[]): TagInfo[] {
   );
 }
 
-export const getMentirasByTag = (mentiras: Mentira[], slug: string) =>
-  mentiras.filter(({ data }) => data.tags.some(tag => slugifyStr(tag) === slug));
+export const getCasosByTag = (casos: Caso[], slug: string) =>
+  casos.filter(({ data }) => data.tags.some(tag => slugifyStr(tag) === slug));
 
 /** Recorta en el último espacio antes de `max` caracteres y añade "…". */
 export function recortar(texto: string, max: number) {
@@ -98,5 +98,5 @@ export function resumenHito(hito: Hito, max: number) {
 }
 
 /** Número de fuentes distintas (por URL) de un caso. */
-export const contarFuentes = (mentira: Mentira) =>
-  new Set(getHitos(mentira).map(h => h.fuente.url)).size;
+export const contarFuentes = (caso: Caso) =>
+  new Set(getHitos(caso).map(h => h.fuente.url)).size;

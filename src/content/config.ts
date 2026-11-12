@@ -94,7 +94,7 @@ const hito = z
 		path: ['destacado'],
 	});
 
-const mentira = defineCollection({
+const casos = defineCollection({
 	type: 'content',
 	schema: z
 		.object({
@@ -148,7 +148,7 @@ const promesa = defineCollection({
 		fuente,
 		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
 		estado: z.enum(['pendiente', 'cumplida', 'incumplida', 'parcial']).default('pendiente'),
-		/** Slug de la ficha de /mentira que la contrasta, si existe. */
+		/** Slug del caso de /casos que la contrasta, si existe. */
 		caso: opcional(z.string()),
 	}),
 });
@@ -188,4 +188,4 @@ const perfil = defineCollection({
 		}),
 });
 
-export const collections = { mentira, promesa, perfil };
+export const collections = { casos, promesa, perfil };
