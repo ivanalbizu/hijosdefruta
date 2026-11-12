@@ -10,8 +10,7 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza |
-| Prometedor (listo para proponer) | arch-18 reforma laboral |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
@@ -142,7 +141,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Notas / veredicto:** promesa clara y repetida con fuente primaria. Contexto a incluir: el Gobierno lo intentó varias veces y no reunió mayoría (no es inacción pura).
 
 ### arch-18 · Derogar «toda» la reforma laboral
-- **Estado:** prometedor
+- **Estado:** publicado `sanchez-derogar-toda-la-reforma-laboral` (12-11-2026). Antes: nota de psoe.es del 06-11-2015 con citas literales (rueda de prensa con UGT y CCOO). Pista abierta: discurso de clausura del 40º Congreso (17-10-2021, «punto y final a leyes como la ley mordaza y la reforma laboral del PP»), solo en tuit de @PSOE. Fuentes leídas: programa 2015, pág. 180; acuerdo PSOE–UP 2019, punto 1.3 (pág. 4); investidura 04-01-2020 (DSCD-14-PL-2-C1, pág. 13: «derogar la reforma laboral del año 2012» y, acto seguido, «las cuestiones que tienen que ser derogadas»); Ley 3/2012 (art. 56.1, 33 días); RDL 32/2021, disposición derogatoria (solo preceptos concretos); Estatuto vigente, art. 56.1 (33 días). Las DSCD-13-PL-2 y 12-PL-146 no tienen promesas de Sánchez sobre esto.
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** Programa electoral PSOE 2015, pág. 180: «Los y las socialistas derogaremos con carácter inmediato toda la reforma laboral del PP» · https://web.archive.org/web/20151223180208/http://www.psoe.es:80/media-content/2015/12/PSOE_Programa_Electoral_2015.pdf · Tuit @PSOE 15-07-2014 recogiendo a Sánchez: «Lo primero que hará el PSOE será derogar la reforma laboral de Rajoy» (https://twitter.com/PSOE/status/489123227642650624). Vídeo de 11-2015 («derogarla toda, toda la reforma laboral, que desaparezca»): fuente original pendiente.
 - **Cronología posible:** 12-2019 acuerdo PSOE–UP, pág. 3: «Derogaremos la reforma laboral»; 05-2020 acuerdo con Bildu «derogar de manera íntegra» y nota posterior del PSOE (ya en `psoe-no-pactara-con-bildu`).
