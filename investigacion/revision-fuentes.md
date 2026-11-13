@@ -59,7 +59,7 @@ Coalición progresista (50 págs.) y PSOE–PNV (2 págs.) son imágenes sin tex
 | sanchez-integro-cumplimiento-sentencia-indultos | c1 · 14-10-2019 | The Objective | 🔎 La Moncloa (declaración del Gobierno de ese día) |
 | sanchez-traera-a-puigdemont-a-espana | c2 · 24-09-2021, c4 · 08-08-2024 | Maldita | 🔎 La Moncloa (2021); el 08-08-2024 es un hecho: nota de los Mossos o del Supremo |
 | psoe-no-pactara-con-bildu | c1 · 09-2016, c5–c7 | Maldita, ABC, EITB, Público | 🔎 Actas de los plenos (Pamplona, Vitoria); acuerdo Gobierno–Bildu de 2024 |
-| rufian-se-ira-en-18-meses | todos | Público, Diario de León, El Debate | ❓ Entrevistas; la candidatura de 2026 está en el BOE (proclamación, BOE-A-2026-23103) |
+| rufian-se-ira-en-18-meses | todos | Público, Diario de León, El Debate | Hecho el 13-11-2026: despues → ✅ BOE-A-2026-23103, pág. 147498 (PDF pág. 35), con recorte; nuevo c2 → ✅ DSCD-14-PL-55, pág. 104 (respuesta a Abascal), con recorte. Antes: entrevista en Público (medio original), fecha corregida al 13-12-2015. Diario de León pasa a la cronología. Quedan en prensa: c1 (EFE, ❓ vídeo) y El Debate (aniversario, redundante: proponer quitarlo) |
 | iglesias-atico-de-guindos-chalet-galapagar | despues, c2–c5 | El Independiente, FormulaTV, El Salto, Público | ❓ Vídeo de Ana Rosa (2015); consulta de Podemos (resultado publicado por Podemos) |
 | hay-un-sector-reaccionario-que-no-acepta-la-soberania-popular | c1 | El Independiente | ❓ Vídeo |
 | patxi-lopez-golpez-de-estado | antes · 03-2015 | pscm-psoe.com | Es web del partido: ya es fuente primaria |
