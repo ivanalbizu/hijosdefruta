@@ -10,8 +10,8 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control |
-| Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia |
+| Investigando (falta una fuente clave) | arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
@@ -236,12 +236,14 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Estado:** duplicado — ver arch-20
 
 ### arch-35 · «Jefe de gabinete» en Bosnia
-- **Estado:** investigando
+- **Estado:** publicado `psoe-sanchez-jefe-de-gabinete-bosnia` (13-11-2026). Versiones del PSOE con «jefe»: biografías CEF julio 2014 (PDF subido en 2015-09, SHA-1 igual a Web Archive 20190529), nota de Srebrenica 11-07-2015 (mismo día que el artículo de El País), biografías CEF 39.º Congreso 2017, ficha web actual (41.º Congreso). Capturas de pantalla de la nota y la ficha en material/bosnia.
 - **Persona / tipo propuesto:** PSOE / Pedro Sánchez / falsedad
-- **Antes:** 01-12-2024 · biografías oficiales de la Comisión Ejecutiva Federal elegida en el 41º Congreso (PDF con membrete de Ferraz, ofiprensa@psoe.es): «jefe de gabinete del Alto Representante de Naciones Unidas en Bosnia durante la Guerra de Kosovo (1999)» · https://elindependiente.com/wp-content/uploads/2024/11/011224-BIOGRAFIAS-41-CONGRESO-1.pdf (leído). Versión de 2015 en psoe.es: no localizada en Web Archive.
-- **Después / contraste:** biografía oficial de La Moncloa: «fue miembro del gabinete del Alto Representante de Naciones Unidas en Bosnia Herzegovina», igual en las copias de Web Archive de 06-2018, 09-2018 y 06-2019 (comprobado), es decir, nunca dijo «jefe».
-- **Pendiente:** declaración original de Carlos Westendorp (Alto Representante en 1999; fallecido en 03-2026) describiéndolo como «un miembro más del gabinete».
-- **Notas / veredicto:** hay dos versiones oficiales contradictorias del mismo puesto. Además, la Oficina del Alto Representante no depende de Naciones Unidas (la designa el Consejo de Aplicación de la Paz): comprobar antes de afirmarlo. Si aparece la cita de Westendorp, es un caso de falsedad atribuible al PSOE, no necesariamente a Sánchez.
+- **Antes (sus propias palabras):** 11-07-2015 · artículo en El País firmado por Carlos Westendorp y Pedro Sánchez, «Srebenica: Lo que la historia nos enseña» (https://elpais.com/elpais/2015/07/09/opinion/1436463925_869104.html): «Llegamos a Sarajevo a mediados de 1997 con la encomienda de la Comunidad Internacional de hacer aplicar los Acuerdos de Dayton […], uno como Alto Representante y el otro como miembro de su gabinete.» Prensa, pero texto firmado por él: sin recorte.
+- **Después:** 01-12-2024 · biografías de la Comisión Ejecutiva Federal del 41.º Congreso (PDF del PSOE, pág. 3, SHA-256 ee14623d… en la copia de El Independiente): «jefe de gabinete del Alto Representante de Naciones Unidas en Bosnia durante la Guerra de Kosovo (1999)». Original en psoe.es: https://www.psoe.es/media-content/2024/12/011224-BIOGRAF%C3%8DAS-41-CONGRESO-1.pdf, copia en Web Archive 20250724210003 (pendiente de descargar y comparar SHA-256).
+- **Contraste oficial:** La Moncloa, biografía actual: «fue miembro del gabinete del Alto Representante de Naciones Unidas en Bosnia Herzegovina» (igual en Web Archive 2018–2019). Congreso, datos abiertos (DiputadosDeBaja, XV Legislatura): «Asesor en el Parlamento Europeo y miembro del Gabinete del Alto Representante de Naciones Unidas en Bosnia Herzegovina».
+- **Otras pistas (prensa, sin fuente primaria):** nota del PSOE sobre Srebrenica (07-2015): «trabajó como jefe de gabinete del Alto Representante…» (según OKDiario 30-08-2025; buscar en psoe.es). Westendorp a OKDiario: «Era un miembro del gabinete. No había jerarquía ni títulos» (sin fecha; no usable). Ficha del PSOE de la CEF actualizada en 07-2025 con «jefe» (OKDiario 24-07-2025).
+- **Fechas:** el propio artículo de 2015 sitúa su llegada a mediados de 1997; la prensa habla de 1997–1998. Westendorp fue Alto Representante de 06-1997 a 07/08-1999 (OHR). La biografía del PSOE dice 1999 y la sitúa además tras ser asesor en el Parlamento Europeo (1998): no se puede afirmar que sea falso sin fuente.
+- **Ojo:** la Oficina del Alto Representante no es de Naciones Unidas (la nombra el Consejo de Aplicación de la Paz); lo dicen mal las tres biografías oficiales, así que no es contraste. El artículo de 2015 dice «Comunidad Internacional».
 
 ### arch-36 · Puente: «no estoy pensando en dimitir»
 - **Estado:** investigando
