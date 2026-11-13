@@ -10,13 +10,13 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
 | Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
-| Por investigar (debate de primarias 2014) | deb-01 aforamiento cero, deb-03 exministros en consejos de empresas energéticas, deb-04 políticos en instituciones de control, deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
+| Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
 
 Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
@@ -290,10 +290,11 @@ artículo 135, parece Pérez Tapias).
 - **Notas:** muy relacionado con arch-24; valorar un caso propio («exministros del PSOE en consejos de empresas energéticas») con este vídeo como «antes».
 
 ### deb-04 · Fuera los políticos de las instituciones de control
-- **Estado:** por investigar
-- **Antes:** 28:11–28:28 · «pongamos fin a la presencia de políticos en los en las instituciones que son garantes de la higiene y la limpieza democrática no entiendo que haya representantes de partidos políticos por ejemplo en el Tribunal de Cuentas»
-- **Después:** pendiente. Posibles: nombramientos en el Tribunal de Cuentas durante sus Gobiernos; Dolores Delgado (exministra de Justicia) fiscal general en 2020; Juan Carlos Campo (exministro de Justicia) magistrado del Constitucional en 2023.
-- **Notas:** riesgo de interpretación: «instituciones garantes» es amplio; el ejemplo que da es el Tribunal de Cuentas. Empezar por ahí.
+- **Estado:** publicado `sanchez-politicos-fuera-de-las-instituciones-de-control` (13-11-2026), cambio de postura. Minuto 28:19 y cita confirmados por el usuario (start 1695).
+- **Antes:** 28:19–28:28 · «pongamos fin a la presencia de políticos en los en las instituciones que son garantes de la higiene y la limpieza democrática no entiendo que haya representantes de partidos políticos por ejemplo en el Tribunal de Cuentas». Programas 2015 (pág. 383) y 2016 (pág. 382), reforma constitucional: «Atribuir en exclusiva a las Cámaras la designación de magistrados del Tribunal Constitucional». También 2015 pág. 76 (convocatoria pública y comité asesor para los órganos constitucionales) y 2019 pág. 170 («con criterios no partidistas […] rechazando un sistema de reparto de cuotas», solo para lo que elige el Parlamento).
+- **Después:** RD 410/2020 (BOE-A-2020-2672): Dolores Delgado fiscal general, a propuesta del Gobierno, tras ser ministra de Justicia (RD 357/2018, BOE-A-2018-7577; no hay RD de cese, cesó con el Gobierno nuevo de 12-01-2020). Orden PCM/1157/2022 (BOE-A-2022-19927) y RD 1092/2022 (BOE-A-2022-24441): Juan Carlos Campo magistrado del TC a propuesta del Gobierno; cese como ministro RD 514/2021 (BOE-A-2021-11520).
+- **Descartado como después:** Tribunal de Cuentas 2021 — los 12 consejeros son catedráticos, magistrados, funcionarios y abogados según Ara (22-10-2021) y El Independiente (05-11-2021); solo «órbita del PSC» o «próximo a Podemos» atribuido a fuentes.
+- **Notas:** riesgo de interpretación (en 2014 solo citó el Tribunal de Cuentas); el matiz va en el cuerpo del caso.
 
 ### deb-05 · Cataluña: ni referéndum pactado ni legal; reforma federal
 - **Estado:** débil
