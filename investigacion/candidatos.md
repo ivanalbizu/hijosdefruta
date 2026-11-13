@@ -27,7 +27,7 @@ lucro»), declaradamente contraria al PSOE y con objetivo electoral (29N). Sus f
 prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso: solo como lista de temas.
 
 ### arch-01 · Bildu: «legal pero no decente»
-- **Estado:** ya existe — posible hito nuevo en `psoe-no-pactara-con-bildu`
+- **Estado:** hito añadido (13-11-2026) en `psoe-no-pactara-con-bildu`: DSCD-14-PL-270, 17-05-2023, respuesta a Aizpurua («Puede ser legal lo que han hecho, pero desde luego no es decente»). La frase del 12-05-2023 («pueden ser legales, pero no son decentes») está en La Moncloa, rueda de prensa tras reunirse con Biden; va en el contexto.
 - **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura
 - **Antes:** 12-05-2023 · sobre los 44 condenados de ETA en listas de Bildu: «Hay cosas que pueden ser legales pero no son decentes» · pendiente
 - **Después:** 16-11-2023 · Bildu vota su investidura · pendiente (Diario de Sesiones)
@@ -82,7 +82,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 
 ### arch-08 · Amnistía «no entra en la Constitución»
 - **Estado:** ya existe — `no-aministia-para-politicos-e-independentistas-catalanes`
-- **Notas:** valorar añadir a la cronología el aval del Tribunal Constitucional (06-2025) y del TJUE (16-07-2026), con las resoluciones como fuente.
+- **Notas:** añadida (13-11-2026) la STC 137/2025 (BOE-A-2025-15939, pág. 52: «El silencio constitucional, por sí solo, no equivale a la prohibición de una institución»). Pendiente: sentencias del TJUE del 16-07-2026 (C-523/24 y otra), no localizadas en curia.europa.eu.
 
 ### arch-09 · «Tirar la toalla» y elecciones «cuando tocan»
 - **Estado:** fusionado en arch-33
@@ -103,7 +103,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 
 ### arch-12 · Traer a Puigdemont
 - **Estado:** ya existe — `sanchez-traera-a-puigdemont-a-espana`
-- **Notas:** valorar añadir el levantamiento de la orden de detención por el juez Llarena (10-2026), con el auto del Supremo como fuente.
+- **Notas:** añadido (13-11-2026) el auto de Llarena del 19-10-2026 que confirma el alzamiento de las órdenes de detención (nota del Tribunal Supremo en poderjudicial.es). Pendiente: el hito de 09-2026 cita The Objective; el Supremo tiene nota propia del 15-09-2026.
 
 ### arch-13 · 20.000 viviendas en suelo de Defensa
 - **Estado:** en el archivo de promesas (`src/content/promesa/2023-04-25-*.yaml`, estado `pendiente`); sigue abierto como candidato si aparecen datos oficiales de ejecución

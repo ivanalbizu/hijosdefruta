@@ -29,6 +29,7 @@ import { createCanvas } from '@napi-rs/canvas';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 
 const DIR_CASOS = 'src/content/casos';
+const DIR_MATERIAL = 'investigacion/material';
 const DIR_PRUEBAS = 'src/assets/pruebas';
 const ESCALA = 2; // píxeles por punto PDF
 const MARGEN_X = 14; // puntos a los lados de lo que se recorta
@@ -60,6 +61,14 @@ async function descargar(url) {
 		} catch {
 			// se prueba la siguiente opción
 		}
+	}
+	// Último recurso: copia descargada a mano en investigacion/material/ con el mismo nombre de archivo
+	// (psoe.es y otras webs bloquean a veces la descarga automática). La huella SHA-256 permite comprobarla.
+	const nombre = decodeURIComponent(new URL(url).pathname.split('/').pop() ?? '');
+	const locales = (await fs.readdir(DIR_MATERIAL, { recursive: true }).catch(() => [])).filter(f => path.basename(f) === nombre);
+	for (const f of locales) {
+		const buf = await fs.readFile(path.join(DIR_MATERIAL, f));
+		if (buf.subarray(0, 5).toString() === '%PDF-') return { buf, desde: `local:${f}` };
 	}
 	throw new Error(`no se pudo descargar un PDF de ${url}`);
 }
@@ -253,7 +262,7 @@ async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 	const archivo = doc.archivo ?? (await copiaArchivada(doc.url));
 	if (archivo) documento.set('archivo', archivo);
 	else console.log(`  aviso: ${etiqueta} sin copia en Web Archive; guárdala en https://web.archive.org/save/${doc.url}`);
-	const origen = desde === doc.url ? '' : ` (desde Web Archive)`;
+	const origen = desde === doc.url ? '' : desde.startsWith('local:') ? ` (copia local ${desde.slice(6)})` : ` (desde Web Archive)`;
 	console.log(`✓ ${slug} / ${etiqueta}: página ${zona.n}${origen} → ${rutaPng}`);
 	return true;
 }
