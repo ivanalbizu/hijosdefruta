@@ -81,6 +81,19 @@ el fragmento, guarda el recorte en `src/assets/pruebas/<slug>/` y añade al hito
 `sha256`. En la ficha se muestra con un enlace a la página del original, la copia archivada y la huella
 SHA-256 del PDF, para que cualquiera pueda comprobar que es el mismo documento.
 
+Si el PDF es un escaneado sin capa de texto (p. ej. las declaraciones de bienes del Congreso), no hay
+nada que buscar: en lugar de `buscar`, se indica la zona a mano, en puntos PDF desde la esquina
+superior izquierda (una página A4 mide 595 × 842), y se revisa el recorte generado:
+
+```yaml
+  documento:
+    url: https://…/escaneado.pdf
+    escaneado:
+      pagina: 2
+      recorte: [44, 62, 568, 163] # [x0, y0, x1, y1]
+      resaltar: [[137, 126, 566, 160]]
+```
+
 ## Perfiles de políticos y partidos
 
 Cada tag puede tener una ficha en `src/content/perfil/<slug-del-tag>.yaml` (`Pedro Sánchez` →

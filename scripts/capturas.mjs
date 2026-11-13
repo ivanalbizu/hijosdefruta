@@ -11,6 +11,10 @@
  *     url: https://…/documento.pdf   # PDF oficial (BOE, Diario de Sesiones, La Moncloa, CSN…)
  *     buscar: ['fragmento literal']   # lo que se resalta; por defecto, la cita del hito
  *     incluir: ['frase de contexto']  # opcional: entra en el recorte sin resaltar
+ *     escaneado:                      # solo para PDF sin capa de texto (en lugar de `buscar`)
+ *       pagina: 2
+ *       recorte: [x0, y0, x1, y1]     # puntos PDF desde la esquina superior izquierda
+ *       resaltar: [[x0, y0, x1, y1]]
  *
  * El script descarga el PDF (o su copia en Web Archive si el original no responde),
  * localiza los fragmentos, dibuja la página, resalta el texto, recorta la zona y
@@ -226,6 +230,36 @@ async function recortar({ pagina, resaltes, contexto, lineas, xMin, xMax }) {
 	return salida.encode('png');
 }
 
+/**
+ * PDF escaneado (imágenes sin capa de texto): no hay nada que buscar, así que el
+ * recorte y los resaltes se indican a mano en `documento.escaneado`, en puntos PDF
+ * medidos desde la esquina superior izquierda de la página.
+ */
+async function recortarEscaneado(pagina, { recorte, resaltar = [] }) {
+	const viewport = pagina.getViewport({ scale: ESCALA });
+	const canvas = createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height));
+	const ctx = canvas.getContext('2d');
+	ctx.fillStyle = '#fff';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+	await pagina.render({ canvasContext: ctx, viewport, canvas }).promise;
+
+	const px = ([x0, y0, x1, y1]) => ({ x: x0 * ESCALA, y: y0 * ESCALA, w: (x1 - x0) * ESCALA, h: (y1 - y0) * ESCALA });
+	ctx.save();
+	ctx.globalCompositeOperation = 'multiply';
+	ctx.fillStyle = RESALTE;
+	for (const r of resaltar.map(px)) ctx.fillRect(r.x, r.y, r.w, r.h);
+	ctx.restore();
+
+	const c = px(recorte);
+	const x = Math.max(0, Math.floor(c.x));
+	const y = Math.max(0, Math.floor(c.y));
+	const x2 = Math.min(canvas.width, Math.ceil(c.x + c.w));
+	const y2 = Math.min(canvas.height, Math.ceil(c.y + c.h));
+	const salida = createCanvas(x2 - x, y2 - y);
+	salida.getContext('2d').drawImage(canvas, x, y, x2 - x, y2 - y, 0, 0, x2 - x, y2 - y);
+	return salida.encode('png');
+}
+
 async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 	const documento = nodo.get('documento', true);
 	if (!documento) return false;
@@ -235,7 +269,8 @@ async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 		console.log(`· ${slug} / ${etiqueta}: ya tiene recorte (usa --forzar para regenerarlo)`);
 		return false;
 	}
-	const buscar = doc.buscar ?? (datos.cita ? [datos.cita] : null);
+	const escaneado = doc.escaneado;
+	const buscar = escaneado ? [] : (doc.buscar ?? (datos.cita ? [datos.cita] : null));
 	if (!buscar) throw new Error(`${etiqueta}: un hito sin cita necesita \`documento.buscar\``);
 
 	const { buf, desde } = await descargar(doc.url);
@@ -246,12 +281,22 @@ async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 		cMapPacked: true,
 		verbosity: 0,
 	}).promise;
-	const zona = await localizar(pdf, buscar, doc.incluir ?? []);
-	if (!zona) throw new Error(`${etiqueta}: no se encuentra el texto en ${doc.url}`);
-
-	const png = await recortar(zona);
+	let zona, png;
+	if (escaneado) {
+		if (escaneado.pagina > pdf.numPages) throw new Error(`${etiqueta}: el PDF solo tiene ${pdf.numPages} páginas`);
+		zona = { n: escaneado.pagina };
+		png = await recortarEscaneado(await pdf.getPage(escaneado.pagina), escaneado);
+	} else {
+		zona = await localizar(pdf, buscar, doc.incluir ?? []);
+		if (!zona) throw new Error(`${etiqueta}: no se encuentra el texto en ${doc.url}`);
+		png = await recortar(zona);
+	}
 	// Nombre derivado del contenido: reordenar la cronología no puede pisar otro recorte.
-	const clave = crypto.createHash('sha1').update(JSON.stringify([doc.url, buscar, doc.incluir ?? []])).digest('hex').slice(0, 12);
+	const clave = crypto
+		.createHash('sha1')
+		.update(JSON.stringify(escaneado ? [doc.url, escaneado] : [doc.url, buscar, doc.incluir ?? []]))
+		.digest('hex')
+		.slice(0, 12);
 	const rutaPng = path.join(DIR_PRUEBAS, slug, `${clave}.png`);
 	await fs.mkdir(path.dirname(rutaPng), { recursive: true });
 	await fs.writeFile(rutaPng, png);

@@ -77,6 +77,11 @@ type ImageFn = SchemaContext['image'];
  * Solo documentos de organismos oficiales o documentos públicos de los partidos
  * (programas, ponencias, códigos éticos): nunca capturas de prensa.
  */
+/** [x0, y0, x1, y1] en puntos PDF, desde la esquina superior izquierda. */
+const rectangulo = z
+	.tuple([z.number(), z.number(), z.number(), z.number()])
+	.refine(([x0, y0, x1, y1]) => x1 > x0 && y1 > y0, { message: 'El rectángulo debe ser [x0, y0, x1, y1] con x1 > x0 e y1 > y0' });
+
 const documento = (image: ImageFn) =>
 	z.object({
 		/** PDF oficial del que sale el recorte (puede ser distinto de `fuente.url`, p. ej. la versión PDF de una transcripción). */
@@ -85,6 +90,17 @@ const documento = (image: ImageFn) =>
 		buscar: z.preprocess(v => (Array.isArray(v) && !v.length ? undefined : v), z.array(z.string().min(3)).optional()),
 		/** Fragmentos que entran en el recorte sin resaltar, como contexto (p. ej. la frase que presenta una tabla). */
 		incluir: z.preprocess(v => (Array.isArray(v) && !v.length ? undefined : v), z.array(z.string().min(3)).optional()),
+		/**
+		 * Solo para PDF escaneados (sin capa de texto), en lugar de `buscar`: página, recorte y
+		 * zonas resaltadas en puntos PDF desde la esquina superior izquierda.
+		 */
+		escaneado: z
+			.object({
+				pagina: z.number().int().positive(),
+				recorte: rectangulo,
+				resaltar: z.array(rectangulo).optional(),
+			})
+			.optional(),
 		/** Lo rellena el script. */
 		imagen: opcional(image()),
 		pagina: opcional(z.number().int().positive()),
