@@ -19,10 +19,13 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
   title="Buscar casos"
   description="Busca entre los casos por texto, tipo de contradicción, persona o partido y año"
   lead="Busca en los títulos, las citas y los hechos de cada caso, o filtra por tipo, persona o partido y año.">
-  <form class="filtros surface" id="filtros" action="/buscar/" method="get" role="search" aria-label="Buscar casos">
+  <form class="filtros surface" id="filtros" action="/buscar/" method="get" role="search" aria-label="Buscar casos"
+    toolname="buscar_casos_formulario"
+    tooldescription="Filtra los casos de contradicciones de políticos españoles por texto, tipo, persona o partido y año">
     <div class="campo campo--texto">
       <label for="q">Texto</label>
-      <input id="q" name="q" type="search" autocomplete="off" placeholder="Ej.: amnistía, indulto, Cámara…" />
+      <input id="q" name="q" type="search" autocomplete="off" placeholder="Ej.: amnistía, indulto, Cámara…"
+        toolparamdescription="Texto a buscar en títulos, citas y hechos" />
     </div>
     <div class="campo">
       <label for="tipo">Tipo</label>
@@ -33,7 +36,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     </div>
     <div class="campo">
       <label for="quien">Persona o partido</label>
-      <select id="quien" name="quien">
+      <select id="quien" name="quien" toolparamdescription="Slug de la persona o partido">
         <option value="">Todos</option>
         {tags.map(t => <option value={t.slug}>{t.name} ({t.count})</option>)}
       </select>

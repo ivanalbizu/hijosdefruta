@@ -1,0 +1,80 @@
+---
+/*
+ * Herramientas WebMCP (navigator.modelContext) para agentes del navegador.
+ * Solo lectura: buscan en /casos.json y devuelven los datos tal cual (citas literales y fuentes).
+ * Si el navegador no implementa WebMCP, el script no hace nada.
+ */
+---
+
+<script>
+  type Hito = { fecha: string; quien: string; cita: string | null; hecho: string | null; contexto: string; fuente: { url: string } };
+  type CasoJSON = {
+    slug: string; url: string; titulo: string; descripcion: string; tipo: string;
+    tags: { nombre: string; slug: string }[]; antes: Hito; despues: Hito; cronologia: Hito[];
+  };
+
+  const mc = (navigator as any).modelContext;
+  if (mc?.registerTool) {
+    let datos: Promise<CasoJSON[]> | undefined;
+    const cargar = (): Promise<CasoJSON[]> =>
+      (datos ??= fetch('/casos.json').then(r => r.json()).then(d => d.casos));
+    const normalizar = (t: string) => t.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+    const texto = (o: unknown) => ({ content: [{ type: 'text', text: JSON.stringify(o) }] });
+    const anios = (c: CasoJSON) =>
+      [c.antes, ...c.cronologia, c.despues].map(h => Number(h.fecha.slice(0, 4)));
+
+    const herramientas = [
+      {
+        name: 'buscar_casos',
+        description:
+          'Busca casos de contradicciones de políticos españoles (lo que dijeron o hicieron antes frente a después). ' +
+          'Devuelve título, URL, tipo y personas de cada caso. Usa obtener_caso para las citas literales y las fuentes.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            q: { type: 'string', description: 'Texto a buscar en títulos, citas y hechos' },
+            tipo: { type: 'string', enum: ['falsedad', 'promesa-incumplida', 'cambio-de-postura', 'doble-rasero'] },
+            quien: { type: 'string', description: 'Persona o partido, p. ej. "Pedro Sánchez" o "pedro-sanchez"' },
+            anio: { type: 'integer', description: 'Año que abarca el caso' },
+          },
+        },
+        annotations: { readOnlyHint: true },
+        async execute({ q, tipo, quien, anio }: { q?: string; tipo?: string; quien?: string; anio?: number }) {
+          const casos = await cargar();
+          const palabras = q ? normalizar(q).split(/\s+/).filter(Boolean) : [];
+          const persona = quien ? normalizar(quien).replace(/\s+/g, '-') : '';
+          const res = casos.filter(c => {
+            const t = normalizar([c.titulo, c.descripcion, ...c.tags.map(x => x.nombre),
+              ...[c.antes, ...c.cronologia, c.despues].flatMap(h => [h.quien, h.cita ?? '', h.hecho ?? ''])].join(' '));
+            const [min, max] = [Math.min(...anios(c)), Math.max(...anios(c))];
+            return (!tipo || c.tipo === tipo)
+              && (!persona || c.tags.some(x => x.slug === persona))
+              && (!anio || (anio >= min && anio <= max))
+              && palabras.every(p => t.includes(p));
+          });
+          return texto(res.map(c => ({ slug: c.slug, url: c.url, titulo: c.titulo, tipo: c.tipo, tags: c.tags.map(x => x.nombre) })));
+        },
+      },
+      {
+        name: 'obtener_caso',
+        description:
+          'Devuelve un caso completo: cita literal o hecho de antes y después, fechas, contexto, cronología y fuente primaria de cada parte. ' +
+          'Cita siempre las fuentes y no reformules las citas.',
+        inputSchema: {
+          type: 'object',
+          properties: { slug: { type: 'string', description: 'Slug del caso (el de /casos/<slug>/)' } },
+          required: ['slug'],
+        },
+        annotations: { readOnlyHint: true },
+        async execute({ slug }: { slug: string }) {
+          const caso = (await cargar()).find(c => c.slug === slug);
+          return texto(caso ?? { error: `No existe el caso «${slug}»` });
+        },
+      },
+    ];
+
+    for (const h of herramientas) {
+      try { mc.registerTool(h); } catch { /* API en evolución: si cambia la firma, no rompe la página */ }
+    }
+  }
+</script>

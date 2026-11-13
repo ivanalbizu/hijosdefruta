@@ -42,6 +42,7 @@ const imageURL = new URL(image, Astro.site);
 <meta name="color-scheme" content="light dark" />
 {noindex && <meta name="robots" content="noindex" />}
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
+<link rel="alternate" type="application/json" title={`${SITE_TITLE} (datos)`} href={new URL('casos.json', Astro.site)} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <meta name="generator" content={Astro.generator} />
