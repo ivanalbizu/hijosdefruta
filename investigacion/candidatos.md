@@ -10,8 +10,7 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia |
-| Investigando (falta una fuente clave) | arch-36 Puente «no estoy pensando en dimitir» |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión |
 | Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
@@ -246,11 +245,11 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Ojo:** la Oficina del Alto Representante no es de Naciones Unidas (la nombra el Consejo de Aplicación de la Paz); lo dicen mal las tres biografías oficiales, así que no es contraste. El artículo de 2015 dice «Comunidad Internacional».
 
 ### arch-36 · Puente: «no estoy pensando en dimitir»
-- **Estado:** investigando
+- **Estado:** publicado `puente-seguir-adelante-dimision-urda` (13-11-2026). El «antes» es la rueda de prensa del 30-10 (directo de elDiario.es, youtu.be/ppbeGhMJX_c, min. 34:32, start 2068; transcripción aportada por el usuario): «voy a seguir adelante tratando de cumplir con mi deber». La frase del 28-10 sigue sin verificar y no se usa. Pendiente: copia del DS en Web Archive (save devolvió 520).
 - **Persona / tipo propuesto:** Óscar Puente (ministro de Transportes) / falsedad
-- **Antes:** 28-10-2026 · tras el accidente de Urda: «Yo en este momento no estoy pensando en dimitir» (The Objective; vídeo o transcripción pendiente; otra versión: lo que le ocupaba era aclarar lo ocurrido, no pensar en sí mismo).
-- **Después:** 03-11-2026 · Diputación Permanente del Congreso: anuncia su dimisión y renuncia a ir en las listas; según la pista, dice que lo decidió «los primeros minutos en los que se produjo la tragedia» (pendiente: Diario de Sesiones de la Diputación Permanente).
-- **Notas / veredicto:** solo es caso si las dos frases literales se confirman en fuente primaria: entonces el 28-10 habría negado lo que ya había decidido. Consideración editorial: el contexto son dos accidentes con 115 muertos y la dimisión es una asunción de responsabilidad; valorar con el usuario si encaja.
+- **Antes:** 28-10-2026 · comparecencia ante los medios en Atocha el día del accidente. La frase varía según el medio: «Yo en este momento no estoy pensando en dimitir» (La Bandera), «En este momento no estoy pensando en mí» (The Objective), «Ahora no estoy pensando en mí» (65ymás); El Debate (04-11-2026): pensaba en «esclarecer» lo ocurrido, «En nada más». 30-10-2026, otra rueda de prensa: «Mi forma de asumir responsabilidades, la conocen ustedes bien, es dar la cara» (El Debate). Pendiente: vídeo íntegro de las dos (canal del Ministerio de Transportes, La Moncloa o RTVE) con el minuto exacto.
+- **Después:** 03-11-2026 · DSCD-15-PL-212 (Diputación Permanente núm. 9), pág. 54, SHA-256 05de21fc…: «la decisión sobre mi futuro la tomé en los primeros minutos en los que se produjo la tragedia, en cuanto tuve conocimiento de ella, según me dirigía al centro H24 de ADIF. Así se lo hice saber, en primer lugar, a mi familia. Un ministro de Transportes de un país como España no puede continuar en su cargo con dos accidentes de esta gravedad en menos de un año.» Explica que la hace pública «una vez cumplido el que creo que era el trabajo más urgente e inaplazable». URL: https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-212.PDF
+- **Notas / veredicto:** si el vídeo confirma «no estoy pensando en dimitir» (o una negativa equivalente) el 28-10, es una contradicción literal: ese mismo día ya lo había decidido. Si dijo «no estoy pensando en mí», no hay caso de falsedad. Puente explica el aplazamiento (atender primero la emergencia): va como justificación. Consideración editorial pendiente con el usuario: tragedia con 116 muertos en dos accidentes y una dimisión como asunción de responsabilidad.
 
 ### arch-37 · Puente: «Yo sí he hecho mi trabajo»
 - **Estado:** débil
