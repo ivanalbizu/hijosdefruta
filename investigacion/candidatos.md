@@ -12,7 +12,7 @@ haberlo encontrado antes en la fuente primaria.
 | --- | --- |
 | Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
-| Débil (con motivo y pista abierta) | arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
+| Débil (con motivo y pista abierta) | cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
@@ -270,7 +270,7 @@ antes de citarla. Descartados por no ser de Sánchez: 1:15:03 (Madina) y 1:34:54
 artículo 135, parece Pérez Tapias).
 
 ### deb-01 · «Aforamiento cero»
-- **Estado:** por investigar — posible hito de 2014 para `sanchez-suprimir-aforamientos`
+- **Estado:** añadido como hito de 2014 en `sanchez-suprimir-aforamientos` (13-11-2026), pendiente de confirmar el minuto 27:40 viendo el vídeo (empieza en el segundo 1654, igual que limitar mandatos)
 - **Antes:** 27:40 · «que haya aforamiento cero de diputados y diputadas» (dentro de la nueva ley de partidos que proponía).
 - **Notas:** el caso publicado arranca en 2018; este hito lo adelanta a 2014. Confirmar el minuto viéndolo.
 
@@ -303,3 +303,18 @@ artículo 135, parece Pérez Tapias).
 - **Estado:** débil — asunto interno del partido
 - **Antes:** 20:06–21:27 · «voy a hacer primarias abiertas y las voy a proponer en el mes de noviembre de este año»
 - **Notas:** comprobar qué pasó (en 2015 fue proclamado candidato); interés limitado para la web.
+
+## Origen: discurso de clausura del 40.º Congreso Federal del PSOE (17-10-2021)
+
+Vídeo de El País (https://www.youtube.com/watch?v=9Zmr5nlIjj8, 68 s) y tuit de @PSOE
+(https://twitter.com/PSOE/status/1449692620750561282). La frase sobre la ley mordaza y la reforma laboral ya
+está en los casos publicados de ambos temas.
+
+### cong-01 · Abolir la prostitución
+- **Estado:** débil — analizar a fondo otro día (decisión del usuario, 12-11-2026)
+- **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
+- **Antes:** 17-10-2021 · vídeo, segundo ~17: «sale de este congreso un compromiso que llevaré a término: avanzaremos aboliendo la prostitución que esclaviza a…» (la transcripción automática dice «a la gente» y el tuit, «a las mujeres»: confirmar viendo el vídeo).
+- **Después:** XV legislatura · proposición 122/000077 del Grupo Socialista «para prohibir el proxenetismo en todas sus formas» (BOCG-15-B-89-1, 05-04-2024), rechazada en la toma en consideración el 21-05-2024 (BOCG-15-B-89-2). Según prensa: intento anterior en 2022 (tomado en consideración, caducó en 2023); en 2025 la ministra Redondo dejó la abolición fuera de la ley de trata por falta de acuerdo (Infobae, 08-03-2025); sin iniciativas nuevas en 2025-2026 (El Debate, 01-11-2026).
+- **Por qué es débil:** el PSOE lo intentó dos veces y lo frenaron el Congreso y sus socios; no es inacción.
+- **Pista abierta:** el ángulo «su Gobierno lo dejó fuera de la ley de trata». Buscar el anteproyecto o proyecto de ley de trata (referencia del Consejo de Ministros en La Moncloa, BOCG serie A) y la declaración de Redondo en fuente oficial; localizar en el BOCG de la XIV legislatura la proposición de 2022 y su caducidad.
+
