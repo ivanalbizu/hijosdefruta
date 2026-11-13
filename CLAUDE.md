@@ -16,8 +16,9 @@ Un solo error o una cita sacada de contexto desacredita toda la web.
   deja en `draft: true`.
 - Cada caso tiene un `tipo` (falsedad, promesa incumplida, cambio de postura, doble rasero): no todo
   es "mentira". En la interfaz se habla de **casos**.
-- No se atribuyen delitos ni se publican procesos judiciales abiertos; las resoluciones se citan tal
-  cual.
+- No se atribuyen delitos ni se informa sobre procesos judiciales abiertos; las resoluciones se citan tal
+  cual. De una causa abierta solo se puede citar una declaración del propio político ya publicada, para
+  contrastarla con lo que dijo en público, con un contexto neutro y sin resumir la investigación.
 - Se incluye la justificación del político cuando la hay.
 - Datos de perfiles (cargo, partido): solo lo que sea claro y estable. Ante la duda, se deja vacío.
 - Las imágenes de personas y partidos vienen de Wikimedia Commons, siempre con autor y licencia.
