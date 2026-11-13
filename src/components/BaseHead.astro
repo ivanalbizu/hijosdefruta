@@ -17,6 +17,8 @@ interface Props {
 	type?: 'website' | 'article';
 	/** Páginas internas que no deben aparecer en buscadores. */
 	noindex?: boolean;
+	/** Datos estructurados schema.org de la página. */
+	jsonLd?: Record<string, unknown>;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -28,6 +30,7 @@ const {
 	imageAlt = 'hijosdefruta: lo que dijeron, lo que hicieron',
 	type = 'website',
 	noindex = false,
+	jsonLd,
 } = Astro.props;
 
 const imageURL = new URL(image, Astro.site);
@@ -43,6 +46,7 @@ const imageURL = new URL(image, Astro.site);
 {noindex && <meta name="robots" content="noindex" />}
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
 <link rel="alternate" type="application/json" title={`${SITE_TITLE} (datos)`} href={new URL('casos.json', Astro.site)} />
+<link rel="alternate" type="text/plain" title="llms.txt" href={new URL('llms.txt', Astro.site)} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <meta name="generator" content={Astro.generator} />
@@ -74,3 +78,5 @@ const imageURL = new URL(image, Astro.site);
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageURL} />
 <meta name="twitter:image:alt" content={imageAlt} />
+
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}

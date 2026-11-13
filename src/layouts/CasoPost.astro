@@ -7,7 +7,10 @@ import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
 import Compartir from '@components/Compartir.astro';
-import { contarFuentes, getHitos, type Caso } from '@utils/casos';
+import { contarFuentes, getHitos, isoFecha, type Caso } from '@utils/casos';
+import { slugifyStr } from '@utils/slugify';
+import { getPerfiles, nombreSinCargo } from '@utils/perfiles';
+import { SITE_TITLE } from '../consts';
 
 interface Props {
 	caso: Caso;
@@ -18,9 +21,48 @@ const { title, description, tipo, tags, antes, despues, cronologia, revisado } =
 const numFuentes = contarFuentes(caso);
 // Generada en src/pages/og/[slug].png.ts
 const image = `/og/${caso.slug}.png`;
+
+/*
+ * Datos estructurados: Article con cada declaración como `citation` (Quotation con su fecha y su fuente).
+ * No se usa ClaimReview: exige una calificación de verdadero/falso y solo encajaría con «falsedad».
+ */
+const perfiles = await getPerfiles();
+/** Tipo schema.org solo si hay perfil; si no, nombre sin tipo para no adivinar. */
+const entidad = (nombre: string) => {
+	const t = perfiles.get(slugifyStr(nombre))?.data.tipo;
+	return { '@type': t === 'partido' ? 'PoliticalParty' : t === 'persona' ? 'Person' : 'Thing', name: nombre };
+};
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description,
+	url,
+	inLanguage: 'es',
+	image: new URL(image, Astro.site).href,
+	datePublished: caso.data.pubDate.toISOString().slice(0, 10),
+	dateModified: revisado.toISOString().slice(0, 10),
+	genre: tipo,
+	keywords: tags.join(', '),
+	publisher: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.href },
+	about: tags.map(entidad),
+	citation: getHitos(caso).map(h => ({
+		// Lo que se dijo o hizo, cuándo y quién; la fuente va aparte porque su fecha de publicación puede ser otra.
+		...(h.cita ? { '@type': 'Quotation', text: h.cita } : { '@type': 'CreativeWork', description: h.hecho }),
+		creator: entidad(nombreSinCargo(h.quien)),
+		dateCreated: isoFecha(h.fecha),
+		isBasedOn: {
+			'@type': 'CreativeWork',
+			url: h.fuente.url,
+			publisher: { '@type': 'Organization', name: h.fuente.medio },
+			...(h.fuente.archivo ? { archivedAt: h.fuente.archivo } : {}),
+		},
+	})),
+};
 ---
 
-<Base title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article">
+<Base title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article" jsonLd={jsonLd}>
 	<article class="container page">
 		<nav class="migas meta" aria-label="Migas de pan">
 			<ol>

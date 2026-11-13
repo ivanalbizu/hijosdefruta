@@ -11,6 +11,7 @@ interface Props {
 	imageAlt?: string;
 	type?: 'website' | 'article';
 	noindex?: boolean;
+	jsonLd?: Record<string, unknown>;
 }
 
 const props = Astro.props;
