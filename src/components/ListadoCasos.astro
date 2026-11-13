@@ -18,6 +18,12 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
 	description="Contradicciones de políticos españoles clasificadas en falsedades, promesas incumplidas, cambios de postura y dobles raseros, con la cita literal y la fuente de cada declaración"
 	eyebrow={`${pagina.elementos} casos documentados`}
 	lead="Cada caso enfrenta lo que se dijo antes con lo que se dijo o hizo después. Ordenados por la fecha de la contradicción, de la más reciente a la más antigua.">
+	<form slot="header" class="buscador" action="/buscar/" method="get" role="search" aria-label="Buscar casos">
+		<label for="buscar-casos" class="sr-only">Buscar en los casos</label>
+		<input id="buscar-casos" name="q" type="search" placeholder="Buscar en títulos y citas…" />
+		<button class="btn btn--primary" type="submit">Buscar</button>
+		<a class="link-arrow" href="/buscar/">Filtrar por tipo, persona o año</a>
+	</form>
 	<ul class="grid-cards">
 		{
 			pagina.items.map(caso => (
@@ -29,3 +35,26 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
 	</ul>
 	<Paginacion pagina={pagina} base="/casos/" etiqueta="Páginas de casos" />
 </Default>
+
+<style>
+	.buscador {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--space-2) var(--space-4);
+		margin-top: var(--space-6);
+	}
+	input {
+		flex: 1 1 16rem;
+		max-width: 28rem;
+		min-height: var(--target-min);
+		padding: var(--space-2) var(--space-3);
+		border: 1px solid var(--color-border-control);
+		border-radius: var(--radius-md);
+		background: var(--color-surface);
+		color: var(--color-text);
+	}
+	input::placeholder {
+		color: var(--color-text-muted);
+	}
+</style>

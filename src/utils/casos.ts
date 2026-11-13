@@ -100,3 +100,25 @@ export function resumenHito(hito: Hito, max: number) {
 /** Número de fuentes distintas (por URL) de un caso. */
 export const contarFuentes = (caso: Caso) =>
   new Set(getHitos(caso).map(h => h.fuente.url)).size;
+
+/** Minúsculas y sin tildes, para buscar «camara» y encontrar «Cámara». */
+export const normalizar = (texto: string) =>
+  texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+
+/** Años que abarca un caso: de la primera declaración a la última. */
+export function aniosCaso(caso: Caso): number[] {
+  const anios = getHitos(caso).map(h => h.fecha.valor.getUTCFullYear());
+  const [min, max] = [Math.min(...anios), Math.max(...anios)];
+  return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+}
+
+/** Texto en el que se busca: título, resumen, personas, citas y hechos de todos los hitos. */
+export const textoBusqueda = (caso: Caso) =>
+  normalizar(
+    [
+      caso.data.title,
+      caso.data.description,
+      ...caso.data.tags,
+      ...getHitos(caso).flatMap(h => [h.quien, h.cita ?? "", h.hecho ?? ""]),
+    ].join(" ")
+  );

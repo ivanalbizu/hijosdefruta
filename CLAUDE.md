@@ -105,8 +105,9 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 - npm es el único gestor (`package-lock.json`). Versiones exactas para fuentes, satori y sharp.
 - `npm run build` ejecuta `astro check`: debe terminar con 0 errores antes de commitear.
 
-## Mejoras previstas
+## Búsqueda
 
-1. **Filtros y búsqueda**: por tipo, persona/partido y año, y búsqueda de texto en títulos y citas.
-   Al ser un sitio estático, opciones: índice JSON generado en build + filtrado en cliente, o
-   Pagefind. Debe funcionar con teclado y anunciar el número de resultados (`aria-live`).
+`/buscar/` genera todas las tarjetas en el build con su índice en atributos `data-*` (tipo, tags,
+años, texto normalizado con `textoBusqueda`) y un script las filtra; sin JavaScript se ven todas.
+Los filtros van en la URL (`?q=&tipo=&quien=&anio=`) y el número de resultados se anuncia con
+`role="status"`. Si el archivo crece mucho (cientos de casos), pasar a Pagefind.

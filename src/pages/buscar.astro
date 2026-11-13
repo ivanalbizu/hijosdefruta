@@ -1,0 +1,197 @@
+---
+import Default from '@layouts/Default.astro';
+import CasoCard from '@components/CasoCard.astro';
+import { aniosCaso, getCasos, getTags, textoBusqueda } from '@utils/casos';
+import { slugifyStr } from '@utils/slugify';
+import { TIPOS } from '../consts';
+
+/*
+ * Búsqueda y filtros. Todas las tarjetas se generan en el build con su índice en
+ * atributos data-*; el script las muestra u oculta. Sin JavaScript se ven todos los casos.
+ * Los filtros se reflejan en la URL (?q=&tipo=&quien=&anio=) para poder compartirlos.
+ */
+const casos = await getCasos();
+const tags = getTags(casos).sort((a, b) => a.name.localeCompare(b.name, 'es'));
+const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
+---
+
+<Default
+  title="Buscar casos"
+  description="Busca entre los casos por texto, tipo de contradicción, persona o partido y año"
+  lead="Busca en los títulos, las citas y los hechos de cada caso, o filtra por tipo, persona o partido y año.">
+  <form class="filtros surface" id="filtros" action="/buscar/" method="get" role="search" aria-label="Buscar casos">
+    <div class="campo campo--texto">
+      <label for="q">Texto</label>
+      <input id="q" name="q" type="search" autocomplete="off" placeholder="Ej.: amnistía, indulto, Cámara…" />
+    </div>
+    <div class="campo">
+      <label for="tipo">Tipo</label>
+      <select id="tipo" name="tipo">
+        <option value="">Todos</option>
+        {Object.entries(TIPOS).map(([valor, { nombre }]) => <option value={valor}>{nombre}</option>)}
+      </select>
+    </div>
+    <div class="campo">
+      <label for="quien">Persona o partido</label>
+      <select id="quien" name="quien">
+        <option value="">Todos</option>
+        {tags.map(t => <option value={t.slug}>{t.name} ({t.count})</option>)}
+      </select>
+    </div>
+    <div class="campo">
+      <label for="anio">Año</label>
+      <select id="anio" name="anio">
+        <option value="">Todos</option>
+        {anios.map(a => <option value={a}>{a}</option>)}
+      </select>
+    </div>
+    <div class="acciones">
+      <button class="btn btn--primary" type="submit">Buscar</button>
+      <button class="btn btn--secondary" type="reset">Limpiar</button>
+    </div>
+  </form>
+
+  <p class="estado" id="estado" role="status" aria-live="polite" aria-atomic="true">
+    {casos.length} casos
+  </p>
+
+  <ul class="grid-cards" id="resultados" aria-label="Resultados">
+    {
+      casos.map(caso => (
+        <li
+          data-tipo={caso.data.tipo}
+          data-quien={caso.data.tags.map(slugifyStr).join(' ')}
+          data-anio={aniosCaso(caso).join(' ')}
+          data-texto={textoBusqueda(caso)}>
+          <CasoCard caso={caso} />
+        </li>
+      ))
+    }
+  </ul>
+  <p class="vacio" id="vacio" hidden>
+    Ningún caso coincide con la búsqueda. Prueba con menos filtros u otras palabras.
+  </p>
+</Default>
+
+<script>
+  const form = document.getElementById('filtros') as HTMLFormElement;
+  const estado = document.getElementById('estado')!;
+  const vacio = document.getElementById('vacio')!;
+  const items = [...document.querySelectorAll<HTMLLIElement>('#resultados > li')];
+  const campos = ['q', 'tipo', 'quien', 'anio'] as const;
+
+  const normalizar = (t: string) => t.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+  const control = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement;
+
+  let temporizador: number | undefined;
+
+  function filtrar({ anunciar = true } = {}) {
+    const q = normalizar(control('q').value.trim());
+    const palabras = q.split(/\s+/).filter(Boolean);
+    const tipo = control('tipo').value;
+    const quien = control('quien').value;
+    const anio = control('anio').value;
+
+    let n = 0;
+    for (const li of items) {
+      const d = li.dataset;
+      const ok =
+        (!tipo || d.tipo === tipo) &&
+        (!quien || d.quien!.split(' ').includes(quien)) &&
+        (!anio || d.anio!.split(' ').includes(anio)) &&
+        palabras.every(p => d.texto!.includes(p));
+      li.hidden = !ok;
+      if (ok) n++;
+    }
+    vacio.hidden = n > 0;
+
+    // URL compartible sin crear entradas en el historial.
+    const params = new URLSearchParams();
+    for (const c of campos) if (control(c).value.trim()) params.set(c, control(c).value.trim());
+    const url = params.size ? `?${params}` : location.pathname;
+    history.replaceState(null, '', url);
+
+    // El anuncio espera a que se deje de escribir para no leer cada pulsación.
+    clearTimeout(temporizador);
+    const texto = `${n} ${n === 1 ? 'caso' : 'casos'}${params.size ? ` de ${items.length}` : ''}`;
+    if (anunciar) temporizador = window.setTimeout(() => (estado.textContent = texto), 400);
+    else estado.textContent = texto;
+  }
+
+  // Estado inicial desde la URL.
+  const inicial = new URLSearchParams(location.search);
+  for (const c of campos) {
+    const v = inicial.get(c);
+    if (v) control(c).value = v;
+  }
+  filtrar({ anunciar: false });
+
+  form.addEventListener('input', () => filtrar());
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    filtrar();
+  });
+  // `reset` se dispara antes de vaciar los campos.
+  form.addEventListener('reset', () => setTimeout(() => {
+    filtrar();
+    control('q').focus();
+  }));
+</script>
+
+<style lang="scss">
+  @use '../styles/breakpoints' as *;
+
+  .filtros {
+    display: grid;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+
+    @include breakpoint(md) {
+      grid-template-columns: 2fr repeat(3, 1fr);
+      align-items: end;
+    }
+  }
+  .campo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+  }
+  label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+  }
+  input,
+  select {
+    min-height: var(--target-min);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border-control);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+    width: 100%;
+  }
+  input::placeholder {
+    color: var(--color-text-muted);
+  }
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    grid-column: 1 / -1;
+  }
+  .estado {
+    margin-bottom: var(--space-4);
+    font-weight: var(--weight-semibold);
+    font-variant-numeric: tabular-nums;
+  }
+  #resultados > li[hidden],
+  .vacio[hidden] {
+    display: none;
+  }
+  .vacio {
+    padding: var(--space-8) 0;
+    color: var(--color-text-muted);
+  }
+</style>
