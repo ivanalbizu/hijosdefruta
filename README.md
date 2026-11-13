@@ -124,7 +124,3 @@ limita las peticiones, así que la comprobación completa tarda unos minutos;
 
 Criterios de clasificación y de fuentes: página [/metodologia](src/pages/metodologia.astro).
 
-## CMS
-
-`/admin` carga Decap CMS ([`public/admin/config.yml`](public/admin/config.yml)) con formularios para
-los mismos campos. Los casos nuevos se crean como borrador.

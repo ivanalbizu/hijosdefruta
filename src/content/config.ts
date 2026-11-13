@@ -45,7 +45,7 @@ function esFragmentoDe(fragmento: string, texto: string) {
 		.every(trozo => completo.includes(trozo.replace(/^[.,;:]+|[.,;:]+$/g, '').trim()));
 }
 
-/** Opcional que además acepta los "" y null que escribe Decap CMS en campos vacíos. */
+/** Opcional que además acepta "" y null en campos vacíos. */
 const opcional = <T extends z.ZodTypeAny>(schema: T) =>
 	z.preprocess(v => (v === '' || v === null ? undefined : v), schema.optional());
 

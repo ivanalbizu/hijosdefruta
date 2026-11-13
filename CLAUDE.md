@@ -44,7 +44,6 @@ src/utils/
 src/layouts/        Base (html, skip link, header, footer) → Default (página con cabecera) y CasoPost
 src/components/     ver "Componentes"
 scripts/            fuentes.mjs (comprueba enlaces), perfiles.mjs (descarga imágenes), capturas.mjs (recortes de PDF)
-public/admin/       Decap CMS (aún no edita perfiles)
 ```
 
 - Las URLs de los casos son `/casos/<slug>/` y las de tags `/tags/<slug>/`, con el slug de
