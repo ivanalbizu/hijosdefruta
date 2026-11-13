@@ -12,11 +12,11 @@ haberlo encontrado antes en la fuente primaria.
 | --- | --- |
 | Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral |
 | Investigando (falta una fuente clave) | arch-35 currículum de Bosnia, arch-36 Puente «no estoy pensando en dimitir» |
-| Débil (con motivo y pista abierta) | cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
+| Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
-| Por investigar (debate de primarias 2014) | deb-01 aforamiento cero, deb-02 donaciones de 2.000 €, deb-03 exministros en consejos de empresas energéticas, deb-04 políticos en instituciones de control, deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
+| Por investigar (debate de primarias 2014) | deb-01 aforamiento cero, deb-03 exministros en consejos de empresas energéticas, deb-04 políticos en instituciones de control, deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
 
 Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
@@ -275,11 +275,12 @@ artículo 135, parece Pérez Tapias).
 - **Notas:** el caso publicado arranca en 2018; este hito lo adelanta a 2014. Confirmar el minuto viéndolo.
 
 ### deb-02 · Donaciones privadas de 2.000 € al año
-- **Estado:** por investigar
+- **Estado:** débil (13-11-2026) — la cifra no pasó a ningún programa electoral
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
-- **Antes:** 27:40–27:55 · «que se acabe con la financiación privada de los partidos políticos y las donaciones privadas de las personas físicas solamente sean de 2,000 € al año como máximo y no el techo que se fija ahora de 100,000 € al año»
-- **Después:** pendiente: límite vigente en la Ley Orgánica 8/2007 de financiación de los partidos (texto consolidado del BOE; la LO 3/2015 lo bajó a 50.000 €, comprobar si ha cambiado).
-- **Notas:** la LO 3/2015 es del Gobierno del PP; habría que ver si con Sánchez se propuso algo.
+- **Antes:** 27:48–27:55 · «que se acabe con la financiación privada de los partidos políticos y las donaciones privadas de las personas físicas solamente sean de 2,000 € al año como máximo y no el techo que se fija ahora de 100,000 € al año» (debate de primarias, como candidato a secretario general).
+- **Después:** LO 8/2007, art. 5.Uno.b), texto consolidado (https://www.boe.es/buscar/act.php?id=BOE-A-2007-13022): «Donaciones procedentes de una misma persona superiores a 50.000 euros anuales», redacción de la LO 3/2015 (Gobierno del PP). La única modificación posterior (30-05-2024) no toca el art. 5.
+- **Programas leídos:** 2015 (págs. 91–92, SHA-256 06a2f165…) y 2016 (págs. 90–91, acc501aa…): proponen financiación pública suficiente complementada con «aportaciones de pequeña cuantía», incentivos fiscales y microdonaciones por Internet de menos de 200 €, pero **ningún tope** de 2.000 €. Programa de 2019 (28-A, 5390374…): nada sobre donaciones a partidos.
+- **Notas / veredicto:** compromiso de primarias, interno del partido, sin traslado a los programas: no se puede presentar como promesa electoral incumplida. Pista abierta: si apareciera en una investidura o en un acuerdo de Gobierno.
 
 ### deb-03 · Exministros en consejos de empresas estratégicas
 - **Estado:** publicado con arch-24 (`sanchez-puertas-giratorias-exministros-consejos`) — se une con arch-24 en un solo caso (aprobado por el usuario el 12-11-2026). Minuto 46:59–47:24 confirmado por el usuario viendo el vídeo: el vídeo del caso empieza en el segundo 2815 (46:55).
