@@ -6,6 +6,7 @@ import Hito from '@components/Hito.astro';
 import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
+import Compartir from '@components/Compartir.astro';
 import { contarFuentes, getHitos, type Caso } from '@utils/casos';
 
 interface Props {
@@ -37,6 +38,7 @@ const image = `/og/${caso.slug}.png`;
 			<p class="meta">
 				{numFuentes} {numFuentes === 1 ? 'fuente' : 'fuentes'} · Revisado el <Fecha fecha={revisado} />
 			</p>
+			<Compartir titulo={title} ruta={`/casos/${caso.slug}/`} compacto />
 		</header>
 
 		<section class="versus" aria-labelledby="titulo-antes-despues">
@@ -76,12 +78,21 @@ const image = `/og/${caso.slug}.png`;
 					<a href="/metodologia/#correcciones">Así se corrige</a>.
 				</p>
 			</section>
+
+			<section class="bloque surface compartir-final" aria-label="Compartir">
+				<Compartir titulo={title} ruta={`/casos/${caso.slug}/`} />
+			</section>
 		</div>
 	</article>
 </Base>
 
 <style lang="scss">
+
 	@use '../styles/breakpoints' as *;
+
+	.compartir-final {
+		padding: var(--space-5);
+	}
 
 	.migas {
 		margin-bottom: var(--space-6);

@@ -1,0 +1,124 @@
+---
+import ExtLink from '@components/ExtLink.astro';
+
+/**
+ * Compartir una página. Con Web Share (móvil, Safari, Chrome/Edge en Windows)
+ * se muestra el menú del sistema y se ocultan los enlaces a redes; sin ella,
+ * enlaces directos sin scripts de terceros. «Copiar enlace» está siempre.
+ * Solo se comparte título y URL: nunca una cita recortada.
+ */
+interface Props {
+	titulo: string;
+	/** Ruta de la página: `/casos/<slug>/`. */
+	ruta: string;
+	/** Texto del encabezado visible; si no hay, solo para lectores de pantalla. */
+	etiqueta?: string;
+	compacto?: boolean;
+}
+
+const { titulo, ruta, etiqueta = 'Compartir este caso', compacto = false } = Astro.props;
+const url = new URL(ruta, Astro.site).href;
+const t = encodeURIComponent(titulo);
+const u = encodeURIComponent(url);
+const tu = encodeURIComponent(`${titulo} ${url}`);
+
+const redes = [
+	{ nombre: 'WhatsApp', href: `https://wa.me/?text=${tu}` },
+	{ nombre: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+	{ nombre: 'X', href: `https://x.com/intent/post?text=${t}&url=${u}` },
+	{ nombre: 'Bluesky', href: `https://bsky.app/intent/compose?text=${tu}` },
+	{ nombre: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+];
+---
+
+<div class:list={['compartir', { 'compartir--compacto': compacto }]} data-titulo={titulo} data-url={url}>
+	<p class:list={['titulo-compartir', { 'sr-only': compacto }]}>{etiqueta}</p>
+	<ul class="acciones" role="list">
+		<li data-nativo hidden>
+			<button class="btn btn--primary" type="button" data-compartir>
+				<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+					<path d="M8 10V2M5 5l3-3 3 3M3 8v5.5h10V8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+				Compartir
+			</button>
+		</li>
+		{
+			redes.map(r => (
+				<li data-red>
+					<ExtLink href={r.href} class="btn btn--secondary">
+						<span class="sr-only">Compartir en </span>
+						{r.nombre}
+					</ExtLink>
+				</li>
+			))
+		}
+		<li>
+			<button class="btn btn--secondary" type="button" data-copiar>Copiar enlace</button>
+		</li>
+	</ul>
+	<p class="aviso meta" role="status" aria-live="polite"></p>
+</div>
+
+<script>
+	const puedeCompartir = typeof navigator.share === 'function';
+
+	for (const bloque of document.querySelectorAll<HTMLElement>('.compartir')) {
+		const { titulo = '', url = location.href } = bloque.dataset;
+		const aviso = bloque.querySelector<HTMLElement>('.aviso')!;
+		let temporizador: number | undefined;
+		const avisar = (texto: string) => {
+			aviso.textContent = texto;
+			clearTimeout(temporizador);
+			temporizador = window.setTimeout(() => (aviso.textContent = ''), 4000);
+		};
+
+		if (puedeCompartir) {
+			bloque.querySelector<HTMLElement>('[data-nativo]')!.hidden = false;
+			for (const li of bloque.querySelectorAll<HTMLElement>('[data-red]')) li.hidden = true;
+			bloque.querySelector('[data-compartir]')!.addEventListener('click', async () => {
+				try {
+					await navigator.share({ title: titulo, text: titulo, url });
+				} catch (error) {
+					// Cerrar el menú sin elegir nada no es un error.
+					if ((error as DOMException).name !== 'AbortError') avisar('No se ha podido compartir. Copia el enlace.');
+				}
+			});
+		}
+
+		bloque.querySelector('[data-copiar]')!.addEventListener('click', async () => {
+			try {
+				await navigator.clipboard.writeText(url);
+				avisar('Enlace copiado');
+			} catch {
+				avisar(`No se ha podido copiar. Enlace: ${url}`);
+			}
+		});
+	}
+</script>
+
+<style>
+	.compartir {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+	.titulo-compartir {
+		font-size: var(--text-sm);
+		font-weight: var(--weight-semibold);
+	}
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+	}
+	.acciones li[hidden] {
+		display: none;
+	}
+	.compartir--compacto :global(.btn) {
+		padding-inline: var(--space-3);
+		font-size: var(--text-sm);
+	}
+	.aviso:empty {
+		display: none;
+	}
+</style>
