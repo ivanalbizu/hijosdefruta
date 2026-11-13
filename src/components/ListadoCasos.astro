@@ -1,0 +1,31 @@
+---
+import Default from '@layouts/Default.astro';
+import CasoCard from '@components/CasoCard.astro';
+import Paginacion from '@components/Paginacion.astro';
+import type { Caso } from '@utils/casos';
+import type { Pagina } from '@utils/paginacion';
+
+interface Props {
+	pagina: Pagina<Caso>;
+}
+
+const { pagina } = Astro.props;
+const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total})` : '';
+---
+
+<Default
+	title={`Casos${sufijo}`}
+	description="Contradicciones de políticos españoles clasificadas en falsedades, promesas incumplidas, cambios de postura y dobles raseros, con la cita literal y la fuente de cada declaración"
+	eyebrow={`${pagina.elementos} casos documentados`}
+	lead="Cada caso enfrenta lo que se dijo antes con lo que se dijo o hizo después. Ordenados por la fecha de la contradicción, de la más reciente a la más antigua.">
+	<ul class="grid-cards">
+		{
+			pagina.items.map(caso => (
+				<li>
+					<CasoCard caso={caso} />
+				</li>
+			))
+		}
+	</ul>
+	<Paginacion pagina={pagina} base="/casos/" etiqueta="Páginas de casos" />
+</Default>

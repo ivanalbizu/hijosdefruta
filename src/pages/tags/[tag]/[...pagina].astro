@@ -4,24 +4,31 @@ import Avatar from '@components/Avatar.astro';
 import ExtLink from '@components/ExtLink.astro';
 import CasoCard from '@components/CasoCard.astro';
 import TipoBadge from '@components/TipoBadge.astro';
+import Paginacion from '@components/Paginacion.astro';
 import { getCasos, getCasosByTag, getTags, type Caso, type TagInfo } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
-import { TIPOS } from '../../consts';
+import { paginar, type Pagina } from '@utils/paginacion';
+import { TIPOS } from '../../../consts';
 
 export async function getStaticPaths() {
   const casos = await getCasos();
-  return getTags(casos).map(tag => ({
-    params: { tag: tag.slug },
-    props: { tag, casos: getCasosByTag(casos, tag.slug) },
-  }));
+  // Página 1 en /tags/<slug>/; el resto en /tags/<slug>/pagina/<n>/.
+  return getTags(casos).flatMap(tag => {
+    const delTag = getCasosByTag(casos, tag.slug);
+    return paginar(delTag).map(pagina => ({
+      params: { tag: tag.slug, pagina: pagina.actual > 1 ? `pagina/${pagina.actual}` : undefined },
+      props: { tag, casos: delTag, pagina },
+    }));
+  });
 }
 
 interface Props {
   tag: TagInfo;
   casos: Caso[];
+  pagina: Pagina<Caso>;
 }
 
-const { tag, casos } = Astro.props;
+const { tag, casos, pagina } = Astro.props;
 const perfiles = await getPerfiles();
 const perfil = perfiles.get(tag.slug);
 const datos = perfil?.data;
@@ -40,9 +47,10 @@ const porTipo = (Object.keys(TIPOS) as (keyof typeof TIPOS)[])
 
 const totalCasos = `${casos.length} ${casos.length === 1 ? 'caso' : 'casos'}`;
 const imagen = datos?.imagen;
+const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total})` : '';
 ---
 
-<Base title={`${tag.name}: ${totalCasos}`} description={`${tag.name}: ${totalCasos} con la cita literal, la fecha y la fuente de cada declaración`}>
+<Base title={`${tag.name}: ${totalCasos}${sufijo}`} description={`${tag.name}: ${totalCasos} con la cita literal, la fecha y la fuente de cada declaración`}>
   <div class="container page">
     <nav class="migas meta" aria-label="Migas de pan">
       <a href="/tags/">Políticos y partidos</a>
@@ -114,22 +122,23 @@ const imagen = datos?.imagen;
     }
 
     <section class="section" aria-labelledby="titulo-casos">
-      <h2 id="titulo-casos" class="h3 titulo-casos">Casos</h2>
+      <h2 id="titulo-casos" class="h3 titulo-casos">Casos{sufijo}</h2>
       <ul class="grid-cards">
         {
-          casos.map(caso => (
+          pagina.items.map(caso => (
             <li>
               <CasoCard caso={caso} nivel={3} />
             </li>
           ))
         }
       </ul>
+      <Paginacion pagina={pagina} base={`/tags/${tag.slug}/`} etiqueta={`Páginas de casos de ${tag.name}`} />
     </section>
   </div>
 </Base>
 
 <style lang="scss">
-  @use '../../styles/breakpoints' as *;
+  @use '../../../styles/breakpoints' as *;
 
   .migas {
     margin-bottom: var(--space-6);

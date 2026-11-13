@@ -83,6 +83,7 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 | `PerfilCard` | Persona o partido en los índices. |
 | `TipoBadge`, `EstadoBadge` | Insignias de tipo de caso y de estado de promesa. |
 | `ExtLink` | Enlace externo: nueva pestaña, icono y aviso para lectores de pantalla. Úsalo para toda URL externa. |
+| `Paginacion` | Anterior/siguiente y números de página (`utils/paginacion.ts`, 12 por página). La página 1 es la base (`/casos/`, `/tags/<slug>/`); el resto, `<base>pagina/<n>/`. |
 | `Cronologia`, `Fuentes`, `Fecha`, `Media`, `Logo` | Línea de tiempo, lista de fuentes, fechas con precisión variable, YouTube, marca. |
 
 ## Accesibilidad (requisitos, no extras)
@@ -106,7 +107,6 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 
 ## Mejoras previstas
 
-1. **Paginación** del listado de casos y de las páginas de tag (`paginate()` de Astro).
-2. **Filtros y búsqueda**: por tipo, persona/partido y año, y búsqueda de texto en títulos y citas.
+1. **Filtros y búsqueda**: por tipo, persona/partido y año, y búsqueda de texto en títulos y citas.
    Al ser un sitio estático, opciones: índice JSON generado en build + filtrado en cliente, o
    Pagefind. Debe funcionar con teclado y anunciar el número de resultados (`aria-live`).

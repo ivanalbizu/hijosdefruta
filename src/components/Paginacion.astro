@@ -1,0 +1,106 @@
+---
+import { urlPagina, type Pagina } from '@utils/paginacion';
+
+interface Props {
+	pagina: Pagina<unknown>;
+	/** URL de la primera página, con barra final: `/casos/`. */
+	base: string;
+	/** Nombre del listado para el aria-label: "Páginas de casos". */
+	etiqueta?: string;
+}
+
+const { pagina, base, etiqueta = 'Paginación' } = Astro.props;
+const { actual, total } = pagina;
+
+// Números visibles: primera, última y las vecinas de la actual; huecos con «…».
+const numeros: (number | null)[] = [];
+for (let n = 1; n <= total; n++) {
+	if (n === 1 || n === total || Math.abs(n - actual) <= 1) numeros.push(n);
+	else if (numeros.at(-1) !== null) numeros.push(null);
+}
+---
+
+{
+	total > 1 && (
+		<nav class="paginacion" aria-label={etiqueta}>
+			<ul>
+				<li class="extremo">
+					{actual > 1 ? (
+						<a class="btn btn--secondary" href={urlPagina(base, actual - 1)} rel="prev">
+							<span aria-hidden="true">←</span> Anterior
+						</a>
+					) : (
+						<span class="btn btn--secondary deshabilitado" aria-hidden="true">
+							← Anterior
+						</span>
+					)}
+				</li>
+				{numeros.map(n =>
+					n === null ? (
+						<li class="hueco" aria-hidden="true">…</li>
+					) : (
+						<li class="numero">
+							<a
+								class:list={['btn', n === actual ? 'btn--primary' : 'btn--secondary']}
+								href={urlPagina(base, n)}
+								aria-current={n === actual ? 'page' : undefined}>
+								<span class="sr-only">Página </span>
+								{n}
+							</a>
+						</li>
+					)
+				)}
+				<li class="extremo">
+					{actual < total ? (
+						<a class="btn btn--secondary" href={urlPagina(base, actual + 1)} rel="next">
+							Siguiente <span aria-hidden="true">→</span>
+						</a>
+					) : (
+						<span class="btn btn--secondary deshabilitado" aria-hidden="true">
+							Siguiente →
+						</span>
+					)}
+				</li>
+			</ul>
+			<p class="meta">
+				{pagina.desde}–{pagina.hasta} de {pagina.elementos}
+			</p>
+		</nav>
+	)
+}
+
+<style lang="scss">
+	.paginacion {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-3);
+		margin-top: var(--space-12);
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: var(--space-2);
+	}
+	.numero .btn {
+		min-width: var(--target-min);
+		padding-inline: var(--space-3);
+		font-variant-numeric: tabular-nums;
+	}
+	.hueco {
+		color: var(--color-text-muted);
+		padding-inline: var(--space-1);
+	}
+	.deshabilitado {
+		visibility: hidden;
+	}
+	/* En móvil, los números caben mal: solo anterior/siguiente y el contador. */
+	@media (max-width: 30rem) {
+		.numero,
+		.hueco {
+			display: none;
+		}
+	}
+</style>

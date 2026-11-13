@@ -1,0 +1,18 @@
+---
+import ListadoCasos from '@components/ListadoCasos.astro';
+import { getCasos, type Caso } from '@utils/casos';
+import { paginar, type Pagina } from '@utils/paginacion';
+
+// La página 1 es /casos/; aquí solo de la 2 en adelante.
+export async function getStaticPaths() {
+	return paginar(await getCasos())
+		.slice(1)
+		.map(pagina => ({ params: { n: String(pagina.actual) }, props: { pagina } }));
+}
+
+interface Props {
+	pagina: Pagina<Caso>;
+}
+---
+
+<ListadoCasos pagina={Astro.props.pagina} />
