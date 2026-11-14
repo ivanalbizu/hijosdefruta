@@ -113,6 +113,19 @@ const max = destacada ? 220 : 140;
 		text-decoration: underline;
 		text-decoration-thickness: 2px;
 	}
+	/*
+	 * Sobre un enlace interior (tipo, tags) solo reacciona ese enlace: ni se subraya el título
+	 * ni se eleva la tarjeta, para que no parezca que lleva al caso. (Astro no añade su atributo
+	 * de ámbito dentro de :has(), así que alcanza a los enlaces de TipoBadge y Tags.)
+	 */
+	.card:has(a:not(.titulo a):hover) {
+		border-color: var(--color-border);
+		box-shadow: var(--shadow-sm);
+
+		.titulo a {
+			text-decoration: none;
+		}
+	}
 	.resumen {
 		max-width: var(--measure);
 		color: var(--color-text-muted);
