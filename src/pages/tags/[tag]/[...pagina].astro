@@ -217,6 +217,10 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
     &:hover .n {
       text-decoration: underline;
     }
+    /* El badge trae align-self: flex-start (para las tarjetas); aquí va centrado con el número. */
+    :global(.badge) {
+      align-self: center;
+    }
   }
   .n {
     font-size: var(--text-sm);
