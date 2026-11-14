@@ -18,6 +18,7 @@ const { title, description, eyebrow, lead, ancho = 'wide', noindex } = Astro.pro
 
 <Base title={title} description={description} noindex={noindex}>
 	<div class:list={['container page', { 'container--narrow': ancho === 'narrow' }]}>
+		<slot name="migas" />
 		<header class="page-header">
 			{eyebrow && <p class="eyebrow">{eyebrow}</p>}
 			<h1>{title}</h1>

@@ -1,0 +1,169 @@
+---
+import Default from '@layouts/Default.astro';
+import CasoCard from '@components/CasoCard.astro';
+import Paginacion from '@components/Paginacion.astro';
+import { getCasos, type Caso } from '@utils/casos';
+import { paginar, type Pagina } from '@utils/paginacion';
+import { TIPOS } from '../../../consts';
+
+type Tipo = keyof typeof TIPOS;
+
+export async function getStaticPaths() {
+  const casos = await getCasos();
+  // Página 1 en /tipos/<tipo>/; el resto en /tipos/<tipo>/pagina/<n>/.
+  // Se generan todos los tipos, aunque alguno aún no tenga casos.
+  return (Object.keys(TIPOS) as Tipo[]).flatMap(tipo => {
+    const delTipo = casos.filter(c => c.data.tipo === tipo);
+    return paginar(delTipo).map(pagina => ({
+      params: { tipo, pagina: pagina.actual > 1 ? `pagina/${pagina.actual}` : undefined },
+      props: { tipo, pagina },
+    }));
+  });
+}
+
+interface Props {
+  tipo: Tipo;
+  pagina: Pagina<Caso>;
+}
+
+const { tipo, pagina } = Astro.props;
+const { nombre, descripcion } = TIPOS[tipo];
+const casos = await getCasos();
+const otros = (Object.keys(TIPOS) as Tipo[]).map(t => ({ tipo: t, n: casos.filter(c => c.data.tipo === t).length }));
+
+const titulo = `Casos de ${nombre.toLowerCase()}`;
+const total = `${pagina.elementos} ${pagina.elementos === 1 ? 'caso' : 'casos'}`;
+const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total})` : '';
+---
+
+<Default
+  title={`${titulo}${sufijo}`}
+  description={`${total} de tipo «${nombre}»: ${descripcion} Con la cita literal, la fecha y la fuente de cada declaración.`}
+  eyebrow={`Tipo de caso · ${total}`}
+  lead={descripcion}>
+  <Fragment slot="migas">
+    <nav class="migas meta" aria-label="Migas de pan">
+      <a href="/tipos/">Tipos de caso</a>
+    </nav>
+    {/* Antes del título: así no se mueve al cambiar de tipo (la definición y el aviso varían de alto). */}
+    <nav class="otros" aria-label="Tipos de caso">
+      <ul>
+        {
+          otros.map(o => (
+            <li>
+              <a
+                href={`/tipos/${o.tipo}/`}
+                aria-current={o.tipo === tipo ? 'page' : undefined}
+                style={`--fg: var(--tipo-${o.tipo}-fg); --bg: var(--tipo-${o.tipo}-bg)`}>
+                <span class="punto" aria-hidden="true"></span>
+                {TIPOS[o.tipo].nombre}
+                <span class="n">
+                  {o.n}
+                  <span class="sr-only">{o.n === 1 ? 'caso' : 'casos'}</span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </Fragment>
+
+  <Fragment slot="header">
+    {
+      tipo === 'promesa-incumplida' && (
+        <p class="aviso">
+          Promesas ya incumplidas, con la prueba de ambas partes. Las que aún no se pueden contrastar están en el{' '}
+          <a href="/promesas/">archivo de promesas</a>.
+        </p>
+      )
+    }
+    <p class="criterio">
+      <a class="link-arrow" href={`/metodologia/#${tipo}`}>Cómo se clasifican los casos</a>
+    </p>
+  </Fragment>
+
+  {
+    pagina.items.length > 0 ? (
+      <>
+        <ul class="grid-cards">
+          {pagina.items.map(caso => (
+            <li>
+              <CasoCard caso={caso} />
+            </li>
+          ))}
+        </ul>
+        <Paginacion pagina={pagina} base={`/tipos/${tipo}/`} etiqueta={`Páginas de ${titulo.toLowerCase()}`} />
+      </>
+    ) : (
+      <p class="vacio">
+        Todavía no hay casos de este tipo. <a href="/casos/">Ver todos los casos</a>.
+      </p>
+    )
+  }
+</Default>
+
+<style>
+  .migas {
+    margin-bottom: var(--space-4);
+    a {
+      color: var(--color-text-muted);
+      &::before {
+        content: '← ';
+      }
+    }
+  }
+  .criterio {
+    margin-top: var(--space-4);
+  }
+  .aviso {
+    max-width: var(--measure);
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+  }
+  .otros {
+    margin-bottom: var(--space-8);
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      min-height: var(--target-min);
+      padding-inline: var(--space-4);
+      border: 1px solid var(--color-border-control);
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      text-decoration: none;
+      &:hover {
+        border-color: var(--fg);
+      }
+      /* Tipo actual: relleno con los colores de su badge (contraste AA en los dos temas). */
+      &[aria-current='page'] {
+        border-color: var(--fg);
+        background: var(--bg);
+        color: var(--fg);
+        font-weight: var(--weight-semibold);
+      }
+    }
+  }
+  .punto {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--fg);
+  }
+  .n {
+    color: var(--color-text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  [aria-current='page'] .n {
+    color: inherit;
+  }
+</style>

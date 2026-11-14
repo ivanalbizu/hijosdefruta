@@ -15,14 +15,16 @@ const REPO = 'https://github.com/ivanalbizu/hijosdefruta';
   ancho="narrow">
   <div class="prose">
 
-    <h2>Tipos de caso</h2>
+    <h2 id="tipos">Tipos de caso</h2>
     <p>No todo es una mentira. Cada caso se clasifica según lo que las pruebas permiten afirmar:</p>
     <dl class="tipos">
       {
         Object.entries(TIPOS).map(([id, tipo]) => (
           <div id={id}>
             <dt><TipoBadge tipo={id as keyof typeof TIPOS} enlace={false} /></dt>
-            <dd>{tipo.descripcion}</dd>
+            <dd>
+              {tipo.descripcion} <a href={`/tipos/${id}/`}>Ver los casos de {tipo.nombre.toLowerCase()}</a>
+            </dd>
           </div>
         ))
       }

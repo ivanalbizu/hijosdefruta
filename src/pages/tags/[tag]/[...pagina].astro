@@ -82,9 +82,12 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
           <span class="tipos">
             {
               porTipo.map(({ tipo, n }) => (
-                <span class="tipo">
-                  <TipoBadge tipo={tipo} /> <span class="n">{n}</span>
-                </span>
+                <a class="tipo" href={`/buscar/?quien=${tag.slug}&tipo=${tipo}`}>
+                  <TipoBadge tipo={tipo} enlace={false} /> <span class="n">{n}</span>
+                  <span class="sr-only">
+                    {n === 1 ? 'caso' : 'casos'} de {tag.name}
+                  </span>
+                </a>
               ))
             }
           </span>
@@ -203,10 +206,17 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
     flex-wrap: wrap;
     gap: var(--space-2) var(--space-3);
   }
+  /* Cada tipo lleva a la búsqueda filtrada por esta persona o partido y ese tipo. */
   .tipo {
     display: inline-flex;
     align-items: center;
     gap: var(--space-1);
+    min-height: var(--target-min);
+    color: var(--color-text);
+    text-decoration: none;
+    &:hover .n {
+      text-decoration: underline;
+    }
   }
   .n {
     font-size: var(--text-sm);

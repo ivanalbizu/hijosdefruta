@@ -20,7 +20,8 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 
 ## Añadir un caso
 
-Cada caso es un archivo en `src/content/casos/*.mdx` y se publica en `/casos/<nombre-del-archivo>/`. Las pruebas van en el frontmatter y el
+Cada caso es un archivo en `src/content/casos/*.mdx` y se publica en `/casos/<nombre-del-archivo>/`
+(y aparece en `/tipos/<tipo>/` según su `tipo`). Las pruebas van en el frontmatter y el
 esquema de [`src/content/config.ts`](src/content/config.ts) las valida: **si falta una fuente, una
 fecha está mal o la cronología está desordenada, el build falla**.
 

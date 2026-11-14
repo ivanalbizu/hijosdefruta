@@ -49,6 +49,9 @@ scripts/            fuentes.mjs (comprueba enlaces), perfiles.mjs (descarga imá
 
 - Las URLs de los casos son `/casos/<slug>/` y las de tags `/tags/<slug>/`, con el slug de
   `slugifyStr` (`Pedro Sánchez` → `pedro-sanchez`). El archivo del perfil se llama igual que el slug.
+- Cada tipo de `TIPOS` (`consts.ts`) tiene su página `/tipos/<tipo>/` con la definición y sus casos,
+  y el índice `/tipos/`. `TipoBadge` enlaza ahí. Los cruces persona × tipo no son páginas: van a
+  `/buscar/?quien=<slug>&tipo=<tipo>`.
 - Un `quien` como "Pedro Sánchez (presidente del Gobierno)" se separa en nombre y cargo con
   `nombreSinCargo`; el nombre sirve para buscar su perfil.
 - `getCasos()` ordena por la fecha de `despues` (más reciente primero) e incluye borradores solo
@@ -81,10 +84,10 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 | `Avatar` | Foto circular (persona), logo apaisado sobre blanco (partido) o iniciales. Decorativo por defecto (`alt=""`). |
 | `Tags` | Chips con mini-avatar que enlazan a `/tags/<slug>/`. |
 | `PerfilCard` | Persona o partido en los índices. |
-| `TipoBadge`, `EstadoBadge` | Insignias de tipo de caso y de estado de promesa. |
+| `TipoBadge`, `EstadoBadge` | Insignias de tipo de caso (enlaza a `/tipos/<tipo>/`; `enlace={false}` dentro de otro enlace) y de estado de promesa. |
 | `Compartir` | Web Share si existe (oculta las redes); si no, enlaces a WhatsApp, Telegram, X, Bluesky y Facebook sin scripts de terceros. «Copiar enlace» siempre. Solo título y URL. |
 | `ExtLink` | Enlace externo: nueva pestaña, icono y aviso para lectores de pantalla. Úsalo para toda URL externa. |
-| `Paginacion` | Anterior/siguiente y números de página (`utils/paginacion.ts`, 12 por página). La página 1 es la base (`/casos/`, `/tags/<slug>/`); el resto, `<base>pagina/<n>/`. |
+| `Paginacion` | Anterior/siguiente y números de página (`utils/paginacion.ts`, 12 por página). La página 1 es la base (`/casos/`, `/tags/<slug>/`, `/tipos/<tipo>/`); el resto, `<base>pagina/<n>/`. |
 | `Cronologia`, `Fuentes`, `Fecha`, `Media`, `Logo` | Línea de tiempo, lista de fuentes, fechas con precisión variable, YouTube, marca. |
 
 ## Accesibilidad (requisitos, no extras)

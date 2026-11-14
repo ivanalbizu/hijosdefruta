@@ -4,7 +4,7 @@ import type { Caso } from '@utils/casos';
 
 interface Props {
 	tipo: Caso['data']['tipo'];
-	/** Enlaza a la explicación del tipo en /metodologia. */
+	/** Enlaza a la página del tipo (/tipos/<tipo>/), con su definición y sus casos. */
 	enlace?: boolean;
 }
 
@@ -12,7 +12,7 @@ const { tipo, enlace = true } = Astro.props;
 const Tag = enlace ? 'a' : 'span';
 ---
 
-<Tag class="badge" data-tipo={tipo} href={enlace ? `/metodologia/#${tipo}` : undefined}>
+<Tag class="badge" data-tipo={tipo} href={enlace ? `/tipos/${tipo}/` : undefined}>
 	<span class="punto" aria-hidden="true"></span>
 	{TIPOS[tipo].nombre}
 </Tag>

@@ -24,6 +24,7 @@ ${Object.entries(TIPOS).map(([k, v]) => `  - ${k}: ${v.descripcion}`).join('\n')
 - [RSS](${u('/rss.xml')})
 - [Metodología](${u('/metodologia/')}): criterios de selección, clasificación y correcciones.
 - [Búsqueda](${u('/buscar/')}): admite ?q=&tipo=&quien=&anio= en la URL.
+- [Tipos de caso](${u('/tipos/')}): ${Object.keys(TIPOS).map(k => `[${k}](${u(`/tipos/${k}/`)})`).join(', ')}.
 
 ## Casos
 

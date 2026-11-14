@@ -1,0 +1,95 @@
+---
+import Default from '@layouts/Default.astro';
+import TipoBadge from '@components/TipoBadge.astro';
+import { getCasos } from '@utils/casos';
+import { TIPOS } from '../../consts';
+
+type Tipo = keyof typeof TIPOS;
+
+const casos = await getCasos();
+const tipos = (Object.keys(TIPOS) as Tipo[]).map(tipo => ({
+  tipo,
+  ...TIPOS[tipo],
+  n: casos.filter(c => c.data.tipo === tipo).length,
+}));
+---
+
+<Default
+  title="Tipos de caso"
+  description="Casos de contradicciones de políticos españoles agrupados por tipo: falsedad, promesa incumplida, cambio de postura y doble rasero"
+  eyebrow="Índice"
+  lead="No todo es una mentira: cada caso se clasifica según lo que las pruebas permiten afirmar.">
+  <p slot="header" class="criterio">
+    <a class="link-arrow" href="/metodologia/#tipos">Criterios de clasificación</a>
+  </p>
+
+  <ul class="tipos">
+    {
+      tipos.map(({ tipo, nombre, descripcion, n }) => (
+        <li class="tipo surface">
+          <TipoBadge tipo={tipo} enlace={false} />
+          <h2 class="h4">
+            <a href={`/tipos/${tipo}/`}>Casos de {nombre.toLowerCase()}</a>
+          </h2>
+          <p>{descripcion}</p>
+          <p class="meta">
+            {n} {n === 1 ? 'caso' : 'casos'}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</Default>
+
+<style>
+  .criterio {
+    margin-top: var(--space-4);
+  }
+  .tipos {
+    display: grid;
+    gap: var(--space-4);
+    /* 4 tipos: 4 columnas en escritorio, 2 en tableta, 1 en móvil (nunca 3 + 1). */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    @media (min-width: 40rem) and (max-width: 63.99rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .tipo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-6);
+    &:hover {
+      border-color: var(--color-border-control);
+    }
+    /* El foco del título se dibuja en toda la tarjeta (si el navegador admite :has). */
+    &:has(h2 a:focus-visible) {
+      outline: 3px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+  }
+  h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+    /* Enlace extendido: toda la tarjeta es clicable. */
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+    @supports selector(:has(*)) {
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+  .tipo:hover h2 a {
+    text-decoration: underline;
+  }
+  .meta {
+    margin-top: auto;
+  }
+</style>

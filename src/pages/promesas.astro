@@ -32,6 +32,9 @@ const campanas = [...new Set(promesas.map(p => p.data.campana))];
   description="Archivo de promesas electorales con su fuente, guardadas cuando se hicieron para poder contrastarlas después"
   eyebrow="Archivo"
   lead="Promesas guardadas en el momento en que se hacen, con su fuente. Cuando se cumplan o se incumplan se actualiza su estado y, si se incumplen, pasan a ser un caso.">
+  <p slot="header" class="relacion">
+    <a class="link-arrow" href="/tipos/promesa-incumplida/">Ver los casos de promesa incumplida</a>
+  </p>
   {
     campanas.map(campana => {
       const lista = items.filter(i => i.data.campana === campana);
@@ -98,6 +101,9 @@ const campanas = [...new Set(promesas.map(p => p.data.campana))];
 </Default>
 
 <style>
+  .relacion {
+    margin-top: var(--space-4);
+  }
   .campana + .campana {
     margin-top: var(--space-16);
   }
