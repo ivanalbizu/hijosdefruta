@@ -13,7 +13,7 @@ haberlo encontrado antes en la fuente primaria.
 | Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión |
 | Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
-| En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto) |
+| En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto), usr-01 Mínguez, familiares de otros y «ataque personal» (causas abiertas y vida familiar; además débil) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
 | Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
@@ -434,3 +434,24 @@ verificadores es solo una pista. Cribado el 13-11-2026.
 - **Estado:** ya existe — `puente-seguir-adelante-dimision-urda`; posible hito de cronología
 - **Después:** ~20:16–20:40 y ~27:10 · «Óscar Puente me dijo, "Yo creo que tengo que dimitir"»; a si lo habría cesado: «ese debate hoy […] está superado».
 
+
+## Origen: idea del usuario (14-11-2026)
+
+Pista: Mínguez habla a menudo de los familiares de políticos del PP y, cuando se publica la actividad de su
+pareja, lo llama ataque personal. Buscado en las 21 ruedas de prensa de Mínguez del canal de YouTube del PSOE
+(07-2025 a 09-2026), con los subtítulos automáticos (`novio`, `pareja`, `marido`, `mujer de`, `hermano/a de`,
+`familia de`); los minutos son de esos subtítulos y hay que confirmarlos viendo el vídeo.
+
+### usr-01 · Mínguez: los familiares de los demás y el «ataque personal» a los suyos
+- **Estado:** en espera — no se publica de momento (decisión del usuario, 14-11-2026). Motivo del bloqueo: causas judiciales abiertas y vida familiar; además, débil. Relacionado con arch-16 (en espera).
+- **Origen:** idea del usuario (14-11-2026)
+- **Persona / tipo propuesto:** Montse Mínguez (portavoz del PSOE) / doble rasero
+- **Antes (lo que dijo de familiares de otros), todo en ruedas de prensa en Ferraz, canal del PSOE:**
+  - 21-07-2025 · `haNJKt1l47M` ~5:46 · recuerda que Casado preguntó «si era moral» que el hermano de Ayuso fuera adjudicatario de un contrato en la pandemia.
+  - 01-06-2026 · `z2O9TC-KGPA` ~11:17–11:43 · «Begoña Gómez, sin pruebas, se la investiga […] por ser la mujer del presidente del Gobierno» y «Begoña Gómez tiene dos informes de la UCO […] llevamos […] un año esperando el informe de la UCO de […] el novio de la señora Ayuso»; repite lo del novio en ~22:15.
+  - 27-07-2026 · `y1V8G9IdYso` ~18:01 · Begoña Gómez: «una cacería resultado de ser la mujer de quien es».
+  - 14-09-2026 · `f0hBN8CfV5I` ~13:27 · «¿por qué la señora Ayuso y los apellidos que la rodean se archivan las causas?», «depende de qué familia es», «el hermano del presidente y la hermana de Moreno Bonilla».
+- **Después:** 13-10-2026 · Espejo Público (Antena 3), entrevista de Susanna Griso: «a mí el ataque personal, de verdad que es lo peor que hay en política» y «empresa familiar», sobre la información de los pisos de su pareja. Primaria pendiente: programa completo en atresplayer. Pista: corte de ESdiario TV en YouTube (`cLS1Gp-J9a8`, ~3:01). El 16-10-2026 deja la portavocía (mensaje en X; Europa Press).
+- **Justificación del político:** la empresa de su pareja es familiar, legal y cumple la Ley de Vivienda; la información es un «ataque personal» de Artículo 14.
+- **Búsquedas:** web (Mínguez + novio/pareja de Ayuso, Begoña Gómez, «vida privada»); canal del PSOE en YouTube (21 ruedas de prensa con subtítulos); El Español y El Diario de Madrid (13-10-2026), Demócrata (16-10-2026), moncloa.com (02-06-2026), solo como pistas. No se encontró la expresión «vida privada» en boca de Mínguez.
+- **Notas / veredicto:** el contraste no es limpio. Cuando habla de familiares del PP lo hace siempre a propósito de causas judiciales (ritmo de los informes de la UCO, archivos), no de su vida privada ni de negocios legales; y defiende a Begoña Gómez con el mismo argumento que luego usa para sí («por ser la mujer de quien es» / «ataque personal»), lo que es coherente, no contradictorio. Además: González Amador y Begoña Gómez tienen causas abiertas (regla del proyecto) y el «después» trata de la actividad de su pareja (vida familiar, como arch-16). Lo más sólido sigue siendo arch-16 (su discurso sobre vivienda frente a la empresa de su pareja), que el usuario dejó en espera.
