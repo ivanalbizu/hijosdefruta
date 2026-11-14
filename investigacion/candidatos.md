@@ -10,14 +10,14 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión, wild-01 «nunca dije» (hito) |
 | Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto), usr-01 Mínguez, familiares de otros y «ataque personal» (causas abiertas y vida familiar; además débil) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
 | Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
-| The Wild Project (13-11-2026) | prometedor: wild-01 (hito para el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; por investigar: wild-03, wild-10 a wild-15; débil: wild-02, wild-04; bloqueado: wild-17 |
+| The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; por investigar: wild-03, wild-10 a wild-15; débil: wild-02, wild-04; bloqueado: wild-17 |
 
 Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
 
@@ -331,13 +331,13 @@ entrevista es fuente primaria de lo que dice Sánchez en ella; lo que afirma el 
 verificadores es solo una pista. Cribado el 13-11-2026.
 
 ### wild-01 · «Nunca dije que no quería que Pablo Iglesias estuviera en el Gobierno»
-- **Estado:** prometedor — hito nuevo para `pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria`
+- **Estado:** publicado (14-11-2026) — hito en `pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria`
 - **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura (ya es el tipo del caso)
-- **Antes:** ya en el caso: 18-07-2019, «El principal escollo […] es la participación del señor Iglesias en el Gobierno» y 19-09-2019, «no dormiría por la noche» (transcripciones de La Moncloa).
-- **Después:** ~1:40:00–1:40:25 · «Yo nunca dije, nunca dije que eh no quería que Pablo Iglesias estuviera en el gobierno, no. Yo lo que dije es que lo que me quitaba el sueño es que, por ejemplo, la seguridad social o la Hacienda la llevar[a] Podemos. Es es una de las grandes mentiras y bulos que se han propagado». A ~1:40:30 la transcripción mezcla hablantes («yo no he dicho lo de dormir»): confirmar quién lo dice.
-- **Justificación del político:** ~1:40:37–1:40:52 · tras repetir las elecciones tuvo que negociar; ~1:46:57 · «fui a una repetición electoral por no pactar con Pablo Iglesias, pero lo que no voy a hacer es una tercera».
-- **Búsquedas:** no hace falta otra fuente: el «antes» ya está en La Moncloa. El entrevistador lee la frase «No se dan las condiciones para que el señor Iglesias sea miembro de ese gobierno» (julio de 2019): buscarla en La Moncloa para añadirla.
-- **Notas / veredicto:** el matiz de los ministerios es cierto para el 19-09-2019 (ya está en el contexto del caso), pero no para el 18-07-2019. Falta que el usuario confirme minuto y frase.
+- **Antes:** 18-07-2019, La Moncloa (transcripción de «Al Rojo Vivo», pág. 2): «no se dan las condiciones para que el señor Iglesias sea miembro de ese Gobierno» y «el principal escollo […] es la participación del señor Iglesias en el Gobierno» (con recorte). 19-09-2019: «no dormiría por la noche».
+- **Después:** 1:40:15 (vídeo 6013–6063 s), confirmado por el usuario viendo el vídeo: «Yo nunca dije, nunca dije que no quería que Pablo Iglesias estuviera en el Gobierno. Bueno, no, yo lo que dije es que lo que me quitaba el sueño es que, por ejemplo, la Seguridad Social o la Hacienda la llevara Podemos. Es una de las grandes mentiras y bulos que se han propagado por las redes sociales, incluso por los medios de comunicación tradicionales». A continuación el entrevistador lee la frase de julio de 2019 y dice «Es una frase clara» (lo dice Jordi, no Sánchez).
+- **Justificación del político:** ~1:40:47–1:41:03 · tuvo que negociar después de repetir las elecciones, porque el PP no apoyó ni facilitó la formación de un gobierno.
+- **Corrección:** la frase de ~1:47:07 «fui a una repetición electoral por no pactar con Pablo Iglesias, pero lo que no voy a hacer es una tercera» la dice el entrevistador, resumiendo lo que comentó Sánchez; no es cita de Sánchez.
+- **Notas / veredicto:** el matiz de los ministerios es cierto para el 19-09-2019 (ya está en el contexto del caso), pero no para el 18-07-2019, cuando habló de Iglesias en persona.
 
 ### wild-02 · «Del 100 % de migrantes que nos llegan, el 40 % son europeos y otro 40 %, latinoamericanos»
 - **Estado:** débil
