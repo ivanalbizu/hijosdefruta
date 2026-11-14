@@ -17,6 +17,7 @@ haberlo encontrado antes en la fuente primaria.
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
 | Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
+| The Wild Project (13-11-2026) | prometedor: wild-01 (hito para el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; por investigar: wild-03, wild-10 a wild-15; débil: wild-02, wild-04; bloqueado: wild-17 |
 
 Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
 
@@ -320,4 +321,116 @@ está en los casos publicados de ambos temas.
 - **Después:** XV legislatura · proposición 122/000077 del Grupo Socialista «para prohibir el proxenetismo en todas sus formas» (BOCG-15-B-89-1, 05-04-2024), rechazada en la toma en consideración el 21-05-2024 (BOCG-15-B-89-2). Según prensa: intento anterior en 2022 (tomado en consideración, caducó en 2023); en 2025 la ministra Redondo dejó la abolición fuera de la ley de trata por falta de acuerdo (Infobae, 08-03-2025); sin iniciativas nuevas en 2025-2026 (El Debate, 01-11-2026).
 - **Por qué es débil:** el PSOE lo intentó dos veces y lo frenaron el Congreso y sus socios; no es inacción.
 - **Pista abierta:** el ángulo «su Gobierno lo dejó fuera de la ley de trata». Buscar el anteproyecto o proyecto de ley de trata (referencia del Consejo de Ministros en La Moncloa, BOCG serie A) y la declaración de Redondo en fuente oficial; localizar en el BOCG de la XIV legislatura la proposición de 2022 y su caducidad.
+
+## Origen: The Wild Project #393, entrevista de Jordi Wild a Pedro Sánchez (13-11-2026)
+
+Vídeo: https://www.youtube.com/watch?v=mStOFBvToUI (1:52:07, publicado el 13-11-2026, en campaña del 29N).
+Transcripción automática en `investigacion/material/transcripciones/2026-11-13-wild-project-pedro-sanchez-mStOFBvToUI.limpio.txt`
+(sin hablantes: los minutos son aproximados y **toda frase se confirma viendo el vídeo**). El vídeo de la
+entrevista es fuente primaria de lo que dice Sánchez en ella; lo que afirma el entrevistador o sus
+verificadores es solo una pista. Cribado el 13-11-2026.
+
+### wild-01 · «Nunca dije que no quería que Pablo Iglesias estuviera en el Gobierno»
+- **Estado:** prometedor — hito nuevo para `pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria`
+- **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura (ya es el tipo del caso)
+- **Antes:** ya en el caso: 18-07-2019, «El principal escollo […] es la participación del señor Iglesias en el Gobierno» y 19-09-2019, «no dormiría por la noche» (transcripciones de La Moncloa).
+- **Después:** ~1:40:00–1:40:25 · «Yo nunca dije, nunca dije que eh no quería que Pablo Iglesias estuviera en el gobierno, no. Yo lo que dije es que lo que me quitaba el sueño es que, por ejemplo, la seguridad social o la Hacienda la llevar[a] Podemos. Es es una de las grandes mentiras y bulos que se han propagado». A ~1:40:30 la transcripción mezcla hablantes («yo no he dicho lo de dormir»): confirmar quién lo dice.
+- **Justificación del político:** ~1:40:37–1:40:52 · tras repetir las elecciones tuvo que negociar; ~1:46:57 · «fui a una repetición electoral por no pactar con Pablo Iglesias, pero lo que no voy a hacer es una tercera».
+- **Búsquedas:** no hace falta otra fuente: el «antes» ya está en La Moncloa. El entrevistador lee la frase «No se dan las condiciones para que el señor Iglesias sea miembro de ese gobierno» (julio de 2019): buscarla en La Moncloa para añadirla.
+- **Notas / veredicto:** el matiz de los ministerios es cierto para el 19-09-2019 (ya está en el contexto del caso), pero no para el 18-07-2019. Falta que el usuario confirme minuto y frase.
+
+### wild-02 · «Del 100 % de migrantes que nos llegan, el 40 % son europeos y otro 40 %, latinoamericanos»
+- **Estado:** débil
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (dato)
+- **Antes:** ~54:29–54:40 · «del 100% de migrantes que nos llegan, el 40% son europeos. El otro 40% son latinoamericanos y el resto son o bien africanos o bien asiáticos». En directo, los verificadores del programa le corrigen (~58:32: Colombia, Marruecos, Venezuela, Perú en los flujos; en residentes, Marruecos, Rumanía, Colombia…).
+- **Después:** INE, EMCR, tabla 69693 (inmigraciones procedentes del extranjero por nacionalidad), 2024: 1.288.562 inmigraciones; 144.335 de españoles. Sobre los extranjeros: Europa 23,1 %, Latinoamérica 48,9 %, África 18,7 %, Asia 7,6 % (2023: 26,0 / 49,9 / 16,2 / 6,5). Contando a los españoles como europeos: 31,7 % Europa. Marruecos es la 2.ª nacionalidad (133.130), tras Colombia (168.122).
+- **Lo que lo debilita:** en población extranjera residente (INE, ECP, tabla 56942, 1-1-2025: 6.911.971) Europa es el 35,4 %, Centro y Sudamérica el 35,0 %, África el 19,8 % y Asia el 8,1 %: bastante cerca de lo que dijo. Pudo confundir flujo y stock; es un dato aproximado dicho de memoria y corregido en el mismo programa.
+- **Otros datos de migración de la entrevista, sin comprobar:** irregular «entre un 5 y un 10% como mucho» (~1:00:26); «el 25% del crecimiento económico» (~56:19); regularización de «1.200.000 personas», «medio millón […] ya está trabajando y cotizando» (~1:05:20–1:05:37), «la primera nacionalidad colombiana» (~54:13).
+- **Notas / veredicto:** no es una contradicción limpia; como mucho, contexto. No se propone.
+
+### wild-03 · «El PSOE, en la oposición, no pidió la dimisión de Ana Pastor» por Angrois
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (si el PSOE la pidió)
+- **Antes:** ~26:03–26:16 y ~26:44–27:01 · «el Partido Socialista estando en la oposición no pidió la dimisión de Ana Pastor, que era la ministra de transportes del momento». También: «Feijóo era el presidente de la Xunta y acusó al trabajador, al maquinista» (afirmación sobre otro político: fuera de alcance salvo que sea útil como contexto).
+- **Después:** pendiente.
+- **Búsquedas:** búsqueda web general (13-11-2026): solo aparece que la plataforma de víctimas pidió su dimisión (ya como vicepresidenta del Congreso). Falta: Diario de Sesiones de la comparecencia de Pastor tras el accidente (agosto–septiembre de 2013) y de las preguntas del Grupo Socialista; notas del PSdeG-PSOE 2013–2016.
+- **Notas / veredicto:** en 2013 el secretario general era Rubalcaba, no Sánchez. Contexto útil para `puente-seguir-adelante-dimision-urda` (ver wild-19).
+
+### wild-04 · Koldo: «con Koldo no tenía prácticamente comunicación»
+- **Estado:** débil — toca una causa abierta
+- **Antes:** post de Sánchez en Facebook de 2014 sobre Koldo García («socialismo de raíz», «aizkolari contra las injusticias»; según Esdiario, 2024). El entrevistador lo lee a ~1:13:48.
+- **Después:** ~1:11:01 · «yo con Coldo no tenía prácticamente comunicación» (hablando de los viajes en coche); ~1:17:04 · «con Coldo García. Yo es que no le conocía como conocía a Santos Cerdán».
+- **Lo que lo debilita:** en la propia entrevista reconoce el post, lo sitúa en 2014, en las primarias, y lo explica como reconocimiento a un militante. Elogiar a alguien una vez no contradice limpiamente «no tenía una relación estrecha».
+- **Notas / veredicto:** se relaciona con el caso Koldo (abierto, salvo lo ya juzgado): solo se podría usar como declaración propia y con contexto neutro. No se propone.
+
+### wild-05 · 183.000 viviendas: «entregadas o en proceso, en torno a 120–130 [mil]»
+- **Estado:** ya existe — promesa `2023-04-25-sanchez-183000-viviendas-alquiler` (estado: pendiente)
+- **Después:** ~1:30:18–1:31:45 · no da el dato de viviendas con gente viviendo; «en torno a unas 120 130» entre entregadas y en proceso; «vamos a cumplir con ese compromiso». El entrevistador lo fecha el 18-12-2023 con 184.000: buscar esa fuente.
+- **Pista:** datos oficiales de viviendas entregadas (Ministerio de Vivienda, Casa 47/SEPES) para actualizar el estado de la promesa al final de la legislatura.
+
+### wild-06 · Ley mordaza: «como Gobierno hemos llevado una propuesta al Congreso»
+- **Estado:** ya existe — `sanchez-derogar-ley-mordaza`; posible hito de justificación
+- **Después:** ~1:40:52–1:41:58 · «nosotros como gobierno hemos llevado una propuesta a los grupos parlamentarios en el Congreso […] se ha acabado la legislatura y volverá en la próxima»; culpa a la minoría parlamentaria (121 escaños).
+- **Pista:** comprobar en el BOCG si hubo proyecto de ley del Gobierno (serie A) o solo proposiciones de grupos (serie B). Si no hubo proyecto, «como Gobierno» no es exacto.
+
+### wild-07 · Bildu: «Yo no he gobernado con Bildu […] no he pactado un gobierno»
+- **Estado:** ya existe — `psoe-no-pactara-con-bildu`; posible hito de justificación
+- **Después:** ~1:39:09–1:39:52 · «Yo no he gobernado con Bildu»; busca votos «hasta debajo de las piedras» para el SMI, las pensiones, la eutanasia o el aborto; «yo no he pactado un gobierno en Euskadi ni en Navarra»; sobre la moción de Pamplona admite «es un pacto».
+
+### wild-08 · Indultos y amnistía: «cambio de opinión y además lo he reconocido»
+- **Estado:** ya existe — `no-aministia-para-politicos-e-independentistas-catalanes` y `sanchez-integro-cumplimiento-sentencia-indultos`; posible hito de justificación
+- **Después:** ~1:36:57–1:38:26 · «efectivamente eh cambio de opinión y además lo he reconocido»; la «catarsis» de la campaña de 2019 en un hospital de Cataluña. ~1:44:16–1:44:55: «hacer de la necesidad virtud».
+
+### wild-09 · Sáhara: «no es que nosotros hayamos cambiado»
+- **Estado:** ya existe — `sahara-autodeterminacion-plan-autonomia-marruecos`; posible hito de justificación
+- **Después:** ~1:38:26–1:39:09 · la posición de España «es la misma que se expresa en la resolución del Consejo de Seguridad»; «no es que nosotros hayamos cambiado». Comprobar a qué resolución se refiere (octubre de 2025 o 2026).
+
+### wild-10 · «Advertí a Rajoy de que judicializar la crisis de Cataluña era un tremendo error»
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad o cambio de postura
+- **Antes:** pendiente: qué dijo Sánchez en octubre–noviembre de 2017 sobre las querellas del fiscal Maza (30-10-2017). Según OKdiario, el PSOE «no entra a valorar» la querella.
+- **Después:** ~1:44:23–1:44:39 · «yo advertí a Mariano Rajoy entonces de que judicializar la crisis política de Cataluña era un tremendo error cuando activó a la Fiscalía General del Estado contra los líderes del Procés».
+- **Búsquedas:** búsqueda web general (13-11-2026), sin una frase concreta. Falta: Diario de Sesiones de octubre–noviembre de 2017 (Sánchez no era diputado: buscar ruedas de prensa en psoe.es) y la hemeroteca.
+- **Notas:** relacionado con `clarisimamente-ha-habido-un-delito-de-rebelion-de-sedicion-en-espana`.
+
+### wild-11 · Ceuta: «yo no me fui de vacaciones»
+- **Estado:** por investigar
+- **Después:** ~45:20 · «yo no me fui de vacaciones»; ~49:40 · «yo no había anunciado que [estaba de vacaciones] […] estaba con mi familia en otra residencia oficial».
+- **Pista:** agenda y comunicados de La Moncloa de agosto de 2026 (crisis del 30–31 de julio de 2026). Hechos posteriores al conocimiento del modelo: verificarlo todo en la web.
+
+### wild-12 · Policía y Guardia Civil: «Rajoy recortó 15.000 efectivos; hoy hay 180.000»
+- **Estado:** por investigar
+- **Después:** ~1:04:23–1:04:30.
+- **Pista:** Anuario Estadístico del Ministerio del Interior, Portal de Transparencia, Boletín Estadístico del Personal de las Administraciones Públicas.
+
+### wild-13 · Vivienda: «multiplicado por ocho el presupuesto», «13 % protegida, más de 150.000»
+- **Estado:** por investigar
+- **Después:** ~1:26:26–1:26:42 («se han construido en torno a 1 millón de viviendas, el 13% han sido viviendas protegidas, más de 150.000»); ~1:28:04–1:28:16 («construcción de vivienda en máximos desde la crisis financiera del año 2011», «multiplicado por ocho el presupuesto en vivienda», «más de 7.000 millones» a las comunidades); ~1:30:56 Casa 47 («todas las viviendas que tuvo el Banco Malo»).
+- **Pista:** PGE (programa 261), estadísticas del Ministerio de Vivienda (calificaciones de VPO, certificados de fin de obra), Plan Estatal de Vivienda.
+
+### wild-14 · Madrid–Sevilla: «hemos multiplicado por 20 la inversión»
+- **Estado:** por investigar
+- **Después:** ~15:45–16:02 · «en la línea en la que se han concentrado los dos desgraciados accidentes ferroviarios, nosotros hemos multiplicado por 20 durante estos últimos 8 años […] la inversión».
+- **Pista:** ADIF (informes de inversión), PGE. Hechos de 2026 (dos accidentes): verificar en la web.
+
+### wild-15 · Topes al alquiler: «la propuesta de Iglesias es inviable»
+- **Estado:** por investigar
+- **Antes:** el entrevistador dice (~1:36:23) que Sánchez llamó «inviable» la propuesta de Iglesias; Sánchez no lo niega.
+- **Búsquedas:** búsqueda web general (13-11-2026): no aparece la frase. Contexto: en enero de 2019 Unidos Podemos tumbó el decreto del alquiler por no limitar precios.
+- **Después:** Ley 12/2023, de vivienda (BOE), con índice de precios en zonas tensionadas.
+
+### wild-16 · Tribunal Constitucional y Juan Carlos Campo
+- **Estado:** ya existe — `sanchez-politicos-fuera-de-las-instituciones-de-control` (Campo ya está en el caso). Nada nuevo.
+
+### wild-17 · Leire Díez y Zapatero
+- **Estado:** bloqueado — causas judiciales abiertas
+- **Notas:** ~1:19:51–1:21:35 (Leire Díez: en el Senado «no me consta» un encargo; ahora, «contratamos los servicios de varios despachos de abogados»; que estos contrataran a Leire Díez «el Partido Socialista desconocía») y ~1:21:40–1:24:31 (Zapatero: «pongo la mano en el fuego»). Por la regla de causas abiertas no se investiga; decide el usuario.
+
+### wild-18 · Balance: SMI, pensiones, «no al 5 %» de Trump
+- **Estado:** sin indicio de contradicción — no se investiga
+- **Notas:** ~1:47:18–1:47:42 · «dije que iba a subir el salario mínimo […] regularizar las pensiones conforme al IPC […] Le dije al señor Trump que no al 5% del presupuesto en defensa y lo he mantenido».
+
+### wild-19 · Puente: «creo que ha hecho bien en tomar la decisión de dar un paso a un lado»
+- **Estado:** ya existe — `puente-seguir-adelante-dimision-urda`; posible hito de cronología
+- **Después:** ~20:16–20:40 y ~27:10 · «Óscar Puente me dijo, "Yo creo que tengo que dimitir"»; a si lo habría cesado: «ese debate hoy […] está superado».
 
