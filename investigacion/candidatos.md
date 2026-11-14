@@ -17,9 +17,9 @@ haberlo encontrado antes en la fuente primaria.
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
 | Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
-| The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; por investigar: wild-03, wild-10 a wild-15; débil: wild-02, wild-04; bloqueado: wild-17 |
+| The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; hito añadido: wild-10; por investigar: wild-11 a wild-15; débil: wild-02, wild-04; bloqueado: wild-17; descartado: wild-03 (la frase es cierta) |
 
-Ningún candidato se ha descartado: los débiles tienen anotado qué falta para que dejen de serlo.
+Descartados: solo wild-03, porque la frase resultó cierta en la fuente primaria. Los débiles tienen anotado qué falta para que dejen de serlo.
 
 ## Origen: archivopsoe.com/hemeroteca
 
@@ -349,12 +349,13 @@ verificadores es solo una pista. Cribado el 13-11-2026.
 - **Notas / veredicto:** no es una contradicción limpia; como mucho, contexto. No se propone.
 
 ### wild-03 · «El PSOE, en la oposición, no pidió la dimisión de Ana Pastor» por Angrois
-- **Estado:** por investigar
-- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (si el PSOE la pidió)
-- **Antes:** ~26:03–26:16 y ~26:44–27:01 · «el Partido Socialista estando en la oposición no pidió la dimisión de Ana Pastor, que era la ministra de transportes del momento». También: «Feijóo era el presidente de la Xunta y acusó al trabajador, al maquinista» (afirmación sobre otro político: fuera de alcance salvo que sea útil como contexto).
-- **Después:** pendiente.
-- **Búsquedas:** búsqueda web general (13-11-2026): solo aparece que la plataforma de víctimas pidió su dimisión (ya como vicepresidenta del Congreso). Falta: Diario de Sesiones de la comparecencia de Pastor tras el accidente (agosto–septiembre de 2013) y de las preguntas del Grupo Socialista; notas del PSdeG-PSOE 2013–2016.
-- **Notas / veredicto:** en 2013 el secretario general era Rubalcaba, no Sánchez. Contexto útil para `puente-seguir-adelante-dimision-urda` (ver wild-19).
+- **Estado:** descartado (14-11-2026) — la frase es cierta según el Diario de Sesiones
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (solo si el PSOE la hubiera pedido)
+- **Antes:** ~26:03–26:16 y ~26:44–27:01 (transcripción automática, sin confirmar en vídeo) · «el Partido Socialista estando en la oposición no pidió la dimisión de Ana Pastor, que era la ministra de transportes del momento […] Nosotros no pedimos la dimisión porque entendemos que las tragedias es lo que exigen por parte de los gobiernos»; y «Estuvimos equivocados, ¿sí o no?» (pregunta de Jordi) → «nosotros hemos mantenido una actitud coherente en cuanto a esa posición». También: «Feijóo era el presidente de la Xunta y acusó al trabajador, al maquinista» (afirmación sobre otro político: fuera de alcance).
+- **Después:** no hay contradicción. DSCD-10-CO-388 (Comisión de Fomento, 09-08-2013, comparecencia de Pastor a petición propia y de los grupos Mixto y Socialista, exp. 213/000922; https://www.congreso.es/public_oficiales/L10/CONG/DS/CO/DSCD-10-CO-388.PDF): intervienen por el Grupo Socialista Rafael Simancas y Laura Seara; ninguno pide la dimisión (el texto completo no contiene «dimi», «cese» ni «responsabilidad política»). Simancas, pág. 31: «De controversia, de conflicto político, cero. Nosotros no vamos a intentar sacar rendimiento político de este asunto […] Aquí lo que nos importan son: víctimas, verdad y mejora; punto». Lo que pidió el PSOE: comisión parlamentaria de estudio, agencia estatal de seguridad ferroviaria y un decálogo de medidas.
+- **Justificación del político:** no aplica.
+- **Búsquedas (13 y 14-11-2026):** web general «PSOE pide dimisión Ana Pastor Angrois», «Simancas dimisión Pastor», «PSOE exige dimisión ministra de Fomento 2014 2015», «Pedro Sánchez dimisión Ana Pastor 2014–2016», «PSdeG Besteiro dimisión Pastor Alvia»: ningún resultado de una petición del PSOE. Solo la pidieron las víctimas (Plataforma Víctimas Alvia 04155), más tarde y ya como vicepresidenta del Congreso. Prensa de 30-10 y 03-11-2026: Puente y Lastra dicen lo mismo («Rubalcaba no pidió la dimisión»); incluso El Español (30-10-2026), crítico, admite que es cierto y lo atribuye a «tapar a José Blanco» (interpretación, no hecho). Sin revisar: DSCD-10-CO-387 (ADIF y Renfe, 08-08-2013), notas del PSdeG 2013–2016 y una votación del Parlament de Catalunya sobre el cese de la ministra de Fomento sin el voto del PSC (3cat; tema y fecha sin comprobar, probablemente Rodalies, no Angrois).
+- **Notas / veredicto:** descartado como falsedad: lo que dice Sánchez coincide con la fuente primaria. En 2013 el secretario general era Rubalcaba, no Sánchez. Posible contexto para `puente-seguir-adelante-dimision-urda` (wild-19) si se quiere recoger la justificación de Puente y Sánchez, pero no es contradicción de nadie del PSOE.
 
 ### wild-04 · Koldo: «con Koldo no tenía prácticamente comunicación»
 - **Estado:** débil — toca una causa abierta
@@ -386,12 +387,15 @@ verificadores es solo una pista. Cribado el 13-11-2026.
 - **Después:** ~1:38:26–1:39:09 · la posición de España «es la misma que se expresa en la resolución del Consejo de Seguridad»; «no es que nosotros hayamos cambiado». Comprobar a qué resolución se refiere (octubre de 2025 o 2026).
 
 ### wild-10 · «Advertí a Rajoy de que judicializar la crisis de Cataluña era un tremendo error»
-- **Estado:** por investigar
-- **Persona / tipo propuesto:** Pedro Sánchez / falsedad o cambio de postura
-- **Antes:** pendiente: qué dijo Sánchez en octubre–noviembre de 2017 sobre las querellas del fiscal Maza (30-10-2017). Según OKdiario, el PSOE «no entra a valorar» la querella.
-- **Después:** ~1:44:23–1:44:39 · «yo advertí a Mariano Rajoy entonces de que judicializar la crisis política de Cataluña era un tremendo error cuando activó a la Fiscalía General del Estado contra los líderes del Procés».
-- **Búsquedas:** búsqueda web general (13-11-2026), sin una frase concreta. Falta: Diario de Sesiones de octubre–noviembre de 2017 (Sánchez no era diputado: buscar ruedas de prensa en psoe.es) y la hemeroteca.
-- **Notas:** relacionado con `clarisimamente-ha-habido-un-delito-de-rebelion-de-sedicion-en-espana`.
+- **Estado:** caso nuevo descartado (14-11-2026); dos hitos añadidos (sin commit) en `clarisimamente-ha-habido-un-delito-de-rebelion-de-sedicion-en-espana`: La Moncloa 20-09-2023 (con recorte, pág. 11) y The Wild Project (vídeo 6261–6306 s; «De hecho, yo advertí…» en 1:44:25 y «hacer de la necesidad virtud» en 1:44:45, confirmados por el usuario)
+- **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura (el del caso existente); como falsedad no se puede probar
+- **Después (1):** 20-09-2023 · La Moncloa, rueda de prensa en Nueva York (78.ª AGNU), pág. 11, respuesta a Inmaculada Carretero (Cadena SER) · https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2023/230920%20RdP%20PG%2078%C2%AA%20AGNU.pdf · «nosotros hemos respetado siempre el trabajo y la labor de la justicia. Lo hemos hecho siempre. También digo, y lo he comentado siempre, que una crisis política nunca tuvo que derivar en una acción judicial y en una judicialización como vimos de toda esta crisis. Yo recuerdo y fue público, por tanto, pueden ustedes recordar en las hemerotecas, que cuando el Presidente del Gobierno era Mariano Rajoy y yo era líder de la oposición, y el fiscal general de entonces, fallecido, el señor Maza, abrió la puerta a todas estas causas judiciales a través de la Audiencia Nacional. Yo trasladé mi malestar al señor Rajoy. Lo hice por dos motivos. El primero, porque no habíamos sido consultados […] Y en segundo lugar, porque efectivamente habíamos trasladado una vía que era la judicial, un conflicto que tenía una raíz política».
+- **Después (2):** 13-11-2026 · The Wild Project, ~1:44:16–1:44:39 (sin confirmar en vídeo) · «resolver definitivamente la situación heredada que yo, por cierto, no creé en el año 2017 en Cataluña. De hecho, yo advertí a Mariano Rajoy entonces de que judicializar la crisis política de Cataluña era un tremendo error cuando activó a la Fiscalía General del Estado contra los líderes del Procés, abriendo la causa en la Audiencia Nacional».
+- **Antes:** pendiente. Lo que ya está en el caso existente: 17-05-2018, «clarísimamente ha habido un delito de rebelión, de sedición» (fuente: El Independiente; falta primaria). Falta una declaración pública de Sánchez entre el 30-10-2017 (querellas de Maza) y el 02-11-2017 (prisión de Junqueras y siete exconsellers) que apoye o critique la vía judicial.
+- **Versión contraria:** Rajoy, COPE, 21-09-2023: «No me dijo nada, en absoluto»; «Sánchez no me habló ni de judicializar ni de no judicializar» (Que!, OKDiario; LD da otra variante: «no me habló de desjudicializar»; hay que cotejarlo con el audio de COPE). Es la palabra de uno contra la del otro sobre una conversación privada: **no sirve como prueba de falsedad**.
+- **Justificación del político:** el malestar fue también «porque no habíamos sido consultados» (2023). El PSOE apoyó el 155 en el Senado (27-10-2017).
+- **Búsquedas (14-11-2026):** web: «Sánchez querella Maza octubre 2017», «Sánchez judicializar Cataluña 2017», «malestar Sánchez Rajoy Maza», «Sánchez noviembre 2017 prisión exconsellers», «Sánchez Junqueras cárcel 3-11-2017»: no aparece ninguna declaración de Sánchez de 2017; solo la del PSC («respeta y acata», la ve «desproporcionada»). Leídas: El Español, Que!, LD, OKDiario (21-09-2023): ninguna trae una frase de Sánchez de 2017. Sin revisar: hemeroteca de El País / La Vanguardia del 30-10 al 10-11-2017, tuits de @sanchezcastejon y @PSOE de esas fechas, notas de psoe.es (archivo en web.archive.org), RTVE Play; OKDiario «Cuando Pedro Sánchez afirmaba que los golpistas del 1-O habían cometido un delito de rebelión» (pista, sin abrir).
+- **Notas / veredicto:** la frase de 2023 de La Moncloa («una crisis política nunca tuvo que derivar en una acción judicial») es buena para el caso existente: en 2018 vio «clarísimamente» rebelión y en 2023 dice que nunca debió llegar a los tribunales. Lo de «advertí a Rajoy» no se puede verificar; solo se podría desmentir con una declaración pública de 2017 que respalde las querellas, y Sánchez afirma que «fue público».
 
 ### wild-11 · Ceuta: «yo no me fui de vacaciones»
 - **Estado:** por investigar

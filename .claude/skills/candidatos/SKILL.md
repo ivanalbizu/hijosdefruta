@@ -9,6 +9,11 @@ Objetivo: convertir pistas (webs ajenas, noticias, hilos) en casos que cumplan l
 de [CLAUDE.md](../../../CLAUDE.md), **sin perder casos buenos por descartarlos demasiado pronto** y sin
 publicar nada que no se pueda probar con fuente primaria.
 
+**Alcance:** casos del Gobierno actual y de los partidos que lo sostienen: los socios de coalición y los
+que votaron la investidura (PSOE, Sumar, Podemos, ERC, Junts, EH Bildu, PNV, BNG, Coalición Canaria),
+con sus cargos actuales o anteriores. Lo que solo afecta a otros partidos se anota en una línea como
+`fuera de alcance`, sin investigar.
+
 El registro vive en [investigacion/candidatos.md](../../../investigacion/candidatos.md). Léelo antes de
 empezar: puede que el candidato ya esté investigado o descartado.
 
@@ -40,6 +45,7 @@ viendo el vídeo** y el vídeo del caso empieza unos 4 segundos antes de la fras
 
 ### 2. Cribar
 Para cada candidato, en este orden:
+- **¿Entra en el alcance?** Si no, `fuera de alcance` y se pasa al siguiente.
 - **¿Ya existe?** Busca en `src/content/casos/*.mdx` por persona, tema y cita. Si existe, valora si la
   pista aporta un hito nuevo a la cronología del caso existente.
 - **¿Es una contradicción limpia?** Dos afirmaciones o una afirmación y un hecho que no pueden ser
@@ -75,6 +81,7 @@ Estados posibles en el registro:
 - `bloqueado`: choca con una regla (principio 4); decide el usuario.
 - `en espera`: bloqueado y el usuario ha decidido no publicarlo de momento. Se conserva toda la
   información (fuentes, citas y qué haría falta para reabrirlo); no se borra ni se descarta.
+- `fuera de alcance`: solo afecta a partidos fuera del alcance; no se investiga.
 - `descartado`: con motivo y lista de búsquedas hechas.
 - `publicado` / `ya existe`: con el slug del caso.
 
