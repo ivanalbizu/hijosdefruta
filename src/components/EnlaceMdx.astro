@@ -1,0 +1,26 @@
+---
+/**
+ * Enlace del cuerpo de un caso (Markdown/MDX). Las URL externas pasan por ExtLink
+ * (otra pestaña, icono y aviso para lectores de pantalla); las internas y las
+ * anclas se quedan como enlace normal.
+ */
+import type { HTMLAttributes } from 'astro/types';
+import ExtLink from './ExtLink.astro';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, ...resto } = Astro.props;
+const externo = typeof href === 'string' && /^https?:\/\//.test(href);
+---
+
+{
+	externo ? (
+		<ExtLink href={href as string}>
+			<slot />
+		</ExtLink>
+	) : (
+		<a href={href} {...resto}>
+			<slot />
+		</a>
+	)
+}

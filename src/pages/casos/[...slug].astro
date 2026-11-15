@@ -1,5 +1,6 @@
 ---
 import CasoPost from '@layouts/CasoPost.astro';
+import EnlaceMdx from '@components/EnlaceMdx.astro';
 import { getCasos, type Caso } from '@utils/casos';
 
 export async function getStaticPaths() {
@@ -19,5 +20,5 @@ const { Content } = await caso.render();
 ---
 
 <CasoPost caso={caso}>
-	<Content />
+	<Content components={{ a: EnlaceMdx }} />
 </CasoPost>
