@@ -19,7 +19,8 @@ haberlo encontrado antes en la fuente primaria.
 | Por investigar (debate de primarias 2014) | deb-05 Cataluña y reforma federal, deb-06 primarias en noviembre |
 | Fusionado o duplicado | arch-09 → arch-33, arch-34 → arch-20, arch-38 → arch-07 |
 | Newtral, fact-checks (14-11-2026) | prometedor: nt-01 Sánchez «primer presidente en Ceuta y Melilla», nt-02 Urtasun y el SMI; investigando: nt-03 retornos, nt-04 CIS, nt-05 voto CERA; débil: nt-06 a nt-08 y los de nt-09; bloqueados: Rufián y Aizpurua (nt-09) |
-| Gemini, ministros sin perfil (15-11-2026) | publicado: gem-22 `marlaska-cese-perez-de-los-cobos-perdida-de-confianza`; publicados: gem-22 y gem-05; publicado: gem-07 `diaz-vox-recurso-constitucional-despido-por-bajas`; publicado: gem-10 `albares-ninguna-exportacion-armas-israel`; publicado: gem-26 `marlaska-criminalidad-almeria-se-ha-reducido`; por investigar: gem-13, gem-01; publicado: gem-14 (hito de Bolaños en la SER);  débil: gem-03, gem-04, gem-06, gem-11, gem-12, gem-16 a gem-19, gem-25; duplicados: gem-02 → nt-09, gem-23 → nt-07; descartados: gem-20 (Robles contra Interior por el aviso del CNI, sin contradicción propia), gem-15 (sin cita de Bolaños sobre Puigdemont), gem-08 (el error era de La Moncloa; Díaz lo había corregido en su ficha en 2019), gem-21 (Arcadi España y AFI: el «después» solo está en prensa), gem-24 (Marlaska e IBAN: el decreto solo lo nombra como uno de los medios de pago), gem-09 (Aagesen), gem-27 (Malasaña) |
+| Gemini, ministros sin perfil (15-11-2026) | publicado: gem-22 `marlaska-cese-perez-de-los-cobos-perdida-de-confianza`; publicados: gem-22 y gem-05; publicado: gem-07 `diaz-vox-recurso-constitucional-despido-por-bajas`; publicado: gem-10 `albares-ninguna-exportacion-armas-israel`; publicado: gem-26 `marlaska-criminalidad-almeria-se-ha-reducido`; descartado: gem-01 (Saiz y el leonés, sin rastro); descartado: gem-13 (Bolaños, «nadie vio»: el aviso del CGPJ era sobre otra versión); publicado: gem-14 (hito de Bolaños en la SER);  débil: gem-03, gem-04, gem-06, gem-11, gem-12, gem-16 a gem-19; descartado: gem-25 (el «103» no lo dijo Marlaska); duplicados: gem-02 → nt-09, gem-23 → nt-07; descartados: gem-20 (Robles contra Interior por el aviso del CNI, sin contradicción propia), gem-15 (sin cita de Bolaños sobre Puigdemont), gem-08 (el error era de La Moncloa; Díaz lo había corregido en su ficha en 2019), gem-21 (Arcadi España y AFI: el «después» solo está en prensa), gem-24 (Marlaska e IBAN: el decreto solo lo nombra como uno de los medios de pago), gem-09 (Aagesen), gem-27 (Malasaña) |
+| Gemini, segundo listado (16-11-2026) | por investigar: gem-28 Morant y los jóvenes (Newtral, falso), gem-31 Redondo y las pulseras, gem-36 Celaá y las leyes educativas; investigando: gem-32 Redondo y los 53 centros, gem-33 presupuestos «en tiempo y forma» (Rodríguez / Belarra); sin rastro: gem-30, gem-34, gem-37, gem-38; débil: gem-35; descartado: gem-29 (Morant y el PP); resto en gem-39 (duplicados, débiles, en espera los de causas abiertas y descartados) |
 | The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; hito añadido: wild-10; publicado: wild-11 (`sanchez-vacaciones-crisis-ceuta`); prometedor: wild-15 (Onda Cero 18-04-2019 frente a Ley 12/2023 y Bloomberg CityLab 28-04-2026); débil: wild-02, wild-04; bloqueado: wild-17; descartado: wild-03 (la frase es cierta), wild-12, wild-13 y wild-14 (las cifras oficiales no los desmienten) |
 
 Descartados: usr-02 (Airbnb «no paga impuestos», exageración de mitin) y usr-04 (dentista municipal), por decisión del usuario; wild-03, porque la frase resultó cierta en la fuente primaria, y wild-12, wild-13 y wild-14, porque las cifras oficiales no los desmienten. Los débiles tienen anotado qué falta para que dejen de serlo.
@@ -661,10 +662,10 @@ España y AFI; 7) gem-24 Marlaska y el IBAN; 8) gem-15 y gem-14, hitos de Bolañ
 10) el resto (gem-26, gem-13, gem-01, gem-25 y los débiles).
 
 ### gem-01 · Saiz: el leonés y el gallego en los informes de arraigo de Castilla y León
-- **Estado:** por investigar (probable invención)
+- **Estado:** descartado por el usuario (16-11-2026; probable invención de la pista)
 - **Persona / tipo propuesto:** Elma Saiz (ministra de Inclusión) / falsedad
 - **Antes:** 03-2025 · entrevista, según la pista. Sin localizar.
-- **Búsquedas:** web (Saiz + leonés + gallego + arraigo + Junta): nada; ni la frase ni el desmentido de la Junta.
+- **Búsquedas:** web (Saiz + leonés + gallego + arraigo + Junta): nada; ni la frase ni el desmentido de la Junta. Segunda búsqueda (16-11-2026; Saiz + arraigo + Castilla y León + leonés + informe de integración + desmiente): solo aparecen la petición de información de la vicepresidenta Isabel Blanco al Ministerio (The Objective, 18-03-2025), los criterios de arraigo de la Junta para sus ayudas (2026) y el informe del Consejo de Europa sobre el leonés, sin relación con Saiz.
 - **Notas:** sin fecha, medio ni cita comprobable. Si no aparece con una búsqueda más, descartar.
 
 ### gem-02 · Saiz: caída de las llegadas irregulares «en torno al 70 %»
@@ -741,8 +742,12 @@ España y AFI; 7) gem-24 Marlaska y el IBAN; 8) gem-15 y gem-14, hitos de Bolañ
 - **Notas / veredicto:** son previsiones y valoraciones («hay comprensión», «no hay obstáculos insalvables»), no hechos. Solo sería caso si hay una promesa con plazo («se aprobará en…») que no se cumplió. Pista: comparecencias de Albares de 2023 y 2024 en el Congreso.
 
 ### gem-13 · Bolaños y las rebajas del «solo sí es sí»
-- **Estado:** por investigar (dudoso)
-- **Notas:** la pista le atribuye haber negado las rebajas de penas, pero Bolaños fue quien impulsó la reforma con el PP. Sin cita ni fecha. Si aparece en primaria, sería un hito del caso `solo-si-es-si-jueces-no-cumplen-la-ley`.
+- **Estado:** descartado por el usuario (16-11-2026)
+- **Persona / tipo propuesto:** Félix Bolaños (ministro de la Presidencia) / falsedad
+- **Antes:** 09-02-2023 · Onda Cero, según The Objective (sin audio ni vídeo enlazado): «evidentemente la ley ha tenido efectos que nadie vio»; «Digo con toda humildad que esa ley es imperfecta». La paráfrasis «no eran previsibles y nadie avisó» no va entre comillas.
+- **Después posible:** CGPJ, informe al anteproyecto (25-02-2021), punto 245: advertía de que reducir los límites máximos obligaría a revisar condenas.
+- **Búsquedas:** web (Bolaños + rebajas + noviembre de 2022 / «no se va a tocar» / Supremo): ninguna frase suya negando las rebajas; en enero de 2023 ya proponía pulseras para los condenados con rebaja y en febrero defendía la reforma. Audio de Onda Cero del 09-02-2023: no localizado. Diarios de Sesiones PL-218 a PL-262: congreso.es rechaza la descarga automática.
+- **Notas / veredicto:** la pista («negó las rebajas») no se sostiene. El contraste «nadie vio» frente al CGPJ no es limpio: según Maldita, el informe analizaba una versión anterior que rebajaba los *máximos*, y Igualdad la cambió; las rebajas reales vinieron de la bajada de los *mínimos* al fusionar abuso y agresión. Presentarlo como contradicción sería sacarlo de contexto. Si se quisiera seguir, haría falta el audio de Onda Cero y un aviso oficial sobre los mínimos (CGPJ o Consejo Fiscal sobre el texto final).
 
 ### gem-14 · Bolaños: la amnistía antes del 23J
 - **Estado:** publicado (15-11-2026): hito en `no-aministia-para-politicos-e-independentistas-catalanes`; tramo confirmado por el usuario
@@ -816,8 +821,12 @@ España y AFI; 7) gem-24 Marlaska y el IBAN; 8) gem-15 y gem-14, hitos de Bolañ
 - **Notas / veredicto:** la frase está en el DS y el decreto nombra el IBAN, pero solo como una de las formas de identificar el medio de pago (si se paga por transferencia), y con la lectura de Interior (art. 5.2: solo lo que ya se recoge) la frase se puede defender. No hay ninguna primaria que diga que la plataforma pide el IBAN siempre. No es una contradicción irrefutable. Propuesta: descartar. Seguiría si la orden de desarrollo se publica en el BOE con el IBAN como dato obligatorio, o si aparece la especificación técnica de SES.Hospedajes con ese campo obligatorio.
 
 ### gem-25 · Marlaska: «no hubo ningún muerto en territorio español» en Melilla (24-06-2022)
-- **Estado:** débil
-- **Notas / veredicto:** lo dijo, y lo reiteró en el Congreso el 30-11-2022 («Lo dije y lo reitero»). Pero las investigaciones oficiales (Fiscalía y Defensor del Pueblo) se archivaron sin concluir que hubiera muertes en suelo español; lo contrario solo lo sostienen la BBC y Lighthouse Reports. No hay prueba oficial que lo desmienta. Ángulo posible: el Defensor del Pueblo contó unas 470 devoluciones frente a las 134 entradas que dio el Gobierno, aunque eso no es lo mismo que dijo Marlaska. Hay que buscar una frase suya sobre cifras o sobre la legalidad de las devoluciones.
+- **Estado:** descartado por el usuario (16-11-2026)
+- **Notas sobre los muertos:** lo dijo, y lo reiteró en el Congreso el 30-11-2022 («Lo dije y lo reitero»). Pero las investigaciones oficiales (Fiscalía y Defensor del Pueblo) se archivaron sin concluir que hubiera muertes en suelo español; lo contrario solo lo sostienen la BBC y Lighthouse Reports. No hay prueba oficial que lo desmienta.
+- **Ángulo de las cifras (16-11-2026), comprobado en primaria:** la nota del GPP del 30-11-2022 y la diputada Ana Vázquez en el Pleno (DSCD-14-PL-228, pág. 47) dicen que Marlaska «dijo que solo se habían rechazado en frontera a 103 inmigrantes y ahora sabemos que fueron 470». **Es falso que lo dijera él**: en su comparecencia del 21-09-2022 (DSCD-14-PL-209, págs. 39-41, 67 y 69) no da ninguna cifra de rechazos; habla de que «cerca de un centenar de personas logra entrar en territorio nacional» y del «rechazo de frontera […] de aquellas personas que se interceptaron intentando entrar de forma irregular y violenta en territorio nacional y antes de poder hacerlo». El «103» lo dice una diputada en esa misma sesión (pág. 59: «Hemos conocido una cifra aproximada, 103 personas que habían ingresado en territorio español fueron devueltas»). El 30-11-2022 (PL-228, pág. 66) Marlaska responde: «Quien dijo que fueron 470 las personas rechazadas en frontera fue el ministerio […] tanto al Defensor del Pueblo como a la Fiscalía». La nota del GPP del 25-11-2022 («negó en tres ocasiones que hubiera rechazos») también la desmiente el DS del 21-09 (pág. 69: «Respecto a los rechazos en frontera que hubo, los que se produjeron fueron conforme a la legalidad»).
+- **Ángulo restante:** «antes de poder hacerlo» (21-09) frente a que las 470 personas estuvieran ya en territorio español, como sostienen el Defensor del Pueblo y varios grupos (PL-228, págs. 51, 54, 56, 71). Es una discusión jurídica sobre dónde empieza el territorio a efectos del rechazo (DA 10.ª LOEX, STC 172/2020), y la Fiscalía archivó considerando los rechazos conformes a la Ley de Extranjería (decreto de 22-12-2022, Diligencias 1/2022, copia en El Faro de Melilla; Memoria FGE 2023, cap. III 4.1). No es una contradicción limpia.
+- **Material:** DSCD-14-PL-209 y 228, descargados por el usuario; borrados al descartar.
+- **Notas / veredicto:** ninguno de los ángulos da una contradicción demostrable con fuente oficial. Propuesta: descartar.
 
 ### gem-26 · Marlaska: la criminalidad «ha bajado» en Almería (2025)
 - **Estado:** publicado (16-11-2026) — `/casos/marlaska-criminalidad-almeria-se-ha-reducido/`. Después: Balance 2T 2025 (Almería +5,0 % / +5,2 %); cronología: Balance 4T 2024 y Balance 1T 2025 (versión de interior.gob.es del 08-05-2025, archivada el 02-06-2025, mismas cifras). Recortes: DS-117 pág. 29 y tablas de Almería. Sin vídeo.
@@ -833,3 +842,106 @@ España y AFI; 7) gem-24 Marlaska y el IBAN; 8) gem-15 y gem-14, hitos de Bolañ
 
 ### gem-27 · Marlaska y la falsa agresión homófoba de Malasaña (09-2021)
 - **Estado:** descartado. Reaccionó a una denuncia que después resultó falsa: no hay contradicción propia. Además afecta a un particular.
+
+## Origen: segundo listado de Gemini (16-11-2026)
+
+El usuario pegó en `investigacion/analizar-casos.txt` otra respuesta de Gemini, esta vez sobre 18 ministros
+actuales y anteriores: Elma Saiz, Luis Planas, Ángel Víctor Torres, Isabel Rodríguez, Ernest Urtasun, Mónica García,
+Pablo Bustinduy, Diana Morant, Ana Redondo, Sira Rego, Carmen Montón, Óscar Puente, José Guirao, Magdalena
+Valerio, Isabel Celaá y Arancha González Laya. Todos entran en el alcance. **La pista es igual de poco fiable
+que la primera**: en la primera criba (16-11-2026) se buscó en la web si cada episodio existía y aparecieron
+tres verificaciones reales (Morant y los jóvenes, Morant y el PP, Celaá y los repetidores), además de las
+contradicciones de Redondo que recoge Maldita. Otras, como Planas y el Nutri-Score, Urtasun y los museos o
+Morant y los 45 años, no dejan rastro. Todavía no se ha leído ninguna fuente primaria.
+
+**Orden propuesto:** 1) gem-28 Morant y los jóvenes; 2) gem-33 los presupuestos «en tiempo y forma»; 3) gem-32
+Redondo y los 53 centros; 4) gem-31 Redondo y las pulseras; 5) gem-36 Celaá y las leyes educativas; 6) gem-30, gem-34, gem-37 y
+gem-38, que no dejan rastro. Decidido por el usuario el 16-11-2026: gem-29 descartado, los bloqueados de gem-39
+pasan a «en espera» y los descartes propuestos quedan descartados. El .txt se borró ese día: su contenido útil
+está en estas fichas.
+
+### gem-28 · Morant: «más jóvenes trabajando que nunca» (02-2025)
+- **Estado:** por investigar (es el más prometedor de la tanda)
+- **Origen:** analizar-casos.txt (Morant, punto 1). Newtral existe: newtral.es/empleo-jovenes-diana-morant-factcheck/20250212 (falso).
+- **Persona / tipo propuesto:** Diana Morant (ministra de Ciencia, Innovación y Universidades) / falsedad (dato)
+- **Antes:** ~11-02-2025 · «más mujeres trabajando que nunca y más jóvenes trabajando que nunca». No sabemos dónde lo dijo ni tenemos el vídeo.
+- **Después:** EPA (INE), ocupados de 16 a 29 años: 3.203.800 en el 4T 2024 frente a 4.276.300 en el 4T 2008, según Newtral. Afiliación (Seguridad Social): 3.169.748 el 31-01-2025 frente a 4.284.816 en 2008. Primaria pendiente: INEbase, EPA, ocupados por grupo de edad (serie trimestral desde 2002).
+- **Justificación del político:** Newtral pidió explicaciones al ministerio y no recibió respuesta.
+- **Búsquedas:** web (16-11-2026): la verificación de Newtral existe. Falta el acto y el vídeo.
+- **Notas / veredicto:** si la frase está grabada, se demuestra solo con el INE, sea cual sea la franja de edad (16-24, 16-29 o 16-34): todas tuvieron más ocupados entre 2005 y 2008. Hay que confirmar que no matizó la frase («desde 2008» o similar). Newtral se lee en Chrome.
+
+### gem-29 · Morant: el PP, «el único condenado como organización criminal» (06-2025)
+- **Estado:** descartado por el usuario (16-11-2026): obligaría a interpretar una condena de otro partido, en contra de la redacción neutra
+- **Origen:** analizar-casos.txt (Morant, punto 2). Newtral, 27-06-2025 (engañoso), según Ground News.
+- **Persona / tipo propuesto:** Diana Morant / falsedad
+- **Antes:** ~26-06-2025 · acto en Alicante: el PP «es el único que ha sido condenado como organización criminal en nuestro país». Fuente pendiente.
+- **Después:** sentencia de la Audiencia Nacional de 2018 sobre la primera época de Gürtel, confirmada por el Supremo (STS 507/2020): el PP fue condenado como partícipe a título lucrativo, no como organización criminal. Hay más condenas de ese tipo (Boadilla, 2022). Primaria: CENDOJ (con código de verificación: copia el usuario).
+- **Notas / veredicto:** es una sentencia firme y se puede citar tal cual, pero el caso consiste en interpretar una condena a otro partido. Esto choca con la redacción neutra y con «no se atribuyen delitos». La contradicción es limpia (partícipe a título lucrativo no es lo mismo que organización criminal), pero es delicada. Propuesta: preguntar al usuario antes de buscar más.
+
+### gem-30 · Morant: «la ley permite la desclasificación solo a partir de los 45 años» (03-2026)
+- **Estado:** por investigar (sin rastro)
+- **Persona / tipo propuesto:** Diana Morant / falsedad
+- **Antes:** 03-2026 según la pista, sin medio ni fecha.
+- **Después:** la Ley 9/1968 de Secretos Oficiales (BOE), todavía vigente, no fija ningún plazo. Los 45 años son del proyecto de Ley de Información Clasificada (aprobado como anteproyecto el 22-07-2025, La Moncloa). El Acuerdo del Consejo de Ministros que desclasifica los documentos del 23F (BOE-A-2026-4351, 25-02-2026) se toma a los 45 años, pero en virtud de la ley de 1968.
+- **Búsquedas:** web (Morant + 45 años + desclasificación + Newtral): nada de Morant; todo lo que sale es de Bolaños y Saiz sobre el 23F.
+- **Notas / veredicto:** puede que la pista atribuya a Morant algo dicho en el contexto del 23F, que el Gobierno justificó con los 45 años del golpe. Si no aparece la frase, descartar.
+
+### gem-31 · Redondo: las pulseras antimaltrato «han funcionado en todo momento» y «no llega al 1 %» (09-2025)
+- **Estado:** por investigar
+- **Origen:** analizar-casos.txt (Redondo, punto 1). Maldita Hemeroteca, 23-09-2025: «Las contradicciones y explicaciones sin pruebas de la ministra de Igualdad sobre las pulseras telemáticas».
+- **Persona / tipo propuesto:** Ana Redondo (ministra de Igualdad) / cambio de postura o falsedad
+- **Antes:** 18-09-2025 · un problema de «un número muy pequeño de casos, que no llega al 1 %»; además, que la incidencia se resolvió en una reunión del 27-02 (año por confirmar). Fuente pendiente: comparecencias y sesiones de control de septiembre y octubre de 2025 (Congreso y Senado).
+- **Después:** días después, que el ministerio no sabía cuántos casos había y que había pedido los datos a la Fiscalía y al CGPJ (Maldita). El CGPJ dice que los fallos se comunicaron por oficio antes de esa reunión. Memoria de la Fiscalía General del Estado de 2025 (oficial): la migración de datos al cambiar de proveedor dio lugar a sobreseimientos y absoluciones.
+- **Matiz en contra:** la propia nota de la Fiscalía dice que «las víctimas estuvieron protegidas en todo momento, porque los dispositivos funcionaron». Por eso **«han funcionado en todo momento» no sirve**: el fallo fue de pérdida de datos, no de los dispositivos.
+- **Notas / veredicto:** lo que puede servir es «no llega al 1 %» frente a «no sabemos cuántos», un cambio de postura sobre lo mismo en unos días, o la fecha en que se resolvió frente al oficio del CGPJ. Hay que comprobar que no hay ninguna causa abierta relacionada con la ministra. Hubo reprobación en el Congreso, que se puede citar como hito.
+
+### gem-32 · Redondo: «los 53 centros de crisis 24 horas […] están abiertos» (02-01-2025)
+- **Estado:** investigando
+- **Origen:** analizar-casos.txt (Redondo, punto 2).
+- **Persona / tipo propuesto:** Ana Redondo / falsedad
+- **Antes:** 02-01-2025 · vídeo de la ministra: el Gobierno cierra 2024 «cumpliendo un objetivo: los 53 centros de crisis 24 horas para atender a las víctimas de violencias sexuales están abiertos». Fuente pendiente: igualdad.gob.es o la cuenta oficial (vídeo).
+- **Después (según prensa, falta la primaria):** según el propio ministerio, el 19-12-2024 había 23 abiertos (El Debate, La Marea). Se pidió a la Comisión Europea una prórroga del hito del PRTR hasta el 02-06-2025. La Junta de Extremadura publicó un comunicado oficial (juntaex.es, «comunicado centros atención 24 horas») según el cual los centros de Mérida y Badajoz atendían solo por teléfono. El Salto (06-2025): solo dos de seis comunidades con atención 24 horas.
+- **Notas / veredicto:** puede ser limpio si hay una primaria oficial de que algún centro no estaba abierto el 02-01-2025: el comunicado de la Junta, una respuesta parlamentaria o la modificación de la Decisión de Ejecución del Consejo sobre el PRTR. Ojo: Igualdad puede alegar que «abierto» significa adjudicado o constituido, y que la gestión es de las comunidades.
+
+### gem-33 · Presupuestos presentados «en tiempo y forma» (Isabel Rodríguez; también Belarra)
+- **Estado:** investigando
+- **Origen:** analizar-casos.txt (Isabel Rodríguez, punto 1). La pista dice que Newtral lo verificó para Rodríguez, pero esa verificación no aparece. La que sí existe es de Belarra: newtral.es/podemos-presupuestos-belarra-factcheck/20260625 (engañoso).
+- **Persona / tipo propuesto:** Isabel Rodríguez (ministra portavoz, 2021-2023) o Ione Belarra (Podemos) / falsedad
+- **Antes:** Rodríguez, ruedas de prensa del Consejo de Ministros de 2021 y 2022: los presupuestos «en tiempo y forma» (Deia, 2022, como intención: «trabajará para entregarlos en tiempo y forma»). Belarra, ~06-2026: con Podemos en el Gobierno los presupuestos se aprobaron «en tiempo y forma». Primaria pendiente: transcripciones de La Moncloa y el vídeo o la cita de Belarra.
+- **Después:** art. 134.3 CE: el Gobierno presenta los presupuestos «al menos tres meses antes de la expiración de los del año anterior», es decir, antes del 1 de octubre. Fechas de entrada en el Congreso según Newtral (pendiente BOCG): PGE 2021, 28-10-2020; PGE 2022, 13-10-2021; PGE 2023, 06/07-10-2022.
+- **Notas / veredicto:** con el BOCG es demostrable. Lo que importa es la frase: si se dijo como intención («vamos a presentarlos en tiempo y forma») sería una promesa incumplida; si se dijo como hecho, una falsedad. La de Belarra parece la más categórica. Buscar en las transcripciones de La Moncloa de las ruedas de prensa del 05-10-2021 y del 04-10-2022 (aprobación del proyecto).
+
+### gem-34 · Urtasun: las visitas a los museos estatales «un 30 % más desde 2019» (11-2025)
+- **Estado:** por investigar (sin rastro)
+- **Persona / tipo propuesto:** Ernest Urtasun (ministro de Cultura) / falsedad (dato)
+- **Después posible:** según el ministerio, los museos estatales tuvieron 3.121.418 visitas en 2024 (Vozpópuli). En 2019 superaron por primera vez los 3 millones (la pista dice 2,90). Primaria: estadística de museos estatales del Ministerio de Cultura.
+- **Búsquedas:** web (Urtasun + museos + 30 % + 2019 + Newtral): no aparece ni la frase ni la verificación.
+- **Notas:** si no aparece la frase, descartar.
+
+### gem-35 · Celaá: «en primaria tenemos un 14 % de repetidores» (RNE, 14-10-2020)
+- **Estado:** débil
+- **Origen:** Maldita, 16-10-2020: «Es falso que en España en la educación primaria haya "un 14 % de repetidores"».
+- **Persona / tipo propuesto:** Isabel Celaá (ministra de Educación) / falsedad (dato)
+- **Notas / veredicto:** según la propia Maldita, la cifra sale de un informe del Ministerio de Educación, y el dato que lo corrige (11,4 % acumulado en 2018) también es del ministerio. Repetir la cifra mal calculada de tu propio ministerio no es una contradicción limpia, porque hay que entrar en cómo se calcula. Propuesta: descartar salvo que el usuario lo quiera.
+
+### gem-36 · Celaá: las leyes educativas socialistas «respaldadas por todas las fuerzas políticas excepto […] el PP» (12-2020)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Isabel Celaá / falsedad
+- **Antes:** 12-2020 · Congreso o Senado, debate de la LOMLOE (según la pista). Fuente pendiente: Diario de Sesiones.
+- **Después:** las votaciones de la LODE (1985), la LOGSE (1990), la LOE (2006) y la propia LOMLOE (19-11-2020 en el Congreso, con el voto en contra también de Vox y Ciudadanos) están en los Diarios de Sesiones.
+- **Búsquedas:** web: la verificación de Newtral no aparece. Sí aparece otra frase de Celaá («las leyes que han prosperado tienen sello socialista», ACI Prensa).
+- **Notas:** si la frase está en el DS, se resuelve con los resultados de las votaciones (fuente primaria). Es de 2020 y de una exministra: interés menor.
+
+### gem-37 · Saiz: «el 87 % de los nuevos contratos» son indefinidos (05-2024)
+- **Estado:** por investigar (sin rastro)
+- **Notas:** no aparece la frase. Sí otras dos: «el 90 % de los contratos son indefinidos» (Forbes, sin fecha clara) y «uno de cada dos contratos que se firman son indefinidos» (Europa Press, 06-2025). Esta última concuerda con el SEPE. Seguramente se refería al porcentaje de afiliados con contrato indefinido. Débil salvo que aparezca una frase que hable expresamente de *nuevos* contratos.
+
+### gem-38 · Planas: Nutri-Score «es privado y no público» (03-2021)
+- **Estado:** por investigar (sin rastro; probable invención)
+- **Notas:** no aparece ni la frase ni la verificación. Santé publique France es la creadora y propietaria de la marca (santepubliquefrance.fr). Si no aparece en una segunda búsqueda, descartar.
+
+### gem-39 · Resto de la tanda
+- **Duplicados:** Saiz y el leonés → gem-01 (descartado); Saiz y el 70 % → gem-02 / nt-09; Saiz y el uso sanitario → gem-03; Urtasun y el voto del PSOE sobre los fondos → nt-08; Urtasun y la eurozona → nt-06; Mónica García y la factura de la luz → nt-09; Isabel Rodríguez y el presupuesto de vivienda ×8 → wild-13 / nt-09 (descartado).
+- **Débiles (exageraciones, comparaciones parciales o frases literalmente ciertas):** Saiz y los «310 votos» de la regularización (la toma en consideración de la ILP sí tuvo 310 votos); Saiz y la externalización migratoria (lo que la contradice es periodismo de investigación); Planas y la flota pesquera (es la primera por capacidad), las exportaciones de carne (12.200 M€ del sector frente a 8.500 M€ solo de carne), los precios de los alimentos (inflación frente a nivel de precios; falta la frase) y la posición del SMI en Europa; Torres y el «agujero» de 2019 (disputa política entre gobiernos) y La Palma (no hay frase concreta); Isabel Rodríguez y las viviendas frente a los hogares (depende de si se cuentan los visados o las terminadas); Urtasun y la vivienda pública de PP y PSOE (verdad a medias, opinión) y la lectura (verdad a medias); Mónica García y el 40 % de plazas MIR (el dato es real y ella misma lo matizó el mismo día), el sueldo de los médicos (rectificó) y el Estatuto Marco (acusaciones de los sindicatos); Morant y los ERTE «inventados» (el art. 47 del ET es anterior, pero es poca cosa) y el paro juvenil (mínimo en número, no en tasa); Sira Rego y el paro juvenil (verdad a medias); Celaá y el pin parental (haría falta la publicación de la Consejería de Murcia y la frase literal); González Laya y Gibraltar y Frontex (negociación abierta); Puente y el ciberataque de Rodalies (era una hipótesis).
+- **En espera (bloqueados; el usuario decidió no investigarlos el 16-11-2026):** Torres, las mascarillas y Koldo, y el «caso Mediador» (causas abiertas); Bustinduy y el ático de Ayuso (afecta a su pareja, que está en una causa abierta); Puente y Adamuz: la auscultación de septiembre o noviembre, el aviso al 112, la renovación «integral» y la rotura de la vía «ridícula» (hay una causa abierta en el Juzgado de Instrucción de Montoro por la muerte de 46 personas); González Laya y Ghali (los hechos salen de una instrucción por falsedad documental, archivada para ella); Montón y su máster (2018: archivado para ella, pero los hechos tocan alteraciones de notas por terceros y ya dimitió por ello).
+- **Descartados por el usuario (16-11-2026):** Guirao (murió en 2020; además, la frase trata de la causa de un particular, Dani Mateo); Bustinduy (la propia pista reconoce que no hay ninguna afirmación desmentida); Valerio (el «gol por la escuadra» es una rectificación; la anulación de su nombramiento en el Consejo de Estado es una decisión del Gobierno, no una frase suya); la Junta Electoral y las ruedas de prensa de Rodríguez (no es una contradicción); los bulos atribuidos a Urtasun, Mónica García, Rego, Montón, Celaá y González Laya (no los dijeron).
