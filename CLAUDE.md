@@ -71,7 +71,7 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
   única pista.
 - Tipografías: Inter (interfaz) y Source Serif 4 cursiva solo para citas (clase `.cita`).
 - Clases compartidas: `.container`, `.page`, `.section`, `.section-header`, `.grid-cards`, `.surface`,
-  `.prose`, `.eyebrow`, `.lead`, `.meta`, `.btn .btn--primary/--secondary`, `.link-arrow`, `.sr-only`.
+  `.prose`, `.eyebrow`, `.lead`, `.meta`, `.btn .btn--primary/--secondary`, `.link-arrow`, `.sr-only`, `.tabla-datos` (tabla de cifras en el cuerpo de un caso, con `caption`, `scope`, fila `.destacada` y `.nota` de fuentes).
 - Las imágenes OG (`og.ts`) usan su propia paleta en hex, alineada con los tokens del tema oscuro.
 
 ### Componentes

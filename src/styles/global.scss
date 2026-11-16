@@ -548,6 +548,56 @@
     }
   }
 
+  /* Tabla de datos: cifras alineadas a la derecha; el contenedor se desplaza si no cabe */
+  .tabla-datos {
+    max-width: 100%;
+    overflow-x: auto;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+      font-variant-numeric: tabular-nums;
+    }
+    caption {
+      padding-bottom: var(--space-2);
+      text-align: left;
+      font-weight: var(--weight-semibold);
+    }
+    th,
+    td {
+      padding: var(--space-2) var(--space-3);
+      border-bottom: 1px solid var(--color-border);
+      text-align: right;
+      white-space: nowrap;
+    }
+    thead th {
+      border-bottom: 2px solid var(--color-border-strong);
+      color: var(--color-text-muted);
+      font-weight: var(--weight-semibold);
+    }
+    th:first-child {
+      padding-left: 0;
+      text-align: left;
+      white-space: normal;
+    }
+    tbody th {
+      font-weight: var(--weight-regular);
+    }
+    .destacada {
+      background: var(--color-surface-sunken);
+      font-weight: var(--weight-semibold);
+      th:first-child {
+        padding-left: var(--space-3);
+        font-weight: var(--weight-semibold);
+      }
+    }
+    .nota {
+      margin-top: var(--space-2);
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+    }
+  }
+
   /* Cita literal */
   .cita {
     font-family: var(--font-serif);

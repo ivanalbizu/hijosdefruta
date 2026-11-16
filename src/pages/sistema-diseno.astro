@@ -169,6 +169,31 @@ const espacios = ['1', '2', '3', '4', '6', '8', '12', '16'];
       {tag && <PerfilCard tag={tag} perfil={perfiles.get(tag.slug)} />}
     </div>
 
+    <h3 class="h4 sub">Tabla de datos</h3>
+    <p class="meta">
+      Clase <code>.tabla-datos</code> en el cuerpo de un caso: <code>caption</code>, cabeceras con <code>scope</code> y
+      cifras alineadas. <code>.destacada</code> marca la fila que sostiene el caso (el texto dice cuál; el fondo no es
+      la única pista).
+    </p>
+    <div class="tabla-datos" role="region" aria-labelledby="tabla-ejemplo" tabindex="0">
+      <table>
+        <caption id="tabla-ejemplo">Ejemplo: infracciones y tasa por habitante</caption>
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Dato</span></th>
+            <th scope="col">2024</th>
+            <th scope="col">2025</th>
+            <th scope="col">Variación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Infracciones</th><td>6.644</td><td>6.827</td><td>+2,8 %</td></tr>
+          <tr class="destacada"><th scope="row">Infracciones por cada mil habitantes</th><td>8,73</td><td>8,86</td><td>+1,5 %</td></tr>
+        </tbody>
+      </table>
+      <p class="nota">Fuente: nota al pie con enlace a la fuente primaria.</p>
+    </div>
+
     <h3 class="h4 sub">Tarjeta de caso</h3>
     <div class="ancho-tarjeta">{ejemplo && <CasoCard caso={ejemplo} nivel={4} />}</div>
   </section>
