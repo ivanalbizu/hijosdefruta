@@ -110,6 +110,12 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 - En el código el concepto es **caso** (`Caso`, `getCasos`, `CasoCard`, colección `casos`); "mentira"
   solo aparece en textos visibles.
 - Fechas en formato largo español con `formatFecha` (en UTC) y precisión de día, mes o año.
+- Cifras (norma de la RAE): en los textos propios (título, descripción, `hecho`, `compromiso`, tablas,
+  cuerpo), las de más de cuatro cifras se separan en grupos de tres con espacio fino que no se parte
+  (U+202F): «3 121 418»; las de cuatro, sin separador: «1568». Años, páginas y números de norma, nunca.
+  En las citas literales (`cita`, `destacado` que sale de ella, lo que va entre «») se respeta la forma
+  de la fuente: con punto si la fuente usa punto; si usa espacio, el espacio va como U+202F para que no
+  se parta. `buscar` e `incluir` de los recortes pueden llevar espacios normales.
 - npm es el único gestor (`package-lock.json`). Versiones exactas para fuentes, satori y sharp.
 - `npm run build` ejecuta `astro check`: debe terminar con 0 errores antes de commitear.
 
