@@ -125,6 +125,9 @@
   --color-accent-soft: var(--blue-50);
   --color-on-accent: var(--gray-0);
   --color-focus: var(--blue-600);
+  /* Selección de texto: fondo sólido para que se vea también sobre los bloques «Antes»/«Después» */
+  --color-selection-bg: var(--blue-600);
+  --color-selection-fg: var(--gray-0);
 
   --color-antes: var(--blue-600);
   --color-antes-soft: var(--blue-50);
@@ -173,6 +176,8 @@
   --color-accent-soft: var(--blue-900);
   --color-on-accent: var(--gray-950);
   --color-focus: var(--blue-300);
+  --color-selection-bg: var(--blue-300);
+  --color-selection-fg: var(--gray-950);
 
   --color-antes: var(--blue-400);
   --color-antes-soft: var(--blue-900);
@@ -356,8 +361,8 @@
   }
 
   ::selection {
-    background: var(--color-accent-soft);
-    color: var(--color-text);
+    background: var(--color-selection-bg);
+    color: var(--color-selection-fg);
   }
 
   hr {
