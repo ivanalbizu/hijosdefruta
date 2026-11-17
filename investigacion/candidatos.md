@@ -21,6 +21,7 @@ haberlo encontrado antes en la fuente primaria.
 | Newtral, fact-checks (14-11-2026) | prometedor: nt-01 Sánchez «primer presidente en Ceuta y Melilla», nt-02 Urtasun y el SMI; investigando: nt-03 retornos, nt-04 CIS, nt-05 voto CERA; débil: nt-06, nt-08 y los de nt-09; en espera: nt-07 (Marlaska y el dosier de periodistas, = gem-23); bloqueados: Rufián y Aizpurua (nt-09) |
 | Gemini, ministros sin perfil (15-11-2026) | publicado: gem-22 `marlaska-cese-perez-de-los-cobos-perdida-de-confianza`; publicados: gem-22 y gem-05; publicado: gem-07 `diaz-vox-recurso-constitucional-despido-por-bajas`; publicado: gem-10 `albares-ninguna-exportacion-armas-israel`; publicado: gem-26 `marlaska-criminalidad-almeria-se-ha-reducido`; descartado: gem-01 (Saiz y el leonés, sin rastro); descartado: gem-13 (Bolaños, «nadie vio»: el aviso del CGPJ era sobre otra versión); publicado: gem-14 (hito de Bolaños en la SER);  débil: gem-03, gem-04, gem-06, gem-11, gem-12, gem-16 a gem-19; descartado: gem-25 (el «103» no lo dijo Marlaska); duplicados: gem-02 → nt-09, gem-23 → nt-07 (en espera); descartados: gem-20 (Robles contra Interior por el aviso del CNI, sin contradicción propia), gem-15 (sin cita de Bolaños sobre Puigdemont), gem-08 (el error era de La Moncloa; Díaz lo había corregido en su ficha en 2019), gem-21 (Arcadi España y AFI: el «después» solo está en prensa), gem-24 (Marlaska e IBAN: el decreto solo lo nombra como uno de los medios de pago), gem-09 (Aagesen), gem-27 (Malasaña) |
 | Gemini, segundo listado (16-11-2026) | publicado: gem-28 Morant y los jóvenes (`morant-mas-jovenes-trabajando-que-nunca`); publicado: gem-31 Redondo y las pulseras (`redondo-pulseras-no-llega-al-1-por-ciento`); publicado: gem-36 Celaá y las leyes educativas (`celaa-leyes-socialistas-todas-las-fuerzas-excepto-el-pp`); publicado: gem-30 Morant y los 45 años (`morant-la-ley-permite-desclasificar-solo-a-partir-de-45-anos`); publicado: gem-34 Urtasun y los museos (`urtasun-visitas-museos-estatales-30-por-ciento-desde-2019`); publicado: gem-37 Saiz y el 87 % (`saiz-87-por-ciento-nuevos-contratos-indefinidos`); publicado: gem-38 Planas y Nutri-Score (`planas-nutri-score-es-privado-y-no-publico`); débil: gem-35; descartados: gem-29 (Morant y el PP), gem-33 (Belarra y los presupuestos «en tiempo y forma», por decisión del usuario), gem-32 (Redondo y los 53 centros, por decisión del usuario); resto en gem-39 (duplicados, débiles, en espera los de causas abiertas y descartados) |
+| Gemini, tercer listado (17-11-2026) | publicado: gem-46 `campo-reforma-sedicion-estaba-en-el-debate-de-investidura`; por investigar: gem-54 Calviño y el paro, gem-57 Darias y las vacunas, gem-51 Escrivá y las pensiones, gem-40 Montero y el IVA, gem-41 Montero y el estado de alarma, gem-55, gem-58; débil: gem-43 a gem-45, gem-47, gem-52, gem-56; descartados: gem-42, gem-49, gem-59; propuesta de descarte: gem-50, gem-53; ya existe: gem-48 |
 | The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; hito añadido: wild-10; publicado: wild-11 (`sanchez-vacaciones-crisis-ceuta`); prometedor: wild-15 (Onda Cero 18-04-2019 frente a Ley 12/2023 y Bloomberg CityLab 28-04-2026); débil: wild-02, wild-04; bloqueado: wild-17; descartado: wild-03 (la frase es cierta), wild-12, wild-13 y wild-14 (las cifras oficiales no los desmienten) |
 
 Descartados: usr-02 (Airbnb «no paga impuestos», exageración de mitin) y usr-04 (dentista municipal), por decisión del usuario; wild-03, porque la frase resultó cierta en la fuente primaria, y wild-12, wild-13 y wild-14, porque las cifras oficiales no los desmienten. Los débiles tienen anotado qué falta para que dejen de serlo.
@@ -985,3 +986,95 @@ está en estas fichas.
 - **Débiles (exageraciones, comparaciones parciales o frases literalmente ciertas):** Saiz y los «310 votos» de la regularización (la toma en consideración de la ILP sí tuvo 310 votos); Saiz y la externalización migratoria (lo que la contradice es periodismo de investigación); Planas y la flota pesquera (es la primera por capacidad), las exportaciones de carne (12.200 M€ del sector frente a 8.500 M€ solo de carne), los precios de los alimentos (inflación frente a nivel de precios; falta la frase) y la posición del SMI en Europa; Torres y el «agujero» de 2019 (disputa política entre gobiernos) y La Palma (no hay frase concreta); Isabel Rodríguez y las viviendas frente a los hogares (depende de si se cuentan los visados o las terminadas); Urtasun y la vivienda pública de PP y PSOE (verdad a medias, opinión) y la lectura (verdad a medias); Mónica García y el 40 % de plazas MIR (el dato es real y ella misma lo matizó el mismo día), el sueldo de los médicos (rectificó) y el Estatuto Marco (acusaciones de los sindicatos); Morant y los ERTE «inventados» (el art. 47 del ET es anterior, pero es poca cosa) y el paro juvenil (mínimo en número, no en tasa); Sira Rego y el paro juvenil (verdad a medias); Celaá y el pin parental (haría falta la publicación de la Consejería de Murcia y la frase literal); González Laya y Gibraltar y Frontex (negociación abierta); Puente y el ciberataque de Rodalies (era una hipótesis).
 - **Descartados por el usuario (17-11-2026; tocan causas abiertas):** Torres, las mascarillas y Koldo, y el «caso Mediador» (causas abiertas); Bustinduy y el ático de Ayuso (afecta a su pareja, que está en una causa abierta); Puente y Adamuz: la auscultación de septiembre o noviembre, el aviso al 112, la renovación «integral» y la rotura de la vía «ridícula» (hay una causa abierta en el Juzgado de Instrucción de Montoro por la muerte de 46 personas); González Laya y Ghali (los hechos salen de una instrucción por falsedad documental, archivada para ella); Montón y su máster (2018: archivado para ella, pero los hechos tocan alteraciones de notas por terceros y ya dimitió por ello).
 - **Descartados por el usuario (16-11-2026):** Guirao (murió en 2020; además, la frase trata de la causa de un particular, Dani Mateo); Bustinduy (la propia pista reconoce que no hay ninguna afirmación desmentida); Valerio (el «gol por la escuadra» es una rectificación; la anulación de su nombramiento en el Consejo de Estado es una decisión del Gobierno, no una frase suya); la Junta Electoral y las ruedas de prensa de Rodríguez (no es una contradicción); los bulos atribuidos a Urtasun, Mónica García, Rego, Montón, Celaá y González Laya (no los dijeron).
+
+## Origen: tercer listado de Gemini (`investigacion/indicios-de-casos-de-gemini.md`, 17-11-2026)
+
+Texto del usuario generado con Gemini: respuestas por ministro, casi todas a partir de verificadores. Pista de fiabilidad baja (fechas y medios sin comprobar). Cribado el 17-11-2026 sin leer aún ninguna fuente primaria.
+
+### gem-40 · Montero: el IVA de las mascarillas «no lo permite Bruselas» (2020)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** María Jesús Montero (ministra de Hacienda) / falsedad
+- **Antes:** 2020 · decía que la normativa europea impedía bajar el IVA de las mascarillas · pendiente (DS del Congreso y del Senado, La Moncloa, ruedas de prensa del Consejo de Ministros)
+- **Después:** según la pista, carta de la Comisión del 03-04-2020; rebaja en noviembre de 2020 (RDL 34/2020) · pendiente (BOE, DOUE: Decisión (UE) 2020/491)
+- **Notas / veredicto:** con cautela: la Directiva del IVA no permitía entonces un tipo reducido para las mascarillas y la Decisión 2020/491 trata de importaciones exentas. Hay que leer qué dijo exactamente ella y qué permitía la UE antes de llamarlo contradicción.
+
+### gem-41 · Montero: el PP «votó en contra» de la prórroga del estado de alarma (2021)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** María Jesús Montero / falsedad
+- **Antes:** 05-2021 (según la pista) · la frase · pendiente
+- **Después:** votaciones de las prórrogas en el DS del Congreso · pendiente
+- **Notas / veredicto:** la pista no da el acto ni la prórroga; hay que localizar la frase y la votación concreta a la que se refiere. Contrastar con lo que votó el PP en cada prórroga.
+
+### gem-42 · Montero: «la economía del mundo avanzado que más crece»
+- **Estado:** descartado por el usuario (17-11-2026); duplicado de nt-06
+
+### gem-43 · Montero: el CGPJ y «lo que pide Bruselas» (2022)
+- **Estado:** débil (interpretación de los informes del Estado de Derecho, no un dato). Propuesta: descartar.
+
+### gem-44 · Montero: «fue Susana Díaz quien bajó» el impuesto de sucesiones (2021)
+- **Estado:** débil (verdad a medias: los dos gobiernos lo bajaron). Propuesta: descartar.
+
+### gem-45 · Montero: la muerte de dos guardias civiles en Huelva, «accidente laboral» (05-2026)
+- **Estado:** débil (expresión que ella rectificó, no un dato falso). Propuesta: descartar.
+
+### gem-46 · Campo: la reforma de la sedición estaba «en el debate de investidura» (05-10-2020)
+- **Estado:** publicado el 17-11-2026: `campo-reforma-sedicion-estaba-en-el-debate-de-investidura`. Cita y minutos confirmados por el usuario. El DS PL-2 vigente es DSCD-14-PL-2-C1 (el original da 404).
+- **Origen:** tercer listado de Gemini (decía «La Hora de La 1», TVE: era Onda Cero); fact-check de Newtral del 07-10-2020 (solo pista)
+- **Persona / tipo propuesto:** Juan Carlos Campo (ministro de Justicia) / falsedad
+- **Antes / la frase:** 05-10-2020 · Onda Cero, «Más de Uno», entrevista de Carlos Alsina · audio oficial https://www.ondacero.es/programas/mas-de-uno/audios-podcast/entrevistas/juan-carlos-campo_202010055f7ad2c13d76370001659abd.html (Web Archive 20261117205538; MP3 directo en dpvclip.ondacero.es, 37:25). Transcripción automática: 18:04 Alsina: «La reforma del delito de sedición o de rebelión en el Código Penal, ¿en qué página del programa electoral del Partido Socialista figuraba en las elecciones de noviembre del año 19?» — Campo (18:15): «Pues está en el debate de investidura del presidente del Gobierno, candidato a presidencia del Gobierno, y está en una obligación europea». Lo repite en el 21:48: «porque lo dijo en el debate de investidura que habría que adecuarlo».
+- **Después / los hechos:** Diarios de Sesiones de la investidura de enero de 2020: DSCD-14-PL-2 (04-01), PL-3 (05-01) y PL-4 (07-01), leídos en las copias de Web Archive (congreso.es da 403 a curl). «Sedición» y «rebelión» solo salen en boca de Casado, Abascal, Rufián, Arrimadas y otros; Sánchez nunca. Arrimadas le pregunta en PL-2 pág. 95 «¿Va usted a despenalizar el delito de sedición y de rebelión?». El discurso inicial (transcripción de La Moncloa, 20200104 PG Discurso investidura (2).pdf) solo cita el Código Penal para el «solo sí es sí». Tampoco en la investidura fallida de julio de 2019 (DSCD-13-PL-2 a PL-5).
+- **Cronología posible:** 20-01-2020, Sánchez en TVE (transcripción de La Moncloa, «20200120 PG Entrevista tve blanco franganillo.pdf», pág. 6): a la pregunta de Franganillo sobre la sedición, «hay que ir paso a paso […] tenemos un código penal que no corresponde con la época». 21-01-2020, Montero en la rueda de prensa del Consejo de Ministros (La Moncloa, «CONSEJO DE MINISTROS.Montero-Ribera-Darias 200121.pdf», pág. 24): «no ha formado parte del acuerdo programático».
+- **Justificación del político:** ninguna conocida (Newtral pidió explicación y no la obtuvo). En la misma entrevista, Campo la liga a «una obligación europea».
+- **Búsquedas:** Newtral (en Chrome); DS de enero de 2020 y de julio de 2019 (Web Archive); La Moncloa (discursos de investidura del 04 y 07-01-2020, entrevista en TVE del 20-01 y rueda de prensa del 21-01); Onda Cero (página y MP3, transcrito con faster-whisper).
+- **Notas / veredicto:** contradicción limpia entre una afirmación y el Diario de Sesiones. Falta: que el usuario escuche el tramo 18:04–18:24 (y el 21:40–21:52) y confirme la cita literal. Onda Cero no está en YouTube: se enlaza la página con el minuto, como el vídeo de mitele en gem-30.
+
+### gem-47 · Campo: la sedición, sin tocar «desde hace 200 años» (09-2020)
+- **Estado:** débil (valoración jurídica discutible, no un dato). Propuesta: descartar.
+
+### gem-48 · Campo: la amnistía, «claramente inconstitucional» (06-2021)
+- **Estado:** ya existe (hito c2 de `no-aministia-para-politicos-e-independentistas-catalanes`; su fuente sigue pendiente en revision-fuentes.md). Posible hito nuevo: su abstención como magistrado del TC en los recursos contra la ley (auto del TC; resolución citable tal cual).
+
+### gem-49 · Tolón: el alquiler de su vivienda de protección oficial
+- **Estado:** descartado por el usuario (17-11-2026). Estaba bloqueado (patrimonio personal; la clave es un expediente administrativo no público y la pista es una investigación periodística). Decide el usuario.
+
+### gem-50 · Ribera: «puertas giratorias» (Isofotón, IDDRI)
+- **Estado:** propuesta de descarte: no hay ninguna declaración suya contradicha; la Oficina de Conflictos de Intereses autorizó los pasos.
+
+### gem-51 · Escrivá: «no se estudia» ampliar de 25 a 35 años el cálculo de la pensión (2021)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** José Luis Escrivá (ministro de Inclusión, Seguridad Social y Migraciones) / falsedad
+- **Antes:** 2021 · la negación · pendiente (La Moncloa, DS)
+- **Después:** según la pista, borradores enviados a Bruselas · pendiente (Plan de Recuperación, componente 30, y documentos oficiales del ministerio)
+- **Notas / veredicto:** solo vale si el documento es oficial y publicado; un borrador filtrado a la prensa no sirve.
+
+### gem-52 · Escrivá: otras (voto del PP a la reforma laboral, Lacalle y la insignia de Twitter, baby boomers, jubilación a los 75)
+- **Estado:** débil (opiniones o frases que él matizó). Propuesta: descartar.
+
+### gem-53 · Escrivá: del Gobierno al Banco de España (2024)
+- **Estado:** propuesta de descarte: no hay frase contradicha; es un debate sobre el nombramiento.
+
+### gem-54 · Calviño: «mínimos históricos» de paro y de paro juvenil (10-11-2022)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Nadia Calviño (vicepresidenta primera y ministra de Asuntos Económicos) / falsedad
+- **Antes:** 10/11-2022 · la frase · pendiente (DS, La Moncloa)
+- **Después:** INE, EPA (tasas de paro general y de menores de 25) · como en gem-28
+- **Notas / veredicto:** puede tener la misma forma que el caso de Morant. Comprobar si la frase dice «tasa» o «cifra»: con la cifra registrada en el SEPE podría ser cierta.
+
+### gem-55 · Calviño: España, el país donde más crece la renta real de las familias (08-2023)
+- **Estado:** por investigar (débil a priori: depende del trimestre y de la medida de la OCDE)
+
+### gem-56 · Calviño: alimentos más baratos que en el entorno; «todos los organismos» revisan al alza
+- **Estado:** débil (comparaciones parciales y generalizaciones). Propuesta: descartar.
+
+### gem-57 · Darias: «nueve de cada diez vacunas que llegan a Latinoamérica vienen de España» (10-2021)
+- **Estado:** por investigar
+- **Persona / tipo propuesto:** Carolina Darias (ministra de Sanidad) / falsedad
+- **Antes:** 10-2021 · la frase · pendiente (La Moncloa, DS)
+- **Después:** donaciones de España (Exteriores, Sanidad) frente a las dosis recibidas en la región (OPS, COVAX) · pendiente
+- **Notas / veredicto:** comprobar la frase exacta: podría referirse solo a las donaciones europeas («de las que dona la UE»), lo que cambiaría el sentido.
+
+### gem-58 · Darias: España, el país con «mayor cobertura vacunal de Europa y del mundo» (12-2021)
+- **Estado:** por investigar (datos del ECDC; débil si la frase se refiere a un grupo de edad o a la primera dosis)
+
+### gem-59 · Repetidos de la tanda anterior
+- **Estado:** descartado por el usuario (17-11-2026); ya estaban descartados en gem-39 y gem-35: Montón (máster), Puente (Adamuz, Rodalies), Guirao, Valerio, Celaá (repetidores, pin parental; las leyes educativas ya están publicadas como gem-36), González Laya (Ghali, Gibraltar, bulo de Biden).
