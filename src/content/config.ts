@@ -57,6 +57,34 @@ const fuente = z.object({
 	archivo: opcional(z.string().url()),
 });
 
+/**
+ * Cambio detectado en una fuente después de publicar el caso: un documento oficial
+ * sustituido por otra versión, movido o retirado. Solo hechos: qué había, qué hay y
+ * cuándo lo vimos. Se muestra en el caso y en /cambios-en-fuentes/.
+ * Los campos no se llaman `url` ni `archivo` para que `npm run fuentes` no los tome
+ * por fuentes del caso (la dirección original ya no funciona).
+ */
+const cambioFuente = z.object({
+	/** Día en que lo detectamos. */
+	detectado: z.coerce.date(),
+	/** Documento afectado, como en `fuente.medio`. */
+	documento: z.string().min(1),
+	/** Dirección con la que se citó y que ha cambiado o dejado de funcionar. */
+	original: z.string().url(),
+	/** Copia del original en Web Archive. */
+	copiaOriginal: opcional(z.string().url()),
+	/** Dirección actual, si el documento sigue publicado. */
+	actual: opcional(z.string().url()),
+	/** Qué ha cambiado, sin valoraciones. */
+	cambio: z.string().min(1),
+	/** `pendiente`: aún no se ha podido comparar el original con la versión actual. */
+	estado: z.enum(['pendiente', 'comprobado']),
+	/** Día en que se comparó el original con la versión actual (con `estado: comprobado`). */
+	comprobadoEl: opcional(z.coerce.date()),
+	/** ¿Ha cambiado el texto citado en el caso? Se omite si aún no se sabe. */
+	afectaCita: z.boolean().optional(),
+});
+
 const video = z
 	.object({
 		id: z.string().regex(/^[\w-]{11}$/, 'ID de YouTube de 11 caracteres'),
@@ -157,6 +185,8 @@ const casos = defineCollection({
 			despues: hito(image),
 			/** Contexto adicional, en orden cronológico. */
 			cronologia: z.array(hito(image)).default([]),
+			/** Cambios detectados en las fuentes después de publicar el caso. */
+			cambiosFuentes: z.array(cambioFuente).default([]),
 		})
 		.superRefine((data, ctx) => {
 			if (esPosterior(data.antes.fecha, data.despues.fecha)) {

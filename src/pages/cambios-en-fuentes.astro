@@ -1,0 +1,40 @@
+---
+import Default from '@layouts/Default.astro';
+import CambiosFuentes from '@components/CambiosFuentes.astro';
+import { getCasos } from '@utils/casos';
+
+// Todos los cambios de todos los casos publicados, del más reciente al más antiguo.
+const cambios = (await getCasos())
+	.flatMap(caso =>
+		caso.data.cambiosFuentes.map(c => ({ ...c, caso: { titulo: caso.data.title, slug: caso.slug } })),
+	)
+	.sort((a, b) => b.detectado.getTime() - a.detectado.getTime());
+---
+
+<Default
+	title="Cambios en las fuentes"
+	description="Registro de los documentos citados en hijosdefruta que han cambiado, se han movido o se han retirado después de publicar el caso"
+	eyebrow="Transparencia"
+	lead="Los documentos oficiales a veces se corrigen, cambian de dirección o se retiran. Cuando detectamos que una fuente citada en un caso ha cambiado después de publicarlo, lo anotamos aquí y en el propio caso: cuándo lo vimos, qué ha cambiado y dónde está la copia archivada del original."
+	ancho="narrow">
+	<div class="prose intro">
+		<p>
+			Por eso cada fuente lleva, siempre que es posible, una copia en Web Archive, y cada recorte de un documento
+			oficial, la huella SHA-256 del PDF con el que se hizo. Si el texto citado cambia, el caso se revisa según
+			la <a href="/metodologia/">metodología</a>.
+		</p>
+	</div>
+	{
+		cambios.length > 0 ? (
+			<CambiosFuentes cambios={cambios} />
+		) : (
+			<p class="meta">Todavía no hemos detectado ningún cambio en las fuentes.</p>
+		)
+	}
+</Default>
+
+<style>
+	.intro {
+		margin-bottom: var(--space-8);
+	}
+</style>

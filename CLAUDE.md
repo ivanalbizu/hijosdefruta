@@ -27,6 +27,9 @@ Un solo error o una cita sacada de contexto desacredita toda la web.
   partidos (programas electorales, ponencias, códigos éticos). **Nunca capturas de prensa.**
   El recorte es la prueba visible; lo que la hace verificable es el enlace a la página, la copia en Web
   Archive y la huella SHA-256 del PDF.
+- Si una fuente cambia después de publicar (404, versión corregida, documento retirado), se anota en
+  `cambiosFuentes` del caso con la fecha de detección y la copia del original, sin valoraciones; sale en el
+  caso y en `/cambios-en-fuentes/` (enlace en el pie). Formato en el README.
 
 ## Estructura
 
@@ -88,6 +91,7 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 | `Compartir` | Web Share si existe (oculta las redes); si no, enlaces a WhatsApp, Telegram, X, Bluesky y Facebook sin scripts de terceros. «Copiar enlace» siempre. Solo título y URL. |
 | `ExtLink` | Enlace externo: nueva pestaña, icono y aviso para lectores de pantalla. Úsalo para toda URL externa. |
 | `Paginacion` | Anterior/siguiente y números de página (`utils/paginacion.ts`, 12 por página). La página 1 es la base (`/casos/`, `/tags/<slug>/`, `/tipos/<tipo>/`); el resto, `<base>pagina/<n>/`. |
+| `CambiosFuentes` | Cambios detectados en las fuentes de un caso; con `caso`, enlaza a él (página `/cambios-en-fuentes/`). |
 | `Cronologia`, `Fuentes`, `Fecha`, `Media`, `Logo` | Línea de tiempo, lista de fuentes, fechas con precisión variable, YouTube, marca. |
 
 ## Accesibilidad (requisitos, no extras)

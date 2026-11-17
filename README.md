@@ -52,6 +52,28 @@ cronologia: [] # hitos intermedios (mismos campos), en orden
 
 El cuerpo del `.mdx` es opcional y sirve para matices o contexto.
 
+### Cambios en las fuentes
+
+Si una fuente cambia después de publicar el caso (un Diario de Sesiones sustituido por una versión corregida,
+un documento movido o retirado), se actualizan los enlaces a la versión vigente, se regenera el recorte
+(`npm run capturas -- <slug> --forzar`) y se anota el cambio en `cambiosFuentes`. Se muestra en el caso y en
+`/cambios-en-fuentes/`, enlazada desde el pie de página.
+
+```yaml
+cambiosFuentes:
+  - detectado: 2026-11-17 # cuándo lo vimos
+    documento: Diario de Sesiones del Congreso, núm. 212
+    original: https://… # dirección con la que se citó
+    copiaOriginal: https://web.archive.org/… # copia del original
+    actual: https://… # versión vigente, si la hay
+    cambio: 'Qué ha cambiado, solo hechos'
+    estado: pendiente # pendiente | comprobado (tras comparar el original con la versión actual)
+    comprobadoEl: 2026-11-17 # opcional, con estado comprobado
+    afectaCita: false # opcional: ¿cambia el texto citado?
+```
+
+Los campos no se llaman `url` ni `archivo` para que `npm run fuentes` no compruebe la dirección antigua.
+
 ## Archivo de promesas
 
 `src/content/promesa/*.yaml` guarda promesas electorales en el momento en que se hacen, con su

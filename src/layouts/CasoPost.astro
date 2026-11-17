@@ -5,6 +5,7 @@ import Fecha from '@components/Fecha.astro';
 import Hito from '@components/Hito.astro';
 import Cronologia from '@components/Cronologia.astro';
 import Fuentes from '@components/Fuentes.astro';
+import CambiosFuentes from '@components/CambiosFuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
 import Compartir from '@components/Compartir.astro';
 import { contarFuentes, getHitos, isoFecha, type Caso } from '@utils/casos';
@@ -17,7 +18,7 @@ interface Props {
 }
 
 const { caso } = Astro.props;
-const { title, description, tipo, tags, antes, despues, cronologia, revisado } = caso.data;
+const { title, description, tipo, tags, antes, despues, cronologia, revisado, cambiosFuentes } = caso.data;
 const numFuentes = contarFuentes(caso);
 // Generada en src/pages/og/[slug].png.ts
 const image = `/og/${caso.slug}.png`;
@@ -120,6 +121,19 @@ const jsonLd = {
 					<a href="/metodologia/#correcciones">Así se corrige</a>.
 				</p>
 			</section>
+
+			{
+				cambiosFuentes.length > 0 && (
+					<section class="bloque" aria-labelledby="titulo-cambios">
+						<h2 id="titulo-cambios" class="h3">Cambios en las fuentes</h2>
+						<p class="meta">
+							Cambios que hemos detectado en los documentos citados después de publicar el caso. Todos están en
+							<a href="/cambios-en-fuentes/">el registro de cambios en las fuentes</a>.
+						</p>
+						<CambiosFuentes cambios={cambiosFuentes} />
+					</section>
+				)
+			}
 
 			<section class="bloque surface compartir-final" aria-label="Compartir">
 				<Compartir titulo={title} ruta={`/casos/${caso.slug}/`} />
