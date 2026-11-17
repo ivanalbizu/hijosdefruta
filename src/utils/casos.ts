@@ -105,11 +105,9 @@ export const contarFuentes = (caso: Caso) =>
 export const normalizar = (texto: string) =>
   texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
-/** Años que abarca un caso: de la primera declaración a la última. */
+/** Años en los que el caso tiene algún hito (sin rellenar los intermedios). */
 export function aniosCaso(caso: Caso): number[] {
-  const anios = getHitos(caso).map(h => h.fecha.valor.getUTCFullYear());
-  const [min, max] = [Math.min(...anios), Math.max(...anios)];
-  return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+  return [...new Set(getHitos(caso).map(h => h.fecha.valor.getUTCFullYear()))].sort((a, b) => a - b);
 }
 
 /** Texto en el que se busca: título, resumen, personas, citas y hechos de todos los hitos. */

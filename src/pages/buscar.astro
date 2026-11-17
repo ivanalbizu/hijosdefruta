@@ -3,6 +3,7 @@ import Default from '@layouts/Default.astro';
 import CasoCard from '@components/CasoCard.astro';
 import { aniosCaso, getCasos, getTags, textoBusqueda } from '@utils/casos';
 import { slugifyStr } from '@utils/slugify';
+import { getPerfiles } from '@utils/perfiles';
 import { TIPOS } from '../consts';
 
 /*
@@ -12,6 +13,11 @@ import { TIPOS } from '../consts';
  */
 const casos = await getCasos();
 const tags = getTags(casos).sort((a, b) => a.name.localeCompare(b.name, 'es'));
+const perfiles = await getPerfiles();
+const grupos = [
+  { etiqueta: 'Personas', tags: tags.filter(t => perfiles.get(t.slug)?.data.tipo !== 'partido') },
+  { etiqueta: 'Partidos', tags: tags.filter(t => perfiles.get(t.slug)?.data.tipo === 'partido') },
+].filter(g => g.tags.length);
 const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
 ---
 
@@ -38,7 +44,13 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
       <label for="quien">Persona o partido</label>
       <select id="quien" name="quien" toolparamdescription="Slug de la persona o partido">
         <option value="">Todos</option>
-        {tags.map(t => <option value={t.slug}>{t.name} ({t.count})</option>)}
+        {
+          grupos.map(g => (
+            <optgroup label={g.etiqueta}>
+              {g.tags.map(t => <option value={t.slug}>{t.name} ({t.count})</option>)}
+            </optgroup>
+          ))
+        }
       </select>
     </div>
     <div class="campo">
