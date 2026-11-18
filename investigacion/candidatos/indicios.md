@@ -77,4 +77,4 @@ Cuatro artículos pegados: Newtral, «datos falsos repetidos en los debates» (2
     - **Veredicto:** publicado `psoe-rtve-mayoria-absoluta-por-decreto` (18-11-2026). Matiz añadido: la Ley 5/2017 ya admitía la mayoría absoluta en la primera elección, con 15 días de plazo y candidaturas de la mitad de los grupos. Antes: Camacho (2017); después: RDL 5/2024 con la justificación de López y Sarrià; hitos: RDL 15/2012 (BOE), STC 150/2017, RDL 4/2018 y elección del 14-11-2024.
 
 ### ind-08 · Causas judiciales (Ábalos, Cerdán, Leire Díez, Begoña Gómez, David Sánchez, García Ortiz, Zapatero, Mínguez)
-- **Estado:** bloqueado (procesos abiertos y vida familiar). Las sentencias firmes podrían citarse tal cual, pero la pista no ofrece ninguna contradicción de declaraciones; no se investiga.
+- **Estado:** descartado por el usuario (18-11-2026). Antes: bloqueado (procesos abiertos y vida familiar). Las sentencias firmes podrían citarse tal cual, pero la pista no ofrece ninguna contradicción de declaraciones; no se investiga.
