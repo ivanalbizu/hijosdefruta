@@ -1010,12 +1010,13 @@ Texto del usuario generado con Gemini: respuestas por ministro, casi todas a par
 - **Después:** según la pista, carta de la Comisión del 03-04-2020; rebaja en noviembre de 2020 (RDL 34/2020) · pendiente (BOE, DOUE: Decisión (UE) 2020/491)
 - **Notas / veredicto:** con cautela: la Directiva del IVA no permitía entonces un tipo reducido para las mascarillas y la Decisión 2020/491 trata de importaciones exentas. Hay que leer qué dijo exactamente ella y qué permitía la UE antes de llamarlo contradicción.
 
-### gem-41 · Montero: el PP «votó en contra» de la prórroga del estado de alarma (2021)
-- **Estado:** por investigar
-- **Persona / tipo propuesto:** María Jesús Montero / falsedad
-- **Antes:** 05-2021 (según la pista) · la frase · pendiente
-- **Después:** votaciones de las prórrogas en el DS del Congreso · pendiente
-- **Notas / veredicto:** la pista no da el acto ni la prórroga; hay que localizar la frase y la votación concreta a la que se refiere. Contrastar con lo que votó el PP en cada prórroga.
+### gem-41 · Montero: el PP «votó en contra en octubre de la prolongación del Estado de Alarma» (11-05-2021)
+- **Estado:** publicado (18-11-2026): `montero-pp-voto-en-contra-prorroga-estado-de-alarma-octubre`; completado con DS PL-59 y PL-23, recortes, copias de Web Archive y vídeo de RTVE (59:41–1:00:22, por confirmar). publicado el 18-11-2026 (justificación y prórroga del 3-6-2020 descartadas por el usuario)
+- **Persona / tipo propuesto:** María Jesús Montero (ministra de Hacienda y portavoz del Gobierno; PSOE) / falsedad
+- **Antes (la votación):** 29-10-2020 · Congreso, sesión 56, votación 18: autorización de la prórroga del estado de alarma del Real Decreto 926/2020, de 25 de octubre. Resultado oficial: presentes 346, sí 194, no 53, abstenciones 99, no votan 4. El Grupo Popular figura entero en «ABSTENCIONES» (Casado incluido); los «no» son de Vox y del Grupo Mixto. · https://www.congreso.es/webpublica/opendata/votaciones/Leg14/Sesion056/20201029/Votacion018/VOT_20201120105018.pdf · falta el Diario de Sesiones de ese pleno y la copia en Web Archive
+- **Después (la frase):** 11-05-2021 · rueda de prensa posterior al Consejo de Ministros, transcripción oficial de La Moncloa, pág. 21: «Sería bueno también que el Partido Popular se aclarara respecto a qué quiere en materia de control de esta pandemia, porque saben ustedes que esta formación política votó en contra y hay que repetirlo, porque probablemente se escuchan ustedes aisladamente a los dirigentes del Partido Popular nos podamos despistar de lo que hizo, el Partido Popular votó en contra en octubre de la prolongación del Estado de Alarma durante los meses que han durado prácticamente hasta hace escasamente unos días.» · https://www.lamoncloa.gob.es/consejodeministros/ruedas/Documents/2021/Consejo%202021.05.11.pdf (SHA-256 18e3d957…6e18c2, descargado el 18-11-2026) · falta el minuto del vídeo de La Moncloa y la copia en Web Archive. En la misma rueda (pág. 28 aprox.): «ha votado en contra de los estados de alarma una y otra vez».
+- **Justificación:** según Maldita, Hacienda explicó que quiso decir que el PP «no apoyó (no votó a favor)». El PP sí votó en contra de otras prórrogas de 2020 (por comprobar en el DS cuáles), pero la frase fija «en octubre».
+- **Origen:** Maldita, «Es falso que el PP votara en contra de la prórroga del estado de alarma en octubre como dice María Jesús Montero», 12-05-2021: https://maldita.es/malditodato/20210512/falso-pp-votara-contra-estado-alarma-octubre-maria-jesus-montero/
 
 ### gem-42 · Montero: «la economía del mundo avanzado que más crece»
 - **Estado:** descartado por el usuario (17-11-2026); duplicado de nt-06
