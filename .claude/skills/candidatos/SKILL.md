@@ -14,8 +14,12 @@ que votaron la investidura (PSOE, Sumar, Podemos, ERC, Junts, EH Bildu, PNV, BNG
 con sus cargos actuales o anteriores. Lo que solo afecta a otros partidos se anota en una línea como
 `fuera de alcance`, sin investigar.
 
-El registro vive en [investigacion/candidatos.md](../../../investigacion/candidatos.md). Léelo antes de
-empezar: puede que el candidato ya esté investigado o descartado.
+El registro está partido por origen: [investigacion/candidatos.md](../../../investigacion/candidatos.md)
+tiene el resumen de estados y la tabla de archivos; cada origen vive en
+`investigacion/candidatos/<origen>.md` (archivopsoe, psoe-actos, wild, usuario, newtral, gemini,
+indicios…). Antes de empezar, lee el resumen y busca el tema o la persona en todos los archivos
+(`grep -ril <término> investigacion/candidatos/`): puede que el candidato ya esté investigado o
+descartado. Un origen nuevo va en un archivo nuevo, con su fila en la tabla y en el resumen.
 
 ## Principios
 
@@ -115,5 +119,5 @@ Cada candidato es una sección `### <id> · <tema>` con estos campos (deja vací
 - **Notas / veredicto:** …
 ```
 
-Al terminar una tanda, actualiza la tabla de resumen de la cabecera del registro e informa al usuario
+Al terminar una tanda, actualiza la tabla de resumen de `investigacion/candidatos.md` e informa al usuario
 con: prometedores (listos para proponer), débiles, bloqueados (necesitan su decisión) y qué queda.
