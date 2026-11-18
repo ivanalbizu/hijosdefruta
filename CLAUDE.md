@@ -2,7 +2,7 @@
 
 Hemeroteca de contradicciones de políticos españoles: cada caso enfrenta lo que alguien dijo o hizo
 **antes** con lo que dijo o hizo **después**, con la cita literal, la fecha y la fuente de cada parte.
-Sitio estático en Astro 4, desplegado en Netlify (<https://hijosdefruta.netlify.app>) desde `main`.
+Sitio estático en Astro 4, desplegado en Netlify (<https://hijoputismo.com>) desde `main`.
 
 Comandos, formato de los casos y scripts: [README.md](README.md). Criterios públicos:
 [/metodologia](src/pages/metodologia.astro).

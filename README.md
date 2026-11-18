@@ -2,7 +2,7 @@
 
 Hemeroteca de contradicciones de políticos españoles: lo que dijeron frente a lo que dijeron o hicieron
 después, con la cita literal y la fuente de cada declaración.
-Sitio estático hecho con [Astro](https://astro.build), publicado en <https://hijosdefruta.netlify.app>.
+Sitio estático hecho con [Astro](https://astro.build), publicado en <https://hijoputismo.com>.
 
 ## Comandos
 

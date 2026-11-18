@@ -30,7 +30,7 @@ const hito = (h: Hito, site: URL) => ({
 });
 
 export const GET: APIRoute = async ({ site }) => {
-	const base = site ?? new URL('https://hijosdefruta.netlify.app');
+	const base = site ?? new URL('https://hijoputismo.com');
 	const casos = await getCasos();
 	const datos = {
 		sitio: SITE_TITLE,
