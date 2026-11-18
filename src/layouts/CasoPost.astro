@@ -199,7 +199,7 @@ const jsonLd = {
 		gap: var(--space-6);
 
 		@include breakpoint(md) {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 	.panel {

@@ -116,7 +116,7 @@ const Nombre = `h${nivel}` as 'h3' | 'h4';
 
 		> div {
 			display: grid;
-			grid-template-columns: 5.5rem 1fr;
+			grid-template-columns: 5.5rem minmax(0, 1fr);
 			gap: var(--space-2);
 		}
 	}
@@ -125,5 +125,6 @@ const Nombre = `h${nivel}` as 'h3' | 'h4';
 	}
 	dd {
 		margin: 0;
+		overflow-wrap: anywhere;
 	}
 </style>
