@@ -76,7 +76,7 @@ export async function renderOg(caso: Caso): Promise<Buffer> {
             },
             TIPOS[tipo].nombre.toUpperCase()
           ),
-          div({ fontSize: 24, fontWeight: 700, color: COLORES.secundario }, "hijosdefruta"),
+          div({ fontSize: 24, fontWeight: 700, color: COLORES.secundario }, "hijoputismo"),
         ]),
         div({ fontSize: 36, fontWeight: 700, lineHeight: 1.2, marginTop: 22, color: COLORES.texto }, recortar(title, 105)),
         div({ flex: 1, gap: 48, marginTop: 30 }, [

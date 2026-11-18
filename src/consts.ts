@@ -1,4 +1,4 @@
-export const SITE_TITLE = 'hijosdefruta';
+export const SITE_TITLE = 'hijoputismo';
 export const SITE_DESCRIPTION =
 	'Lo que dijeron los políticos españoles frente a lo que dijeron o hicieron después, con la cita literal, la fecha y la fuente de cada declaración.';
 
