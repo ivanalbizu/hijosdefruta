@@ -11,6 +11,15 @@ interface Props {
 const { href, class: className } = Astro.props;
 ---
 
+<style>
+	.ext svg {
+		display: inline-block;
+		margin-left: 0.25em;
+		vertical-align: -0.05em;
+		opacity: 0.75;
+	}
+</style>
+
 <a href={href} class:list={['ext', className]} target="_blank" rel="noopener noreferrer"
 	><slot /><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"
 		><path
@@ -22,12 +31,3 @@ const { href, class: className } = Astro.props;
 			stroke-linejoin="round"></path></svg
 	><span class="sr-only"> (se abre en otra pestaña)</span></a
 >
-
-<style>
-	.ext svg {
-		display: inline-block;
-		margin-left: 0.25em;
-		vertical-align: -0.05em;
-		opacity: 0.75;
-	}
-</style>
