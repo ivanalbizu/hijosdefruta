@@ -43,6 +43,9 @@ const NAV = [
 		background: color-mix(in srgb, var(--color-surface) 88%, transparent);
 		backdrop-filter: saturate(1.4) blur(10px);
 		border-bottom: 1px solid var(--color-border);
+		/* En la transición entre páginas (global.scss) la cabecera va aparte y no se funde con el
+		   contenido: se queda quieta y solo cambia el enlace activo. */
+		view-transition-name: cabecera;
 	}
 	.barra {
 		display: flex;

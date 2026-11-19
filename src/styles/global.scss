@@ -282,6 +282,17 @@
     html {
       scroll-behavior: smooth;
     }
+    /* Transición nativa entre páginas (sin JavaScript). Los navegadores que no la admiten
+       navegan como siempre; con movimiento reducido no se activa. */
+    @view-transition {
+      navigation: auto;
+    }
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation-duration: var(--duration);
+      animation-timing-function: var(--ease);
+    }
   }
   body {
     min-height: 100vh;
