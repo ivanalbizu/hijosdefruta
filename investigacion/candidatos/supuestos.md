@@ -45,19 +45,22 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Notas:** comprobar que no se solapa con `no-aministia-para-politicos-e-independentistas-catalanes` (podría ser hito).
 
 ### sup-23 · Illa y el «comité de expertos» de la desescalada (2020)
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** Maldita (31-07 y 03-08-2020): ni Illa, ni Simón, ni Sánchez llamaron «comité de expertos» al grupo que decidía las fases; Sánchez habló de «comité técnico de desescalada» (02-05-2020), Simón de «un equipo de técnicos» de Salud Pública (06-05) e Illa de «técnicos, profesionales, funcionarios» del CCAES (10-05). En julio Sanidad negó un «comité de expertos» ante el Consejo de Transparencia y lo describió como «trabajadores públicos expertos en salud pública». El problema de fondo es la opacidad sobre sus miembros, no una afirmación falsa de Illa. Sin contradicción limpia.
 - **Persona / tipo propuesto:** Salvador Illa (ministro de Sanidad) / falsedad
 - **Antes:** mayo de 2020 · ruedas de prensa en las que atribuye las decisiones de fase a un comité de expertos · pendiente (La Moncloa)
 - **Después:** respuesta del Ministerio o resolución del Consejo de Transparencia sobre la composición del comité · pendiente
 - **Notas:** comprobar qué reconoció exactamente Sanidad (si dijo que no existía o solo que no daba los nombres).
 
 ### sup-29 · Delgado: «rebelión» en 2018 y la calificación de la Abogacía del Estado
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** no aparece ninguna frase de Delgado sobre «rebelión» antes de ser ministra (ni conferencia en París en mayo de 2018: su visita a París fue el 06-11-2018, ya ministra, con Anne Hidalgo y sobre el exilio republicano). Como ministra dijo que no se darían instrucciones a la Fiscalía (15-10-2018), pero el cambio a sedición fue de la Abogacía del Estado, que sí depende del Gobierno; la acusación por rebelión la mantuvo la Fiscalía de Segarra. Que presionó a la Abogacía solo consta en prensa y en la reprobación del Congreso (22-11-2018). Sin «antes» propio. Pista de Gemini (19-11-2026): en junio de 2018, ya ministra, defendió en el Congreso reformar el delito de rebelión; postura coherente con la reforma posterior, no contradicción.
 - **Persona / tipo propuesto:** Dolores Delgado (ministra de Justicia) / cambio de postura
 - **Notas:** la pista sitúa la frase en una conferencia en París en mayo de 2018, sin fuente: hay que encontrarla. El cambio de la Abogacía fue en noviembre de 2018. Ojo: tiene relación con `clarisimamente-ha-habido-un-delito-de-rebelion-de-sedicion-en-espana`.
 
 ### sup-30 · Borrell y la amnistía (2017-2018 → 2023)
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** en noviembre de 2023 (Alto Representante) no respaldó la amnistía: dijo que busca «hacer borrón y cuenta nueva», que no podía opinar sin conocer el texto y que quienes le conocen «pueden imaginar lo que pienso» (The Objective y Foro Diplomático, 14-11-2023). Sin cambio de postura.
 - **Persona / tipo propuesto:** Josep Borrell (PSOE, entonces Alto Representante de la UE) / cambio de postura
 - **Notas:** hace falta una frase literal de 2017-2019 contra una amnistía y su respaldo de noviembre de 2023.
 
@@ -77,7 +80,8 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Después:** abril de 2019 · la frase en campaña · pendiente (vídeo)
 
 ### sup-46 · Armengol y la amnistía (antes y después de julio de 2023)
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** el después está claro (discurso de apertura de la XV legislatura ante el Rey, 29-11-2023: la amnistía «es una decisión legítima»), pero no aparece ninguna frase propia anterior a julio de 2023 contra la amnistía: en la campaña del 23J (cabeza de lista del PSOE por Baleares) habló de memoria democrática, derechos LGTBI e igualdad. Sin «antes».
 - **Persona / tipo propuesto:** Francina Armengol / cambio de postura
 - **Notas:** hace falta una frase propia anterior a julio de 2023 contra la amnistía; la pista solo habla de la «posición oficial» del partido.
 
