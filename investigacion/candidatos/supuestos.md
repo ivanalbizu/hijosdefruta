@@ -21,6 +21,14 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Después:** 04-05-2021 · anuncia en la noche electoral que deja todos sus cargos y no recoge el acta
 - **Notas:** solo vale si hay una frase literal comprometiéndose a quedarse como diputado aunque no gobernara.
 
+### sup-14 · Iglesias y la cesantía de exvicepresidente (2021)
+- **Estado:** publicado: `iglesias-cesantia-exvicepresidente-documento-etico` (19-11-2026)
+- **Persona / tipo propuesto:** Pablo Iglesias (Podemos) / doble rasero
+- **Antes:** junio de 2020 · Documento Ético de Podemos (Vistalegre III, siendo él secretario general), apartado XII, p. 12: «todas las personas titulares de cargos designados por Podemos en cualquier órgano de las Administraciones Públicas […] deberán aceptar: […] La obligación de no percibir ninguna remuneración ni cesantías de ningún tipo una vez finalizada su designación en el cargo. […] Quienes no fueran titulares de un empleo público cobrarán la prestación por desempleo que les corresponda.» Web Archive: https://web.archive.org/web/20200925035834/https://podemos.info/wp-content/uploads/2020/06/2020_06_Documento_etico_Podemos.pdf · SHA-256 7f7a825a30b0cfbc022d54e946922556718e67be36efb3634cf78368105768cb
+- **Después:** Portal de la Transparencia, indemnizaciones de ex altos cargos (Derechos Sociales y Agenda 2030): «Iglesias Turrión, Pablo | Ex Vicepresidente segundo del Gobierno | cese 30/03/2021 | inicio 01/04/2021 | fin 04/09/2021 | 5316,42 € | total 27290,96 €». https://transparencia.gob.es/servicios-buscador/buscar.htm?categoria=indemnizaciones_ind&ente=E05070401&lang=es&orderBy=fechaCeseIndemnizacion&or=DESC&lang=es · Falta archivarla en Web Archive.
+- **Búsquedas:** Maldita (08-04-2021, con respuesta de la Oficina de Conflictos de Intereses: solicitud del 06-04-2021; 08-09-2021, deja de cobrarla al empezar a colaborar en medios y en la UOC), El Independiente.
+- **Notas / veredicto:** contradicción limpia con dos fuentes oficiales. Prestación legal (art. 7 de la Ley 3/2015): se presenta como norma del partido frente a cobro, sin insinuar irregularidad. Justificación: la prensa dice que defendió que le correspondía, pero no hay cita literal localizada; buscarla (rueda de prensa o entrevista de abril de 2021) antes de publicar.
+
 ### sup-19 · Iglesias: escraches «jarabe democrático» (2013) y concentraciones en Galapagar (2020)
 - **Estado:** por investigar
 - **Persona / tipo propuesto:** Pablo Iglesias / doble rasero
@@ -76,7 +84,6 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **sup-08 · Castells: crítica a la separación de su ministerio y «presos políticos»:** falta saber si dijo «presos políticos» siendo ministro.
 - **sup-09 / sup-10 · Iglesias, «cal viva» y «mentiroso» frente al Gobierno de coalición:** críticas políticas, no afirmaciones contradichas; la parte de Sánchez ya existe (`pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria`).
 - **sup-11 · Iglesias y la OTAN:** la salida de la OTAN de 2014 no figuró en el acuerdo de coalición; habría que encontrar una renuncia expresa.
-- **sup-14 · Iglesias y la cesantía:** hace falta comprobar si la cobró. Si la cobró, el «antes» puede ser el Documento Ético de Podemos de 2020 (altos cargos: «no percibir ninguna remuneración ni cesantías de ningún tipo una vez finalizada su designación en el cargo»), aprobado mientras él era secretario general.
 - **sup-25 · Delgado y Villarejo:** el comunicado de Justicia (2018) choca con unos audios difundidos por la prensa y vinculados a causas judiciales; sin fuente primaria del «después».
 - **sup-28 · Delgado, Eduardo Esteban y la fiscalía de Memoria:** las sentencias del Supremo se pueden citar, pero falta una afirmación propia contradicha.
 - **sup-35 · Borrell y no dimitir tras la sanción:** falta una frase suya fijando ese estándar.
