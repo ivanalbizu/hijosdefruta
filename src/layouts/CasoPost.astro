@@ -11,7 +11,7 @@ import Compartir from '@components/Compartir.astro';
 import { contarFuentes, getHitos, isoFecha, type Caso } from '@utils/casos';
 import { slugifyStr } from '@utils/slugify';
 import { getPerfiles, nombreSinCargo } from '@utils/perfiles';
-import { SITE_TITLE } from '../consts';
+import { organizacion } from '@utils/jsonld';
 
 interface Props {
 	caso: Caso;
@@ -46,7 +46,7 @@ const jsonLd = {
 	dateModified: revisado.toISOString().slice(0, 10),
 	genre: tipo,
 	keywords: tags.join(', '),
-	publisher: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.href },
+	publisher: organizacion(Astro.site),
 	about: tags.map(entidad),
 	citation: getHitos(caso).map(h => ({
 		// Lo que se dijo o hizo, cuándo y quién; la fuente va aparte porque su fecha de publicación puede ser otra.

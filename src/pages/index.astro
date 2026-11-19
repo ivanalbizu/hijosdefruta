@@ -3,9 +3,10 @@ import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
 import CasoCard from '@components/CasoCard.astro';
 import PerfilCard from '@components/PerfilCard.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, TIPOS } from '../consts';
+import { SITE_TITLE, TIPOS } from '../consts';
 import { getCasos, getFeatured, getTags, getHitos } from '@utils/casos';
 import { getPerfiles } from '@utils/perfiles';
+import { sitioWeb } from '@utils/jsonld';
 
 const casos = await getCasos();
 const destacado = getFeatured(casos);
@@ -22,13 +23,17 @@ const cifras = [
   { valor: promesas.length, texto: 'promesas archivadas' },
 ];
 
+/* En buscadores, el título de la portada dice qué es la web: solo con la marca, Google lo reescribe. */
+const titulo = `${SITE_TITLE} · Lo que dijeron los políticos y lo que hicieron`;
+const descripcion = `Hemeroteca de ${casos.length} casos de políticos españoles: lo que dijeron frente a lo que hicieron después, con la cita literal, la fecha y la fuente primaria.`;
+
 const top = tags.slice(0, 8).map(tag => {
   const perfil = perfiles.get(tag.slug);
   return { tag, perfil, partido: perfil?.data.partido ? perfiles.get(perfil.data.partido) : undefined };
 });
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base title={titulo} description={descripcion} jsonLd={sitioWeb(Astro.site)}>
   <section class="hero">
     <div class="container">
       <p class="eyebrow">Hemeroteca con fuentes</p>

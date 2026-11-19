@@ -34,6 +34,8 @@ const {
 } = Astro.props;
 
 const imageURL = new URL(image, Astro.site);
+/** En la pestaña y en los buscadores, el nombre del sitio detrás; en redes ya va en og:site_name. */
+const tituloDocumento = title.includes(SITE_TITLE) ? title : `${title} · ${SITE_TITLE}`;
 ---
 
 <!-- Global Metadata -->
@@ -58,8 +60,8 @@ const imageURL = new URL(image, Astro.site);
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{tituloDocumento}</title>
+<meta name="title" content={tituloDocumento} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
