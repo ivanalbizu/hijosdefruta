@@ -10,7 +10,8 @@
     "astro": "astro",
     "fuentes": "node scripts/fuentes.mjs",
     "perfiles": "node scripts/perfiles.mjs",
-    "capturas": "node scripts/capturas.mjs"
+    "capturas": "node scripts/capturas.mjs",
+    "favicons": "node scripts/favicons.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.4.4",

@@ -17,6 +17,7 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 | `npm run fuentes` | Comprueba que fuentes, copias archivadas y vídeos siguen vivos |
 | `npm run perfiles` | Descarga de Wikimedia Commons la foto o el logo de los perfiles que no la tienen |
 | `npm run capturas -- <slug>` | Genera los recortes resaltados de los documentos oficiales de un caso |
+| `npm run favicons` | Regenera `favicon.ico`, `apple-touch-icon.png` y los iconos del manifest desde `public/favicon.svg` |
 
 ## Añadir un caso
 
