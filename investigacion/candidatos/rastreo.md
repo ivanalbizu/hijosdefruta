@@ -30,12 +30,13 @@ candidato indica la bandeja y la entrada.
 - **Notas / veredicto:** caso propio y no hito del de Urtasun: es la propia ministra y fija ella la fecha de partida. Enlaza al caso de Urtasun, y el de Urtasun enlaza de vuelta.
 
 ### ras-03 · Colau: el SMI ha subido «de 735 euros» a 1286 «en todo este tiempo»
-- **Estado:** débil
+- **Estado:** descartado (decisión del usuario, 19-11-2026)
 - **Origen:** bandeja del 19-11-2026, pasada de las 18:03, Newtral 18-11 («Cuando Yolanda Díaz entró en el Gobierno el SMI era de 900 euros, 165 euros más de lo que dice Colau»; texto pegado por el usuario)
 - **Persona / tipo propuesto:** Ada Colau (candidata de Frente Amplio a la Presidencia del Gobierno) / falsedad
 - **Después:** 17-11-2026 · desayuno informativo de Europa Press (canal Europa Press Catalunya, YouTube `HY7vA5REgDw`), de 15:05 a 15:33 (whisper con marcas por palabra): «Quiero empezar por aquí por reivindicar que efectivamente llevamos dos mandatos de gobierno progresista y que hay cosas que han mejorado y han mejorado mucho. No nos cansaremos de reivindicar el gran trabajo que ha hecho la ministra de Trabajo, Yolanda Díaz. En todo este tiempo se ha conseguido subir el salario mínimo interprofesional de 735 euros a hoy mismo, en el Consejo de Ministros, a 1.286».
-- **Búsquedas:** Newtral (pegado por el usuario); tramo 14:00-16:15 transcrito.
-- **Notas / veredicto:** no es limpia. Justo antes dice «llevamos dos mandatos de gobierno progresista», así que «en todo este tiempo» puede referirse a todo el periodo de gobierno progresista, desde 2018, y entonces la cifra es correcta. A diferencia de Díaz, no fija la fecha de llegada de la ministra. No se usa en el caso de Díaz.
+- **En el mismo discurso:** de 26:42 a 27:01 (https://www.youtube.com/watch?v=HY7vA5REgDw&t=1598s), tras agradecer la presencia de CC. OO.: «hoy es un día importante porque efectivamente llevamos al Consejo de Ministros, a través de la mejor ministra de Trabajo que ha tenido este país, la subida del salario mínimo una vez más: hoy sube a 1.286 euros, cosa que significa un aumento del 75% desde 2018» (whisper, sin confirmar escuchando).
+- **Búsquedas:** Newtral (pegado por el usuario); desayuno completo transcrito con whisper (transcripción y audio borrados tras el descarte) y buscado por «salario», «735», «1.286», «Yolanda», «mandato», «2018», «2020», «coalición». No hay más menciones al punto de partida del SMI.
+- **Notas / veredicto:** a favor del caso: «llevamos dos mandatos de gobierno progresista» encaja mejor con el periodo de los gobiernos de coalición, desde 2020, y la subida se atribuye al «gran trabajo» de Díaz. En contra, y decisivo: once minutos después, en el mismo discurso, ella misma sitúa la subida del 75 % «desde 2018». La frase de las 15:24 no fija ninguna fecha, y con la de las 26:50 se entiende que habla de todo el periodo desde 2018. Publicarla sería sacarla de contexto. A diferencia de Díaz, que fija ella misma el «13 de enero del año 20», no hay contradicción limpia. Descartado.
 
 ### ras-04 · Sánchez y las mafias en la entrada de Ceuta: «Yo no he dicho que fueran, dije que podrían ser»
 - **Estado:** débil (confirmado por el usuario, 19-11-2026)
