@@ -1,0 +1,6 @@
+# Cabeceras de Netlify (https://docs.netlify.com/routing/headers/).
+# Lo que genera Astro en /_astro/ (fuentes, JS) lleva un hash en el nombre que cambia con el
+# contenido: se puede guardar en caché un año sin volver a preguntar al servidor.
+# El resto (HTML, imágenes OG, favicons) mantiene la caché por defecto de Netlify.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

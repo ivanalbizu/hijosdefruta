@@ -8,5 +8,8 @@ const site = process.env.SITE_URL || process.env.URL || 'https://hijoputismo.com
 // https://astro.build/config
 export default defineConfig({
 	site,
+	// El CSS va dentro de cada página: es pequeño (unos 3,6 KB comprimido) y así no bloquea la
+	// primera visualización con una petición aparte. Casi todas las visitas entran por un enlace.
+	build: { inlineStylesheets: 'always' },
 	integrations: [mdx(), sitemap({ filter: page => !page.includes('/sistema-diseno') && !page.endsWith('/404/') })],
 });

@@ -1,11 +1,9 @@
 ---
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/source-serif-4/400.css';
-import '@fontsource/source-serif-4/400-italic.css';
+import '../styles/fuentes.css';
 import '../styles/global.scss';
+// Fuente del texto de la interfaz (y de la parte principal de casi todas las páginas): se precarga
+// para que no espere a que el navegador lea el CSS. Debe ser el mismo archivo que en fuentes.css.
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import { SITE_TITLE } from '../consts';
 
 interface Props {
@@ -41,6 +39,7 @@ const tituloDocumento = title.includes(SITE_TITLE) ? title : `${title} · ${SITE
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
 <link rel="icon" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
