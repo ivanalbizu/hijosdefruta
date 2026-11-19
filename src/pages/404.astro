@@ -1,0 +1,88 @@
+---
+import Default from '@layouts/Default.astro';
+
+/*
+ * Netlify sirve dist/404.html con estado 404 para cualquier ruta que no exista.
+ * El script rellena la búsqueda con las palabras de la URL (/casos/amnistia-ilegal → «amnistia ilegal»);
+ * sin JavaScript, el formulario funciona igual con el campo vacío.
+ */
+---
+
+<Default
+  title="Página no encontrada"
+  description="La página que buscas no existe o ha cambiado de dirección."
+  eyebrow="Error 404"
+  lead="La página que buscas no existe o ha cambiado de dirección. Puedes buscar el caso o ir a alguno de los índices."
+  ancho="narrow"
+  noindex>
+  <form class="busqueda surface" action="/buscar/" method="get" role="search" aria-label="Buscar casos">
+    <label for="q404">Buscar casos</label>
+    <div class="fila">
+      <input id="q404" name="q" type="search" autocomplete="off" placeholder="Ej.: amnistía, indulto, Cámara…" />
+      <button class="btn btn--primary" type="submit">Buscar</button>
+    </div>
+  </form>
+
+  <nav aria-label="Índices">
+    <ul class="enlaces">
+      <li><a class="link-arrow" href="/">Portada</a></li>
+      <li><a class="link-arrow" href="/casos/">Todos los casos</a></li>
+      <li><a class="link-arrow" href="/tags/">Políticos y partidos</a></li>
+      <li><a class="link-arrow" href="/tipos/">Tipos de caso</a></li>
+    </ul>
+  </nav>
+</Default>
+
+<script>
+  const IGNORADAS = new Set(['casos', 'tags', 'tipos', 'pagina', 'og', 'html']);
+  const input = document.querySelector<HTMLInputElement>('#q404');
+  if (input) {
+    let ruta = location.pathname;
+    try {
+      ruta = decodeURIComponent(ruta);
+    } catch {
+      // URL mal codificada: se usa tal cual.
+    }
+    const palabras = ruta
+      .split(/[/\-_.]+/)
+      .filter(p => p && !IGNORADAS.has(p.toLowerCase()) && !/^\d+$/.test(p));
+    if (palabras.length > 0) input.value = palabras.join(' ').slice(0, 80);
+  }
+</script>
+
+<style lang="scss">
+  .busqueda {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    margin-bottom: var(--space-8);
+  }
+  label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+  }
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  input {
+    flex: 1 1 14rem;
+    min-width: 0;
+    min-height: var(--target-min);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border-control);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+  input::placeholder {
+    color: var(--color-text-muted);
+  }
+  .enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+</style>
