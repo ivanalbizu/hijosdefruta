@@ -1,0 +1,67 @@
+---
+/**
+ * Migas de pan jerárquicas (dónde está la página, no por dónde llegó el usuario).
+ * Se ven los niveles superiores, empezando por Inicio; la página actual no se repite porque ya es el h1.
+ * Emite también un BreadcrumbList para que Google muestre la ruta en lugar de la URL.
+ */
+interface Props {
+	/** Niveles superiores, sin Inicio (se añade solo). */
+	items: { texto: string; href: string }[];
+	/** Nombre de la página actual: solo para los datos estructurados. */
+	actual: string;
+}
+
+const { items, actual } = Astro.props;
+const niveles = [{ texto: 'Inicio', href: '/' }, ...items];
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		...niveles.map(({ texto, href }, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			name: texto,
+			item: new URL(href, Astro.site).href,
+		})),
+		{ '@type': 'ListItem', position: niveles.length + 1, name: actual },
+	],
+};
+---
+
+<nav class="migas meta" aria-label="Migas de pan">
+	<ol>
+		{
+			niveles.map(({ texto, href }) => (
+				<li>
+					<a href={href}>{texto}</a>
+				</li>
+			))
+		}
+	</ol>
+</nav>
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+
+<style>
+	.migas {
+		margin-bottom: var(--space-6);
+	}
+	ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-1) var(--space-2);
+	}
+	li:not(:last-child)::after {
+		content: '/';
+		margin-left: var(--space-2);
+		color: var(--color-border-strong);
+	}
+	a {
+		display: inline-block;
+		padding-block: var(--space-1);
+		color: var(--color-text-muted);
+	}
+	a:hover {
+		color: var(--color-text);
+	}
+</style>

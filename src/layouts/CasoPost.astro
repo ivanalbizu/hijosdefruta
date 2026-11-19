@@ -8,7 +8,9 @@ import Fuentes from '@components/Fuentes.astro';
 import CambiosFuentes from '@components/CambiosFuentes.astro';
 import TipoBadge from '@components/TipoBadge.astro';
 import Compartir from '@components/Compartir.astro';
-import { contarFuentes, getHitos, isoFecha, type Caso } from '@utils/casos';
+import Migas from '@components/Migas.astro';
+import CasoCard from '@components/CasoCard.astro';
+import { contarFuentes, getCasos, getCasosByTag, getHitos, isoFecha, type Caso } from '@utils/casos';
 import { slugifyStr } from '@utils/slugify';
 import { getPerfiles, nombreSinCargo } from '@utils/perfiles';
 import { organizacion } from '@utils/jsonld';
@@ -33,6 +35,26 @@ const entidad = (nombre: string) => {
 	const t = perfiles.get(slugifyStr(nombre))?.data.tipo;
 	return { '@type': t === 'partido' ? 'PoliticalParty' : t === 'persona' ? 'Person' : 'Thing', name: nombre };
 };
+/*
+ * «Más casos»: hasta dos tags del caso (personas antes que partidos) con sus tres casos más recientes,
+ * sin repetir ninguno. Es lo que busca quien llega desde un buscador o una red social.
+ */
+const MAX_GRUPOS = 2;
+const POR_GRUPO = 3;
+const todos = await getCasos();
+const vistos = new Set([caso.slug]);
+const masCasos = tags
+	.map(nombre => ({ nombre, slug: slugifyStr(nombre) }))
+	.sort((a, b) => Number(perfiles.get(a.slug)?.data.tipo === 'partido') - Number(perfiles.get(b.slug)?.data.tipo === 'partido'))
+	.map(({ nombre, slug }) => {
+		const delTag = getCasosByTag(todos, slug);
+		const otros = delTag.filter(c => !vistos.has(c.slug)).slice(0, POR_GRUPO);
+		otros.forEach(c => vistos.add(c.slug));
+		return { nombre, slug, total: delTag.length, casos: otros };
+	})
+	.filter(g => g.casos.length > 0)
+	.slice(0, MAX_GRUPOS);
+
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -65,13 +87,7 @@ const jsonLd = {
 
 <Base title={title} description={description} image={image} imageAlt={`${title}: antes y después`} type="article" jsonLd={jsonLd}>
 	<article class="container page">
-		<nav class="migas meta" aria-label="Migas de pan">
-			<ol>
-				<li><a href="/">Inicio</a></li>
-				<li><a href="/casos/">Casos</a></li>
-				<li><span aria-current="page">{title}</span></li>
-			</ol>
-		</nav>
+		<Migas items={[{ texto: 'Casos', href: '/casos/' }]} actual={title} />
 
 		<header class="cabecera">
 			<TipoBadge tipo={tipo} />
@@ -139,6 +155,31 @@ const jsonLd = {
 				<Compartir titulo={title} ruta={`/casos/${caso.slug}/`} />
 			</section>
 		</div>
+
+		{
+			masCasos.length > 0 && (
+				<section class="bloque mas-casos" aria-labelledby="titulo-mas-casos">
+					<h2 id="titulo-mas-casos" class="h3">Más casos</h2>
+					{masCasos.map(g => (
+						<section class="grupo" aria-labelledby={`mas-${g.slug}`}>
+							<div class="section-header">
+								<h3 id={`mas-${g.slug}`} class="h4">{g.nombre}</h3>
+								<a class="link-arrow" href={`/tags/${g.slug}/`}>
+									Todos sus casos <span class="sr-only">({g.nombre}: {g.total})</span>
+								</a>
+							</div>
+							<ul class="grid-cards">
+								{g.casos.map(c => (
+									<li>
+										<CasoCard caso={c} nivel={4} />
+									</li>
+								))}
+							</ul>
+						</section>
+					))}
+				</section>
+			)
+		}
 	</article>
 </Base>
 
@@ -148,33 +189,6 @@ const jsonLd = {
 
 	.compartir-final {
 		padding: var(--space-5);
-	}
-
-	.migas {
-		margin-bottom: var(--space-6);
-
-		ol {
-			display: flex;
-			flex-wrap: wrap;
-			gap: var(--space-1) var(--space-2);
-		}
-		li:not(:last-child)::after {
-			content: '/';
-			margin-left: var(--space-2);
-			color: var(--color-border-strong);
-		}
-		li:last-child {
-			max-width: 40ch;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
-		a {
-			color: var(--color-text-muted);
-			&:hover {
-				color: var(--color-text);
-			}
-		}
 	}
 
 	.cabecera {
@@ -254,6 +268,17 @@ const jsonLd = {
 	}
 	.fuentes {
 		padding: var(--space-2) var(--space-5);
+	}
+	.mas-casos {
+		padding-top: var(--space-12);
+		border-top: 1px solid var(--color-border);
+
+		> h2 {
+			margin-bottom: var(--space-6);
+		}
+	}
+	.grupo + .grupo {
+		margin-top: var(--space-10);
 	}
 	.revisado {
 		margin-top: var(--space-4);

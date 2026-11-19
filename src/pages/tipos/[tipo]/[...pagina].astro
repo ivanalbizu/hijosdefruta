@@ -2,6 +2,7 @@
 import Default from '@layouts/Default.astro';
 import CasoCard from '@components/CasoCard.astro';
 import Paginacion from '@components/Paginacion.astro';
+import Migas from '@components/Migas.astro';
 import { getCasos, type Caso } from '@utils/casos';
 import { paginar, type Pagina } from '@utils/paginacion';
 import { TIPOS } from '../../../consts';
@@ -42,9 +43,7 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
   eyebrow={`Tipo de caso · ${total}`}
   lead={descripcion}>
   <Fragment slot="migas">
-    <nav class="migas meta" aria-label="Migas de pan">
-      <a href="/tipos/">Tipos de caso</a>
-    </nav>
+    <Migas items={[{ texto: 'Tipos de caso', href: '/tipos/' }]} actual={titulo} />
     {/* Antes del título: así no se mueve al cambiar de tipo (la definición y el aviso varían de alto). */}
     <nav class="otros" aria-label="Tipos de caso">
       <ul>
@@ -104,15 +103,6 @@ const sufijo = pagina.actual > 1 ? ` (página ${pagina.actual} de ${pagina.total
 </Default>
 
 <style>
-  .migas {
-    margin-bottom: var(--space-4);
-    a {
-      color: var(--color-text-muted);
-      &::before {
-        content: '← ';
-      }
-    }
-  }
   .criterio {
     margin-top: var(--space-4);
   }
