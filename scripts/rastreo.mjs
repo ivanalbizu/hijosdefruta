@@ -148,7 +148,7 @@ const DECLARACION =
 const INGLES = /\b(the|and|of|is|are|with|that|this|from)\b/g;
 const enIngles = titulo => (titulo.toLowerCase().match(INGLES) ?? []).length >= 2;
 const BULO =
-  /\b(bulo|generad[ao]s? con (ia|inteligencia artificial)|hech[ao]s? con ia|montaje|manipulad[ao]s?|no es real|suplanta\w*|cuenta falsa)\b/;
+  /\b(bulo|generad[ao]s? con (ia|inteligencia artificial)|hech[ao]s? con ia|montaje|manipulad[ao]s?|no es real|suplanta\w*|cuenta falsa|timo|estafa)\b/;
 
 function etiqueta(titulo) {
   const t = sinTildes(titulo).toLowerCase();
