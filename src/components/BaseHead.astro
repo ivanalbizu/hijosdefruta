@@ -86,3 +86,28 @@ const tituloDocumento = title.includes(SITE_TITLE) ? title : `${title} · ${SITE
 <meta name="twitter:image:alt" content={imageAlt} />
 
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
+
+<!--
+  Transición entre páginas (global.scss): el título de la tarjeta de un caso vuela hasta su h1, que
+  lleva view-transition-name: caso-<slug>. Solo se nombra la tarjeta de esa navegación (la pulsada al
+  entrar y la del caso del que se vuelve): con todas nombradas, los casos que salen en varios listados
+  volarían de una tarjeta a otra. En línea y sin defer para escuchar pagereveal antes de pintar.
+-->
+<script is:inline>
+	(() => {
+		const slug = url => (url && new URL(url).pathname.match(/^\/casos\/([a-z0-9-]+)\/$/)?.[1]) || '';
+		const nombrar = s => {
+			for (const t of document.querySelectorAll('[data-caso]')) t.style.viewTransitionName = '';
+			const t = s && document.querySelector(`[data-caso="${s}"]`);
+			if (t) t.style.viewTransitionName = `caso-${s}`;
+		};
+		addEventListener('pageswap', e => {
+			if (e.viewTransition) nombrar(slug(e.activation?.entry?.url));
+		});
+		addEventListener('pagereveal', e => {
+			if (!e.viewTransition) return;
+			nombrar(slug(globalThis.navigation?.activation?.from?.url));
+			e.viewTransition.finished.finally(() => nombrar(''));
+		});
+	})();
+</script>

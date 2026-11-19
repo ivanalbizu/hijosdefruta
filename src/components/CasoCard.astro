@@ -30,7 +30,7 @@ const max = destacada ? 220 : 140;
 		<p class="meta"><Fecha fecha={antes.fecha} /> <span aria-hidden="true">→</span><span class="sr-only">a</span> <Fecha fecha={despues.fecha} /></p>
 	</div>
 
-	<Titulo class="titulo">
+	<Titulo class="titulo" data-caso={caso.slug}>
 		<a href={`/casos/${caso.slug}/`}>{title}</a>
 	</Titulo>
 	{destacada && <p class="resumen">{description}</p>}
