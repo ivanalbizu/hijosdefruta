@@ -12,7 +12,7 @@ antes de citarla. Descartados por no ser de Sánchez: 1:15:03 (Madina) y 1:34:54
 artículo 135, parece Pérez Tapias).
 
 ### deb-01 · «Aforamiento cero»
-- **Estado:** añadido como hito de 2014 en `sanchez-suprimir-aforamientos` (13-11-2026), pendiente de confirmar el minuto 27:40 viendo el vídeo (empieza en el segundo 1654, igual que limitar mandatos)
+- **Estado:** añadido como hito de 2014 en `sanchez-suprimir-aforamientos` (13-11-2026), minuto confirmado por el usuario el 19-11-2026 (el vídeo empieza en el segundo 1654, igual que limitar mandatos)
 - **Antes:** 27:40 · «que haya aforamiento cero de diputados y diputadas» (dentro de la nueva ley de partidos que proponía).
 - **Notas:** el caso publicado arranca en 2018; este hito lo adelanta a 2014. Confirmar el minuto viéndolo.
 
