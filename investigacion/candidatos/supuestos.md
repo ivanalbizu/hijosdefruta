@@ -35,7 +35,7 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Notas:** el usuario (18-11-2026) aclara el enfoque: se analiza solo lo que Iglesias dijo en público (2013: escraches como «jarabe democrático»; 2020: sus declaraciones sobre las concentraciones ante su casa), sin entrar en las concentraciones ni en su familia.
 
 ### sup-20 · Illa: «ni habrá amnistía» (2021) y su defensa posterior
-- **Estado:** por investigar
+- **Estado:** publicado: `illa-ni-habra-amnistia` (19-11-2026); antes: Consell Nacional PSC 29-05-2021 (PSCtv, Aj5C3eEnKZE, 53:06); después: Consell Nacional 29-10-2023 (PSOE, V1ghZuRicwo, 41:19). Citas transcritas con Whisper, pendientes de confirmar por el usuario. Pista: Newtral 05-11-2026 «Illa: de oponerse a la amnistía a defenderla frente a Feijóo».
 - **Persona / tipo propuesto:** Salvador Illa (PSC) / cambio de postura
 - **Antes:** mayo de 2021, Consell Nacional del PSC · «ni Cataluña será independiente, ni habrá amnistía ni referéndum» · pendiente (vídeo del PSC o Parlament)
 - **Después:** 2023-2024 · defensa de la ley · pendiente (Diari de Sessions del Parlament o vídeo)
