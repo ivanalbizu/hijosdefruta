@@ -15,7 +15,7 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Notas / veredicto:** es un cambio de una norma interna aprobado por la asamblea del partido y con justificación escrita; el límite de mandatos no se elimina, se flexibiliza con consulta. La promesa de Iglesias de 2014 se refería a los eurodiputados de esa legislatura y solo consta en prensa. No hay contradicción limpia de una afirmación. Pista útil para sup-14: el Documento Ético de 2020 obliga a los altos cargos a «no percibir ninguna remuneración ni cesantías de ningún tipo una vez finalizada su designación en el cargo».
 
 ### sup-13 · Iglesias: quedarse en la Asamblea de Madrid (2021)
-- **Estado:** por investigar
+- **Estado:** publicado: `iglesias-estare-donde-me-coloque-la-ciudadania` (19-11-2026). Antes: Hoy por Hoy (SER) 26-04-2021, xxYelfPnl8o 18:41; también La hora de La 1 09-04-2021 (RTVE Play 5837641, 08:52). Después: discurso del 04-05-2021 (HuffPost, uxpLnsiW-uw 4:40). laSexta 28-04-2021 («clarísimamente», según Maldita) ya no está en Atresplayer. Citas confirmadas por el usuario.
 - **Persona / tipo propuesto:** Pablo Iglesias / promesa incumplida
 - **Antes:** marzo-abril de 2021 · compromiso de quedarse en la Asamblea fuera cual fuera el resultado · pendiente (frase literal en vídeo)
 - **Después:** 04-05-2021 · anuncia en la noche electoral que deja todos sus cargos y no recoge el acta
@@ -59,14 +59,16 @@ fuente primaria. Criba inicial del 18-11-2026, sin búsquedas todavía salvo lo 
 - **Notas:** hace falta una frase literal de 2017-2019 contra una amnistía y su respaldo de noviembre de 2023.
 
 ### sup-34 · Borrell: venta de acciones de Abengoa y sanción de la CNMV (2015-2018)
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** BOE-A-2018-16196 (sanción firme: vender «disponiendo de información privilegiada», art. 282.6 en relación con el 227.1.a LMV, 30 000 €) frente a DSCD-12-PL-156 (17-10-2018, págs. 14-15: «no hice uso de información que hubiera podido obtener en mi condición de consejero»; reconoce que «fue un error»). Disponer no es usar: las dos afirmaciones son compatibles y la negación es posterior a la sanción. Sin contradicción limpia.
 - **Persona / tipo propuesto:** Josep Borrell / falsedad
 - **Antes:** declaraciones públicas negando haber usado información privilegiada · pendiente
 - **Después:** 2018 · sanción firme de la CNMV por infracción muy grave · pendiente (resolución de la CNMV o BOE)
 - **Notas:** sanción administrativa, no penal: se cita tal cual. Comprobar si la declaración es anterior a la sanción y qué dijo después.
 
 ### sup-38 · Batet: el PSOE «nunca» defendió la autodeterminación (2019)
-- **Estado:** por investigar
+- **Estado:** descartado por el usuario (19-11-2026)
+- **Búsquedas / veredicto:** origen en El Nacional (15-04-2019, entrevista en RAC1 sin enlace ni audio localizado). El «nunca» es paráfrasis de la redactora; lo citado de Batet es su postura de entonces («en contra del derecho a la autodeterminación porque estamos en contra de votar rupturas») y reconoce el cambio del PSC sobre el derecho a decidir. Sin frase suya que niegue el pasado; los documentos de 1974-1978 solo se citan de segunda mano.
 - **Persona / tipo propuesto:** Meritxell Batet (PSC) / falsedad
 - **Antes:** resoluciones del Congreso de Suresnes (PSOE, 1974) y del PSC (1978) · pendiente (documentos de partido)
 - **Después:** abril de 2019 · la frase en campaña · pendiente (vídeo)
