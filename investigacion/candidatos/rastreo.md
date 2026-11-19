@@ -9,7 +9,7 @@ generales del 29-11-2026. Cada bandeja está en `investigacion/rastreo/AAAA-MM-D
 candidato indica la bandeja y la entrada.
 
 ### ras-01 · Sánchez: la migración irregular «ha bajado» un 38 % este año (y más de un 70 % en Canarias)
-- **Estado:** borrador (19-11-2026) — `src/content/casos/sanchez-migracion-irregular-ha-bajado-un-38-por-ciento.mdx`, `draft: true`; falta que el usuario confirme la cita (el 19-11 el vídeo de Telecinco no le cargaba)
+- **Estado:** publicado (19-11-2026, cita y minutos confirmados por el usuario) — `/casos/sanchez-migracion-irregular-ha-bajado-un-38-por-ciento/`
 - **Origen:** bandeja del 19-11-2026, pasada de las 18:03, Verificat 18-11 («La migració irregular ha augmentat aquest any, malgrat que Sánchez afirmi el contrari», veredicto: enganyós)
 - **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno y candidato del PSOE) / falsedad
 - **Antes (el dato publicado):** Interior, informe quincenal acumulado del 1-1 al 31-10-2026, el último publicado antes de la entrevista (primera copia en Web Archive: 05-11-2026; las tres copias, del 05-11 y del 17-11, tienen la misma SHA-256, 9c421d4d…). Total por mar y tierra: 32 942 en 2026 frente a 30 263 en 2025 (+2679, +8,9 %), sin contar las entradas por tierra en Ceuta del 30 y 31 de julio, que el informe deja fuera (mar 28 155 + tierra 4787). Canarias: 13 327 frente a 14 099 (−5,5 %). Península y Baleares: +15 %. Recorte de la pág. 2 generado.
@@ -17,7 +17,7 @@ candidato indica la bandeja y la entrada.
 - **Justificación del político:** sus cifras son las del informe de Interior al 15-05-2026: 9047 frente a 14 857 (−39,1 %) en total y 3018 frente a 10 822 (−72,1 %) en Canarias. Interior se lo dijo así a Verificat, pero el caso no cita a Verificat: el informe del 15-05 va en la cronología, y la explicación, en el matiz.
 - **Evolución (Interior, acumulado frente al mismo periodo de 2025):** 15-05: −39,1 % total, −72,1 % Canarias; 15-07: 14 479 frente a 19 222 (−24,7 %), Canarias 4440 frente a 11 454 (−61,2 %); 31-08: 20 417 frente a 23 931 (−14,7 %), Canarias 5163 frente a 12 126 (−57,4 %); 31-10: +8,9 %, Canarias −5,5 %. Según Verificat, al 15-11: 44 238 (+39,4 %), Canarias +66 %; ese informe aún no está en Web Archive y no se ha leído.
 - **Búsquedas:** Verificat (leído); CDX de Web Archive de los informes de Interior de 2026 (el del 15-10 está capturado con la página de Cloudflare; el del 15-11, sin copia); informes del 15-05, 15-07, 31-08 y 31-10 leídos; audio del tramo 24:45-28:30 de Telecinco transcrito con whisper. La Moncloa (RSS de intervenciones del presidente): no devolvió nada. interior.gob.es da 403 de Cloudflare a `npm run fuentes`: aviso falso, como en el caso de Albares.
-- **Notas / veredicto:** publicado como borrador con el informe del 31-10 como «antes» y los del 15-05 y 31-08 en la cronología. Enlaza al caso de Albares; falta el enlace de vuelta desde Albares cuando se publique.
+- **Notas / veredicto:** publicado como borrador con el informe del 31-10 como «antes» y los del 15-05 y 31-08 en la cronología. Enlaza al caso de Albares, y el de Albares enlaza de vuelta.
 
 ### ras-02 · Díaz: «llevo subiendo el salario mínimo desde que he llegado al Gobierno […] un 75 %»
 - **Estado:** publicado (19-11-2026, cita confirmada por el usuario, sin commit) — `/casos/diaz-smi-75-por-ciento-desde-que-llego-al-gobierno/`, con tabla de cuantías del BOE
