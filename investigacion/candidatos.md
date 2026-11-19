@@ -26,6 +26,7 @@ haberlo encontrado antes en la fuente primaria.
 | supuestos-indicios.md (18-11-2026) | por investigar: sup-13, 14 (pista nueva), 19, 20, 23, 29, 30, 34, 38, 46; débiles: sup-05 a 11, 25, 28, 35, 39, 45; bloqueados (caso Koldo): sup-01, 22, 44; ya existe: sup-15, 26; descartados: sup-12 y el resto; fuera de alcance: sup-32 |
 | Rastreo de campaña (bandeja del 19-11-2026) | publicados: ras-01 `sanchez-migracion-irregular-ha-bajado-un-38-por-ciento`, ras-02 `diaz-smi-75-por-ciento-desde-que-llego-al-gobierno`; débil: ras-04 Sánchez y las mafias de Ceuta; descartados: ras-03 Colau y el SMI (en el mismo discurso dice «un aumento del 75% desde 2018»), ras-05 Bustinduy y los 50 000 millones |
 | The Wild Project (13-11-2026) | publicado: wild-01 (hito en el caso de Iglesias); ya existe, posibles hitos: wild-05 a wild-09, wild-19; hito añadido: wild-10; publicado: wild-11 (`sanchez-vacaciones-crisis-ceuta`); descartado: wild-02 (dato aproximado, corregido en directo), wild-03 (la frase es cierta), wild-04 (causa abierta, contraste débil), wild-12, wild-13 y wild-14 (las cifras oficiales no los desmienten), wild-15 (fragmento de 2019 atropellado, contraste no limpio), wild-17 (causas abiertas, sin contradicción) |
+| Caso ERE de Andalucía (nota del usuario, 19-11-2026) | la pieza política sigue abierta (cuestión prejudicial ante el TJUE desde el 14-07-2025); borrador: ere-13 `montero-ley-instituto-publico-de-credito-traeremos-brevemente` (Montero y el instituto público de crédito; sale de ere-06, que se descarta: sí hubo oposiciones y la ratio se recurrió); descartados por el usuario: ere-01 a ere-05 y ere-07 a ere-12 |
 
 Descartados: usr-02 (Airbnb «no paga impuestos», exageración de mitin) y usr-04 (dentista municipal), por decisión del usuario; wild-03, porque la frase resultó cierta en la fuente primaria, y wild-12, wild-13 y wild-14, porque las cifras oficiales no los desmienten. Los débiles tienen anotado qué falta para que dejen de serlo.
 
@@ -44,5 +45,6 @@ Cada origen tiene su archivo en [candidatos/](candidatos/), con un `### <id> · 
 | [indicios.md](candidatos/indicios.md) | recopilación del usuario (18-11-2026) | ind- |
 | [supuestos.md](candidatos/supuestos.md) | investigacion/supuestos-indicios.md (sin fuentes) | sup- |
 | [rastreo.md](candidatos/rastreo.md) | bandejas diarias de `npm run rastreo` (campaña del 29N) | ras- |
+| [eres.md](candidatos/eres.md) | caso ERE de Andalucía, nota del usuario (19-11-2026) | ere- |
 
 Un origen nuevo va en un archivo nuevo de esta carpeta y una fila en esta tabla y en el resumen.
