@@ -1,0 +1,90 @@
+# Rastreo diario de campaña (`npm run rastreo`): fuentes que se leen y nombres que cuentan como
+# «dentro del alcance». Lo que sale en la bandeja son pistas, no fuentes (skill /candidatos).
+
+# Verificadores: todo lo que publican pasa por el filtro de nombres.
+verificadores:
+  - { nombre: Newtral, url: https://www.newtral.es/feed/ }
+  - { nombre: Maldita, url: https://maldita.es/feed/ }
+  - { nombre: EFE Verifica, url: https://verifica.efe.com/feed/ }
+  - { nombre: Verificat, url: https://www.verificat.cat/feed/ }
+
+# La Moncloa: fuente primaria y todo dentro del alcance (sin filtro de nombres).
+moncloa:
+  - { nombre: Consejo de Ministros, url: "https://www.lamoncloa.gob.es/Paginas/rss.aspx?tipo=15" }
+  - { nombre: Presidente, url: "https://www.lamoncloa.gob.es/Paginas/rss.aspx?tipo=20" }
+
+# Canales oficiales de YouTube de los partidos (id «UC…»): mítines y entrevistas completos.
+# Pendientes, sin canal oficial activo localizado (19-11-2026): Podemos y Frente Amplio.
+youtube:
+  - { nombre: PSOE, canal: UCB75fTm3weGTmtnitiZcdBw }
+  - { nombre: PSC, canal: UCTv0iLn3S2Pg7iLKWaVpXWg }
+  - { nombre: Sumar, canal: UCEg-oyYjgbOL0NG5qjtuRFA }       # sin vídeos desde el 17-10-2026
+  - { nombre: ERC, canal: UCjVuuV1sd8GnZj_7tq1R0bA }         # último vídeo: 20-05-2026
+  - { nombre: Junts, canal: UCG6dZxszooC9hpNRr1-LlJw }
+  - { nombre: EH Bildu, canal: UCbL7d4Gubav2tnardHApS7Q }
+  - { nombre: PNV, canal: UCMv59ay_eYWNTNPLpFJSBYw }
+  - { nombre: BNG, canal: UClwhV8zFxorQ6jFnYWIG1dg }
+  - { nombre: Coalición Canaria, canal: UCxwJkU4G-17XQZ97rcB6u5g }
+
+# Filtro de alcance. Además de estos, cuentan los nombres de src/content/perfil/*.yaml.
+# Se buscan como palabra entera, sin tener en cuenta las tildes y respetando mayúsculas
+# («Podemos» sí, «podemos» no).
+partidos:
+  [PSOE, PSC, Sumar, Frente Amplio, Podemos, ERC, Esquerra, Junts, EH Bildu, Bildu, PNV, EAJ, BNG, Coalición Canaria]
+
+# Nombres completos de cargos actuales o anteriores de esos partidos.
+nombres:
+  - Margarita Robles
+  - Carlos Cuerpo
+  - Ángel Víctor Torres
+  - Óscar López
+  - Isabel Rodríguez
+  - Jordi Hereu
+  - Sara Aagesen
+  - Arcadi España
+  - Milagros Tolón
+  - Teresa Ribera
+  - José Luis Escrivá
+  - Emiliano García-Page
+  - Adrián Barbón
+  - Francina Armengol
+  - Cristina Narbona
+  - Pablo Bustinduy
+  - Mónica García
+  - Sira Rego
+  - Lara Hernández
+  - Agustín Santos
+  - Àgueda Micó
+  - Antonio Maíllo
+  - Enrique Santiago
+  - Alberto Garzón
+  - Ione Belarra
+  - Pablo Echenique
+  - Oriol Junqueras
+  - Marta Rovira
+  - Pere Aragonès
+  - Míriam Nogueras
+  - Jordi Turull
+  - Arnaldo Otegi
+  - Mertxe Aizpurua
+  - Pello Otxandiano
+  - Oskar Matute
+  - Aitor Esteban
+  - Andoni Ortuzar
+  - Imanol Pradales
+  - Maribel Vaquero
+  - Ana Pontón
+  - Néstor Rego
+  - Fernando Clavijo
+  - Cristina Valido
+  - Ana Oramas
+
+# Apellidos poco comunes que bastan solos (nunca palabras corrientes como Puente, Campo o España).
+apellidos:
+  [Sánchez, Marlaska, Bolaños, Albares, Urtasun, Bustinduy, Belarra, Rufián, Puigdemont, Junqueras,
+   Nogueras, Otegi, Aizpurua, Ortuzar, Pontón, Errejón, Ábalos, Cerdán, Calviño, Darias, Celaá, Iceta,
+   Aagesen, Morant, Hereu, Maíllo, Garzón, Clavijo, Illa, Colau, Montero, Robles, Echenique, Escrivá,
+   Armengol, Barbón, Pradales, Otxandiano, Turull, Aragonès, Tolón, Oramas]
+
+# Coincidencia débil: se lista aparte, al final de los verificadores.
+genericos: [Gobierno, Moncloa, ministra, ministro, vicepresidenta, vicepresidente]

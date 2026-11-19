@@ -42,5 +42,6 @@ Cada origen tiene su archivo en [candidatos/](candidatos/), con un `### <id> · 
 | [gemini.md](candidatos/gemini.md) | tres listados de Gemini | gem- |
 | [indicios.md](candidatos/indicios.md) | recopilación del usuario (18-11-2026) | ind- |
 | [supuestos.md](candidatos/supuestos.md) | investigacion/supuestos-indicios.md (sin fuentes) | sup- |
+| [rastreo.md](candidatos/rastreo.md) | bandejas diarias de `npm run rastreo` (campaña del 29N) | ras- |
 
 Un origen nuevo va en un archivo nuevo de esta carpeta y una fila en esta tabla y en el resumen.

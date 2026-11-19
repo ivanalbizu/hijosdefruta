@@ -18,6 +18,7 @@ El proyecto usa **npm**: el único lockfile es `package-lock.json`.
 | `npm run perfiles` | Descarga de Wikimedia Commons la foto o el logo de los perfiles que no la tienen |
 | `npm run capturas -- <slug>` | Genera los recortes resaltados de los documentos oficiales de un caso |
 | `npm run favicons` | Regenera `favicon.ico`, `apple-touch-icon.png` y los iconos del manifest desde `public/favicon.svg` |
+| `npm run rastreo` | Recoge lo nuevo de verificadores, La Moncloa y los canales de los partidos en una bandeja de pistas |
 
 ## Añadir un caso
 
@@ -158,6 +159,18 @@ YouTube, y termina con error si alguna prueba ha desaparecido (404, dominio caí
 Los fallos que pueden ser puntuales (timeouts, bloqueos anti-bots) se marcan como aviso. Web Archive
 limita las peticiones, así que la comprobación completa tarda unos minutos;
 `npm run fuentes -- --rapido` se salta las copias archivadas.
+
+## Rastreo diario
+
+`npm run rastreo` lee los RSS de los verificadores (Newtral, Maldita, EFE Verifica, Verificat), de
+La Moncloa (Consejo de Ministros y presidente) y de los canales de YouTube de los partidos, y escribe
+lo nuevo de los últimos 3 días en `investigacion/rastreo/AAAA-MM-DD.md`. De los verificadores solo
+quedan las entradas que nombran en el título a una persona o un partido del alcance (los perfiles más
+las listas de `investigacion/rastreo/config.yaml`); lo ya visto se guarda en `visto.json` y no se repite.
+La bandeja son pistas, no fuentes: se criban con la skill `/candidatos`.
+
+Opciones: `--dias 7` amplía la ventana, `--simular` imprime la bandeja sin escribir nada y `--shorts`
+lista también los shorts de YouTube. Las fuentes y los nombres se cambian en `config.yaml`.
 
 Criterios de clasificación y de fuentes: página [/metodologia](src/pages/metodologia.astro).
 

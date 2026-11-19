@@ -35,6 +35,24 @@ descartado. Un origen nuevo va en un archivo nuevo, con su fila en la tabla y en
 5. **Fechas posteriores al conocimiento del modelo**: todo hecho reciente se verifica en la web; nunca
    se completa de memoria.
 
+## Bandeja del rastreo diario
+
+«Revisa la bandeja» se refiere a `investigacion/rastreo/AAAA-MM-DD.md`, que genera `npm run rastreo`
+(README, «Rastreo diario»). Hay que gastar poco, así que no se abre todo:
+
+- Lee solo la bandeja más reciente y, dentro de ella, las pasadas que no tengan la línea «Revisada».
+- **Verificadores:** decide por el título y el extracto. El artículo solo se abre (con `web-fetch`)
+  cuando es una declaración de alguien del alcance con una afirmación comprobable (una cifra, «nunca»,
+  «más que nunca», «el primero», «mínimos históricos»…) que no esté ya en casos ni en candidatos. Los
+  bulos y las coincidencias débiles se saltan salvo que el usuario los marque. El verificador es la
+  pista: la fuente es la declaración original (vídeo o transcripción) y el dato oficial.
+- **La Moncloa y vídeos:** solo los que el usuario marque con `[x]`. Los vídeos se transcriben como
+  se explica en el paso 1, «Extraer».
+- Las exageraciones de mitin y las opiniones no son casos.
+- Lo que pase la criba se registra como `ras-NN` en
+  [investigacion/candidatos/rastreo.md](../../../investigacion/candidatos/rastreo.md). Al terminar,
+  añade al final de la pasada: `Revisada el DD-MM: ras-01 y ras-02 registrados; el resto, sin interés.`
+
 ## Procedimiento
 
 ### 1. Extraer
