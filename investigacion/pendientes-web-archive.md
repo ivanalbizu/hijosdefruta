@@ -1,81 +1,26 @@
 # Copias pendientes en Web Archive
 
-Fuentes oficiales de casos publicados que aún no tienen copia en Web Archive. Para guardar una, abre en el navegador `https://web.archive.org/save/<URL>`. Cuando esté, Claude lo comprueba con el índice CDX, añade `archivo:` en el caso y la quita de esta lista.
+Fuentes de casos publicados que aún no tienen copia en Web Archive. Para guardar una, abre en el navegador `https://web.archive.org/save/<URL>`. Cuando esté, Claude lo comprueba con el índice CDX, añade `archivo:` en el caso y la quita de esta lista.
 
-Última revisión: 13-11-2026.
+Última revisión: 19-11-2026. Ese día se añadieron 81 copias a 29 casos y 3 promesas (búsqueda en el CDX y, si no había copia, guardado con `web.archive.org/save`). De las copias de PDF se comprobó que estuvieran completas (terminan en `%%EOF`) y, cuando el caso guarda la SHA-256 del recorte, que la huella coincida. Ojo: Web Archive guarda a veces los PDF grandes cortados en 1 MiB (1 048 576 bytes): pasó con DSCD-14-PL-59, cuyas copias de 2021-01, 2021-06 y 2023-10 están truncadas; vale la del 15-12-2021.
 
-- [ ] https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2023/231115%20TRANSCRIPCI%C3%93N%20DISCURSO%20INVESTIDURA%20PG.pdf
-  - casos: no-aministia-para-politicos-e-independentistas-catalanes
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2023/231115%20TRANSCRIPCI%C3%93N%20DISCURSO%20INVESTIDURA%20PG.pdf
-- [ ] https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2019/ENTREVISTA.%20LA%20SEXTA.%20PRESIDENTE.%20190919.pdf
-  - casos: pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2019/ENTREVISTA.%20LA%20SEXTA.%20PRESIDENTE.%20190919.pdf
-- [ ] https://www.boe.es/buscar/doc.php?id=BOE-A-2020-413
-  - casos: pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria, sanchez-no-pactara-con-el-populismo
-  - guardar: https://web.archive.org/save/https://www.boe.es/buscar/doc.php?id=BOE-A-2020-413
-- [ ] https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx
-  - casos: psoe-sanchez-jefe-de-gabinete-bosnia
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx
-- [ ] https://www.congreso.es/es/opendata/diputados
-  - casos: psoe-sanchez-jefe-de-gabinete-bosnia
-  - guardar: https://web.archive.org/save/https://www.congreso.es/es/opendata/diputados
-- [ ] https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-212.PDF
-  - casos: puente-seguir-adelante-dimision-urda
-  - guardar: https://web.archive.org/save/https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-212.PDF
-- [ ] https://www.lamoncloa.gob.es/presidente/actividades/Documents/2022/070422-declaracion-conjunta-Espana-Marruecos.pdf
-  - casos: sahara-autodeterminacion-plan-autonomia-marruecos
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/presidente/actividades/Documents/2022/070422-declaracion-conjunta-Espana-Marruecos.pdf
-- [ ] https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/presidencia/paginas/2022/180322-comunicado_marruecos.aspx
-  - casos: sahara-autodeterminacion-plan-autonomia-marruecos
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/presidencia/paginas/2022/180322-comunicado_marruecos.aspx
-- [ ] https://www.boe.es/boe/dias/2026/10/06/pdfs/BOE-A-2026-20742.pdf
-  - casos: sanchez-derogar-ley-mordaza
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2026/10/06/pdfs/BOE-A-2026-20742.pdf
-- [ ] https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-148-1.PDF
-  - casos: sanchez-derogar-ley-mordaza
-  - guardar: https://web.archive.org/save/https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-148-1.PDF
-- [ ] https://www.boe.es/boe/dias/2021/12/30/pdfs/BOE-A-2021-21788.pdf
-  - casos: sanchez-derogar-toda-la-reforma-laboral
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2021/12/30/pdfs/BOE-A-2021-21788.pdf
-- [ ] https://www.boe.es/boe/dias/2012/07/07/pdfs/BOE-A-2012-9110.pdf
-  - casos: sanchez-derogar-toda-la-reforma-laboral
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2012/07/07/pdfs/BOE-A-2012-9110.pdf
-- [ ] https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-2-C1.PDF
-  - casos: sanchez-derogar-toda-la-reforma-laboral
-  - guardar: https://web.archive.org/save/https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-2-C1.PDF
-- [ ] https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2021/210621-sanchez-liceo.aspx
-  - casos: sanchez-integro-cumplimiento-sentencia-indultos
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2021/210621-sanchez-liceo.aspx
-- [ ] https://www.ine.es/daco/daco42/daco4211/epa0218.pdf
-  - casos: sanchez-paro-casi-el-doble
-  - guardar: https://web.archive.org/save/https://www.ine.es/daco/daco42/daco4211/epa0218.pdf
-- [ ] https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-255.PDF
-  - casos: sanchez-paro-casi-el-doble
-  - guardar: https://web.archive.org/save/https://www.congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-255.PDF
-- [ ] https://www.boe.es/boe/dias/2022/12/31/pdfs/BOE-A-2022-24441.pdf
-  - casos: sanchez-politicos-fuera-de-las-instituciones-de-control
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2022/12/31/pdfs/BOE-A-2022-24441.pdf
-- [ ] https://www.boe.es/boe/dias/2020/02/26/pdfs/BOE-A-2020-2672.pdf
-  - casos: sanchez-politicos-fuera-de-las-instituciones-de-control
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2020/02/26/pdfs/BOE-A-2020-2672.pdf
-- [ ] https://www.boe.es/boe/dias/2021/07/12/pdfs/BOE-A-2021-11520.pdf
-  - casos: sanchez-politicos-fuera-de-las-instituciones-de-control
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2021/07/12/pdfs/BOE-A-2021-11520.pdf
-- [ ] https://www.boe.es/boe/dias/2022/11/30/pdfs/BOE-A-2022-19927.pdf
-  - casos: sanchez-politicos-fuera-de-las-instituciones-de-control
-  - guardar: https://web.archive.org/save/https://www.boe.es/boe/dias/2022/11/30/pdfs/BOE-A-2022-19927.pdf
-- [ ] https://www.congreso.es/l15p/e12/e_0120891_n_000.pdf
-  - casos: sanchez-sin-presupuestos-no-se-gobierna
-  - guardar: https://web.archive.org/save/https://www.congreso.es/l15p/e12/e_0120891_n_000.pdf
-- [ ] https://www.lamoncloa.gob.es/consejodeministros/Paginas/enlaces/301118-enlaceaforamientos.aspx
-  - casos: sanchez-suprimir-aforamientos
-  - guardar: https://web.archive.org/save/https://www.lamoncloa.gob.es/consejodeministros/Paginas/enlaces/301118-enlaceaforamientos.aspx
-- [ ] https://www.boe.es/buscar/doc.php?id=BOE-A-2010-8228
-  - casos: sanchez-zapatero-no-congelo-las-pensiones
-  - guardar: https://web.archive.org/save/https://www.boe.es/buscar/doc.php?id=BOE-A-2010-8228
-- [ ] https://www.boe.es/eli/es/lo/2023/04/27/4
-  - casos: solo-si-es-si-jueces-no-cumplen-la-ley
-  - guardar: https://web.archive.org/save/https://www.boe.es/eli/es/lo/2023/04/27/4
 - [ ] https://www.psoe.es/media-content/2023/10/Intervenci%C3%B3n-inicial-de-Pedro-S%C3%A1nchez-en-el-Comit%C3%A9-Federal-del-28-de-octubre-de-2023.pdf
+  - casos: no-aministia-para-politicos-e-independentistas-catalanes (fuente y recorte)
+  - la copia guardada el 19-11-2026 es una página vacía de psoe.es (909 bytes), no el PDF: no sirve. Hay una copia antigua de El Independiente (en revision-fuentes.md), pero es otro archivo. Probar a guardarla desde el navegador cuando psoe.es cargue.
+- [ ] https://infocuria.curia.europa.eu/tabs/document/C/2024/C-0666-24-00000000RP-01-P-01/ARRET/323833-ES-1-html
   - casos: no-aministia-para-politicos-e-independentistas-catalanes
-  - guardar: https://web.archive.org/save/https://www.psoe.es/media-content/2023/10/Intervenci%C3%B3n-inicial-de-Pedro-S%C3%A1nchez-en-el-Comit%C3%A9-Federal-del-28-de-octubre-de-2023.pdf
+  - InfoCuria es una aplicación JavaScript: la copia guarda la página sin el texto de la sentencia. El recorte del fallo ya tiene copia (PDF de EUR-Lex).
+- [ ] https://www.poderjudicial.es/portal/site/cgpj/viewDocument?ECLI=ECLI:ES:TS:2023:1019
+  - casos: marlaska-cese-perez-de-los-cobos-perdida-de-confianza
+  - el CENDOJ redirige a un visor con código de verificación: la copia solo guarda el buscador. No se puede archivar.
+- [ ] https://www.poderjudicial.es/portal/site/cgpj/viewDocument?ECLI=ECLI:ES:TS:2022:4489
+  - casos: solo-si-es-si-jueces-no-cumplen-la-ley
+  - igual que la anterior (CENDOJ).
+- [ ] https://twitter.com/HoyPorHoy/status/1121678663739564037
+  - casos: sanchez-gobernabilidad-partidos-independentistas
+  - Web Archive no llega a X (error 523, dos intentos el 19-11-2026). Probar desde el navegador.
+  - guardar: https://web.archive.org/save/https://twitter.com/HoyPorHoy/status/1121678663739564037
+- [ ] https://www.europapress.tv/politica/1127314/1/urtasun-pregunta-feijoo-lado-insultar-milei-sanchez
+  - casos: urtasun-smi-66-por-ciento-desde-que-diaz-es-ministra
+  - Web Archive no llega a europapress.tv (error 520, dos intentos el 19-11-2026). Probar desde el navegador.
+  - guardar: https://web.archive.org/save/https://www.europapress.tv/politica/1127314/1/urtasun-pregunta-feijoo-lado-insultar-milei-sanchez
