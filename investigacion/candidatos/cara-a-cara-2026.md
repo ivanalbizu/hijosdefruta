@@ -1,0 +1,245 @@
+# Candidatos · Cara a cara Sánchez–Feijóo (19-11-2026)
+
+Parte del registro de candidatos: resumen y criterios en [../candidatos.md](../candidatos.md).
+
+## Origen
+
+Debate de la Academia de la Televisión del 19-11-2026, moderado por María Casado, emitido por RTVE,
+Atresmedia, Mediaset, FORTA y otros. Cinco bloques: vivienda, economía y fiscalidad, política social y
+servicios públicos, corrupción y regeneración, migración y política exterior. Por sorteo abrió Feijóo y
+cerró Sánchez.
+
+- **Vídeo usado para localizar:** ABC, «Así ha sido el debate COMPLETO» (YouTube `0ge5WDh_fho`, 1:39:11;
+  el debate va de 0:00:24 a 1:36:10, con pausas en 0:39:14–0:42:49 y 1:13:57–1:17:37). Los minutos de
+  este registro son de ese vídeo (subtítulos automáticos para localizar y whisper en los tramos citados;
+  **nada confirmado todavía por el usuario**). Para el caso conviene el vídeo de RTVE Noticias
+  (`f8qUA829xVY`, especial de 6:14:11, falta calcular el desfase) o el de la Academia, si lo publica.
+- **Material (fuera de git):** `investigacion/material/transcripciones/debate-19n/`: `abc.mp3` (audio),
+  `abc.es-orig.vtt` (subtítulos automáticos), `abc.subs.txt` (texto con marcas cada ~30 s, hecho con
+  `vtt2txt.py`) y `documentos/` (programa del PP de 2026 y nota del Consejo de Transparencia del
+  23-12-2025, con la misma SHA-256 que la descarga). Whisper: el venv del scratchpad se borra al reiniciar;
+  se reinstala como dice /transcribir.
+
+- **Pista:** <https://sanchezmiente.com/>, web del PP con 30 «desmentidos» en directo (22:07–23:48,
+  hora peninsular; leída el 20-11-2026, sin aviso legal ni firma). Es una pista de parte: sus fuentes son a
+  menudo prensa (Idealista, 20minutos, Libertad Digital) y algunas frases que atribuye a Sánchez son
+  paráfrasis o no están en el audio (la n.º 22, «No bajé las penas por malversación»; la n.º 30, Frontex,
+  es de las 23:48, después del debate). Nada se toma de ella sin la fuente primaria.
+
+**Fuera de alcance:** las afirmaciones de Feijóo (PP) no se investigan.
+
+## Para retomar (20-11-2026, segunda tanda)
+
+Investigados cac-10, 13, 02, 14, 07, 16 y 22; **sin commit**. Los documentos descargados están en
+`investigacion/material/transcripciones/debate-19n/documentos/`. Pendiente de que el usuario decida:
+
+1. **cac-02** (alquiler en Barcelona): publicado (`sanchez-alquiler-barcelona-ha-bajado-un-4-4-en-el-ultimo-ano`).
+2. **cac-14** (pensiones, ya existe): añadir al caso los dos hitos (voto «sí» de 2010 y «congelado a
+   0,25 %» de 2026). Antes: confirmar el minuto 49:34–49:40.
+3. **cac-22** (ley de grupos de interés, prometedor): caso de promesa incumplida o entrada en `/promesas`.
+4. **cac-10** (hucha, débil): dejarlo débil hasta que haya un saldo oficial cercano al 19-11, o publicarlo
+   con el criterio estricto de ras-01.
+5. **cac-13** y **cac-16** (débiles): se propone descartarlos. **cac-07**: descartado (propuesta).
+6. cac-20 y cac-26, bloqueados: recomendado dejarlos en espera (de la primera tanda).
+
+Ninguna cita está confirmada: al proponer un caso, pedir la confirmación con URL, tramo y texto.
+
+### cac-01 · «Hemos rehabilitado más de medio millón de viviendas durante estos últimos ocho años»
+- **Estado:** por investigar (prioridad baja)
+- **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno y candidato del PSOE) / falsedad
+- **Después:** 19-11-2026 · de 7:30 a 7:38 (whisper): «hemos rehabilitado más de medio millón de viviendas durante estos últimos ocho años»
+- **Búsquedas:** ninguna aún. Mirar el balance del Ministerio de Vivienda de los programas de rehabilitación del Plan de Recuperación (el hito comprometido con Bruselas era de unas 510 000 actuaciones) y distinguir actuaciones concedidas de terminadas.
+
+### cac-02 · Barcelona: «en el último año ha bajado en un 4,4 % el precio del alquiler»
+- **Estado:** publicado `sanchez-alquiler-barcelona-ha-bajado-un-4-4-en-el-ultimo-ano` (20-11-2026) — cita y tramo confirmados por el usuario (sin el «eh»); copia de la nota del Govern guardada por el usuario (`20261120103451`, comprobada)
+- **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno y candidato del PSOE) / falsedad. Tags: PSOE y Pedro Sánchez.
+- **En el caso (20-11-2026):** vídeo de RTVE Noticias (`f8qUA829xVY`, especial de 6:14:11), cita de 2:21:11 a 2:21:31, `start: 8467`, `end: 8493` (whisper por palabras del tramo descargado; desfase con el vídeo de ABC: la frase está en 7:39 en ABC y en 2:21:11 en RTVE). El «antes» es la nota de premsa del Govern del 02-11-2026 (<https://govern.cat/salapremsa/notes-premsa/886848/consellera-paneque-dos-anys-despres-de-la-declaracio-de-zones-tenses-els-preus-dels-lloguers-creixen-per-sota-de-la-inflacio>, leída en Chrome; curl da 403 y Web Archive solo la guarda desde el navegador del usuario), que dice las dos cosas: «Respecte del mateix trimestre de 2025, […] a Barcelona ciutat, ha estat d’un +0,5%» y «Des del 1r trimestre de 2024, el darrer sense contenció de rendes, fins al 2n trimestre de 2026, la inflació ha pujat a Catalunya un +6,8% acumulat. En aquest període, els preus del lloguer s'han reduït un -4,4% a Barcelona ciutat». Sin recorte (la nota es HTML, sin PDF). Tabla trimestral con los datos abiertos del Incasòl. En el resto del debate no corrige la cifra: a 2:31:28 (RTVE) vuelve a Barcelona para hablar de la oferta.
+- **Después:** 19-11-2026 · de 7:39 a 8:00 (whisper): «La ley estatal de vivienda es un buen ejemplo de cómo se puede intervenir un mercado que no funciona, como es el mercado de la vivienda y allí donde se aplica, allí donde no se aplica el dogma neoliberal que ustedes ejercen, por ejemplo en el Ayuntamiento de Barcelona, en el último año ha bajado en un 4,4% el precio del alquiler»
+- **Antes (dato oficial):** Incasòl, «Preu mitjà del lloguer d'habitatges per municipi» (Departament de Territori, Habitatge i Transició Ecològica; dades obertes de la Generalitat, conjunto `qww9-bvhh`, «explotació estadística del registre de les fiances», actualizado el 02-11-2026; el último trimestre publicado antes del debate es el 2.º de 2026). Barcelona, renta media mensual de los contratos nuevos: 1.er T 2024: 1193,51 €; 2.º T 2024: 1131,80; 1.er T 2025: 1087,23; 2.º T 2025: 1135,55; 3.er T 2025: 1153,11; 4.º T 2025: 1160,99; 1.er T 2026: 1137,35; **2.º T 2026: 1140,89**. <https://analisi.transparenciacatalunya.cat/resource/qww9-bvhh.json?nom_territori=Barcelona> · copia `20261120074524` (comprobada: trae la fila de abril–junio de 2026).
+- **Cálculos propios:** 2.º T 2026 frente al 2.º T 2025: **+0,5 %**. Frente al 1.er T 2024, el último antes de los topes: **−4,4 %** (de ahí sale la cifra). 1.er semestre de 2026 frente al de 2025: +2,5 % (1139,09 frente a 1111,06). 1.er T 2026 frente al 1.er T 2025: +4,6 %. Media de 2025 frente a la de 2024: −1,1 % (1134,61 frente a 1147,22). 2.º T 2026 frente al 2.º T 2024: +0,8 %. Ninguna comparación de un año da −4,4 %.
+- **Justificación del político:** ninguna publicada. El −4,4 % es la cifra que dio la Generalitat al presentar los datos del 2.º trimestre de 2026 (consellera Sílvia Paneque, hacia el 02-11-2026) como variación «desde la aplicación del tope», es decir, en dos años (Público y Crónica Global, 02-11-2026; Crónica Global la fecha «respecto al primer trimestre de 2024»). Nota del Govern sin localizar.
+- **Lo que lo debilita:** la cifra existe y es oficial; lo falso es el periodo («en el último año»). Mide la renta mensual, no el metro cuadrado (los pisos alquilados son más pequeños: lo dice la prensa, no se usa).
+- **Pista del PP (n.º 1):** +4,3 % entre el 1.er trimestre de 2025 (16,19 €/m²) y el de 2026 (16,89 €/m²), sin enlace. No se usa: mide otra cosa.
+- **Búsquedas (20-11-2026):** web («Barcelona alquiler 4,4 % Incasòl», «Paneque 4,4 % nota Govern»); que.es (03-11), Crónica Global (02-11), Tot Barcelona y Público (02-11) leídos; catálogo de dades obertes de la Generalitat (API Socrata) y de Open Data BCN (sin resultado para «lloguer mitjà»). Pendiente: nota de premsa del Govern (govern.cat) del 2.º trimestre de 2026, fecha exacta de entrada en vigor de los topes en Barcelona (marzo de 2024, de memoria) y la página del conjunto de datos para enlazarla en el caso.
+- **Notas / veredicto:** prometedor. Mismo criterio que ras-02: la referencia la fija el propio político («en el último año»), y con el último dato oficial publicado antes del debate el alquiler de Barcelona sube un 0,5 % en un año; el −4,4 % es de dos años. El matiz debe dar el −4,4 % por bueno como cifra de dos años.
+
+### cac-03 · «Las competencias exclusivas en materia de vivienda están en las comunidades autónomas»
+- **Estado:** sin indicio de contradicción — no se investiga
+- **Notas:** ≈11:37. Es la lectura habitual del art. 148.1.3.ª de la Constitución y de los Estatutos; la pista del PP (n.º 3) enumera las palancas estatales, que no la desmienten. Sería un doble rasero solo si el Gobierno hubiera sostenido lo contrario (p. ej., al defender ante el Constitucional la Ley 12/2023): pista abierta, no investigada.
+
+### cac-04 · Plan estatal de vivienda «de 7.000 millones de euros que hemos transferido» a las comunidades
+- **Estado:** por investigar (prioridad baja) — misma frase que en wild-13
+- **Notas:** ≈11:45. En wild-13 quedó sin comprobar si «repartido» o «transferido» es exacto (los 7000 millones son la dotación del Plan Estatal 2026-2030). Haría falta el acuerdo de la Conferencia Sectorial y lo transferido de verdad.
+
+### cac-05 · «Hemos construido durante estos últimos ocho años un millón de viviendas, de las cuales el 13 % son viviendas protegidas»
+- **Estado:** descartado por precedente — wild-13 (decisión del usuario, 14-11-2026)
+- **Notas:** ≈16:11 y ≈16:42, la misma frase que en The Wild Project. La estadística del Ministerio da unas 985 000 viviendas iniciadas entre enero de 2018 y junio de 2026, el 13 % protegidas; las «algo más de 700 000» de la pista del PP (n.º 4) son terminadas. Ver wild-13.
+
+### cac-06 · «Desde la aprobación de la Ley estatal de Vivienda han sido 480.000 pisos más en alquiler»
+- **Estado:** por investigar (prioridad media-baja)
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad
+- **Después:** 19-11-2026 · ≈18:44–19:15 (subtítulos; falta whisper)
+- **Lo que lo debilita:** en el mismo acto distingue el parque de la oferta: «Al haber una prolongación y una estabilidad en los contratos de alquiler, evidentemente hay menos oferta de alquiler» (≈19:15). La pista del PP (n.º 2) opone los anuncios de Idealista (393 000 viviendas menos en oferta entre 2018 y 2025), que miden otra cosa.
+- **Búsquedas:** ninguna aún. Buscar de dónde sale la cifra (INE, Encuesta Continua de Hogares o Censo: hogares en alquiler; Sistema Estatal de Referencia del Precio del Alquiler, con datos del IRPF) y si cuadra desde mayo de 2023.
+
+### cac-07 · Votaciones del PP en vivienda: «han votado en contra de reformar la ley del suelo para agilizar los trámites»
+- **Estado:** descartado (20-11-2026, propuesta; decide el usuario) — los votos comprobados constan (precedente wild-03)
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad
+- **Después:** 19-11-2026 · de 21:42 a 22:15 (whisper): «ustedes han votado en contra de limitar los precios de alquiler en las zonas tensionadas. Han votado en contra de ampliar los contratos de alquiler para dar más estabilidad a los inquilinos. Han votado en contra de reformar la ley del suelo para agilizar precisamente los trámites burocráticos. Algo que pedían precisamente sus alcaldes. Las bonificaciones fiscales para inquilinos, propietarios, comunidades de vecinos, mayores en situación de dependencia, ustedes han votado en contra. Las ayudas para jóvenes en alquiler también han votado en contra. Limitar la presencia de pisos turísticos y de fondos buitre también han votado en contra.» Ya en ≈12:37–13:08: «¿Por qué votan en contra de incentivos fiscales, de bonificaciones fiscales a los inquilinos…?»
+- **Ley del suelo (la que más podía fallar):** el PP sí votó en contra. El Gobierno retiró su proyecto en mayo de 2024 y el 25-02-2025 el Pleno rechazó tomar en consideración la proposición de ley de reforma pactada por PSOE y PNV: 126 (o 124) a favor (PSOE, PNV, CC), 186 en contra (PP, Sumar, ERC, Junts, EH Bildu, Podemos) y 34 abstenciones (Vox, BNG), según elEconomista, Forbes, Idealista y Diario de Pontevedra (25-02-2025). El PP alegó que priorizaba su propuesta en el Senado. Votación del Congreso sin descargar (no hace falta para descartar).
+- **Bonificaciones fiscales:** Real Decreto-ley 29/2026 («decreto Maricarmen», desahucios, prórrogas y deducciones para inquilinos), convalidado por la Diputación Permanente el 12-11-2026 por 35 votos contra 34; en contra, PP, Vox y Junts (Artículo14, Law&Trends, 12-11-2026).
+- **Ampliar los contratos:** el Real Decreto-ley 8/2026 (prórroga de los alquileres) se derogó el 28-04-2026 con los votos de PP, Vox y Junts (Orain, El Salto); el Real Decreto-ley 28/2026 (prórroga indefinida), el 12-11-2026.
+- **Sin comprobar:** Ley 12/2023 (precios en zonas tensionadas; el voto en contra del PP es conocido), ayudas a jóvenes, pisos turísticos y fondos. Al ser ciertas las tres que más podían fallar, no se sigue.
+- **Búsquedas (20-11-2026):** web («reforma ley del suelo Congreso votación PP», «decreto Mari Carmen convalidación PP»).
+- **Notas / veredicto:** descartado. Las votaciones que menciona existen y el PP votó en contra; «algo que pedían sus alcaldes» es una valoración.
+
+### cac-08 · Comisión Europea: «la gran economía europea que más crezca, un 2,6 %»
+- **Estado:** descartado — se precisa en el mismo acto (precedentes ras-03 y wild-02)
+- **Notas:** 25:23 y 26:56. Cuando Feijóo le dice que «hay ocho países que han crecido más», responde: «Estoy hablando de las grandes economías» (≈29:29). La pista del PP (n.º 7) omite el «gran».
+
+### cac-09 · «Subir el salario mínimo interprofesional al 75 %»
+- **Estado:** descartado — los datos oficiales lo respaldan
+- **Notas:** 25:58–26:03 y ≈29:59. De 735,9 euros (SMI de 2018, el vigente cuando llegó al Gobierno) a 1286 (SMI de 2027, Real Decreto 1013/2026): +74,8 % (ver ras-02). Sánchez no fija otra fecha de partida, a diferencia de Díaz (ras-02).
+
+### cac-10 · La hucha de las pensiones: «En 2018 estaban en 5.000 millones de euros, hoy están en 20.000 millones»
+- **Estado:** débil (20-11-2026) — «hoy» adelanta la previsión de cierre de año; el último dato oficial tiene ocho meses (decide el usuario)
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad
+- **Después:** 19-11-2026 · de 26:03 a 26:17 (whisper): «que se puede revalorizar las pensiones y también llenar la hucha de las pensiones. En 2018 estaban en 5.000 millones de euros, hoy están en 20.000 millones de euros y nuestra apuesta es llevarlo en el año 2030 a 50.000 millones de euros». Lo repite de 49:54 a 50:01: «Nosotros hemos llenado la hucha de las pensiones de 5.000 millones de euros a 20.000 millones de euros y queremos dejarla en 50.000 millones de euros».
+- **Antes (último dato oficial publicado antes del debate):** La Moncloa, nota del Ministerio de Inclusión del 13-04-2026, «El Fondo de Reserva de la Seguridad Social supera los 15.200 millones de euros en abril»: «El Fondo de Reserva de la Seguridad Social alcanzó, a 31 de marzo, un importe de 15.267 millones de euros, su máximo desde hace diez años. Desde 2019, son 13.114 millones de euros más. En los primeros meses de 2026, el Fondo ha recibido aportaciones por el concepto del Mecanismo de Equidad Intergeneracional (MEI) por un valor de 1.162,23 millones de euros.» <https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/130426-fondo-reserva-seguridad-social-abril.aspx> · copia `20261116065836` (leída). Es el dato de la Comisión de Seguimiento del Fondo. No hay otro saldo oficial posterior.
+- **La cifra del Gobierno:** la ministra Elma Saiz, en la rueda de prensa del Consejo de Ministros del 20-10-2026, habló de unos 20 000 millones **al cierre de 2026** (Infobae, 20-10-2026, en estilo indirecto, sin cita literal). El Debate (19-11-2026) da 19 841 millones como previsión anual. Fuente primaria pendiente: transcripción de esa rueda de prensa en La Moncloa.
+- **Cálculos propios:** 20 000 frente a 15 267: +31 %. Pero el Fondo crece cada mes con el MEI (1162 millones en el primer trimestre, unos 390 al mes): a ese ritmo, a mediados de noviembre rondaría los 18 000–18 500 millones más rendimientos (estimación propia, no oficial), y la previsión del Gobierno para seis semanas después es de unos 20 000.
+- **Matiz sobre 2018:** «En 2018 estaban en 5.000 millones» cuadra con el cierre de 2018 (≈5043 millones, de memoria). La nota da a entender que en 2019 el Fondo tocó su mínimo (15 267 − 13 114 = 2153 millones), ya con Sánchez en el Gobierno. No es una contradicción, pero sirve de contexto si se publica algo.
+- **Búsquedas (20-11-2026):** web («Fondo de Reserva saldo noviembre 2026», «"20.000 millones" Saiz», «Fondo de Reserva 30 de junio / 30 de septiembre de 2026»); El Debate (19-11), Infobae (20-10 y 17-11) leídos; elEconomista (09-2026, «en 2026 ya suma más de 4.000 millones») da 403. No hay notas del Fondo posteriores a la del 13-04-2026 en La Moncloa, la revista de la Seguridad Social ni inclusion.gob.es. La fecha del 13-11-2026 que daba El Debate según la primera búsqueda no se ha confirmado.
+- **Notas / veredicto:** débil. Con el criterio estricto de ras-01 (último dato oficial publicado) sería una falsedad: 15 267 frente a «hoy están en 20.000». Pero el dato oficial tiene ocho meses, el Fondo sube cada mes y los 20 000 son la previsión oficial para seis semanas después: la diferencia real con el saldo del día probablemente ronda el 8–10 %, no el 31 %. No es una prueba irrefutable. Se reabre si el Ministerio publica un saldo cercano al 19-11 (Comisión de Seguimiento, informe a las Cortes) claramente por debajo de 20 000, o cuando se conozca el cierre de 2026.
+
+### cac-11 · Deuda pública: «hemos reducido en 25 puntos la deuda pública en relación con el PIB»
+- **Estado:** por investigar (prioridad baja)
+- **Después:** 19-11-2026 · de 26:21 a 26:28 («consolidar las cuentas públicas, reducir el déficit público y reducir la deuda pública») y de 38:09 a 38:25 («vamos a dejarla por debajo del 100% del Producto Interior Bruto […] Hemos reducido, señor Feijó, en 25 puntos la deuda pública en relación con el PIB»)
+- **Lo que lo debilita:** medido desde el máximo de la pandemia (ratio trimestral del Banco de España en torno al 125 % en 2021, de memoria) la cuenta puede salir. La pista del PP (n.º 8) opone la deuda en euros, en máximos: es otra magnitud (wild-14).
+- **Qué haría caso:** que la serie del Banco de España no dé unos 25 puntos desde ningún máximo. Con la ratio de 2018 (≈100 %) no hay bajada, pero Sánchez no fija esa fecha.
+
+### cac-12 · Energía: «el 60 % de la electricidad proviene de las energías renovables» y el precio del MWh, «un 27 % más bajo que el promedio de la Unión Europea, mientras que en 2018 fue un 14 % más alto»
+- **Estado:** por investigar (prioridad baja)
+- **Notas:** ≈36:40–37:11. Comprobar con Red Eléctrica (cuota renovable de 2026 hasta octubre y de 2025) y ver qué precio usa (mayorista, Eurostat para hogares…); si la medida no está clara, débil.
+
+### cac-13 · Programa del PP: «plantea elevar el gasto en defensa al 5 % del PIB»
+- **Estado:** débil (20-11-2026) — se propone descartar: la lectura de Sánchez es defendible (decide el usuario)
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad
+- **Después:** 19-11-2026 · de 44:16 a 44:31 (whisper): «Usted en su programa electoral también plantea elevar el gasto en defensa al 5% del PIB y tendrá que explicar, señor Feijó, de dónde va a sacar esos recursos económicos, porque estamos hablando de 80.000 millones de euros más al año durante 10 años». Lo repite en ≈53:43–54:01: «En su programa electoral asume que hay que gastar el 5% del producto interior bruto en defensa. Eso para que nos escuchen y entiendan los ciudadanos significan 80.000 millones de euros al año más».
+- **Antes (el documento):** programa electoral del PP de 2026, «Reconstrucción nacional» (https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-2026-RECONSTRUCCION-NACIONAL.pdf, 64 págs., SHA-256 ae0c35d7…49789c, descargado el 20-11-2026 en `debate-19n/documentos/pp-programa-electoral-2026.pdf`, sin copia en Web Archive todavía). No aparece ningún porcentaje de gasto en defensa («5 %», «5%», «gasto en defensa», «PIB» junto a defensa: nada). Lo único es la medida 52, pág. 21: «HAREMOS TRANSPARENTES LOS COMPROMISOS ADQUIRIDOS CON NUESTROS ALIADOS INTERNACIONALES EN MATERIA DE DEFENSA. La Defensa será una verdadera política de Estado y contará con una inversión plurianual que permita conocer fehacientemente y cumplir nuestros compromisos internacionales. Aprobaremos una ley de programación y financiación de la defensa […]».
+- **Lo que lo debilita:** España firmó la declaración de la cumbre de La Haya (25-06-2025), en la que los aliados se comprometen al 5 % en 2035; si «cumplir nuestros compromisos internacionales» es el 5 %, el «asume» de la segunda frase es una inferencia, no un invento. En el mismo acto, Feijóo replica: «¿Qué es usted el acuerdo que firmó en la OTAN?» (44:36).
+- **Lo que lo refuerza:** el propio Sánchez sostiene que España no está comprometida con el 5 % («el no a Trump y a la OTAN del 5% del presupuesto en defensa», ≈1:18:38; «No es verdad» cuando Feijóo le dice que lo firmó, 54:30). Con su propia lectura, «cumplir nuestros compromisos» no es el 5 %. Y la primera frase («plantea elevar el gasto en defensa al 5% del PIB») atribuye al programa una cifra que no está.
+- **Feijóo y el 5 % en público:** sí lo ha asumido. Bruselas, 26-06-2025, tras la cumbre del Partido Popular Europeo, cuya declaración respalda el plan de la OTAN del 5 % (3,5 % de gasto militar y 1,5 % de inversiones relacionadas): un Gobierno del PP «echaría bien las cuentas» para llegar al 5 % en 2035 (EFE); citas literales: «Echaré bien las cuentas en mi país, mantendré los servicios públicos» y «si tengo que pedir mayor flexibilidad a los socios de la OTAN lo haré» (EFE en Investing.com, 26-06-2025; El Español, 27-06-2025: «Feijóo asume el compromiso de llegar al 5% de gasto en Defensa en 10 años»). En la rueda de prensa no fue explícito con la cifra, según El Español. Sin fuente primaria (vídeo del PP o declaración del PPE) localizada.
+- **Búsquedas (20-11-2026):** programa del PP leído con `pdftexto.mjs`; web («Feijóo 5 % PIB defensa compromiso OTAN»); EFE y El Español leídos. No se ha buscado el vídeo ni la declaración del PPE: no hace falta para la propuesta de descarte.
+- **Notas / veredicto:** débil, se propone descartar. El programa no da la cifra, pero el PP se compromete a «cumplir nuestros compromisos internacionales», que para el PP son el 5 % (Feijóo en el mismo debate: «¿Qué es usted el acuerdo que firmó en la OTAN?»), y Feijóo dijo en 2025 que un Gobierno suyo iría al 5 % en 2035. «Plantea elevar el gasto en defensa al 5 %» es inexacto en el detalle (la cifra no está escrita en el programa), pero no es una contradicción limpia: la postura que le atribuye es pública.
+
+### cac-14 · «Ustedes cuando han gobernado han congelado las pensiones a 0,25 %»
+- **Estado:** ya existe — `sanchez-zapatero-no-congelo-las-pensiones`; dos hitos listos para la cronología (20-11-2026), pendiente de confirmar el minuto del debate
+- **Hito 1 · 27-05-2010, el voto de Sánchez:** votación nominal del Pleno del Congreso, sesión 160, votación 1, «CONVALIDACIÓN REAL DECRETO LEY REAL DECRETO-LEY 8/2010, de 20 de mayo, por el que se adoptan medidas extraordinarias para la reducción del déficit público»: «SI 169 […] NO 168 […] ABSTENCIONES 13» (pág. 1); el listado «SI» del G.P. Socialista va de la pág. 2 a la 4 y en la pág. 4 figura «Sánchez Pérez-Castejón, Pedro» (escaño 2806); el «NO» empieza en la pág. 5. <https://www.congreso.es/votoplenoh/L9/20100527001.pdf> · copia `20230807115022` (también `20211114070354`) · SHA-256 2b014bfb…dbce4d9c4 · 10 págs., termina en `%%EOF`. Diario de Sesiones del Congreso, IX legislatura, núm. 169 (27-05-2010), pág. 3: «se aprueba por 169 votos a favor, 168 en contra y 13 abstenciones» · <https://www.congreso.es/public_oficiales/L9/CONG/DS/PL/PL_169.PDF> · copia `20240520022741` · SHA-256 c3733dcf… · 34 págs. Copias locales en `investigacion/material/transcripciones/debate-19n/documentos/`. Contexto neutro: el voto es al decreto entero (también recortaba el sueldo de los empleados públicos); la suspensión de la revalorización para 2011 es su art. 4, que ya cita el caso. Pista: Maldita, 13-11-2026 (no se cita).
+- **Hito 2 · 19-11-2026:** de 49:34 a 49:40 (whisper): «Y en segundo lugar, ustedes cuando han gobernado, han congelado las pensiones a 0,25%, señor Feijó». Feijóo, encima: «El diputado que congeló las pensiones fue usted». Sin confirmar por el usuario.
+- **Notas:** en el cara a cara de 2023 negó que Zapatero las congelara (el caso); ahora llama «congelar» a revalorizarlas un 0,25 % (2014-2017), y en 2010 votó a favor del decreto que suspendió la revalorización de 2011. Es la misma persona sobre lo mismo: hitos, no caso propio. Para el recorte del hito 1 vale el PDF de la votación (documento oficial del Congreso), con `buscar` en «Sánchez Pérez-Castejón».
+
+### cac-15 · Pensiones: «he subido al pensionista, en 2018 a 2026, 6.000 euros la pensión al año»
+- **Estado:** por investigar (prioridad baja)
+- **Notas:** de 49:42 a 49:53 y de 53:05 a 53:11 («6.000 euros cobran más al año los pensionistas gracias a este gobierno»). Comprobar la pensión media de jubilación (Seguridad Social, junio de 2018 frente a octubre de 2026, por 14 pagas). Si cuadra con la media, no es caso (la pista del PP, n.º 6, habla del IRPF: otra cosa).
+
+### cac-16 · «Multiplicar por cinco la financiación del Sistema Nacional de Dependencia, multiplicar por dos la educación»
+- **Estado:** débil (20-11-2026) — el propio Gobierno dice «casi por cinco» y lo aprobado para 2027 pasa de cinco
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad
+- **Después:** 19-11-2026 · de 53:17 a 53:40 (whisper): «de las cosas más importantes que hemos hecho durante todo este tiempo ha sido, por ejemplo, multiplicar por 5 la financiación del Sistema Nacional de Dependencia, multiplicar por 2 la educación. 2.600 millones de euros estamos destinando a las becas de nuestros estudiantes, más de 400.000 plazas creadas para la formación profesional en nuestro país. Y en Sanidad hemos aumentado en 18.000 millones de euros el presupuesto en Sanidad.»
+- **Lo que dijo el Gobierno antes:** La Moncloa, actividad del presidente del 23-06-2026 (encuentro en el Imserso): Sánchez dice que el real decreto-ley «casi multiplica por cinco la financiación estatal desde nuestra llegada al Ejecutivo» y, del periodo anterior, que han logrado «triplicar la inversión en Dependencia, pasando de poco más de 1.300 millones de euros a los casi 3.800 millones de euros en el año 2025» (sin año de los 1300). <https://www.lamoncloa.gob.es/presidente/actividades/paginas/2026/230626-sanchez-apoyo-discapacidad-dependencia.aspx> (transcripción enlazada: 20260622-sanchez-politicas-discapacidad-dependenci.aspx, sin leer).
+- **Lo aprobado:** Real Decreto-ley 17/2026, de 23 de junio, convalidado el 14-07-2026 (BOE-A-2026-15455, 16-07-2026; solo Vox en contra, según prensa): aportación del Estado de 5513,8 millones en 2026 y 7239,4 millones en 2027 (cifras de prensa; la de 2027, con el Real Decreto-ley 36/2026). Sin leer en el BOE.
+- **Cálculos propios:** con los 1300 millones de partida, 2026 sale ×4,2 y 2027, ×5,6.
+- **Búsquedas (20-11-2026):** web («multiplicado por cinco financiación dependencia», «real decreto-ley dependencia convalidación»); página de La Moncloa leída. «Multiplicar por 2 la educación»: sin investigar (no se sabe qué magnitud mide: presupuesto del Ministerio, becas…).
+- **Notas / veredicto:** débil. En junio el propio Sánchez dijo «casi por cinco»; en el debate quita el «casi». Entre ×4,2 (2026) y ×5,6 (2027, ya aprobado) no hay contradicción limpia (precedente usr-02: exageración de mitin). Haría falta la aportación oficial del Estado en 2018 y en 2026 (Imserso, PGE) con un resultado lejos de cinco, y aun así lo aprobado para 2027 le daría la razón.
+
+### cac-17 · Feijóo en la Xunta: infraestructuras «un 44 %» menos, «596 millones» en 2009 y «337» en 2022
+- **Estado:** por investigar (prioridad baja)
+- **Notas:** de 48:22 a 48:45 (subtítulos). Presupuestos de la Xunta (consellería de infraestructuras) de 2009 y 2022. La pista del PP no lo discute. En el mismo tramo: «El señor Rajoy redujo en un 65% las infraestructuras tocando en 2018 el mínimo desde el año 1985» (medida sin precisar: débil).
+
+### cac-18 · Feijóo y la sanidad gallega: «recortó el presupuesto del Servicio Gallego de Salud, recortó el número de camas hospitalarias, recortó en más de 600 la plantilla»
+- **Estado:** débil — no se investiga por ahora
+- **Notas:** 55:33–56:40. Los recortes de 2009-2014 y el aumento hasta 2022 pueden ser ciertos a la vez (la pista del PP, n.º 19, compara 2009 con 2022): datos que no se miden igual. «Privatizó el hospital público de Vigo» es una valoración de una concesión.
+
+### cac-19 · Comunidades: «ha transferido 300.000 millones de euros a las comunidades autónomas»; Madrid y Andalucía
+- **Estado:** por investigar (prioridad baja)
+- **Notas:** 56:34–57:35. «300.000 millones» (¿más que con Rajoy, acumulado?); Madrid: «7.000 millones de euros en contratos a Quirón» y «360.000 madrileños que han tenido que hacerse un seguro privado solo en un año» (probablemente datos de ICEA, no oficiales); Andalucía: «8.000 sanitarios menos, 3.000 aulas públicas menos, 2.000 plazas menos en residencias para mayores». Lo más comprobable con fuente oficial: plantilla del SAS y unidades escolares públicas (Ministerio de Educación).
+
+### cac-20 · Corrupción: «uno de los gobiernos más limpios», «el partido más corrupto», imputados y causas del PP
+- **Estado:** bloqueado — procesos judiciales y atribución de delitos (decide el usuario)
+- **Notas:** 1:00:43–1:02:13, 1:07:49–1:08:19 y ≈1:10:24: «15 ministros o imputados o condenados» con Aznar y Rajoy, «30 causas abiertas, 150 cargos públicos vinculados con casos de corrupción y 37 investigados o imputados». También 1:07:49 («el Tribunal de Cuentas no está investigando», sobre su hermano: vida familiar y procedimiento abierto). La pista del PP (n.º 20) opone las sentencias de Ábalos, Koldo y Aldama.
+
+### cac-21 · Consejo de Transparencia: el PSOE, «el partido más transparente de España», con un 83 %; PP, 34 %; Vox, 33 %
+- **Estado:** descartado — los datos oficiales lo respaldan (precedente wild-03)
+- **Después:** 19-11-2026 · ≈1:04:14–1:04:44 (subtítulos)
+- **Fuente:** nota del Consejo de Transparencia y Buen Gobierno del 23-12-2025 (https://consejodetransparencia.es/content/dam/ctransparencia/portal-ctbg/comunicacion/noticias/2025/NP_evaluacion-partidos-2025.pdf, pág. 2; copia local en `debate-19n/documentos/`): Índice de Cumplimiento de la Información Obligatoria de 2025 (y 2024): PSOE 83,1 (57,8), Podemos 74 (57,8), IU 50,5 (32,7), Sumar 46,1 (38,8), PP 34,2 (44,4), Vox 33,2 (33,7). Solo PP y Vox bajan.
+- **Notas:** lo único inexacto es que lo llama «grado de cumplimiento de las recomendaciones» (el índice mide la información obligatoria publicada; recomendaciones aplicadas: PSOE 4 de 7, PP 0 de 12). El Consejo no dice «el más transparente», pero es el índice más alto.
+
+### cac-22 · Ley de grupos de interés: «nos comprometemos a aprobar la ley de grupos de interés que nos obliga también Europa y que ustedes votaron en contra»
+- **Estado:** prometedor (20-11-2026) como promesa incumplida, con un matiz fuerte (lo intentó y el Congreso lo tumbó); decide el usuario entre caso y archivo de promesas
+- **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida. Tags: PSOE y Pedro Sánchez.
+- **Antes (las promesas):**
+  - Programa del PSOE de 2015, pág. 84 (y 2016, pág. 83): «Regular la actividad de lobby ante el Poder Legislativo, el Gobierno y la Administración. Crear un registro obligatorio de lobbies y lobistas.»
+  - Acuerdo «Coalición progresista» PSOE–Unidas Podemos (30-12-2019), pág. 22, punto 2.11.4: «Abordaremos la regulación de los lobbies para hacer transparente su incidencia política, con registro obligatorio y público de sus entrevistas y agendas.»
+  - Programa del PSOE de 2023, pág. 243: «Aprobaremos la Ley de Lobbies para dar transparencia a las actividades de los grupos de interés, creando un registro público y gratuito que permita monitorizar las actividades de influencia que se ejercen sobre el personal empleado público.» Y pág. 246: «Aprobaremos las leyes de transparencia de grupos de interés y de prevención de conflictos de intereses del personal empleado público.» (El de 2019, pág. 172, solo lo plantea en la reforma del Reglamento del Congreso.)
+  - Todos en `investigacion/material/` (programas y `acuerdos/30122019-Coalición-progresista.pdf`).
+- **Después:** 16-09-2026 · el Congreso deroga el Real Decreto-ley 21/2026, de 25 de agosto, de transparencia e integridad de las actividades de los grupos de interés: «el Congreso de los Diputados, en su sesión del día de hoy, acordó derogar el Real Decreto-ley 21/2026» · BOE-A-2026-19419 (18-09-2026) <https://www.boe.es/buscar/doc.php?id=BOE-A-2026-19419> · copias `20261120074628` (ficha) y `20261120074622` (PDF, SHA-256 4479055f…) · 179 en contra, 155 a favor y 12 abstenciones; en contra PP, Vox, Junts y UPN (prensa: The Objective, 16-09-2026). Estuvo 22 días en vigor. A 19-11-2026 no hay ley de grupos de interés.
+- **Y en el debate:** 19-11-2026 · ≈1:04:44–1:05:15 (subtítulos; falta whisper): «nos comprometemos a aprobar la ley de grupos de interés que nos obliga también Europa y que ustedes votaron en contra en esta legislatura».
+- **Justificación del político:** el Gobierno lo intentó tres veces: un proyecto de ley que decayó con la disolución de 2023, otro remitido en enero de 2025 que quedó en ponencia por falta de acuerdo (The Objective, 29-06-2026: «Sánchez retrasa la regulación de los lobbies») y el real decreto-ley, derogado por la oposición y Junts (CCOO y UGT pidieron no convalidarlo). Fuente primaria pendiente: BOCG de los dos proyectos (expedientes 121/…), Diario de Sesiones del 16-09-2026 y la votación nominal.
+- **Lo que lo debilita:** no es inacción: el bloqueo final fue parlamentario. «Nos obliga también Europa»: según moncloa.com (diario privado, no La Moncloa), España pierde 260 millones de fondos europeos; sin comprobar si era un hito del Plan de Recuperación.
+- **Relación:** `sanchez-puertas-giratorias-exministros-consejos` (arch-24) ya menciona el Real Decreto-ley 21/2026; enlazar.
+- **Búsquedas (20-11-2026):** web («Real Decreto-ley 21/2026 convalidación derogado», «ley de grupos de interés promesa coalición 2019 proyecto decayó»); BOE leído; programas de 2015, 2016, 2019 y 2023 y acuerdos de investidura de 2019 y 2023 (PNV, ERC, BNG, Junts, ofertas a Podemos e IU) con `pdftexto.mjs`: en los acuerdos de 2023 no aparece.
+- **Notas / veredicto:** prometedor. Promesa concreta y repetida («Aprobaremos la Ley de Lobbies»), once años desde la primera y ocho en el Gobierno, sin ley. El matiz tiene que contar los tres intentos y quién votó en contra del decreto. Dos opciones: caso de promesa incumplida, o entrada en `/promesas` (la promesa del debate, campaña del 29N, `pendiente`, y la de 2023 como `incumplida`).
+
+### cac-23 · Malversación: «No es cierto», cuando Feijóo dice que «las bajó»
+- **Estado:** débil — conversación cruzada (precedente wild-15)
+- **Notas:** 1:07:19–1:07:26 (whisper): Feijóo: «vamos a endurecer las penas por malversación, que usted las quitó, las bajó, perdón»; se oye «No es cierto» (sin confirmar que sea Sánchez). La Ley Orgánica 14/2022 (BOE-A-2022-21800) rebajó la pena del desvío de fondos sin ánimo de lucro (art. 433). Dos palabras encima de otro no bastan; la pista del PP (n.º 22) le atribuye «No bajé las penas por malversación», que no está en el audio. Haría falta una frase propia y completa, en otro acto, negando la rebaja.
+
+### cac-24 · «Usted mismo ha dicho que quiere derogar la ley de muerte digna»
+- **Estado:** por investigar (prioridad baja)
+- **Notas:** ≈1:11:25–1:11:40 y ≈1:13:27. En el debate Feijóo dice «modificar» («No toque usted la eutanasia»). Sería falsedad si Feijóo nunca dijo «derogar»; hace falta su declaración anterior en vídeo o en el Diario de Sesiones. Igual con «restringir el acceso al aborto de las mujeres de 16 años».
+
+### cac-25 · OTAN: «el no a Trump y a la OTAN del 5 %» y «No es verdad» cuando Feijóo dice que lo firmó
+- **Estado:** débil — disputa de interpretación
+- **Notas:** ≈1:18:38 y 54:27–54:30. España firmó la declaración de La Haya (25-06-2025) con el compromiso del 5 % en 2035, con una carta de Rutte que le reconocía «flexibilidad». Sería caso si en 2025 el propio Sánchez dijo que España suscribía ese objetivo (transcripciones de La Moncloa de la cumbre). Relacionado con cac-13.
+
+### cac-26 · Ceuta: el CNI «ha notificado a la jueza Tardón de la Audiencia Nacional que no hay pruebas fehacientes de que el régimen de Marruecos esté detrás de los asaltos del 30 y el 31 de julio»
+- **Estado:** bloqueado — causa abierta en la Audiencia Nacional (decide el usuario)
+- **Notas:** ≈1:22:42–1:23:13. La frase es sobre la investigación misma; la pista del PP (n.º 24) opone un informe policial remitido al juzgado (prensa). Ver ras-04 (Sánchez y las mafias de Ceuta, débil).
+
+### cac-27 · Migración: «ha reducido la migración irregular en un 21 % desde el año 2018, que es donde lo dejó el señor Rajoy» y «un 39 % por debajo» del pico de 2024
+- **Estado:** prometedor (20-11-2026) — pendiente de leer el informe de Interior al 15-11-2026 y de que el usuario confirme la cita
+- **Persona / tipo propuesto:** Pedro Sánchez (presidente del Gobierno y candidato del PSOE) / falsedad. Tags: PSOE y Pedro Sánchez.
+- **Después:** 19-11-2026 · vídeo de ABC (`0ge5WDh_fho`), de 1:27:22 a 1:27:31 (whisper con marcas por palabra, 5242,1–5250,3 s): «Mire, este gobierno ha reducido la migración irregular en un 21% desde el año 2018, que es donde lo dejó el señor Rajoy». Entre «lo» y «dejó» hay 1,3 s y los subtítulos automáticos dan «donde lo dejó donde lo dejó»: comprobar al escucharlo si lo repite. Lo vuelve a decir de 1:27:48 a 1:28:05: «Pues como le he dicho, este gobierno ha reducido la migración irregular en un 21% desde el año 2018. Incluso con el repunte que estamos sufriendo ahora mismo en Canarias, siguen muy lejos de los máximos históricos que tuvimos en el año 2024, es decir, un 39% por debajo de ese pico registrado.»
+- **Contexto en el acto:** responde a Feijóo (1:26:40–1:27:22), que acaba de decir que en España la migración irregular ha subido «un 39%» este año y que desde que Sánchez es presidente han entrado «400.000. Más 100.000 en Ceuta». Sánchez no vuelve a precisar el punto de partida en el resto del bloque (hasta 1:33:00).
+- **Antes (Interior, informes quincenales; leídos en copias de Web Archive, todas terminan en `%%EOF`):**
+  - **Hasta el 31-05-2018**, el último con Rajoy en el Gobierno (moción de censura del 01-06-2018): 10 639 llegadas por mar y tierra, frente a 6852 en el mismo periodo de 2017 (+55,3 %). <https://www.interior.gob.es/opencms/pdf/prensa/balances-e-informes/2018/10_informe_quincenal_01-01-2018_al_31-05-2018.pdf> · copia `20260305141002` (misma huella que la de `20221103103542`) · SHA-256 1d659462… · pág. 2, «TOTAL GENERAL (POR VÍA MARÍTIMA Y TERRESTRE) 10.639 6.852 +3.787 +55,3».
+  - **Hasta el 14-11-2018:** 55 949 (2017: 23 147; +141,7 %). <https://www.interior.gob.es/opencms/pdf/prensa/balances-e-informes/2018/informe_quincenal_acumulado_01-01_al_14-11-2018.pdf> · copia `20251012194640` (misma huella que `20221103103540`) · SHA-256 36d08ccf… · pág. 2. El informe de 2019 al 14-11 da la misma cifra para 2018.
+  - **Todo 2018:** 64 298 (2017: 27 834; +131,0 %). <https://www.interior.gob.es/opencms/pdf/prensa/balances-e-informes/2018/24_informe_quincenal_acumulado_01-01_al_31-12-2018.pdf> · copia `20250618154649` · SHA-256 e5cb1140… · pág. 2.
+  - **Hasta el 15-11-2024:** 54 216 en total; Canarias, 39 713 (informe 21 de 2024: la copia buena es `20251115071119`, SHA-256 d356f0d6…; la de `20250124105616` está cortada en 1 MiB).
+  - **Hasta el 31-05-2026:** 10 224 (informe 10 de 2026, copia `20260610121723`).
+  - **Hasta el 15-11-2026:** 44 238 según Verificat (ras-01). **Sin leer:** no hay copia en Web Archive, el guardado da 520 y interior.gob.es pide en Chrome la casilla de Cloudflare. Hay que pedírselo al usuario.
+- **Cálculos propios con esas cifras:** 2026 frente al mismo periodo de 2018: −20,9 % (el 21 % cuadra). De las 55 949 llegadas de 2018 hasta el 14-11, 45 310 (81,0 %) fueron después del 31-05, con Sánchez en el Gobierno; del año entero, 53 659 de 64 298 (83,5 %). 2026 frente al mismo periodo de 2017, el último año completo de Rajoy: +91,1 % (44 238 frente a 23 147); frente a todo 2017, +58,9 %. Enero–mayo de 2026 frente a enero–mayo de 2018: −3,9 % (10 224 frente a 10 639). Total de 2026 frente al mismo periodo de 2024: −18,4 %, así que el «39 %» habla de Canarias: con el +66 % sobre 2025 que da Verificat, saldrían unas 24 200 llegadas, un 39 % menos que las 39 713 de 2024 (pendiente del informe).
+- **Ceuta:** los informes de 2026 dejan fuera «LAS ENTRADAS PRODUCIDAS LOS DÍAS 30 Y 31 DE JULIO QUE YA HAN SIDO OBJETO DE TRIAJE» (nota de las págs. 10 y 11 del informe al 31-10). Según la prensa, Interior las cifró en unas 72 000 (04-08-2026; Marlaska en el Congreso el 28-08-2026) y el Gobierno de Ceuta en al menos 96 058. Con ellas, 2026 superaría a 2018. Sin buscar aún en fuente primaria (Diario de Sesiones del 28-08-2026 o nota de Interior). Es el tema de cac-26 (bloqueado por la causa abierta), aunque la cifra no sale de la causa.
+- **Justificación del político:** ninguna publicada (búsquedas web del 20-11-2026). La que cabe en el matiz: cuando Rajoy dejó el Gobierno las llegadas ya subían (+55,3 % en enero–mayo de 2018 frente a 2017).
+- **Búsquedas:** índice de «Balances e informes» de Interior (copia de Web Archive de octubre de 2026): los informes de 2018 y 2019 están en `/opencms/pdf/prensa/balances-e-informes/<año>/`, no en `.galleries`; en 2018 faltan los del 30-06 al 31-08 con el nombre habitual (los de julio y agosto tienen otro nombre). CDX de los informes de 2018, 2019, 2024 y 2026. Búsquedas web del «21 %»: Diario Sabemos (20-11) habla de una caída «alrededor del 11,5%» en una «comparación homogénea» sin explicar el cálculo (probablemente 44 238 frente a las 49 997 llegadas por mar de 2018, que no es homogéneo); OKDiario critica la comparación entre dos puntos. Ningún verificador la ha revisado todavía. La pista del PP (53 659 desde el 1 de junio) coincide con los informes, pero no se usa.
+- **Relación:** caso propio enlazado con `sanchez-migracion-irregular-ha-bajado-un-38-por-ciento` (la misma persona, otra afirmación).
+- **Notas / veredicto:** prometedor. El 21 % es correcto si se toma 2018 entero; lo que no se sostiene es «que es donde lo dejó el señor Rajoy»: el 81 % de las llegadas de ese periodo de 2018 fueron con Sánchez ya en el Gobierno. Mismo criterio que ras-02 (la referencia la fija el propio político): medido desde donde lo dejó Rajoy (2017, su último año completo), en 2026 han llegado un 91 % más. Riesgo de lectura: «donde lo dejó» se puede entender como «el año en que se fue»; por eso el caso debe dar el 21 % por bueno en el matiz y centrarse en la atribución. Lo que lo debilita: en enero–mayo de 2018 ya subían (+55,3 %) y enero–mayo de 2026 está casi igual (−3,9 %). El «39 %» de Canarias parece correcto: no es caso.
+
+### cac-28 · «Cuando yo llegué al Gobierno estaban en 5 semanas los permisos paternos, a 19 semanas»
+- **Estado:** sin indicio de contradicción — no se investiga
+- **Notas:** ≈1:28:54. Las 5 semanas entraron en vigor el 05-07-2018 (Ley de Presupuestos de 2018), un mes después de su llegada: diferencia mínima.
+
+### Otras frases de Sánchez sin indicio de contradicción (no se registran como candidatos)
+- Préstamos «a tipo cero de interés de 50.000 €» del Real Decreto-ley «de Mari Carmen» (≈8:02, ≈12:37): medida aprobada.
+- «Se estarían ahorrando 500 € al mes» en Madrid o Valencia con la ley estatal (≈12:07) y el ejemplo del alquiler de 1320 € (≈19:46): estimaciones, no datos.
+- «Seis de cada 10 € de los planes regionales de vivienda provienen de la Administración General del Estado» (≈17:12): sin fuente clara; se puede mirar si hace falta.
+- «Sacar de las plataformas digitales a 110.000 pisos turísticos que eran ilegales» (≈18:44): dato del Ministerio de Consumo; lo que afirma es el voto del PP.
+- 22,6 millones de afiliados, «más de 10 millones de mujeres», 3,5 millones de autónomos (≈25:23): afiliación de octubre de 2026, previsiblemente exacta.
+- «Crecer y reducir las emisiones» (25:52): las emisiones de 2025 están por debajo de las de 2018 (la pista del PP, n.º 12, lo admite).
+- «Hemos bajado el IVA de la luz, del gas, de los alimentos» (≈33:37): rebajas temporales que existieron. Escudo de 12 000 millones por la guerra de Irán y rebaja del IRPF a 10 millones de contribuyentes (≈33:06–33:37): cifras del Gobierno; la falta de deflactación (pista del PP, n.º 10) mide otra cosa.
+- Aumento del mantenimiento ferroviario (≈48:53): precedente wild-14 (La Moncloa, 21-01-2026: de 726,5 a 1119,8 millones); la pista del PP (CNMC, por unidad de tráfico) mide otra cosa.
+- 75 000 millones de exportaciones agroalimentarias en 2025 y «la renta agraria más alta de la UE» (≈38:40): sin indicio.
+- Tratado de Amistad con Francia y acuerdo UE–Marruecos (≈1:23:43): Feijóo admite el voto y lo justifica.
+- «El 25 %» del crecimiento por la aportación de los migrantes (≈1:29:10), regularización con la colombiana como primera nacionalidad (≈1:29:56) y plan de integración de 500 millones (≈1:32:30): sin indicio; se pueden mirar si hace falta.
+- Petición de perdón por Adamuz y Urda (≈47:20): Feijóo dice que nunca lo ha pedido; no es una contradicción de Sánchez.
