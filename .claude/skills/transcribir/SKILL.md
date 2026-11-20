@@ -34,6 +34,12 @@ Ejecuta siempre con `python -P` (no `-I`, que ignora el venv). Guarda audios y t
 
 Si la plataforma no deja descargar, pide al usuario el archivo o el minuto aproximado.
 
+**Tramos de vídeos largos** (`--download-sections "*3:35:00-3:47:00"`): el archivo puede empezar unos
+segundos antes de lo pedido (en el especial de RTVE del debate de 2026, 10 s). Mide la duración con
+`ffprobe -v error -show_entries format=duration -of csv=p=0 <archivo>` y resta el sobrante al inicio
+pedido antes de convertir los tiempos de whisper en tiempos del vídeo. Si el mismo acto está en dos
+vídeos, comprueba que el desfase entre ellos sale igual en todas las citas.
+
 ## Transcribir
 
 ```bash

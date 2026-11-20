@@ -4,6 +4,9 @@ Fuentes de casos publicados que aún no tienen copia en Web Archive. Para guarda
 
 Última revisión: 19-11-2026. Ese día se añadieron 81 copias a 29 casos y 3 promesas (búsqueda en el CDX y, si no había copia, guardado con `web.archive.org/save`). De las copias de PDF se comprobó que estuvieran completas (terminan en `%%EOF`) y, cuando el caso guarda la SHA-256 del recorte, que la huella coincida. Ojo: Web Archive guarda a veces los PDF grandes cortados en 1 MiB (1 048 576 bytes): pasó con DSCD-14-PL-59, cuyas copias de 2021-01, 2021-06 y 2023-10 están truncadas; vale la del 15-12-2021.
 
+- [ ] https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2026/21_informe_quincenal_acumulado_01-01_al_15-11-2026.pdf
+  - casos: sanchez-migracion-irregular-21-por-ciento-donde-lo-dejo-rajoy (fuente y recorte)
+  - el guardado con curl da 520 (Cloudflare). Copia local descargada por el usuario el 20-11-2026 en `investigacion/material/cac-27/`, SHA-256 bba22fcb3af0ef16b2db4a65d5d9e88792c2aa80593209416637fb724fcebec6. Al guardarla desde el navegador, comprobar que la copia no es la página de Cloudflare y que la huella coincide.
 - [ ] https://www.psoe.es/media-content/2023/10/Intervenci%C3%B3n-inicial-de-Pedro-S%C3%A1nchez-en-el-Comit%C3%A9-Federal-del-28-de-octubre-de-2023.pdf
   - casos: no-aministia-para-politicos-e-independentistas-catalanes (fuente y recorte)
   - la copia guardada el 19-11-2026 es una página vacía de psoe.es (909 bytes), no el PDF: no sirve. Hay una copia antigua de El Independiente (en revision-fuentes.md), pero es otro archivo. Probar a guardarla desde el navegador cuando psoe.es cargue.
