@@ -167,7 +167,7 @@ La Moncloa (Consejo de Ministros y presidente) y de los canales de YouTube de lo
 lo nuevo de los últimos 3 días en `investigacion/rastreo/AAAA-MM-DD.md`. De los verificadores solo
 quedan las entradas que nombran en el título a una persona o un partido del alcance (los perfiles más
 las listas de `investigacion/rastreo/config.yaml`); lo ya visto se guarda en `visto.json` y no se repite.
-La bandeja son pistas, no fuentes: se criban con la skill `/candidatos`.
+La bandeja son pistas, no fuentes: se criban con la skill `/bandeja`.
 
 Opciones: `--dias 7` amplía la ventana, `--simular` imprime la bandeja sin escribir nada y `--shorts`
 lista también los shorts de YouTube. Las fuentes y los nombres se cambian en `config.yaml`.

@@ -2,7 +2,7 @@
 /**
  * Rastreo diario de campaña: recoge lo nuevo de los verificadores, La Moncloa y los canales de
  * YouTube de los partidos, se queda con lo que entra en el alcance y lo deja en una bandeja,
- * `investigacion/rastreo/AAAA-MM-DD.md`, para cribarla con la skill /candidatos.
+ * `investigacion/rastreo/AAAA-MM-DD.md`, para cribarla con la skill /bandeja.
  *
  * Lo que sale en la bandeja son pistas, no fuentes: cada dato se busca después en la fuente primaria.
  *
@@ -311,7 +311,7 @@ const pasada = [
 const BANDEJA = path.join(DIR, `${hoy}.md`);
 const cabecera = `# Rastreo del ${fmtLargo.format(ahora)}
 
-Pistas, no fuentes: cada dato se busca en la fuente primaria antes de registrarlo (skill /candidatos).
+Pistas, no fuentes: cada dato se busca en la fuente primaria antes de registrarlo (skill /bandeja).
 Marca con [x] lo que quieras investigar o transcribir y pide «revisa la bandeja».
 `;
 

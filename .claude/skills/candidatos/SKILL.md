@@ -1,125 +1,98 @@
 ---
 name: candidatos
-description: Criba e investiga posibles casos para hijosdefruta a partir de una URL o un tema. Úsala cuando el usuario pase una web, una hemeroteca o una noticia con posibles contradicciones de políticos, o pida evaluar candidatos. Registra cada candidato en investigacion/candidatos.md y solo crea casos (como borrador) cuando el usuario elige.
+description: Criba e investiga posibles casos para hijosdefruta a partir de una pista (una URL, una hemeroteca, un fact-check, un listado de otra IA, una idea o un vídeo del usuario) o de un candidato ya registrado (arch-, gem-, sup-, ras-…). Úsala cuando el usuario pase una pista, pida evaluar o investigar candidatos o retome uno. Registra cada candidato en investigacion/candidatos/ y no crea casos; eso lo hace /publicar-caso cuando el usuario da el visto bueno.
 ---
 
 # Cribado e investigación de candidatos
 
-Objetivo: convertir pistas (webs ajenas, noticias, hilos) en casos que cumplan las reglas editoriales
-de [CLAUDE.md](../../../CLAUDE.md), **sin perder casos buenos por descartarlos demasiado pronto** y sin
-publicar nada que no se pueda probar con fuente primaria.
+Objetivo: convertir pistas en casos que cumplan las reglas editoriales de [CLAUDE.md](../../../CLAUDE.md),
+**sin perder casos buenos por descartarlos demasiado pronto** y sin proponer nada que no se pueda probar
+con fuente primaria.
 
-**Alcance:** casos del Gobierno actual y de los partidos que lo sostienen: los socios de coalición y los
-que votaron la investidura (PSOE, Sumar, Podemos, ERC, Junts, EH Bildu, PNV, BNG, Coalición Canaria),
-con sus cargos actuales o anteriores. Lo que solo afecta a otros partidos se anota en una línea como
-`fuera de alcance`, sin investigar.
+Skills relacionadas: [/fuentes-primarias](../fuentes-primarias/SKILL.md) (dónde buscar y cómo descargar,
+leer y archivar), [/transcribir](../transcribir/SKILL.md) (vídeos y audios), [/bandeja](../bandeja/SKILL.md)
+(rastreo diario) y [/publicar-caso](../publicar-caso/SKILL.md) (crear el caso).
+
+**Alcance:** el Gobierno actual y los partidos que lo sostienen o votaron la investidura (PSOE, Sumar,
+Podemos, ERC, Junts, EH Bildu, PNV, BNG, Coalición Canaria), con sus cargos actuales o anteriores. Lo que
+solo afecta a otros partidos se anota en una línea como `fuera de alcance`, sin investigar.
+
+## Antes de empezar
 
 El registro está partido por origen: [investigacion/candidatos.md](../../../investigacion/candidatos.md)
 tiene el resumen de estados y la tabla de archivos; cada origen vive en
-`investigacion/candidatos/<origen>.md` (archivopsoe, psoe-actos, wild, usuario, newtral, gemini,
-indicios…). Antes de empezar, lee el resumen y busca el tema o la persona en todos los archivos
-(`grep -ril <término> investigacion/candidatos/`): puede que el candidato ya esté investigado o
-descartado. Un origen nuevo va en un archivo nuevo, con su fila en la tabla y en el resumen.
+`investigacion/candidatos/<origen>.md` con su prefijo (`arch-`, `gem-`, `sup-`, `ras-`…).
+
+1. Busca el tema y la persona en el registro y en los casos:
+   `grep -ril <término> investigacion/candidatos/ src/content/casos/`. Puede estar investigado, descartado
+   o publicado ya.
+2. Un origen nuevo va en un archivo nuevo, con su fila en la tabla y en el resumen de `candidatos.md`.
+3. Los listados de otras IA (Gemini) y las recopilaciones sin fuentes son pistas de fiabilidad baja: se
+   inventan fechas, cifras y verificaciones. Nada se da por bueno hasta verlo en la fuente.
 
 ## Principios
 
-1. **La URL de origen es una pista, nunca una fuente.** No se cita, no se enlaza en el caso y no se
-   copian sus textos ni su enfoque. Cada dato se vuelve a encontrar en la fuente primaria.
-2. **No se descarta sin buscar.** Un candidato solo se descarta por falta de pruebas después de haber
-   buscado la fuente primaria y haber dejado constancia de dónde se buscó. Las únicas excepciones son
-   los descartes por regla (punto 4), y aun así se registran y se consultan con el usuario.
-3. **Se busca también lo que debilita el caso**: la justificación del político, el contexto completo
-   de la frase, si la condición de la promesa se cumplió, si los datos se miden igual antes y después.
-4. **Reglas que bloquean** (se marcan `bloqueado` y decide el usuario): procesos judiciales abiertos,
+1. **La pista nunca es la fuente.** No se cita, no se enlaza en el caso y no se copia su enfoque. Cada
+   dato se vuelve a encontrar en la fuente primaria.
+2. **No se descarta sin buscar.** Un candidato solo se descarta por falta de pruebas después de buscar la
+   fuente primaria y anotar dónde. Los descartes por regla (punto 4) también se registran y los decide
+   el usuario.
+3. **Se busca también lo que debilita el caso**: la justificación del político, el contexto completo de la
+   frase (la pregunta previa y lo que dice después, en el mismo acto), si la condición de la promesa se
+   cumplió, si los datos se miden igual antes y después.
+4. **Reglas que bloquean** (estado `bloqueado`, decide el usuario): procesos judiciales abiertos,
    atribución de delitos, vida privada o familiar, datos personales de terceros.
-5. **Fechas posteriores al conocimiento del modelo**: todo hecho reciente se verifica en la web; nunca
-   se completa de memoria.
+5. **Lo reciente se verifica en la web**: nada posterior al conocimiento del modelo se completa de memoria.
 
-## Bandeja del rastreo diario
-
-«Revisa la bandeja» se refiere a `investigacion/rastreo/AAAA-MM-DD.md`, que genera `npm run rastreo`
-(README, «Rastreo diario»). Hay que gastar poco, así que no se abre todo:
-
-- Lee solo la bandeja más reciente y, dentro de ella, las pasadas que no tengan la línea «Revisada».
-- **Verificadores:** decide por el título y el extracto. El artículo solo se abre (con `web-fetch`)
-  cuando es una declaración de alguien del alcance con una afirmación comprobable (una cifra, «nunca»,
-  «más que nunca», «el primero», «mínimos históricos»…) que no esté ya en casos ni en candidatos. Los
-  bulos y las coincidencias débiles se saltan salvo que el usuario los marque. El verificador es la
-  pista: la fuente es la declaración original (vídeo o transcripción) y el dato oficial.
-- **La Moncloa y vídeos:** solo los que el usuario marque con `[x]`. Los vídeos se transcriben como
-  se explica en el paso 1, «Extraer».
-- Las exageraciones de mitin y las opiniones no son casos.
-- Lo que pase la criba se registra como `ras-NN` en
-  [investigacion/candidatos/rastreo.md](../../../investigacion/candidatos/rastreo.md). Al terminar,
-  añade al final de la pasada: `Revisada el DD-MM: ras-01 y ras-02 registrados; el resto, sin interés.`
+Los criterios para decidir si hay caso, con los precedentes que ha fijado el usuario, están en
+[criterios.md](criterios.md). Léelo antes de dar un veredicto de `débil` o `descartado`.
 
 ## Procedimiento
 
 ### 1. Extraer
-Lee la URL (con el agente `web-fetch` si no hay WebFetch). Para cada entrada anota: tema, persona,
-«dijo» (fecha, cita o paráfrasis), «hizo» (fecha, hecho), matiz y las fuentes que cita la pista.
-
-Si la pista es un vídeo largo (debate, entrevista, mitin), trabaja con su transcripción en
-`investigacion/material/transcripciones/` (carpeta fuera de git): busca compromisos con forma de
-promesa («vamos a», «me comprometo», «nunca», «derogar»…), deduce quién habla por el contexto y anota
-el minuto. La transcripción automática no tiene puntuación ni hablantes: **toda frase se confirma
-viendo el vídeo** y el vídeo del caso empieza unos 4 segundos antes de la frase.
+Lee la pista (con el agente `web-fetch` si no hay WebFetch; si la web bloquea, pide al usuario que pegue
+el texto). Para cada entrada anota: tema, persona, «dijo» (fecha, cita o paráfrasis), «hizo» (fecha,
+hecho), matiz y las fuentes que cita la pista. Si es un vídeo largo, usa /transcribir para localizar los
+tramos con compromisos o cifras.
 
 ### 2. Cribar
 Para cada candidato, en este orden:
-- **¿Entra en el alcance?** Si no, `fuera de alcance` y se pasa al siguiente.
-- **¿Ya existe?** Busca en `src/content/casos/*.mdx` por persona, tema y cita. Si existe, valora si la
-  pista aporta un hito nuevo a la cronología del caso existente.
-- **¿Es una contradicción limpia?** Dos afirmaciones o una afirmación y un hecho que no pueden ser
-  ciertas a la vez, sobre lo mismo y sin que cambien los hechos de fondo. Una frase condicional
-  («en este momento no…») o una opinión no es una promesa.
+- **¿Entra en el alcance?** Si no, `fuera de alcance`.
+- **¿Ya existe?** Si hay un caso de la misma persona sobre lo mismo, valora si la pista aporta un hito
+  nuevo a su cronología (estado `ya existe`, con el slug).
+- **¿Es una contradicción limpia?** Ver [criterios.md](criterios.md).
 - **¿Qué tipo sería?** `falsedad`, `promesa-incumplida`, `cambio-de-postura` o `doble-rasero`.
-- **¿Toca una regla que bloquea?** (principio 4).
+- **¿Toca una regla que bloquea?**
+
+Con muchos candidatos, propón un orden de investigación (los que tienen más probabilidad de fuente
+primaria primero) y espera a que el usuario elija.
 
 ### 3. Investigar (concienzudamente)
-Para el «antes» y el «después», busca en este orden y **anota cada búsqueda** en el registro:
-
-| Tipo de prueba | Dónde buscar |
-| --- | --- |
-| Intervención parlamentaria | Diario de Sesiones del Congreso (congreso.es → Publicaciones → Diario de Sesiones; buscador de intervenciones) y del Senado (senado.es) |
-| Discurso, rueda de prensa, entrevista del presidente o ministros | La Moncloa → Transcripciones (lamoncloa.gob.es/presidente/intervenciones), Prensa → Consejo de Ministros |
-| Normas, decretos, nombramientos, contratos | BOE (boe.es), Plataforma de Contratación del Sector Público |
-| Datos | INE, CSN, Red Eléctrica (REE), Banco de España, Portal de Transparencia, Consejo de Transparencia |
-| Programa electoral, documentos de partido | Web del partido, archivo en web.archive.org |
-| Entrevistas de televisión o radio | RTVE Play / RNE a la carta, canal oficial de YouTube del medio o del partido; buscar el minuto exacto |
-| Si no hay primaria | Agencias (Europa Press, EFE), verificadores (Maldita, Newtral, EFE Verifica) y prensa, citando la que reproduce la frase literal |
-
-Para cada fuente encontrada: URL, medio, cita literal exacta tal como aparece en ella, y una copia en
-Web Archive (`https://web.archive.org/save/<url>` o la más reciente). Para vídeos: ID de YouTube y el
-segundo en que empieza la cita (YouTube bloquea la descarga de subtítulos; si no se puede ver, deja
-`start` pendiente y dilo).
+Busca el «antes» y el «después» siguiendo /fuentes-primarias y **anota cada búsqueda** en el registro,
+también las que no dan nada. Para cada fuente encontrada: URL, medio, cita literal exacta tal como aparece,
+página o minuto, y copia en Web Archive. Las citas de vídeo o audio quedan pendientes hasta que el usuario
+las confirme (/transcribir).
 
 ### 4. Veredicto
-Estados posibles en el registro:
+Estados del registro:
 - `por investigar`: aún sin búsqueda de fuentes primarias.
 - `investigando`: búsqueda en curso, con lo encontrado hasta ahora.
 - `prometedor`: antes y después con fuente verificable; listo para proponer.
-- `débil`: hay pruebas pero la contradicción no es limpia o depende de una sola fuente secundaria.
-- `bloqueado`: choca con una regla (principio 4); decide el usuario.
-- `en espera`: bloqueado y el usuario ha decidido no publicarlo de momento. Se conserva toda la
-  información (fuentes, citas y qué haría falta para reabrirlo); no se borra ni se descarta.
-- `fuera de alcance`: solo afecta a partidos fuera del alcance; no se investiga.
-- `descartado`: con motivo y lista de búsquedas hechas.
+- `débil`: hay pruebas, pero la contradicción no es limpia o depende de una fuente secundaria. Anota qué
+  faltaría para que deje de serlo.
+- `bloqueado`: choca con una regla que bloquea; decide el usuario.
+- `en espera`: bloqueado y el usuario ha decidido no publicarlo de momento. Se conserva todo (fuentes,
+  citas y qué haría falta para reabrirlo).
+- `fuera de alcance`: no se investiga.
+- `descartado`: con motivo y lista de búsquedas. Si lo decide el usuario, se dice así.
+- `borrador`: caso creado con `draft: true` (/publicar-caso), pendiente de la revisión del usuario.
 - `publicado` / `ya existe`: con el slug del caso.
 
-### 5. Crear el caso (solo con el visto bueno del usuario)
-- Archivo `src/content/casos/<slug>.mdx` con `draft: true`, siguiendo el formato del README.
-- `quien` con el cargo que tenía en ese momento; `contexto` con dónde y cuándo.
-- `cronologia` con la justificación del político si la hay.
-- `npm run build` (valida el esquema y el orden de fechas) y `npm run fuentes -- --rapido`.
-- Si la prueba es un PDF de un organismo oficial (Diario de Sesiones, BOE, La Moncloa, CSN…) o un
-  documento público de un partido (programa electoral, ponencia, código ético), añade al hito
-  `documento: { url, buscar?, incluir? }` y ejecuta `npm run capturas -- <slug>`. Revisa el recorte
-  generado (que se lea y que el resalte caiga donde debe). Nunca recortes de prensa.
-- Si aparece una persona o partido nuevo en `tags`, crea su `src/content/perfil/<slug>.yaml` y ejecuta
-  `npm run perfiles -- <slug>`.
-- Actualiza el estado en el registro con el slug. No se pasa a `draft: false` sin que el usuario lo
-  revise en `npm run dev`.
+### 5. Proponer
+Informa al usuario por estados: prometedores (listos para proponer, con el antes y el después en una línea
+cada uno), débiles (y qué falta), bloqueados (necesitan su decisión) y qué queda por investigar. Las
+decisiones se plantean en texto, como lista numerada con una opción recomendada (el diálogo de preguntas
+no le deja enviar). Con su visto bueno, sigue /publicar-caso.
 
 ## Formato del registro
 
@@ -137,5 +110,4 @@ Cada candidato es una sección `### <id> · <tema>` con estos campos (deja vací
 - **Notas / veredicto:** …
 ```
 
-Al terminar una tanda, actualiza la tabla de resumen de `investigacion/candidatos.md` e informa al usuario
-con: prometedores (listos para proponer), débiles, bloqueados (necesitan su decisión) y qué queda.
+Al cerrar una tanda, actualiza la fila de su origen en el resumen de `investigacion/candidatos.md`.

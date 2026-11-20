@@ -1,5 +1,5 @@
 # Rastreo diario de campaña (`npm run rastreo`): fuentes que se leen y nombres que cuentan como
-# «dentro del alcance». Lo que sale en la bandeja son pistas, no fuentes (skill /candidatos).
+# «dentro del alcance». Lo que sale en la bandeja son pistas, no fuentes (skill /bandeja).
 
 # Verificadores: todo lo que publican pasa por el filtro de nombres.
 verificadores:
