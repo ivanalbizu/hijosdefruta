@@ -1,0 +1,18 @@
+fecha: 2026-11-19
+quien: Pedro Sánchez (presidente del Gobierno y candidato del PSOE)
+partido: PSOE
+compromiso: 'Aprobar la ley de grupos de interés.'
+cita: 'Nosotros, por ejemplo, nos comprometemos a aprobar la Ley de Grupos de Interés, que nos obliga también Europa y que ustedes votaron en contra en esta legislatura'
+contexto: 'Cara a cara con Alberto Núñez Feijóo organizado por la Academia de la Televisión, en el bloque de corrupción y regeneración. El PSOE ya la prometió en 2023; el Real Decreto-ley 21/2026 de grupos de interés lo derogó el Congreso el 16 de septiembre de 2026'
+tema: Transparencia
+campana: Generales 29N 2026
+fuente:
+  url: https://www.youtube.com/watch?v=f8qUA829xVY&t=11899s
+  archivo: https://web.archive.org/web/20261120103835/https://www.youtube.com/watch?v=f8qUA829xVY
+  medio: RTVE Noticias (canal oficial de YouTube), minuto 3:18:19
+video:
+  id: f8qUA829xVY
+  titulo: 'Cara a cara Sánchez–Feijóo (especial «La gran decisión», RTVE Noticias, 19-11-2026)'
+  start: 11899
+  end: 11913
+estado: pendiente

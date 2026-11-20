@@ -62,7 +62,7 @@ const campanas = [...new Set(promesas.map(p => p.data.campana))];
                     <Avatar nombre={nombre} perfil={perfil} size="sm" />
                     <p>
                       <span class="nombre">{nombre}</span>
-                      {partido && <span class="meta"> · {partido.data.nombre}</span>}
+                      {partido && partido.data.nombre !== nombre && <span class="meta"> · {partido.data.nombre}</span>}
                       {cargo && (
                         <>
                           <br />
