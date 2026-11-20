@@ -41,6 +41,10 @@ Investigados cac-10, 13, 02, 14, 07, 16 y 22; **sin commit**. Los documentos des
    con el criterio estricto de ras-01.
 5. **cac-13** y **cac-16** (débiles): se propone descartarlos. **cac-07**: descartado (propuesta).
 6. cac-20 y cac-26, bloqueados: recomendado dejarlos en espera (de la primera tanda).
+7. **cac-27** (migración «donde lo dejó Rajoy», prometedor): faltan el informe de Interior al 15-11-2026
+   (Cloudflare: que el usuario lo descargue a `investigacion/material/cac-27/`) y confirmar la cita
+   (1:27:22–1:27:31 del vídeo de ABC). Decidir el enfoque (falsedad sobre la atribución, con el 21 % dado
+   por bueno en el matiz) y qué hacer con Ceuta (recomendado: nota neutra, como en el caso del 38 %).
 
 Ninguna cita está confirmada: al proponer un caso, pedir la confirmación con URL, tramo y texto.
 
