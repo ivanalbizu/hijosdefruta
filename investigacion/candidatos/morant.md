@@ -22,15 +22,6 @@ verificable.
 - **Búsquedas:** web (promesa incumplida 1 % PIB universidades / Ley de la Ciencia).
 - **Notas / veredicto:** el plazo de 2030 no ha llegado, así que no es una promesa incumplida. Lo mismo vale para el 1 % del PIB de la LOSU para universidades (2030). Solo valdría si la ley fija tramos anuales y no se han cumplido: habría que mirar la ley y los presupuestos (prorrogados desde 2023).
 
-### mor-04 · Estatuto del Personal Docente e Investigador: plazo de la LOSU
-- **Estado:** por investigar
-- **Origen:** búsqueda web (CSIF, PP, 2023-2024)
-- **Persona / tipo propuesto:** Diana Morant / promesa incumplida
-- **Antes:** la disposición final décima de la LOSU (Ley Orgánica 2/2023) obliga al Gobierno a presentar el proyecto de estatuto en seis meses (hasta ~10-2023). Morant lo anunció en su comparecencia de inicio de legislatura (21-11-2023, La Moncloa).
-- **Después:** pendiente: si el proyecto llegó al Congreso y cuándo.
-- **Búsquedas:** web (Estatuto PDI + Morant): solo noticias de 2023-2024.
-- **Notas / veredicto:** el plazo lo fija una ley, no ella. Haría falta una frase suya con fecha («lo presentaremos en…») y comprobar en el Congreso si se presentó.
-
 ### mor-06 · Querella del conseller de Sanidad y frases sobre sentencias
 - **Estado:** bloqueado
 - **Notas / veredicto:** la querella de Marciano Gómez ante el Supremo (05-2026) es una causa abierta. Lo que dijo Morant del fiscal general y de David Sánchez (COPE, 09-2026) obliga a valorar procesos judiciales. No se investigan.
