@@ -25,3 +25,15 @@ Candidatos cerrados de [ia-perfiles.md](../ia-perfiles.md), en el orden original
 - **Estado:** descartado (por decisión del usuario, 21-11-2026)
 - **Origen:** puente-temporal, punto 4
 - **Notas / veredicto:** opiniones y choques entre socios, sin afirmación ni hecho que se contradigan (criterio de opiniones de mitin, usr-02; nadie se contradice a sí mismo, gem-20).
+
+## Origen: investigacion/temporal-ada-colau.md y temporal-salarios.md (21-11-2026)
+
+### iap-19 · Iglesias y Montero: el tope de tres SMI
+- **Estado:** duplicado → sup-12 (descartado: cambio de una norma interna aprobado por la asamblea, con justificación escrita)
+- **Origen:** temporal-salarios, punto 1
+- **Persona / tipo propuesto:** Pablo Iglesias, Irene Montero / cambio de postura
+- **Notas / veredicto:** la pista no aporta nada nuevo; la frase de los «5000 o 6000 euros» no tiene fecha ni programa.
+
+### iap-24 · Colau y el tope salarial (listado de sueldos)
+- **Estado:** duplicado → iap-12
+- **Origen:** temporal-salarios, punto 4
