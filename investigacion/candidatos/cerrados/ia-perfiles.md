@@ -50,3 +50,53 @@ Candidatos cerrados de [ia-perfiles.md](../ia-perfiles.md), en el orden original
 - **Justificación del político:** en la misma entrevista de 2022, que «sempre et poden passar coses a la vida que et facin replantejar»; en 2024, que la salida era un paréntesis.
 - **Búsquedas (21-11-2026):** WebSearch (ES y CA: oposición/regidora si perdía, campaña de mayo de 2023); Crónica Global 20-05-2022 («Colau confirma que no pasará a la oposición…»: es el titular; la única cita es «Sólo me planteo ser alcaldesa») y su otra URL (404); Metrópoli Abierta 19-05-2022 (rueda de prensa: «Si pensara que no puedo ganar, no me presentaría»; lo del «último mandato» es paráfrasis); API de búsqueda de RTVE (vídeo de Cafè d'Idees localizado y transcrito entero con whisper); NacióDigital 13-01-2024. NacióDigital resume que en la campaña de 2023 «havia defugit valorar qualsevol altre escenari que no fos la victòria»: no se ha encontrado ninguna frase de campaña sobre la oposición.
 - **Notas / veredicto:** la pista sale de un titular que dice más que la entrevista: Colau esquivó dos veces la pregunta de la oposición, así que no hay promesa que incumplir aunque se quedara 16 meses en la oposición. Lo único con cita es «me'l plantejo com a últim» y «no m'eternitzaré en la política institucional» (2022) frente a la candidatura a las generales de 2026: no es limpio, porque lo dice del mandato municipal, lo condiciona en la misma respuesta y «eternizarse» no es medible. **Descartado por el usuario (21-11-2026).** Solo se reabriría con una frase en la que descarte saltar a la política estatal o presentarse a otras elecciones. Audio y transcripción en el scratchpad (se borran solos).
+
+## Origen: investigacion/maria-jesus-montero-temporal.md y oscar-puente-temporal.md (21-11-2026)
+
+### iap-02 · Montero y la amnistía antes del 23J
+- **Estado:** descartado (decisión del usuario, 21-11-2026: sin frase propia contra la amnistía antes del 23J)
+- **Origen:** montero-temporal, punto 3
+- **Persona / tipo propuesto:** María Jesús Montero / cambio de postura
+- **Antes:** pendiente: frase propia de Montero antes del 23-07-2023 rechazando la amnistía. La pista no da ninguna; habla «del resto del Ejecutivo»
+- **Después:** pendiente: defensa de la ley (Diario de Sesiones, 2023-2024)
+- **Búsquedas:** casos: el giro ya está cubierto con Sánchez e Illa (`no-aministia-para-politicos-e-independentistas-catalanes`, `illa-ni-habra-amnistia`). (21-11-2026) dos búsquedas web: Maldita Hemeroteca (14-11-2023, «ley-amnistia-constitucion-psoe») solo la nombra en el resumen de un reel de Instagram que circula («no habría amnistía ni referéndum»), sin frase, fecha ni fuente; en diciembre de 2022 negó un referéndum de autodeterminación en los pasillos del Congreso (The Objective, Menorca.info), pero no habló de la amnistía; nada de ella sobre la amnistía antes del 23-07-2023
+- **Notas / veredicto:** sin cita propia de Montero no hay caso (no se le atribuye la postura del Gobierno). Lo del referéndum no es un «después»: no ha habido referéndum. Solo se reabriría con un vídeo o un Diario de Sesiones en el que rechace la amnistía antes del 23J (por ejemplo, la fuente del reel).
+
+### iap-04 · Montero y la presentación de los presupuestos
+- **Estado:** descartado (decisión del usuario, 21-11-2026: premisa falsa)
+- **Origen:** montero-temporal, nota al punto 4 («nunca ha presentado ninguno»)
+- **Persona / tipo propuesto:** María Jesús Montero / promesa incumplida
+- **Antes:** pendiente: compromiso concreto de presentar unos PGE (2024, 2025 o 2026) que no se cumpliera
+- **Después:** pendiente
+- **Búsquedas:** registro (21-11-2026): la pista no da ningún compromiso concreto; no se ha buscado uno porque ya está cubierto por `sanchez-sin-presupuestos-no-se-gobierna` y por el precedente gem-33
+- **Notas / veredicto:** la premisa es falsa: presentó los PGE de 2019 (devueltos en el Congreso), 2021, 2022 y 2023. Relación: `sanchez-sin-presupuestos-no-se-gobierna`; precedente gem-33 (Belarra, «en tiempo y forma», descartado por el usuario).
+
+### iap-06 · Montero y el impuesto a las energéticas
+- **Estado:** descartado (decisión del usuario, 21-11-2026: el Gobierno mantuvo el gravamen y lo tumbó el Congreso)
+- **Origen:** montero-temporal, punto 5
+- **Persona / tipo propuesto:** María Jesús Montero / cambio de postura
+- **Antes:** pendiente: defensa de su permanencia
+- **Después:** pendiente: lo que se pactó con PNV y Junts en la reforma fiscal de 12-2024 y qué pasó con el decreto posterior (BOE, Diario de Sesiones). La pista simplifica («pactó su supresión»)
+- **Justificación del político:** aritmética parlamentaria
+- **Búsquedas:** (21-11-2026) web: el 19-12-2024, en la votación de la reforma fiscal, PP, Vox, PNV y Junts derogaron el gravamen de 2022; Montero anunció ese mismo día un real decreto-ley para el de 2025 (The Objective). Era el RDL 10/2024, que el Congreso no convalidó el 22-01-2025 (165 a favor, 183 en contra, 1 abstención; en contra PP, Vox, Junts, PNV y UPN; prensa: Bolsamanía, Infobae). Fuentes primarias por si se reabre: BOE del RDL 10/2024 y Diario de Sesiones del 22-01-2025
+- **Notas / veredicto:** se confirma lo que se temía: el Gobierno siguió proponiendo el impuesto y lo tumbó el Congreso. «Pactó su supresión» es falso: Montero no cambió de postura.
+
+### iap-10 · Puente y la amnistía antes del 23J
+- **Estado:** descartado (decisión del usuario, 21-11-2026: sin frase propia contra la amnistía antes del 23J)
+- **Origen:** puente-temporal, punto 3
+- **Persona / tipo propuesto:** Óscar Puente / cambio de postura
+- **Antes:** pendiente: frase propia contra la amnistía antes del 23-07-2023; la pista no da ninguna («al igual que otros dirigentes»)
+- **Búsquedas:** (21-11-2026) web: nada suyo contra la amnistía antes del 23J; lo que hay es posterior: el 22-11-2023 dijo que «probablemente no» la habrían aprobado sin necesitarla para la investidura (y el símil del embarazo no deseado), lo que es una admisión, no una contradicción consigo mismo; los vídeos de The Objective «Los 12 socialistas que rechazaron la amnistía antes del 23-J» (25-09-2023) y «…que Puigdemont rindiese cuentas» (28-09-2023) no lo nombran en el texto ni en las etiquetas (sí a Lastra, Calvo, Isabel Rodríguez, Ábalos, Iceta, Sánchez e Illa)
+- **Notas / veredicto:** como iap-02: sin cita propia no hay caso. Propuesta: descartar (decide el usuario).
+
+## Origen: investigacion/temporal-ada-colau.md y temporal-salarios.md (21-11-2026)
+
+### iap-14 · Colau: subvenciones a entidades afines y «enchufismo»
+- **Estado:** descartado (decisión del usuario, 21-11-2026: sin frase propia y causa penal archivada)
+- **Origen:** temporal-ada-colau, punto 3
+- **Persona / tipo propuesto:** Ada Colau / doble rasero
+- **Antes:** pendiente: una frase suya contra el «enchufismo» o las subvenciones a entidades afines
+- **Después:** pendiente: subvenciones al Observatori DESC o la PAH y nombramientos (BOPB, Gaseta Municipal)
+- **Justificación del político:** informes técnicos favorables; líneas de ayuda de mandatos anteriores
+- **Búsquedas:** (21-11-2026) una búsqueda web sobre el estado de la causa: querella de la Asociación por la Transparencia y la Calidad Democrática ante el Juzgado de Instrucción 21 de Barcelona; archivada en 2022, reabierta por la Audiencia en noviembre de 2022 y en febrero de 2024, y «arxivada definitivament» según 3Cat (noticia 3340512; la fecha de firmeza no sale en el fragmento: hay que leer el auto si se reabre). No se ha buscado ninguna frase suya contra el «enchufismo»
+- **Notas / veredicto:** la pista dice que todas las querellas se archivaron: hay que verlo en las resoluciones. Si alguna sigue abierta, `bloqueado`. Si están archivadas, la resolución se cita tal cual y le da la razón en lo penal, lo que debilita el doble rasero (precedente: «una resolución le da la razón»).
