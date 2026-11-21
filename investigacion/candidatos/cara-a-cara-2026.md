@@ -34,8 +34,7 @@ cerró Sánchez.
 
 ## Para retomar (21-11-2026)
 
-El usuario da el debate por agotado salvo cac-19 y 24 (por investigar, prioridad baja; cac-17, descartado el 21-11), que se hacen
-en sesiones separadas, una por candidato. cac-06 y cac-29 siguen débiles: no se reabren salvo que lo pida.
+El usuario da el debate por agotado salvo cac-24 (por investigar, prioridad baja; cac-17, descartado el 21-11; cac-19, descartado el 21-11), que se hace en una sesión aparte. cac-06 y cac-29 siguen débiles: no se reabren salvo que lo pida.
 Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar. El historial de las
 tandas anteriores está en [cerrados/cara-a-cara-2026.md](cerrados/cara-a-cara-2026.md).
 
@@ -61,10 +60,6 @@ tandas anteriores está en [cerrados/cara-a-cara-2026.md](cerrados/cara-a-cara-2
 - **Hito 2 · 19-11-2026:** de 49:34 a 49:40 (whisper): «Y en segundo lugar, ustedes cuando han gobernado, han congelado las pensiones a 0,25%, señor Feijó». Feijóo, encima: «El diputado que congeló las pensiones fue usted». Sin confirmar por el usuario.
   - **En el vídeo de RTVE (`f8qUA829xVY`, 20-11-2026):** tramo confirmado por el usuario, de 3:03:05 a 3:03:15, «al 0,25%» → `start: 10985`, `end: 10995`. (Los tiempos que di primero, 3:03:13–3:03:25, iban 10 s tarde: `--download-sections` empezó 10 s antes de lo pedido. Corregido, el desfase con ABC es +8013 s, el mismo que en cac-02.)
 - **Notas:** en el cara a cara de 2023 negó que Zapatero las congelara (el caso); ahora llama «congelar» a revalorizarlas un 0,25 % (2014-2017), y en 2010 votó a favor del decreto que suspendió la revalorización de 2011. Es la misma persona sobre lo mismo: hitos, no caso propio. Para el recorte del hito 1 vale el PDF de la votación (documento oficial del Congreso), con `buscar` en «Sánchez Pérez-Castejón».
-
-### cac-19 · Comunidades: «ha transferido 300.000 millones de euros a las comunidades autónomas»; Madrid y Andalucía
-- **Estado:** por investigar (prioridad baja)
-- **Notas:** 56:34–57:35. «300.000 millones» (¿más que con Rajoy, acumulado?); Madrid: «7.000 millones de euros en contratos a Quirón» y «360.000 madrileños que han tenido que hacerse un seguro privado solo en un año» (probablemente datos de ICEA, no oficiales); Andalucía: «8.000 sanitarios menos, 3.000 aulas públicas menos, 2.000 plazas menos en residencias para mayores». Lo más comprobable con fuente oficial: plantilla del SAS y unidades escolares públicas (Ministerio de Educación).
 
 ### cac-24 · «Usted mismo ha dicho que quiere derogar la ley de muerte digna»
 - **Estado:** por investigar (prioridad baja)
