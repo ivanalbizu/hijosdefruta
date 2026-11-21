@@ -32,3 +32,15 @@ Emilio Delgado», sábado 14-11-2026 (emisión desde las 12:26, 69:40 min). Tran
 `investigacion/material/transcripciones/2026-11-13-frente-amplio-sevilla-colau-TYQeG41SZ4E.txt` (los minutos son
 de la transcripción; hay que confirmarlos viendo el vídeo). Frente Amplio = Movimiento Sumar, IU, Más Madrid,
 Catalunya en Comú y otros: dentro del alcance (Sumar).
+
+## Origen: nota del usuario, investigacion/pedro-sanchez-temporal.md (21-11-2026)
+
+### usr-06 · Sánchez y los decretos-ley: «más que nadie» y gobernar sin el Congreso
+- **Estado:** ya existe — `sanchez-limitar-decretos-ley`; posibles hitos
+- **Origen:** nota del usuario (21-11-2026): criticó gobernar por real decreto, lo ha usado más que nadie y ha dicho que los usará si no le apoya el Congreso
+- **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
+- **Antes:** ya en el caso (foro de El Mundo, 11-2015; debate del estado de la nación, 02-2015)
+- **Después:** el caso se queda en el RDL 18/2022 (132). Pendiente: (a) recuento actualizado en el BOE hasta 11-2026 y comparación con otros presidentes con la misma fuente («más que nadie» solo si la cifra lo sostiene, por legislatura o por año de mandato); (b) localizar la declaración de que gobernará aunque no le apoye el Congreso: cita literal, fecha y fuente primaria (La Moncloa, Diario de Sesiones o vídeo). No se da por buena de memoria.
+- **Justificación del político:** pandemia, guerra de Ucrania, falta de mayoría (buscar la suya propia)
+- **Búsquedas:** registro y casos (21-11-2026): solo `sanchez-limitar-decretos-ley` y `psoe-rtve-mayoria-absoluta-por-decreto`
+- **Notas / veredicto:** el «antes» del caso cita a Maldita.es; conviene sustituirlo por la fuente primaria al tocarlo.
