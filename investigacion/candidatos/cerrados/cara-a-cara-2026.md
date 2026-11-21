@@ -353,3 +353,28 @@ Candidatos cerrados de [cara-a-cara-2026.md](../cara-a-cara-2026.md), en el orde
 - **Después:** pendiente. Lo que ya hay (de cac-01): los objetivos de la inversión C2.I1 con Bruselas (COM(2023) 576: 231 000 actuaciones en 160 000 viviendas al 4.º T 2024; 410 000 en 285 000 al 2.º T 2026; L81, 510 000 en 355 000 al 3.er T 2026), la medida declarada «parcialmente inviable» (Consejo, doc. 17031/25, 13-01-2026), el objetivo rebajado a 32 390 certificados de eficiencia energética (COM(2026) 435, doc. 12352/26 ADD 1, pág. 20) y los 53 375 certificados acreditados en la séptima solicitud de pago (Ministerio de Economía, 30-09-2026). URL y copias en cac-01.
 - **Falta:** cuántas viviendas hay detrás de los certificados; balance al cumplirse los tres años (finales de 2023); si repitió la promesa; justificación del Gobierno; el contexto completo de la comparecencia.
 - **Material:** `investigacion/material/cac-01/` (estadística, documentos de la UE y notas de La Moncloa) y `investigacion/material/cac-30/`.
+
+## Historial de tandas (sacado de «Para retomar» del registro vivo el 21-11-2026)
+
+Publicados el 20-11-2026: cac-02, cac-27 y cac-10 (casos), los dos hitos de cac-14 y las dos promesas de
+cac-22. Quinta tanda (20-11-2026, un agente por candidato): cac-06, 11, 15, 18, 23 y 25 investigados;
+descartados por el usuario cac-11, 15, 18, 23 y 25, y también cac-20 y cac-26 (bloqueados por procesos
+judiciales). cac-06 queda débil (cifra sin fuente; se reabre si el Gobierno publica su origen).
+Material borrado salvo `investigacion/material/cac-27/` (el informe de Interior al 15-11-2026, sin copia
+en Web Archive; ver `pendientes-web-archive.md`), `cac-06/` (por si se reabre) y `debate-19n/` (audio y
+documentos del debate, para los candidatos que quedan).
+Desfase entre vídeos: RTVE (`f8qUA829xVY`) = ABC (`0ge5WDh_fho`) + 8013 s, constante en todo el debate.
+
+Queda por investigar (prioridad baja): cac-17, 19, 24.
+
+Sexta tanda (20-11-2026, un agente por candidato): cac-01, 04 y 12. Descartados por el usuario cac-01 (los datos
+oficiales no desmienten la frase) y cac-04 (se precisa en el mismo debate; «transferido» es una sola palabra). De cac-01
+sale cac-30, la promesa de 2020 de rehabilitar medio millón de viviendas en tres años: descartado por el usuario (21-11). cac-12, descartado entero por
+el usuario (el precio cuadra con la fuente del Gobierno; el 60 % renovable es un redondeo).
+
+Bandeja del 20-11-2026 (verificaciones de Comprobado.es y Verificat): cac-29 registrado (19 000 millones del
+ferrocarril) y cac-04 completado; los dos, débiles por decisión del usuario. cac-29 se reabrió e investigó
+el mismo día (Consejo de Ministros del 13-10, nota de Adif del 08-11): sigue débil. El resto de lo
+verificado por Comprobado ya estaba (cac-05, 08, 13, 15).
+
+Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar.

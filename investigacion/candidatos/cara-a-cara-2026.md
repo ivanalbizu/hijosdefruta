@@ -15,12 +15,14 @@ cerró Sánchez.
   el debate va de 0:00:24 a 1:36:10, con pausas en 0:39:14–0:42:49 y 1:13:57–1:17:37). Los minutos de
   este registro son de ese vídeo (subtítulos automáticos para localizar y whisper en los tramos citados;
   **nada confirmado todavía por el usuario**). Para el caso conviene el vídeo de RTVE Noticias
-  (`f8qUA829xVY`, especial de 6:14:11, falta calcular el desfase) o el de la Academia, si lo publica.
+  (`f8qUA829xVY`, especial de 6:14:11): RTVE = ABC + 8013 s, constante en todo el debate.
 - **Material (fuera de git):** `investigacion/material/transcripciones/debate-19n/`: `abc.mp3` (audio),
   `abc.es-orig.vtt` (subtítulos automáticos), `abc.subs.txt` (texto con marcas cada ~30 s, hecho con
   `vtt2txt.py`) y `documentos/` (programa del PP de 2026 y nota del Consejo de Transparencia del
   23-12-2025, con la misma SHA-256 que la descarga). Whisper: el venv del scratchpad se borra al reiniciar;
   se reinstala como dice /transcribir.
+- **Leer solo el tramo:** `abc.subs.txt` tiene una línea cada ~30 s y ocupa unos 30 000 tokens; no se lee
+  entero. Por ejemplo, de 0:47 a 0:50: `awk '/^\[0:47:/,/^\[0:50:/' abc.subs.txt`.
 
 - **Pista:** <https://sanchezmiente.com/>, web del PP con 30 «desmentidos» en directo (22:07–23:48,
   hora peninsular; leída el 20-11-2026, sin aviso legal ni firma). Es una pista de parte: sus fuentes son a
@@ -30,30 +32,12 @@ cerró Sánchez.
 
 **Fuera de alcance:** las afirmaciones de Feijóo (PP) no se investigan.
 
-## Para retomar (20-11-2026, quinta tanda)
+## Para retomar (21-11-2026)
 
-Publicados el 20-11-2026: cac-02, cac-27 y cac-10 (casos), los dos hitos de cac-14 y las dos promesas de
-cac-22. Quinta tanda (20-11-2026, un agente por candidato): cac-06, 11, 15, 18, 23 y 25 investigados;
-descartados por el usuario cac-11, 15, 18, 23 y 25, y también cac-20 y cac-26 (bloqueados por procesos
-judiciales). cac-06 queda débil (cifra sin fuente; se reabre si el Gobierno publica su origen).
-Material borrado salvo `investigacion/material/cac-27/` (el informe de Interior al 15-11-2026, sin copia
-en Web Archive; ver `pendientes-web-archive.md`), `cac-06/` (por si se reabre) y `debate-19n/` (audio y
-documentos del debate, para los candidatos que quedan).
-Desfase entre vídeos: RTVE (`f8qUA829xVY`) = ABC (`0ge5WDh_fho`) + 8013 s, constante en todo el debate.
-
-Queda por investigar (prioridad baja): cac-17, 19, 24.
-
-Sexta tanda (20-11-2026, un agente por candidato): cac-01, 04 y 12. Descartados por el usuario cac-01 (los datos
-oficiales no desmienten la frase) y cac-04 (se precisa en el mismo debate; «transferido» es una sola palabra). De cac-01
-sale cac-30, la promesa de 2020 de rehabilitar medio millón de viviendas en tres años: descartado por el usuario (21-11). cac-12, descartado entero por
-el usuario (el precio cuadra con la fuente del Gobierno; el 60 % renovable es un redondeo).
-
-Bandeja del 20-11-2026 (verificaciones de Comprobado.es y Verificat): cac-29 registrado (19 000 millones del
-ferrocarril) y cac-04 completado; los dos, débiles por decisión del usuario. cac-29 se reabrió e investigó
-el mismo día (Consejo de Ministros del 13-10, nota de Adif del 08-11): sigue débil. El resto de lo
-verificado por Comprobado ya estaba (cac-05, 08, 13, 15).
-
-Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar.
+El usuario da el debate por agotado salvo cac-17, 19 y 24 (por investigar, prioridad baja), que se hacen
+en sesiones separadas, una por candidato. cac-06 y cac-29 siguen débiles: no se reabren salvo que lo pida.
+Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar. El historial de las
+tandas anteriores está en [cerrados/cara-a-cara-2026.md](cerrados/cara-a-cara-2026.md).
 
 ### cac-06 · «Desde la aprobación de la Ley estatal de Vivienda han sido 480.000 pisos más en alquiler»
 - **Estado:** débil (20-11-2026, decisión del usuario) — cifra sin fuente localizada; las series oficiales dan menos, con el mismo signo y medidas distintas
