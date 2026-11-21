@@ -13,16 +13,6 @@ Sánchez (`no-aministia-para-politicos-e-independentistas-catalanes`, con hitos 
 Illa (`illa-ni-habra-amnistia`), Bolaños (gem-14, cerrado), Borrell (sup-30), Armengol (sup-46),
 Campo (gem-48), Montero y Puente (iap-02 e iap-10, descartados).
 
-### amn-01 · Iceta: la amnistía, «una cosa practicable en momentos excepcionales de cambio de régimen» (19-05-2021)
-- **Estado:** ya existe — `no-aministia-para-politicos-e-independentistas-catalanes`; posible hito nuevo (fuente primaria)
-- **Origen:** etiqueta del vídeo de The Objective
-- **Persona / tipo propuesto:** Miquel Iceta (ministro de Política Territorial y Función Pública) / hito de cambio de postura del Gobierno
-- **Antes:** 19-05-2021 · Diario de Sesiones del Congreso, XIV legislatura, núm. 103 (sesión plenaria núm. 99), p. 31, respuesta a la interpelación urgente de Mireia Vehí (CUP) «relativa a las propuestas del Gobierno para la resolución del conflicto político de Cataluña» (expediente 172/000106): «Nosotros no compartimos el proyecto independentista y no creemos en el derecho de autodeterminación. Y nuestra Constitución prohíbe indultos de carácter general. Ustedes defienden, y tienen pleno derecho a ello, la amnistía. La amnistía, desde nuestro punto de vista, es una cosa practicable en momentos excepcionales de cambio de régimen, cuando lo que se pone en cuestión no es la aplicación concreta de una ley sino todo un sistema legal, que es lo que pasó en el año 1977. Por lo tanto, no creemos que sea planteable ahora; de hecho, creo que los letrados de la Cámara y una mayoría de la Mesa así se han pronunciado ya.» PDF: `congreso.es/public_oficiales/L14/CONG/DS/PL/DSCD-14-PL-103.PDF`, copia de Web Archive 20210520064803 (61 p., SHA-256 4d9100d3…d039a2). Vehí había pedido en la misma interpelación «referéndum y amnistía» (pp. 26-28 y 30)
-- **Después:** el del caso: la ley de amnistía (BOE, 11-06-2024). Iceta no la defendió en público después del 23J: el 07-09-2023 esquivó la pregunta en Bruselas (EFE) y el 19-09-2023 dijo desconocer el acuerdo del que hablaba Junqueras («si existe y se firmó debe ser público y conocido»); dejó el ministerio el 21-11-2023
-- **Justificación del político:** —
-- **Búsquedas:** (21-11-2026) web: Periódico de Ibiza (Europa Press, 19-05-2021) da la fecha y la interpelación; Diario de Sesiones descargado de Web Archive (congreso.es bloquea curl) y leído; dos búsquedas sobre una defensa posterior de la amnistía: ninguna
-- **Notas / veredicto:** el hito de Iceta que tiene ahora el caso (fecha «2021-06», «No va a haber amnistía, no va a haber autodeterminación…») sale del Diario de León, que es prensa. El del Diario de Sesiones es otra frase, anterior, y sale de la fuente primaria: se puede añadir, o sustituir el de prensa (decide el usuario). Como caso propio de Iceta no sirve: no hay un «después» suyo.
-
 ### amn-02 · Isabel Rodríguez, portavoz del Gobierno, y la amnistía
 - **Estado:** débil (sin frase antes del 23J)
 - **Origen:** etiqueta del vídeo de The Objective
@@ -45,7 +35,7 @@ Campo (gem-48), Montero y Puente (iap-02 e iap-10, descartados).
 - **Búsquedas:** ninguna
 
 ### amn-05 · José Luis Ábalos y la amnistía
-- **Estado:** bloqueado (decide el usuario)
+- **Estado:** en espera (decisión del usuario, 21-11-2026: sigue bloqueado, como lo demás relacionado con él)
 - **Origen:** etiqueta del vídeo de The Objective
 - **Persona / tipo propuesto:** José Luis Ábalos (secretario de Organización del PSOE y ministro hasta 2021; diputado en la XV legislatura) / cambio de postura
 - **Antes / Después:** pendientes: frase suya contra la amnistía antes del 23J y su voto a la ley (votaciones del Congreso de 14-03-2024 y 30-05-2024, tal como consten)
