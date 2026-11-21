@@ -147,16 +147,6 @@ Ficheros temporales eliminados tras registrarlos.
 - **Búsquedas:** ninguna (21-11-2026)
 - **Notas / veredicto:** aceptar votos no es pactar: solo hay caso si antes dijo que no los aceptaría. Sin esa frase, no hay contradicción (es una crítica de terceros).
 
-### iap-18 · Colau: dejar la primera línea si perdía en 2023
-- **Estado:** por investigar (prioridad alta)
-- **Origen:** temporal-ada-colau, punto 7
-- **Persona / tipo propuesto:** Ada Colau / promesa incumplida o cambio de postura
-- **Antes:** pendiente: entrevistas de la campaña de mayo de 2023; la pista dice que afirmó que si no ganaba no se quedaría en la oposición y volvería a su vida anterior
-- **Después:** pendiente: siguió de concejala en la oposición hasta su renuncia (la pista dice octubre de 2024; comprobar la fecha en el acta del pleno o la Gaseta Municipal); en 2026 es candidata de Frente Amplio a la Presidencia del Gobierno (ver usr-03)
-- **Justificación del político:** según la pista, liderar la transición del grupo municipal
-- **Búsquedas:** ninguna (21-11-2026)
-- **Notas / veredicto:** el más prometedor de Colau si la frase existe, pero la pista puede estar al revés: comprobar que no dijo que se quedaría de concejala. Buscar también si descartó en algún momento presentarse a unas generales. Vídeo o audio → /transcribir.
-
 ### iap-20 · Irene Montero (y Garzón): la prestación de exministra frente al Documento Ético de Podemos
 - **Estado:** débil (decisión del usuario, 21-11-2026: el código vigente en 2023 tiene una excepción que ampara el cobro)
 - **Origen:** temporal-salarios, punto 2
