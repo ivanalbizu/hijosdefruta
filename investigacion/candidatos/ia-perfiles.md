@@ -47,16 +47,6 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Búsquedas:** —
 - **Notas / veredicto:** la premisa es falsa: presentó los PGE de 2019 (devueltos en el Congreso), 2021, 2022 y 2023. Relación: `sanchez-sin-presupuestos-no-se-gobierna`; precedente gem-33 (Belarra, «en tiempo y forma», descartado por el usuario).
 
-### iap-05 · Montero y la rebaja del IVA de los alimentos
-- **Estado:** por investigar
-- **Origen:** montero-temporal, punto 5
-- **Persona / tipo propuesto:** María Jesús Montero / cambio de postura
-- **Antes:** pendiente: rechazo de Montero a bajar el IVA de los alimentos en 2022 (sesiones de control en el Diario de Sesiones, ruedas de prensa de La Moncloa)
-- **Después:** pendiente: Real Decreto-ley 20/2022 (BOE), rebaja del IVA de alimentos básicos
-- **Justificación del político:** la inflación cambió las circunstancias
-- **Búsquedas:** —
-- **Notas / veredicto:** mirar si los hechos de fondo cambiaron entre las dos fechas (criterio de contradicción limpia) y si ella misma lo justificó. El IVA de la luz (2021) solo si hay frase previa suya en contra.
-
 ### iap-06 · Montero y el impuesto a las energéticas
 - **Estado:** por investigar (prioridad baja; probable débil)
 - **Origen:** montero-temporal, punto 5
@@ -66,12 +56,6 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Justificación del político:** aritmética parlamentaria
 - **Búsquedas:** —
 - **Notas / veredicto:** contradicción poco limpia si el Gobierno siguió proponiendo el impuesto y fue el Congreso el que lo tumbó.
-
-### iap-07 · Montero y los ERE
-- **Estado:** bloqueado
-- **Origen:** montero-temporal, punto 7
-- **Persona / tipo propuesto:** María Jesús Montero / —
-- **Notas / veredicto:** la pieza política sigue abierta (cuestión prejudicial ante el TJUE; ver [eres.md](eres.md)) y la pista le atribuye haber «ocultado» un fraude. Choca con dos reglas; el usuario ya descartó ere-01 a 05 y 07 a 12. Propuesta: descartar.
 
 ### iap-08 · Puente: los insultos en X frente a pedir respeto
 - **Estado:** por investigar
@@ -95,8 +79,3 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Persona / tipo propuesto:** Óscar Puente / cambio de postura
 - **Antes:** pendiente: frase propia contra la amnistía antes del 23-07-2023; la pista no da ninguna («al igual que otros dirigentes»)
 - **Notas / veredicto:** como iap-02: sin cita propia no hay caso.
-
-### iap-11 · Puente y las «lecciones de izquierdismo» de los socios
-- **Estado:** descartado (propuesta; decide el usuario)
-- **Origen:** puente-temporal, punto 4
-- **Notas / veredicto:** opiniones y choques entre socios, sin afirmación ni hecho que se contradigan (criterio de opiniones de mitin, usr-02; nadie se contradice a sí mismo, gem-20).
