@@ -15,17 +15,6 @@ ProyectosDeLey (versión 21-11-2026).
 
 > Cerrados (descartados, publicados, duplicados…): [cerrados/bolanos.md](cerrados/bolanos.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
 
-### bol-02 · Secretos oficiales: «esta legislatura será la oportunidad para hacerlo»
-- **Estado:** prometedor (más flojo que bol-01; posible hito de él o caso propio)
-- **Origen:** búsqueda web (Diario de Sesiones del Senado); El Salto y Artículo 14 (pistas)
-- **Persona / tipo propuesto:** Félix Bolaños / promesa incumplida
-- **Antes:** 23-05-2025 · DS Senado, Comisión de Justicia, núm. 406, p. 27 (https://www.senado.es/legis15/publicaciones/pdf/senado/ds/DS_C_15_406.PDF): «nuestra legislación no se parece a ninguna de Europa, a ninguna, como es lógico, porque es una ley preconstitucional, es una ley de la Dictadura. Por lo tanto, yo creo que tenemos que reformarla y esta legislatura será la oportunidad para hacerlo.» SHA-256 52ab8152b075c4c9af61ae00d3946d88f2b0d206c9fa91e1bc75a11e7efe9594. Según prensa (Europa Press, pistas), 03-03-2026 «compromiso» de derogarla y 05-05-2026, tras el Consejo de Ministros, espera aprobarla «en los próximos meses»: buscar la transcripción de la rueda de prensa en La Moncloa.
-- **Después:** 121/000067 Proyecto de Ley de Información Clasificada (presentado 23-07-2025), en «Enmiendas» del 29-08-2025 al 06-10-2026, «Caducado». La Ley 9/1968 sigue vigente.
-- **Justificación del político:** el Gobierno sí cumplió su parte (aprobar y remitir el proyecto, que también prometió en esa sesión); el PSOE tiene 121 diputados y necesitaba acuerdos (03-03-2026, según prensa).
-- **Lo que lo debilita:** «será la oportunidad» es menos firme que «vamos a». Si aparece la frase del 05-05-2026 en La Moncloa, el caso mejora.
-- **Búsquedas (21-11-2026):** transcripción de la rueda de prensa del 05-05-2026 no localizada (La Moncloa solo tiene la página del vídeo; las URL habituales del PDF, `Documents/2026/20260505-transcripcion-rdp-consejo-ministros.pdf` y variantes, dan una página HTML). Si se quiere, /transcribir sobre el vídeo de La Moncloa. Transcripción del 22-07-2025 (aprobación del proyecto), p. 4: Bolaños recuerda que la primera vuelta se aprobó el 01-08-2022 y que la segunda «se iba a aprobar en mayo de 2023» cuando se convocaron elecciones; no hay compromiso de plazo en esa rueda (sí, p. 21, «estos dos años que llegan todavía de legislatura por delante», dicho por otro ministro o la portavoz: comprobar).
-- **Notas / veredicto:** ya hay un caso de Morant sobre esta ley (gem-30, desclasificación a los 45 años); enlazarlos.
-
 ### bol-03 · «Hemos multiplicado por doce el presupuesto de inversión en justicia»
 - **Estado:** por investigar
 - **Origen:** DSCD-15-CO-446 (14-11-2025), p. 30 y 47; un diputado le acusa de mentir (p. 42)
