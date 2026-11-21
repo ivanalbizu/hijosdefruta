@@ -17,6 +17,10 @@ titular; recortes solo de documentos oficiales o públicos de los partidos.
 5. Solo si no hay primaria: agencias (Europa Press, EFE) o la prensa que reproduce la frase literal. Se
    deja constancia de que no se encontró la primaria. Los verificadores son pistas, no fuentes.
 
+**Gastar poco:** lo leído se queda en el contexto toda la sesión. Un PDF se pasa a texto y se busca con
+`grep` (no se vuelca entero); una web se lee con curl o con el agente `web-fetch` y una pregunta concreta;
+Chrome, solo si la web lo exige, con `get_page_text` o `find` antes que capturas de pantalla.
+
 ## Dónde y cómo, por organismo
 
 | Fuente | Dónde | Cómo descargar y notas |

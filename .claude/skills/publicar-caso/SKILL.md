@@ -44,7 +44,8 @@ Para **añadir un hito** a un caso existente: mismas reglas, en su sitio de la c
   Comprueba que la imagen y el crédito de Commons tienen sentido.
 - **Recorte:** si la prueba es un PDF oficial o un documento público de un partido, añade
   `documento: { url, buscar?, incluir? }` al hito y ejecuta `npm run capturas -- <slug>`. **Mira el PNG
-  generado** (que se lea y que el resalte caiga en la cita). Si la web bloquea, la copia local en
+  generado** (que se lea y que el resalte caiga en la cita) una sola vez; si lo regeneras, mira solo el
+  nuevo. La imagen OG de `dist/` no hace falta mirarla. Si la web bloquea, la copia local en
   `investigacion/material/<caso>/` con el mismo nombre de archivo. Nunca recortes de prensa.
 - **Citas de vídeo o audio:** confirmadas por el usuario con el bloque de /transcribir.
 
@@ -59,7 +60,9 @@ Para **añadir un hito** a un caso existente: mismas reglas, en su sitio de la c
 ## 4. Registro y revisión del usuario
 
 - En `investigacion/candidatos/<origen>.md`: estado y slug (`borrador` mientras tanto, `publicado` al
-  final), y su fila del resumen en `investigacion/candidatos.md`.
+  final), y su fila del resumen en `investigacion/candidatos.md`. Localiza la línea con
+  `grep -n '^### <id> '`, sin leer el registro entero. Al publicar, `archivar.py` (/candidatos) lo pasa a
+  `cerrados/`.
 - Pide al usuario que lo revise en `npm run dev` (`/casos/<slug>/`) con la lista de lo pendiente de
   confirmar. **Solo pasa a `draft: false` cuando lo diga el usuario.**
 

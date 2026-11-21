@@ -41,6 +41,8 @@ Y lee solo esos tramos; los minutos que interesen se transcriben luego con `--de
 2. Registra cada candidato como `ras-NN` (el siguiente número libre) en
    [investigacion/candidatos/rastreo.md](../../../investigacion/candidatos/rastreo.md), con el formato de
    /candidatos y el origen «bandeja del DD-MM-AAAA, pasada de las HH:MM, <verificador> DD-MM («titular»)».
+   El siguiente número, con `grep -ho '^### ras-[0-9]*' -r investigacion/candidatos/ | sort -V | tail -1`;
+   no leas el registro entero.
 3. Al terminar, añade al final de la pasada revisada:
    `Revisada el DD-MM: ras-06 y ras-07 registrados (ras-06 prometedor; ras-07 débil); el resto, sin interés.`
 4. Actualiza la fila «Rastreo de campaña» del resumen de `investigacion/candidatos.md`.

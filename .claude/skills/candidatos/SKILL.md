@@ -21,11 +21,20 @@ solo afecta a otros partidos se anota en una línea como `fuera de alcance`, sin
 
 El registro está partido por origen: [investigacion/candidatos.md](../../../investigacion/candidatos.md)
 tiene el resumen de estados y la tabla de archivos; cada origen vive en
-`investigacion/candidatos/<origen>.md` con su prefijo (`arch-`, `gem-`, `sup-`, `ras-`…).
+`investigacion/candidatos/<origen>.md` con su prefijo (`arch-`, `gem-`, `sup-`, `ras-`…). Los cerrados
+(descartados, publicados, duplicados…) están en `investigacion/candidatos/cerrados/<origen>.md`.
 
 1. Busca el tema y la persona en el registro y en los casos:
-   `grep -ril <término> investigacion/candidatos/ src/content/casos/`. Puede estar investigado, descartado
-   o publicado ya.
+   `grep -ril <término> investigacion/candidatos/ src/content/casos/` (incluye `cerrados/`). Puede estar
+   investigado, descartado o publicado ya.
+
+**Gastar poco:** todo lo que se lee queda en el contexto hasta el final de la sesión.
+- Los registros no se leen enteros: `grep -rn -A 25 '^### cac-27 ' investigacion/candidatos/` para un
+  candidato, `grep -h '^\- \*\*Estado' …` para ver estados.
+- Para leer una página web, el agente `web-fetch` con una pregunta concreta (devuelve la respuesta, no la
+  página); Chrome solo si la web lo exige, con `get_page_text` o `find` antes que capturas.
+- Varias búsquedas web sobre lo mismo: pocas y bien dirigidas; si dos no dan nada, anótalo y pregunta.
+- Al cerrar una tanda, `python3 -I .claude/skills/candidatos/archivar.py` mueve los cerrados a `cerrados/`.
 2. Un origen nuevo va en un archivo nuevo, con su fila en la tabla y en el resumen de `candidatos.md`.
 3. Los listados de otras IA (Gemini) y las recopilaciones sin fuentes son pistas de fiabilidad baja: se
    inventan fechas, cifras y verificaciones. Nada se da por bueno hasta verlo en la fuente.
@@ -110,4 +119,6 @@ Cada candidato es una sección `### <id> · <tema>` con estos campos (deja vací
 - **Notas / veredicto:** …
 ```
 
-Al cerrar una tanda, actualiza la fila de su origen en el resumen de `investigacion/candidatos.md`.
+Al cerrar una tanda, actualiza la fila de su origen en el resumen de `investigacion/candidatos.md` y
+ejecuta `archivar.py` (arriba). Para cambiar el estado de un candidato archivado (reabrirlo), edítalo en
+`cerrados/` y muévelo a mano al registro vivo.

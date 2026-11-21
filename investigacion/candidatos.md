@@ -33,7 +33,9 @@ Descartados: usr-02 (Airbnb «no paga impuestos», exageración de mitin) y usr-
 
 ## Archivos por origen
 
-Cada origen tiene su archivo en [candidatos/](candidatos/), con un `### <id> · <tema>` por candidato:
+Cada origen tiene su archivo en [candidatos/](candidatos/), con un `### <id> · <tema>` por candidato. Los
+cerrados (descartados, publicados, duplicados…) pasan a [candidatos/cerrados/](candidatos/cerrados/) con
+`.claude/skills/candidatos/archivar.py`:
 
 | Archivo | Origen | Prefijo |
 | --- | --- | --- |
