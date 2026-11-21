@@ -36,7 +36,7 @@ Catalunya en Comú y otros: dentro del alcance (Sumar).
 ## Origen: nota del usuario, investigacion/pedro-sanchez-temporal.md (21-11-2026)
 
 ### usr-06 · Sánchez y los decretos-ley: «más que nadie» y gobernar sin el Congreso
-- **Estado:** ya existe — `sanchez-limitar-decretos-ley`; hitos añadidos el 21-11-2026 (título y `despues` a 211, RDL 18/2022 pasa a la cronología, Comité Federal con cita confirmada por el usuario «un concurso», derogación de los RDL 26 y 27/2026, RDL 28/2026 con recorte del preámbulo y Diputación Permanente; tabla por presidente). Pendiente de revisión del usuario y de sustituir el «antes» de Maldita.es
+- **Estado:** ya existe — `sanchez-limitar-decretos-ley`; hitos añadidos el 21-11-2026 y revisados por el usuario (título y `despues` a 211, RDL 18/2022 pasa a la cronología, Comité Federal con cita confirmada por el usuario «un concurso», derogación de los RDL 26 y 27/2026, RDL 28/2026 con recorte del preámbulo y Diputación Permanente; tabla por presidente). Pendiente de revisión del usuario y de sustituir el «antes» de Maldita.es
 - **Origen:** nota del usuario (21-11-2026): criticó gobernar por real decreto, lo ha usado más que nadie y ha dicho que los usará si no le apoya el Congreso
 - **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
 - **Antes:** ya en el caso (foro de El Mundo, 11-2015; debate del estado de la nación, 02-2015)

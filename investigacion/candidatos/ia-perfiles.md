@@ -29,7 +29,7 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Notas / veredicto:** sin cita propia de Montero no hay caso (no se le atribuye la postura del Gobierno).
 
 ### iap-03 · Montero: con Bildu «ni en pintura» (2019) y los presupuestos pactados con Bildu
-- **Estado:** ya existe — `psoe-no-pactara-con-bildu`; hitos añadidos (pendiente de revisión del usuario). Como caso propio, descartado por el usuario: la frase del «antes» no aparece
+- **Estado:** ya existe — `psoe-no-pactara-con-bildu`; hitos añadidos (revisados por el usuario, 21-11-2026). Como caso propio, descartado por el usuario: la frase del «antes» no aparece
 - **Origen:** montero-temporal, punto 4
 - **Persona / tipo propuesto:** María Jesús Montero / cambio de postura
 - **Antes:** no encontrado: ni rastro de «ni en pintura» de Montero (ni de otro dirigente del PSOE) sobre Bildu. La pista no da medio ni fecha, así que no hay vídeo que revisar
