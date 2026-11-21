@@ -34,7 +34,7 @@ cerró Sánchez.
 
 ## Para retomar (21-11-2026)
 
-El usuario da el debate por agotado salvo cac-24 (por investigar, prioridad baja; cac-17, descartado el 21-11; cac-19, descartado el 21-11), que se hace en una sesión aparte. cac-06 y cac-29 siguen débiles: no se reabren salvo que lo pida.
+El usuario da el debate por agotado (cac-17, cac-19 y cac-24, descartados el 21-11). cac-06 y cac-29 siguen débiles: no se reabren salvo que lo pida.
 Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar. El historial de las
 tandas anteriores está en [cerrados/cara-a-cara-2026.md](cerrados/cara-a-cara-2026.md).
 
@@ -60,10 +60,6 @@ tandas anteriores está en [cerrados/cara-a-cara-2026.md](cerrados/cara-a-cara-2
 - **Hito 2 · 19-11-2026:** de 49:34 a 49:40 (whisper): «Y en segundo lugar, ustedes cuando han gobernado, han congelado las pensiones a 0,25%, señor Feijó». Feijóo, encima: «El diputado que congeló las pensiones fue usted». Sin confirmar por el usuario.
   - **En el vídeo de RTVE (`f8qUA829xVY`, 20-11-2026):** tramo confirmado por el usuario, de 3:03:05 a 3:03:15, «al 0,25%» → `start: 10985`, `end: 10995`. (Los tiempos que di primero, 3:03:13–3:03:25, iban 10 s tarde: `--download-sections` empezó 10 s antes de lo pedido. Corregido, el desfase con ABC es +8013 s, el mismo que en cac-02.)
 - **Notas:** en el cara a cara de 2023 negó que Zapatero las congelara (el caso); ahora llama «congelar» a revalorizarlas un 0,25 % (2014-2017), y en 2010 votó a favor del decreto que suspendió la revalorización de 2011. Es la misma persona sobre lo mismo: hitos, no caso propio. Para el recorte del hito 1 vale el PDF de la votación (documento oficial del Congreso), con `buscar` en «Sánchez Pérez-Castejón».
-
-### cac-24 · «Usted mismo ha dicho que quiere derogar la ley de muerte digna»
-- **Estado:** por investigar (prioridad baja)
-- **Notas:** ≈1:11:25–1:11:40 y ≈1:13:27. En el debate Feijóo dice «modificar» («No toque usted la eutanasia»). Sería falsedad si Feijóo nunca dijo «derogar»; hace falta su declaración anterior en vídeo o en el Diario de Sesiones. Igual con «restringir el acceso al aborto de las mujeres de 16 años».
 
 ### cac-29 · Ferrocarril: «el blindaje de la inversión en mantenimiento y en seguridad de la alta velocidad por 19.000 millones de euros durante los próximos seis años»
 - **Estado:** débil (20-11-2026; confirmado por el usuario, reabierto e investigado el mismo día: sigue débil, pendiente de su decisión) — el compromiso existe y es de toda la red, para cinco años; la frase admite dos lecturas
