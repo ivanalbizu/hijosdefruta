@@ -13,16 +13,6 @@ verificable.
 
 > Cerrados (descartados, publicados, duplicados…): [cerrados/morant.md](cerrados/morant.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
 
-### mor-02 · Morant: «yo no comparé a Feijóo con Hitler» (07-2026)
-- **Estado:** débil (pendiente de ver el vídeo)
-- **Origen:** El Español, 22-07-2026 y 24-07-2026; Euronews, 23-07-2026
-- **Persona / tipo propuesto:** Diana Morant / falsedad («nunca dije», precedente wild-01)
-- **Antes:** 22-07-2026 · «Mañaneros», TVE: «Creo que Alberto Núñez Feijóo se equivoca, pero está dibujando un camino que se parece cada vez más a esos gobiernos criminales como el de Hitler» (según El Español; falta la pregunta y el vídeo de RTVE Play).
-- **Después:** 24-07-2026 · visita a la Universidad Miguel Hernández (Elche), preguntas de periodistas (Europa Press): «yo no dije eso», «Yo no comparé a Feijóo con Hitler. Sí que hice una reflexión: los gobiernos nazis empezaron también con políticas racistas, políticas xenófobas…». Vídeo pendiente.
-- **Justificación del político:** que hizo un «paralelismo» entre políticas, no una comparación de personas.
-- **Búsquedas:** web (Morant + Hitler + paralelismo): El Español, El Debate, esdiario, Vozpópuli, Euronews. Sin enlace a RTVE Play.
-- **Notas / veredicto:** la frase del 22-07 compara el «camino» de Feijóo con el de los gobiernos de Hitler; su «no comparé a Feijóo con Hitler» se sostiene en la distinción entre la persona y el camino. Es interpretación, no contradicción limpia, y el caso giraría en torno a una opinión sobre el PP (redacción neutra). Solo sería limpio si a la pregunta «¿comparó el camino de Feijóo con Hitler?» respondiera «yo no dije eso». Hace falta el vídeo de los dos actos.
-
 ### mor-03 · Ley de la Ciencia: «Blindaremos por ley una financiación de la ciencia pública hasta el 1,25 % del PIB» (2022)
 - **Estado:** débil
 - **Origen:** búsqueda web (resumen de resultados; la cita sale de una nota de prensa de 2022, sin localizar)

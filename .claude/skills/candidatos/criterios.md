@@ -37,6 +37,10 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
   Interior).
 - **El «después» solo está en prensa** o en un borrador filtrado (gem-21, gem-51): débil o descartado.
 - **Conversación atropellada** o voces que no se separan bien (wild-15).
+- **Un «nunca dije» que depende de la interpretación:** si lo que niega es una lectura de su frase y su
+  explicación describe con fidelidad lo que dijo, no es caso (mor-02: «no comparé a Feijóo con Hitler»
+  frente a «un camino que se parece […] a esos gobiernos criminales como el de Hitler»). Sí lo es cuando
+  niega lo que dijo casi literalmente (wild-01).
 - **Una resolución le da la razón** (borrador de Montero y la revelación de secretos, eliminado).
 
 ## Datos y matices
