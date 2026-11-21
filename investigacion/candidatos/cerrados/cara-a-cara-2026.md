@@ -378,3 +378,18 @@ el mismo día (Consejo de Ministros del 13-10, nota de Adif del 08-11): sigue d�
 verificado por Comprobado ya estaba (cac-05, 08, 13, 15).
 
 Cada cita nueva se confirma con el usuario (URL, tramo y texto) antes de publicar.
+
+## Para retomar (21-11-2026)
+
+### cac-17 · Feijóo en la Xunta: infraestructuras «un 44 %» menos, «596 millones» en 2009 y «337» en 2022
+- **Estado:** descartado (21-11-2026, confirmado por el usuario) — las cifras salen de los presupuestos de la Xunta y la frase se sostiene
+- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (dato)
+- **Después:** 19-11-2026 · de 48:22 a 48:45 en ABC (subtítulos automáticos, sin whisper ni confirmar): «cuando era presidente de la Xunta de Galicia redujo en un 44% el gasto en infraestructuras. En 2009 era de 596 millones de euros y en 2022 lo dejó en 337 millones de euros».
+- **Datos oficiales:**
+  - Presupuestos de 2009, Memoria I, tomo 2 (https://conselleriadefacenda.gal/orzamentos/2009/DE/MEMORIA_I_02.PDF, 96 págs., SHA-256 `4cf2bd5c…07ae39f`), pág. 28 (impresa 44), «II. Administración Xeral. Gastos», distribución funcional, en miles de euros: función 51 «Infraestruturas», 2008: 535 683; 2009: **596 218** (+11,3 %).
+  - Presupuestos de 2022, Memoria I (https://orzamentos.xunta.gal/orzamentos/2022/DE/MEMORIA_I_FR02.pdf, 124 págs., SHA-256 `a2bd660a…138639e`), pág. 56 (impresa 82), «Orzamento de Gastos da Administración Xeral. Distribución Funcional», en miles de euros: «51 Infraestruturas», 2021: 331 966; 2021 consolidable: 321 917; 2022: **333 491**. El proyecto (`2022/PR/`) da la misma cifra.
+- **Cálculos propios:** de 596 218 a 333 491 miles de euros, −44,1 %. Con las cifras que da él (596 y 337), −43,5 %: «un 44 %» vale con las dos. Los 596 coinciden exactos; los 337 no salen en el presupuesto inicial de 2022 (333,5), una diferencia del 1 % que puede venir de otra versión (créditos definitivos, liquidación). En euros corrientes: en términos reales la caída es mayor.
+- **Lo que lo debilita (para Sánchez):** nada que lo convierta en falsedad. Matices: el presupuesto de 2009 lo elaboró el Gobierno anterior (Touriño) y Feijóo tomó posesión en abril de 2009, pero «en 2009 era de» describe bien el punto de partida; el de 2022 sí es suyo (dejó la Xunta en abril de 2022). Es la función 51 de la Administración General: no incluye lo que gastan con fondos propios los entes instrumentales, y no he comprobado si la clasificación funcional cambió entre 2009 y 2022 (la Axencia Galega de Infraestruturas, que en 2022 gestiona 270,9 millones de carreteras, no existía en 2009).
+- **Búsquedas (21-11-2026):** subtítulos del debate (tramo 48:22–48:53); web («596 millones» «337 millones» Xunta, «44 %» infraestructuras, en castellano y gallego), sin verificación ni otra fuente con las cifras; presupuestos de la Xunta de 2009 (Memoria I, tomos 1 y 2) y de 2022 (Memoria I definitiva y proyecto, ley tomo III). Sin buscar: liquidación de 2022 (Conta Xeral), para localizar los 337.
+- **Material (fuera de git):** `investigacion/material/cac-17/` (las tres memorias). Sin copias en Web Archive.
+- **Notas / veredicto:** descartado. No es una contradicción de Sánchez: el dato de 2009 cuadra exacto y el de 2022 difiere un 1 %, con el mismo porcentaje redondeado (precedentes cac-01 y cac-12). En el mismo tramo: «El señor Rajoy redujo en un 65% las infraestructuras tocando en 2018 el mínimo desde el año 1985» (medida sin precisar; no se investiga).
