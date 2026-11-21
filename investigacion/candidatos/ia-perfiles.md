@@ -29,14 +29,14 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Notas / veredicto:** sin cita propia de Montero no hay caso (no se le atribuye la postura del Gobierno).
 
 ### iap-03 · Montero: con Bildu «ni en pintura» (2019) y los presupuestos pactados con Bildu
-- **Estado:** por investigar
+- **Estado:** ya existe — `psoe-no-pactara-con-bildu`; hitos añadidos (pendiente de revisión del usuario). Como caso propio, descartado por el usuario: la frase del «antes» no aparece
 - **Origen:** montero-temporal, punto 4
 - **Persona / tipo propuesto:** María Jesús Montero / cambio de postura
-- **Antes:** pendiente: la pista sitúa «ni en pintura» en una entrevista de televisión de 2019, sin más datos. Puede ser inventada o de otra persona: verificar en el vídeo
-- **Después:** pendiente: votos de EH Bildu a los PGE 2021 (votación nominal del Congreso) y declaraciones de Montero sobre la negociación
-- **Justificación del político:** diálogo con todas las fuerzas democráticas para aprobar las cuentas
-- **Búsquedas:** registro y casos (21-11-2026): sin rastro de «ni en pintura»
-- **Notas / veredicto:** si la frase existe, es un caso propio enlazado con `psoe-no-pactara-con-bildu` (otra persona: criterio «Caso propio o hito»).
+- **Antes:** no encontrado: ni rastro de «ni en pintura» de Montero (ni de otro dirigente del PSOE) sobre Bildu. La pista no da medio ni fecha, así que no hay vídeo que revisar
+- **Después:** 17-11-2020 · rueda de prensa del Consejo de Ministros: «Y pretender que el hecho de que Bildu vote este presupuesto, que todavía es un voto que no está confirmado, entender que eso supone una victoria o que supone algún tipo de reproche a este Gobierno parece un comentario absolutamente estéril» · https://www.lamoncloa.gob.es/consejodeministros/ruedas/Paginas/2020/rpcm17112020.aspx (PDF `Consejo 2020.11.17.pdf`, pág. 15; copia en Web Archive del 21-11-2026). 03-12-2020 · Congreso, sesión 65: cuatro de los cinco diputados de EH Bildu votan sí al dictamen de los PGE 2021 (el quinto, Iñarritu, no vota), igual en las 51 votaciones; título I, 188-150 · open data del Congreso, votación 1, págs. 5 y 10
+- **Justificación del político:** en la misma rueda de prensa: «ETA fue derrotada por la democracia, hace ya diez años»; sus conversaciones con Bildu «han versado solo y exclusivamente en relación con los números y con las cuentas públicas»; es «obligatorio, exigible [...] intentar llegar a acuerdos con todas y cada una de las formaciones políticas»
+- **Búsquedas:** registro y casos (21-11-2026): sin rastro de «ni en pintura». Web (21-11-2026): «Montero Bildu "ni en pintura"», «Montero 2019 entrevista Bildu "no vamos a pactar" presupuestos» y «"ni en pintura" Bildu PSOE pactar»: nada; lo más parecido de 2019 es «No vamos a ceder a ningún chantaje y no vamos a admitir el derecho de autodeterminación» (12-02-2019, a ERC y PDeCAT, no a Bildu). La Moncloa: transcripción y PDF del 17-11-2020. Congreso: open data de votaciones del 03-12-2020 (sesión 65). BOE: Ley 11/2020, de 30 de diciembre (BOE-A-2020-17339)
+- **Notas / veredicto:** la frase del «antes» parece inventada por la otra IA. El usuario eligió llevar lo verificable como hitos de `psoe-no-pactara-con-bildu` (cronología 2020-11-17 y 2020-12-03, con recortes).
 
 ### iap-04 · Montero y la presentación de los presupuestos
 - **Estado:** por investigar (prioridad baja)
