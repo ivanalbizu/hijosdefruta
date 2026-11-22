@@ -193,11 +193,14 @@ Griñán solo se buscaron en la web (sin resultados claros); Errejón, Cerdán y
 causas.
 
 ### Pedro Sánchez (presidente del Gobierno)
-Candidato: rp-05, bloqueado. Todo con transcripción de La Moncloa.
+Candidato: rp-05, descartado por el usuario (22-11-2026). Todo con transcripción de La Moncloa o Diario de Sesiones.
 - **A** · 21-02-2024 (Rabat), 13-03-2024 (Congreso), 17-10-2024 (Bruselas, «pareja de un delincuente
   confeso»), 23-12-2024, 18-06-2025 y 18-06-2026 · el hermano y la pareja de Ayuso.
 - **B** · 29-04-2024 («el acoso que desde hace diez años sufre mi familia»), 22-05-2024, 14-10-2025, 28-07-2026
   («no es mi mujer, es Begoña Gómez […] lo que se hace es deshumanizar»).
-- **A y B en la misma sesión** · 24-06-2026 · Congreso (DSCD-15-PL-196, pp. 9-10 y 54-56) · «yo no hago lo
-  que otros sí me hicieron a mí, sí hicieron a mi familia», los casos de su mujer y su hermano «afectan a
-  personas», y en la réplica «el caso del novio de la señora Ayuso […] Eso, señor Feijóo, sí que es amor».
+- **A y B en la misma sesión** · 24-06-2026 · Congreso (DSCD-15-PL-196, pp. 10 y 54-56) · los casos de su mujer
+  y su hermano «afectan a personas que quiero», y en la réplica la pareja de Ayuso «multiplicó por siete sus
+  ingresos una vez empezó su relación afectiva» y «el caso del novio de la señora Ayuso […] Eso, señor Feijóo,
+  sí que es amor», después de que Feijóo («el marido de Begoña») y Abascal («el esposo de Begoña, el hermano
+  de David», «enamorado») nombraran a su familia. «Yo no hago lo que otros sí me hicieron a mí, sí hicieron a
+  mi familia» (p. 9) habla de las prácticas atribuidas a Leire Díez, no de mencionar a familiares.
