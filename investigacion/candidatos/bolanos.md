@@ -15,14 +15,6 @@ ProyectosDeLey (versión 21-11-2026).
 
 > Cerrados (descartados, publicados, duplicados…): [cerrados/bolanos.md](cerrados/bolanos.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
 
-### bol-03 · «Hemos multiplicado por doce el presupuesto de inversión en justicia»
-- **Estado:** por investigar
-- **Origen:** DSCD-15-CO-446 (14-11-2025), p. 30 y 47; un diputado le acusa de mentir (p. 42)
-- **Persona / tipo propuesto:** Félix Bolaños / falsedad (si los datos no lo respaldan)
-- **Antes:** 14-11-2025 · p. 30: «Desde que llegamos al Gobierno en el año 2018, hemos multiplicado el presupuesto de inversión en justicia por doce respecto de lo que nos encontramos con el Gobierno Rajoy.» P. 47 lo precisa: «el capítulo de inversiones en justicia».
-- **Después:** pendiente. Comparar el capítulo 6 de la sección 13 (Ministerio de Justicia) en los PGE de 2018 (Ley 6/2018) con los de 2023 (prorrogados en 2024 y 2025), con y sin el Mecanismo de Recuperación (servicio 50). Fuente: SEPG (sepg.pap.hacienda.gob.es), presupuestos por secciones y capítulos.
-- **Notas / veredicto:** criterio ras-01: se compara con el último dato oficial anterior a la declaración. Si los fondos europeos explican el «por doce», la frase puede ser cierta (wild-03). Él mismo los separa después («adicionalmente a esto, los fondos europeos…»), así que hay que ver si el «por doce» sale sin ellos.
-
 ### bol-04 · Ley de grupos de interés
 - **Estado:** débil
 - **Origen:** El Debate (09-10-2026, pista)
