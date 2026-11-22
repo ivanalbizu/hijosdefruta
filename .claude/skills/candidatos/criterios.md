@@ -11,6 +11,10 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
   votos, decisiones) choquen con lo que defendió. Iglesias y los escraches como «jarabe democrático» frente
   a su querella contra un manifestante ante su casa (sup-19). Antes de descartar un doble rasero por falta
   de frase, busca los hechos documentados.
+- **Doble rasero del partido:** cuando el acto es del partido (denuncias de su representante ante la Junta
+  Electoral) y lo que choca lo hacen sus cargos en el Gobierno, el «quien» es el partido; no se atribuye a
+  una persona lo que dijeron o firmaron sus portavoces (usr-07: el PSOE denuncia ruedas de prensa de
+  gobiernos del PP mientras multan a sus ministros por las suyas; Pilar Alegría descartada como ancla).
 - **Falsedad con cifra:** se compara con el último dato oficial publicado **antes** de la declaración. Si
   el político usa un dato anterior, esa es su justificación: va en la cronología y en el matiz (ras-01,
   Sánchez y la migración irregular: sus cifras eran las de mayo).
