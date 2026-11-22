@@ -15,28 +15,6 @@ devuelve 406. Senado, DS_P_15_13 y 14 (25-01 y 06-02-2024): no habla de los meno
 
 > Cerrados (descartados, publicados, duplicados…): [cerrados/marlaska.md](cerrados/marlaska.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
 
-### mar-01 · Menores de Ceuta: «retornos asistidos conforme al acuerdo firmado en 2007» frente a la STS 114/2024
-- **Estado:** investigando
-- **Origen:** búsqueda web (22-11-2026)
-- **Persona / tipo propuesto:** Fernando Grande-Marlaska (ministro del Interior) / falsedad
-- **Antes:** 16 o 17-08-2021 · entrevista en RNE (y declaraciones en Al Rojo Vivo), según El Faro de Ceuta (17-08-2021):
-  «Todos son retornos asistidos conforme al acuerdo firmado en 2007 entre Marruecos y España, siempre en beneficio del
-  menor», «todas las administraciones involucradas han actuado por el interés superior del menor y es lo que ha guiado
-  todo el procedimiento». Fuente primaria pendiente: audio de RNE (/transcribir) o una intervención suya en el Congreso o
-  el Senado de agosto-septiembre de 2021 (Diputación Permanente del 25-08-2021, sesiones de control de septiembre).
-- **Después:** 22-01-2024 · STS 114/2024, Sala Tercera, Sección 4.ª: desestima los recursos de la Abogacía del Estado y de
-  la Ciudad de Ceuta; la devolución de agosto de 2021 fue ilegal por no seguir el procedimiento de la Ley de Extranjería
-  (expediente individual), con «absoluta inobservancia» según la prensa. Nota de prensa del CGPJ localizada
-  (poderjudicial.es, «El Tribunal Supremo confirma que la devolución de menores desde Ceuta a Marruecos en agosto de 2021
-  fue ilegal…»); texto íntegro pendiente en CENDOJ. Comprobar si la sentencia dice también que se incumplió el Acuerdo de
-  2007 (lo sostuvo la Fiscalía, según la prensa): es lo que hace limpia la contradicción con «conforme al acuerdo».
-- **Justificación del político:** el «retorno asistido» no sería una repatriación; tras la sentencia, la «respeta» y
-  mantiene que se actuó por el interés superior del menor (Deia, 23-01-2024, según el buscador; dónde lo dijo, pendiente).
-- **Búsquedas:** web (tres), El Faro de Ceuta 17-08-2021 (leído), Senado DS_P_15_13 y 14 (sin resultados).
-- **Notas / veredicto:** resolución firme, no proceso abierto: se cita tal cual. Los menores no se identifican. Si la STS
-  dice que no se cumplió el Acuerdo de 2007, es una afirmación frente a un hecho declarado por el Supremo. Hito posible: su
-  reacción de enero de 2024, si está en un Diario de Sesiones.
-
 ### mar-02 · Devoluciones en caliente: el PSOE las recurre en 2015 y las defiende en el Gobierno
 - **Estado:** por investigar
 - **Origen:** búsqueda web (22-11-2026); El Faro de Ceuta (14-11-2018) como pista.
