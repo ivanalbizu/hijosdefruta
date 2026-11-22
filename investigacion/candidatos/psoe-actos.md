@@ -36,13 +36,3 @@ artículo 135, parece Pérez Tapias).
 Vídeo de El País (https://www.youtube.com/watch?v=9Zmr5nlIjj8, 68 s) y tuit de @PSOE
 (https://twitter.com/PSOE/status/1449692620750561282). La frase sobre la ley mordaza y la reforma laboral ya
 está en los casos publicados de ambos temas.
-
-### cong-02 · Ley de Trata: «la segunda lectura en este año»
-- **Estado:** prometedor con matiz (22-11-2026) — sale de cong-01; por proponer al usuario
-- **Persona / tipo propuesto:** Ana Redondo / promesa incumplida
-- **Antes:** 17-09-2024 · misma rueda de prensa que cong-01, p. 14: «entre otras medidas la Ley de Trata, que como saben, pasó por primera lectura del Consejo de Ministros, estamos terminando para que podamos presentar la segunda lectura en este año y que pueda iniciar su periplo parlamentario en los próximos meses y cuanto antes»; p. 26: «la Ley de Trata que estamos preparando para esa segunda vuelta al Consejo de Ministros y que iniciará su singladura probablemente al inicio del año que viene».
-- **Después:** 06-10-2026 · disolución (RD 806/2026) sin proyecto de ley: entre los 115 proyectos de la XV en los datos abiertos del Congreso (copia `20261020142254`) no hay ninguno de trata. Primera vuelta: 08-03-2024 según prensa (falta la referencia del Consejo de Ministros en La Moncloa); audiencia pública desde el 03-04-2024 (nota de Igualdad).
-- **Hitos:** 05-05-2026, Bolaños (La Moncloa, p. 6): «En materia de igualdad, aprobaremos la ley de violencia vicaria, y también la ley de trata, que regule por primera vez todas las formas de trata y de explotación humana»; p. 22: «Esa norma sí está, en el Plan Anual Normativo, nuestra voluntad es llevarla, bueno, pues no tardará, no tardará». Según Artículo 14, figuraba en los Planes Anuales Normativos de 2024, 2025 y 2026 (comprobar en los PAN).
-- **Justificación del político:** pendiente. Según El Español (27-07-2026), fuentes de Igualdad decían estar «esperando los informes» (sin primaria).
-- **Búsquedas (22-11-2026):** las de cong-01; web «ley orgánica integral contra la trata segunda vuelta…» y «ley de trata … disolución Cortes decae» (prensa de octubre de 2026: no llegó a las Cortes).
-- **Notas / veredicto:** más limpio que cong-01: plazo concreto («en este año», 2024), sin «objetivo», y dependía solo del Gobierno; el «probablemente» va solo en la segunda frase. Matiz: la segunda vuelta necesita informes de órganos consultivos (CGPJ, Consejo Fiscal, Consejo de Estado) cuyos plazos no controla el ministerio: comprobar si se pidieron y cuándo llegaron. Falta la referencia del Consejo de Ministros del 08-03-2024 y los PAN de 2024 y 2025.
