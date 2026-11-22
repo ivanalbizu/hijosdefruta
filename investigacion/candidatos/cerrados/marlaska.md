@@ -73,3 +73,98 @@ Candidatos cerrados de [marlaska.md](../marlaska.md), en el orden original. Se c
   él mantiene al día siguiente de la sentencia. Matices para el caso: en 2021 atribuye la evaluación a la Ciudad de Ceuta;
   en 2024 lo formula como convicción, dice que Interior no era parte y cita la Audiencia Nacional. Resolución firme: se
   cita tal cual. Los menores no se identifican (la sentencia usa seudónimos; no se reproducen).
+
+### mar-02 · Devoluciones en caliente: el PSOE las recurre en 2015 y las defiende en el Gobierno
+- **Estado:** publicado · `sanchez-rechazamos-rotundamente-devoluciones-en-caliente` (22-11-2026). Antes: tuit de Sánchez
+  del 13-09-2017 (<https://twitter.com/sanchezcastejon/status/907993318273024002>, copia de Web Archive del 21-05-2020
+  comprobada): «Sí, Helena. Pedimos la derogación total de la Ley Mordaza y rechazamos rotundamente las devoluciones en
+  caliente.» (respuesta a Helena Maleno, con enlace a una petición de change.org). Lo localizó elDiario.es
+  (13-08-2018), que lo incrusta; el texto se comprobó con la sindicación pública de X. Después: §§ 131-132 de la sentencia
+  de la Gran Sala en la traducción oficial del Ministerio de Justicia (Abogacía del Estado), con recorte. Enlace de vuelta
+  en `sanchez-derogar-ley-mordaza` añadido al publicar. El tuit de
+  octubre de 2014 («no comparto legalizar…») no se ha encontrado; no hace falta.
+- **Origen:** búsqueda web (22-11-2026); El Faro de Ceuta (14-11-2018) como pista.
+- **Persona / tipo propuesto:** cambio de postura. **Decidido (22-11-2026): caso propio**, no hito de
+  `sanchez-derogar-ley-mordaza` (otra promesa), enlazado con él en los dos sentidos. «quien» del antes: PSOE (recurso y
+  programa de 2015); del después: el Gobierno de España ante la Gran Sala del TEDH (26-09-2018). Tags: PSOE y Pedro
+  Sánchez. Marlaska solo en la cronología (Pleno, 21-09-2022). Precedente usr-07 (doble rasero del partido por hechos).
+- **Antes:**
+  - 21-05-2015 · recurso de inconstitucionalidad 2896-2015 de «noventa y siete diputados y diputadas del Grupo
+    Parlamentario Socialista», once de La Izquierda Plural, cuatro de UPyD y dos del Mixto contra, entre otros, la
+    disposición final primera de la LO 4/2015 (la que añade la DA 10.ª de la LOEx). Alegan que el rechazo en frontera es
+    «un supuesto de «vía de hecho»», sin procedimiento ni revisión judicial (arts. 9.3, 24.1 y 106 CE). Primaria: STC
+    172/2020, antecedente 1 y resumen de los motivos (BOE-A-2020-16819, <https://www.boe.es/buscar/doc.php?id=BOE-A-2020-16819>).
+  - Programa electoral del PSOE de 2015, pág. 368 (y 2016, pág. 367, mismo texto): «Derogar la Disposición Adicional de la
+    Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana, que pretende legalizar las denominadas
+    “devoluciones en caliente” en el espacio fronterizo entre Ceuta y Melilla y el territorio del Reino de Marruecos.»
+    Pág. 338 (2016: 337): «retirando las concertinas de nuestras fronteras y rechazando las devoluciones en caliente».
+    En `investigacion/material/PSOE_Programa_Electoral_2015.pdf` y `PSOE-Programa-Electoral-2016.pdf`.
+- **Después:**
+  - 26-09-2018 · vista ante la Gran Sala del TEDH en N.D. y N.T. c. España (Gobierno de Sánchez desde el 02-06-2018). La
+    sentencia (13-02-2020, HUDOC 001-201353, <https://hudoc.echr.coe.int/eng?i=001-201353>) recoge la comparecencia del
+    Gobierno (§ 14: agente R.-A. León Cavero) y sus alegaciones: § 131, invoca «the special rules for Ceuta and Melilla
+    laid down in the tenth additional provision of the LOEX, as amended by Institutional Law no. 4/2015»; § 132, «the
+    present case did not concern an “expulsion”, but rather the prevention of illegal entry into Spanish territory»;
+    § 129, el «calling effect». Ojo: la remisión a la Gran Sala la pidió el Gobierno anterior (14-12-2017, § 9) y la
+    sentencia no separa lo escrito (quizá antes de junio de 2018) de lo dicho en la vista. Frases de la vista (EFE en
+    Público, 26-09-2018): «el principio de no devolución no se aplica», «la no admisión de extranjeros no significa
+    expulsión».
+    **Webcast oficial del TEDH** (22-11-2026): <https://vodmanager.coe.int/cedh/webcast/cedh/2018-09-26-1/en> (sesión
+    20180926-1, caso 8675/15; también `/fr`). Capítulos del reproductor: 4. Government 35:38–1:10:22; 9. Reply by
+    Government 2:22:18–2:42:22. Solo hay pistas en inglés y francés: el agente habla en español y lo que se oye es la
+    **interpretación** («Great Chamber», «my government»), así que no sirve como cita literal del Gobierno. Tramos
+    localizados (whisper, tiempos del reproductor, aproximados): 45:36 «the principle of non-refoulement is not applicable
+    in this case»; 52:06–52:22 «Spain has never recognized summary expulsions, as the judgment says, but only that it has
+    acted to prevent entry, which is quite a different thing»; 1:04:37–1:05:53 el ejemplo de la casa («600 strong men
+    coming menacing to break your windows […] are you preventing entry to your house or are you [expelling, dudoso] people? Who is
+    being violent and unlawful?»); 2:32:02–2:33:12, a la pregunta de un juez sobre la DA 10.ª («the 10th additional rule
+    of law 2015, establishing a special regime»), responde que no se aplicaba en la fecha de los hechos y que regía el
+    Código de fronteras Schengen. Es decir: en la vista defiende la práctica (impedir la entrada, no expulsar), y la
+    referencia expresa a la DA 10.ª está en el § 131 de la sentencia. **Propuesta:** citar la sentencia (§ 132, texto
+    oficial en inglés, traducción en `contexto`) y enlazar el webcast como fuente del acto. Descarga: el servidor de vídeo
+    (mobility01.coe.int) usa una clave DH antigua; con `curl --ciphers 'DEFAULT:@SECLEVEL=0'` y el script de tramos HLS
+    del scratchpad. El audio original en español no está publicado aparte; si se quiere la cita literal, preguntar al
+    TEDH o buscar si TVE o la Abogacía del Estado publicaron la intervención.
+  - Programa del PSOE de abril de 2019, pág. 193: ya no «derogar», sino «Adecuar la normativa sobre las denominadas
+    “devoluciones en caliente” en el espacio fronterizo entre Ceuta y Melilla y el territorio del Reino de Marruecos».
+    Programa de 2023 y de 2026 (`cac-29/PROGRAMAPSOE29N26.pdf`): sin mención. Acuerdos de coalición de 2019 y de
+    investidura: sin mención.
+  - 30-11-2021 · enmienda n.º 163 del Grupo Socialista y de Unidas Podemos a la proposición del PNV (122/000003), «De
+    supresión» de la disposición final segunda, que añadía al rechazo en frontera un plazo de tres meses para que el
+    Gobierno regulara el procedimiento y, mientras tanto, impedía aplicarlo (BOCG-14-B-28-4, pág. 111; texto del PNV en
+    BOCG-14-B-28-5, págs. 31 y 48). Copias: web.archive.org con `id_` (B-28-4, B-28-5).
+  - 14-03-2023 · Comisión de Interior (DSCD-14-CO-864): la reforma decae. Legarda (PNV) dice que presentaron con
+    Unidas Podemos y el PSOE transaccionales sobre «los rechazos en frontera» con «un compromiso temporal» (pág. 5); en las
+    votaciones (pág. 21) la transaccional sobre Ceuta y Melilla «basada en la enmienda 163» figura como de «Unidas Podemos
+    y Vasco» y obtiene 5 votos a favor y 32 en contra. No se sabe por el DS qué votó cada grupo: no interpretar.
+    Serrada (PSOE) presume del recurso de 2015 (pág. 18: «muy orgulloso, muy orgulloso, de haber presentado recursos de
+    inconstitucionalidad a esta ley») sin mencionar el rechazo en frontera.
+  - 21-09-2022 · Marlaska en el Pleno (DSCD-14-PL-209, pág. 69): «Respecto a los rechazos en frontera que hubo, los que se
+    produjeron fueron conforme a la legalidad» (ya comprobado en gemini.md). Es el contexto de Melilla (24-06-2022): si
+    entra, contexto neutro y sin valorar los hechos de aquel día.
+  - Hoy · la DA 10.ª de la LOEx sigue con el texto de 2015 (BOE consolidado BOE-A-2000-544, `#dadecima`); las únicas
+    «modificaciones» son las declaraciones de interpretación conforme de las STC 172/2020 y 13/2021.
+- **Justificación del político:** enmienda 163, «Dado que se trata de una materia ajena a la Ley de Orgánica de Protección
+  de la Seguridad Ciudadana, se excluye de esta Ley a efectos de residenciar su reforma en la Lo 4/2000» (pero la DA 10.ª
+  se introdujo precisamente por la LOPSC, y no consta ninguna reforma de la LOEx sobre ello; comprobarlo antes de
+  afirmarlo). El TC (STC 172/2020) y la Gran Sala (13-02-2020) avalaron la figura con condiciones: eso cambia los hechos
+  de fondo **después** de 2020, no en 2018, cuando la Sala había condenado a España (03-10-2017).
+- **Búsquedas:** web (seis); El Faro de Ceuta 17-12-2014 (Eva Matarín, secretaria de Inmigración del PSOE: «en el
+  equipo que está impulsando Pedro Sánchez no habrá devoluciones en caliente»; solo prensa), 02-06-2018 y 14-11-2018 (la
+  enmienda de 2018 es un documento de ponencia no publicado en el BOCG; BOCG-12-B-79-4 de marzo de 2018, sin enmienda
+  socialista a la DA 10.ª); Público 17-10-2018 y 26-09-2018; abogacia.es 05-04-2016 (PNL de ERC pactada con el PSOE en la
+  Comisión de Interior para «paralizar de manera inmediata las devoluciones en caliente», 28 a favor; buscar en el BOCG
+  y el DS de la XI si hace falta otro «antes»); STC 172/2020 (BOE); sentencia de la Gran Sala (HUDOC); programas del PSOE
+  2015, 2016, 2019, 2023 y 2026 y acuerdos; BOCG-14-B-28-4 y 28-5; DSCD-14-CO-864; LOEx consolidada. Sin primaria: las
+  frases de Sánchez de 2014-2015 contra las devoluciones. Según Newtral (20-05-2021), en octubre de 2014, durante la
+  tramitación de la ley, dijo: «La ley de seguridad ciudadana atenta contra los derechos civiles y no comparto legalizar
+  las devoluciones en caliente»; por la forma parece un tuit de @sanchezcastejon: que lo busque el usuario en X
+  (`from:sanchezcastejon "devoluciones en caliente"`). Debate del estado de la nación de 2015 (DSCD-10-PL-262 y 263,
+  copias de Web Archive): **Sánchez no habla de las devoluciones**; la única mención (pág. 39 del PL-262, «las llamadas
+  devoluciones en caliente») es de Duran i Lleida.
+- **Notas / veredicto:** contradicción limpia por hechos del partido: en 2015 recurre la figura ante el TC y promete
+  derogarla; en 2018, ya en el Gobierno, la defiende ante la Gran Sala; en 2019 el programa pasa a «adecuar»; en 2021
+  pide suprimir la reforma del PNV, y la DA 10.ª sigue intacta. Caso propio (no hito de `sanchez-derogar-ley-mordaza`,
+  que es otra promesa) y enlazado con él. Recortes posibles: programa 2015 (pág. 368), STC (BOE), BOCG-14-B-28-4 (pág.
+  111) y BOE consolidado; la sentencia del TEDH es de organismo oficial. Decidir: «quien» del antes (PSOE) y del después
+  (Gobierno de España ante el TEDH o Grupo Socialista en 2021).

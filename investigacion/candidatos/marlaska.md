@@ -15,25 +15,6 @@ devuelve 406. Senado, DS_P_15_13 y 14 (25-01 y 06-02-2024): no habla de los meno
 
 > Cerrados (descartados, publicados, duplicados…): [cerrados/marlaska.md](cerrados/marlaska.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
 
-### mar-02 · Devoluciones en caliente: el PSOE las recurre en 2015 y las defiende en el Gobierno
-- **Estado:** por investigar
-- **Origen:** búsqueda web (22-11-2026); El Faro de Ceuta (14-11-2018) como pista.
-- **Persona / tipo propuesto:** PSOE (doble rasero del partido) o cambio de postura; Marlaska en la cronología.
-- **Antes:** 2015 · recurso de inconstitucionalidad de diputados del Grupo Socialista y otros contra la Ley Orgánica 4/2015,
-  incluida la disposición adicional décima («rechazo en frontera» en Ceuta y Melilla). Primaria: STC 172/2020 (BOE), que
-  identifica a los recurrentes. Promesa de Sánchez en la moción de censura de 2018: solo paráfrasis de prensa; buscar en el
-  Diario de Sesiones (31-05 y 01-06-2018).
-- **Después:** 2018-2020 · el Gobierno no retira el recurso ante la Gran Sala del TEDH y la Abogacía del Estado defiende los
-  rechazos (N.D. y N.T. c. España, 13-02-2020, que resume la postura del Gobierno); 14-11-2018 · enmienda del Grupo
-  Socialista a la reforma de la LOPSC (texto del PNV) que mantiene la disposición (prensa; buscar en el BOCG, XII
-  legislatura); comparecencia de Marlaska en la Comisión de Interior por la devolución de 116 personas desde Ceuta (2018,
-  posible DSCD-12-CO-557).
-- **Justificación del político:** que es materia de una reforma de extranjería que «requiere una reflexión» (enmienda de
-  2018, según la prensa) y que la Gran Sala avaló la práctica.
-- **Búsquedas:** web (dos); El Faro de Ceuta 14-11-2018 y 02-06-2018 (leídos, sin cita literal de Sánchez).
-- **Notas / veredicto:** si el BOCG confirma la enmienda y la STC los recurrentes, es un doble rasero por hechos del
-  partido. Enlazar con `sanchez-derogar-ley-mordaza` (o hito suyo, a decidir).
-
 ### mar-03 · La directora de la Guardia Civil y Leire Díez: «no hubo reuniones» y, días después, «sí existieron»
 - **Estado:** bloqueado (causa judicial abierta; decide el usuario)
 - **Origen:** Maldita (05-06 y 30-06-2026), El Independiente (04 y 05-06-2026), El Debate (04-06-2026), Vozpópuli.
