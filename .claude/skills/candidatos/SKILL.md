@@ -51,6 +51,9 @@ tiene el resumen de estados y la tabla de archivos; cada origen vive en
    cumplió, si los datos se miden igual antes y después.
 4. **Reglas que bloquean** (estado `bloqueado`, decide el usuario): procesos judiciales abiertos,
    atribución de delitos, vida privada o familiar, datos personales de terceros.
+   Si al investigar aparece un político del alcance comentando la vida personal o familiar de otro, o
+   pidiendo respeto para la suya, se anota en
+   [investigacion/vida-personal.md](../../../investigacion/vida-personal.md), aunque no dé para caso.
 5. **Lo reciente se verifica en la web**: nada posterior al conocimiento del modelo se completa de memoria.
 
 Los criterios para decidir si hay caso, con los precedentes que ha fijado el usuario, están en
