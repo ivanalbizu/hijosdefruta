@@ -10,9 +10,10 @@ haberlo encontrado antes en la fuente primaria.
 
 | Estado | Candidatos |
 | --- | --- |
-| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión, wild-01 «nunca dije» (hito), wild-11 vacaciones en la crisis de Ceuta |
+| Publicado | arch-03 nucleares, arch-33 elecciones en 2027, arch-22 limitar mandatos, arch-24 + deb-03 puertas giratorias, arch-17 ley mordaza, arch-18 reforma laboral, deb-04 políticos fuera de las instituciones de control, arch-35 «jefe de gabinete» en Bosnia, arch-36 Puente y su dimisión, cong-01 Redondo y la ley abolicionista (`redondo-mi-objetivo-terminar-esta-legislatura-con-una-ley-abolicionista`), wild-01 «nunca dije» (hito), wild-11 vacaciones en la crisis de Ceuta |
 | Publicado (mitin de Colau, 14-11-2026) | usr-03 `colau-expropiar-1600-viviendas-barcelona` |
-| Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, cong-01 abolir la prostitución, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
+| Prometedor con matiz (22-11-2026) | por investigar antes de crearlo: cong-02 Redondo y la Ley de Trata («la segunda lectura en este año») |
+| Débil (con motivo y pista abierta) | deb-02 donaciones de 2.000 €, arch-02, arch-04, arch-05, arch-07, arch-10, arch-14, arch-20, arch-21, arch-23, arch-26, arch-37 |
 | En el archivo de promesas | arch-06, arch-11, arch-13 (fuente: Diario de Sesiones del Senado, 25-04-2023) |
 | En espera, no se publica de momento | arch-16 Mínguez (vida familiar), arch-25 Gallardo (proceso judicial abierto), usr-01 Mínguez, familiares de otros y «ataque personal» (causas abiertas y vida familiar; además débil) |
 | Ya existe (posible actualización) | arch-01, arch-08, arch-12 (con hito nuevo); arch-15, arch-19, arch-27, arch-28, arch-29, arch-30, arch-31, arch-32 |
