@@ -35,7 +35,7 @@ Candidato: usr-01, en espera ([usuario.md](candidatos/usuario.md)). Relacionado:
   atresplayer.
 
 ### Óscar Puente (ministro de Transportes)
-Candidato: rp-01 ([revision-personas.md](candidatos/revision-personas.md)), bloqueado.
+Candidato: rp-01 ([revision-personas.md](candidatos/revision-personas.md)), en espera (decisión del usuario, 22-11-2026).
 - **A** · 14-03-2024 · tuit · «Execrable es lo del testaferro con derecho a roce, Isabel. Dimite» (según
   El Español; falta verlo en X). Lo reconoce en el Congreso el 20-03-2024 (DSCD-15-PL-34, p. 79): «una
   expresión sarcástica refiriéndome al novio —no sé si ya exnovio— o pareja de la señora Ayuso, llamándole
