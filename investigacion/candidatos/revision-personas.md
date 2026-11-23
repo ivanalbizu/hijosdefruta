@@ -115,15 +115,6 @@ Precedente: usr-01 (Mínguez, en espera) y arch-16. Criterio de «vida familiar�
 
 ## Indicios generales por persona
 
-### rp-09 · Puigdemont: dejar la «política activa» si no es investido
-- **Estado:** descartado (decisión del usuario, 23-11-2026: aporta poco a la web)
-- **Origen:** revisión por persona (22-11-2026)
-- **Persona / tipo propuesto:** Carles Puigdemont / promesa incumplida
-- **Antes:** 09-04-2024 · acto de precampaña (según prensa: Ara, 3Cat, NacióDigital, El Independiente): dejará la política activa si no es investido president; volverá a Cataluña para el debate de investidura «guanyi o no»; no será jefe de la oposición. Matiz en la misma intervención: «Faré política tota la vida» (NacióDigital). Fuente primaria pendiente: vídeo del acto en el canal de Junts
-- **Después:** 12-05-2024, no es investido (Illa, 08-08-2024); 27-10-2024, reelegido presidente de Junts en el congreso de Calella con el 90,18 % (prensa; buscar el acta o la nota de Junts)
-- **Justificación del político:** Comín: la promesa se refería a los cargos institucionales («no vol dir que es retiri de la política»). Volvió a Barcelona el 08-08-2024, pero no entró en el Parlament
-- **Notas / veredicto:** depende de qué entendía por «política activa» en el mismo acto: hay que oírlo entero antes de proponer (criterio «se precisa en el mismo acto»).
-
 ### rp-10 · Calvo: la exhumación de Franco, «antes de final de año con toda seguridad» (2018)
 - **Estado:** débil
 - **Origen:** revisión por persona (22-11-2026), ruedas de prensa de La Moncloa
@@ -132,15 +123,6 @@ Precedente: usr-01 (Mínguez, en espera) y arch-16. Criterio de «vida familiar�
 - **Después:** 15-03-2019 · el Consejo de Ministros «ha concluido el procedimiento» y fija la reinhumación para el 10-06-2019 (`…/2019/cpr15032019.aspx`); el Supremo la suspende y la exhumación es el 24-10-2019
 - **Justificación del político:** plazos de alegaciones de la familia y autorizaciones de otras Administraciones (ella misma los cita el 24-08-2018)
 - **Notas / veredicto:** el retraso es de dos meses y medio y en parte ajeno (alegaciones). Poco valor; se anota para no volver a buscarlo.
-
-### rp-11 · Díaz: la jornada de 37,5 horas «en 2025»
-- **Estado:** por investigar
-- **Origen:** revisión por persona (22-11-2026)
-- **Persona / tipo propuesto:** Yolanda Díaz / promesa incumplida (precedente bol-01: reformas prometidas para la legislatura que no salen)
-- **Antes:** 30-04-2024 · rueda de prensa del Consejo de Ministros: una modificación del artículo 34 del Estatuto de los Trabajadores «con el alcance de la reducción de la jornada el año que viene a 37 horas y media» (`consejodeministros/ruedas/Paginas/2024/RPCM20240430.aspx`). 04-02-2025 · rueda de prensa tras aprobar el anteproyecto: «pasamos de tener una jornada máxima legal de 40 horas a 37 horas y media» (`…/2025/04022025-RdP-consejo-ministros.aspx`). Otras frases por buscar (acuerdo PSOE-Sumar de octubre de 2023; comparecencia en el Congreso del 22-01-2024, nota de La Moncloa `serviciosdeprensa/notasprensa/trabajo14/Paginas/2024/220124-diaz-legislatura-reduccion-jornada.aspx`; ruedas de prensa de 2024-2025)
-- **Después:** 10-09-2025 · el Congreso aprueba las enmiendas a la totalidad de PP, Vox y Junts y el proyecto decae (DS del Congreso, pendiente); Díaz: «Será ley». En las ruedas de prensa posteriores (hasta el 17-11-2026) no hay un segundo proyecto: el 28-04-2026 Díaz habla de la reducción de jornada como batalla perdida en las Cortes («hay batallas que se pierden en las Cortes Generales, pero están ganadas en la calle»)
-- **Justificación del político:** la mayoría parlamentaria (Junts) se lo tumbó; el Gobierno sí lo aprobó y lo llevó al Congreso
-- **Notas / veredicto:** como en bol-01, la promesa es de la ministra y el resultado lo decide el Congreso: el matiz debe recogerlo.
 
 ### rp-12 · Albares: Edmundo González y la residencia del embajador
 - **Estado:** débil
