@@ -34,12 +34,13 @@ Candidato: usr-01, en espera ([usuario.md](candidatos/usuario.md)). Relacionado:
   personal, de verdad que es lo peor que hay en política». Falta la fuente primaria: el programa en
   atresplayer.
 
-### Óscar Puente (ministro de Transportes)
-Candidato: rp-01 ([revision-personas.md](candidatos/revision-personas.md)), en espera (decisión del usuario, 22-11-2026).
+### Óscar Puente (ministro de Transportes hasta el 04-11-2026, según prensa)
+Candidato: rp-01 ([revision-personas.md](candidatos/revision-personas.md)), en espera (decisión del usuario, 22-11-2026, confirmada el 23-11-2026).
 - **A** · 14-03-2024 · tuit · «Execrable es lo del testaferro con derecho a roce, Isabel. Dimite» (según
   El Español; falta verlo en X). Lo reconoce en el Congreso el 20-03-2024 (DSCD-15-PL-34, p. 79): «una
   expresión sarcástica refiriéndome al novio —no sé si ya exnovio— o pareja de la señora Ayuso, llamándole
-  testaferro con derecho a roce». Hay causa abierta (González Amador).
+  testaferro con derecho a roce». Lo defiende en el mismo acto: atribuye a Ayuso haber dicho «que ella se mete en
+  la cama con quien quiere» y concluye «Si lo grave es lo de testaferro». Hay causa abierta (González Amador).
 - **A** · 12-03-2024 · Senado (DS_P_15_20, pp. 59-60) · «patrón de conducta, el que se observa en toda la
   familia de la señora Ayuso»; «pregúntele a la mujer […] cuál es su responsabilidad en los hechos
   cometidos por sus familiares». Fuente primaria. También 19-03-2024 (DS_P_15_21, p. 26) y 17-09-2024
@@ -50,8 +51,27 @@ Candidato: rp-01 ([revision-personas.md](candidatos/revision-personas.md)), en e
   públicos, ni sus familiares, sean perturbados o perseguidos, como consecuencia de ser cargos públicos, o
   de ser familiares de cargos públicos». Fuente primaria: [transcripción de La
   Moncloa](https://www.lamoncloa.gob.es/consejodeministros/ruedas/Paginas/2026/20260414-transcripcion-rueda-de-prensa-ministros.aspx).
+- **B** · 03-2025 · *Conspiranoicos* (laSexta), según 20minutos (28-03-2025) · «Lo que más me ha dolido es lo
+  que tiene que ver con mi familia» (fotos con su hija menor y comentarios vejatorios) y «Los que lo dicen
+  saben muy bien que cuando entran al terreno personal es cuando más daño hacen, por eso lo hacen». Solo
+  prensa; la fuente primaria sería el programa en atresplayer. Es una menor: no se nombra ni se usa en ningún caso.
+- **B** · 08-2026 · sobre la foto del Rey con Javier Negre · en X, el 11-08-2026 (según El Español), Negre
+  practica «el acoso a los políticos progresistas y a sus familias»; en una entrevista con Europa Press (según
+  Demócrata, 17-08-2026), «Yo a este personaje tengo la desgracia de sufrirlo en muchas ocasiones, y mi
+  familia». Hay de por medio una condena a Negre por publicar una foto de la menor y una causa abierta por
+  calumnias (paráfrasis de Demócrata). Falta ver el hilo de X.
+- **B (pista)** · 06-10-2026 · su perfil personal, después de que el PP difundiera el vídeo de su caída de
+  2023 · no pide respeto, insulta: «ese partido de miserables que es el PP», «Son la peor gentuza que habita
+  este país» (Tribuna de Valladolid, 06-10-2026; falta ver el mensaje). El modo IA de Google dice que en
+  *Hoy por Hoy* (SER) llamó «terrible» reírse del dolor físico ajeno y dijo que «todo tiene un límite»: no
+  encontrado, y cadenaser.com bloquea las búsquedas automáticas. Habla de su salud, no de su familia.
+- **Sin interés para el cruce** · 06-2024, los escoltas y Vito Quiles (seguridad y un particular; el vídeo de
+  ABC que la pista daba como fuente trata de Negre); querellas
+  por el bulo de cuentas en Andorra y denuncia a un abogado de un divorcio en Valladolid (Infobae,
+  29-02-2024): procesos judiciales y vida privada de terceros. No se investigan.
 - **Cruce:** registrado como rp-01, con el Senado como fuente del «A». Las dos partes giran en torno a
-  causas judiciales (la de la pareja de Ayuso y la de Begoña Gómez).
+  causas judiciales (la de la pareja de Ayuso y la de Begoña Gómez). Las pistas del 23-11-2026 no cambian
+  el estado (ver rp-01).
 
 ### Félix Bolaños (ministro de la Presidencia, Justicia y Relaciones con las Cortes)
 - **B** · 07-07-2026 · rueda de prensa tras el Consejo de Ministros (pp. 17-18) · PP y Vox, a través de
