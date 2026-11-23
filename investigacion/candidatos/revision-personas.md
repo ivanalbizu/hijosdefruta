@@ -116,7 +116,7 @@ Precedente: usr-01 (Mínguez, en espera) y arch-16. Criterio de «vida familiar�
 ## Indicios generales por persona
 
 ### rp-09 · Puigdemont: dejar la «política activa» si no es investido
-- **Estado:** por investigar
+- **Estado:** descartado (decisión del usuario, 23-11-2026: aporta poco a la web)
 - **Origen:** revisión por persona (22-11-2026)
 - **Persona / tipo propuesto:** Carles Puigdemont / promesa incumplida
 - **Antes:** 09-04-2024 · acto de precampaña (según prensa: Ara, 3Cat, NacióDigital, El Independiente): dejará la política activa si no es investido president; volverá a Cataluña para el debate de investidura «guanyi o no»; no será jefe de la oposición. Matiz en la misma intervención: «Faré política tota la vida» (NacióDigital). Fuente primaria pendiente: vídeo del acto en el canal de Junts
