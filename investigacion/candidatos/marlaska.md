@@ -36,14 +36,6 @@ devuelve 406. Senado, DS_P_15_13 y 14 (25-01 y 06-02-2024): no habla de los meno
   asociaciones dicen que se desmanteló. Es una disputa de valoración, no una frase contradicha. Solo sería caso si dijo
   que no se disolvió y existe la orden de disolución, o si una cifra oficial desmiente lo de «sin merma de medios».
 
-### mar-05 · Jubilación anticipada y profesión de riesgo de policías y guardias civiles
-- **Estado:** débil
-- **Origen:** búsqueda web (22-11-2026): The Objective (19-02-2024 y 19-03-2026), El Español (10-09-2026), Artículo 14 (27-10-2026).
-- **Persona / tipo propuesto:** Fernando Grande-Marlaska / promesa incumplida
-- **Notas / veredicto:** en 02-2024 creó un grupo de trabajo para estudiarlo; en 2026 hay un proyecto de real decreto solo
-  para la Policía Nacional y una sentencia del Supremo (05-2025) que obliga a regularlo. No aparece una promesa suya con
-  plazo. Faltaría un «aprobaremos» fechado en un Diario de Sesiones o en una nota de Interior.
-
 ### mar-06 · Equiparación salarial «cumplida»
 - **Estado:** débil
 - **Origen:** Vozpópuli (pista), El Debate (18-04-2026).

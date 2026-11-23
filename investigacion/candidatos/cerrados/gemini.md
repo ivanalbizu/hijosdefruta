@@ -383,3 +383,10 @@ Candidatos cerrados de [gemini.md](../gemini.md), en el orden original. Se consu
 
 ### gem-59 · Repetidos de la tanda anterior
 - **Estado:** descartado por el usuario (17-11-2026); ya estaban descartados en gem-39 y gem-35: Montón (máster), Puente (Adamuz, Rodalies), Guirao, Valerio, Celaá (repetidores, pin parental; las leyes educativas ya están publicadas como gem-36), González Laya (Ghali, Gibraltar, bulo de Biden).
+
+## Origen: listado de Gemini (15-11-2026)
+
+### gem-12 · Albares: la oficialidad del catalán, el euskera y el gallego en la UE
+- **Estado:** descartado (decisión del usuario, 23-11-2026)
+- **Notas / veredicto:** son previsiones y valoraciones («hay comprensión», «no hay obstáculos insalvables»), no hechos. Solo sería caso si hay una promesa con plazo («se aprobará en…») que no se cumplió. Pista: comparecencias de Albares de 2023 y 2024 en el Congreso.
+- **Revisión 23-11-2026:** búsqueda de una promesa con plazo (web, prensa 2023–2026): solo aparecen «cuestión de tiempo» (03-2026), «tarde o temprano» (01-2026) y que el Consejo de Asuntos Generales aplazó la votación (05-2025). Ninguna fecha comprometida; sin eso no hay promesa incumplida.

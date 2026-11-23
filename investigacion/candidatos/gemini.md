@@ -42,10 +42,6 @@ España y AFI; 7) gem-24 Marlaska y el IBAN; 8) gem-15 y gem-14, hitos de Bolañ
 - **Estado:** débil
 - **Notas / veredicto:** es la palabra del Gobierno contra la de Argelia, sin documento que zanje quién tiene razón. Según la propia pista, la versión del aviso salió de «fuentes» y no de Albares con nombre. El giro del Sáhara ya es un caso (`sahara-autodeterminacion-plan-autonomia-marruecos`).
 
-### gem-12 · Albares: la oficialidad del catalán, el euskera y el gallego en la UE
-- **Estado:** débil
-- **Notas / veredicto:** son previsiones y valoraciones («hay comprensión», «no hay obstáculos insalvables»), no hechos. Solo sería caso si hay una promesa con plazo («se aprobará en…») que no se cumplió. Pista: comparecencias de Albares de 2023 y 2024 en el Congreso.
-
 ### gem-16 · Bolaños: récords de empleo y crecimiento
 - **Estado:** débil. Sin cita ni fecha; es el mismo argumento que nt-06.
 

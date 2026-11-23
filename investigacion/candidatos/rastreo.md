@@ -19,3 +19,5 @@ candidato indica la bandeja y la entrada.
 - **Justificación del político:** la del propio 16-11: las mafias aprovecharon el bulo.
 - **Búsquedas:** Maldita (leído). Sin buscar aún la transcripción de La Moncloa del 31-07 ni el Diario de Sesiones del 03-08.
 - **Notas / veredicto:** no es limpia: en julio y agosto Sánchez habla con cautela («parece», «parece evidente») y lo que afirma es que las mafias propagaron el bulo o aprovecharon la situación, que es lo mismo que dice en noviembre. La frase tajante («evidentemente, orquestada por el conjunto de mafias», 04-08-2026) es de Marlaska, no de Sánchez, y Marlaska no se ha desdicho. Solo sería caso si en alguna de las tres intervenciones Sánchez afirma sin matices que las mafias organizaron la entrada; habría que escuchar los tres tramos completos. Propuesta: dejarlo como débil.
+- **Revisión 23-11-2026:** siguen pendientes los tres tramos completos de julio y agosto (/transcribir). No se ha hecho en esta tanda.
+

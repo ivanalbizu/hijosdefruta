@@ -168,3 +168,12 @@ Candidatos cerrados de [marlaska.md](../marlaska.md), en el orden original. Se c
   que es otra promesa) y enlazado con él. Recortes posibles: programa 2015 (pág. 368), STC (BOE), BOCG-14-B-28-4 (pág.
   111) y BOE consolidado; la sentencia del TEDH es de organismo oficial. Decidir: «quien» del antes (PSOE) y del después
   (Gobierno de España ante el TEDH o Grupo Socialista en 2021).
+
+### mar-05 · Jubilación anticipada y profesión de riesgo de policías y guardias civiles
+- **Estado:** descartado (decisión del usuario, 23-11-2026)
+- **Origen:** búsqueda web (22-11-2026): The Objective (19-02-2024 y 19-03-2026), El Español (10-09-2026), Artículo 14 (27-10-2026).
+- **Persona / tipo propuesto:** Fernando Grande-Marlaska / promesa incumplida
+- **Notas / veredicto:** en 02-2024 creó un grupo de trabajo para estudiarlo; en 2026 hay un proyecto de real decreto solo
+  para la Policía Nacional y una sentencia del Supremo (05-2025) que obliga a regularlo. No aparece una promesa suya con
+  plazo. Faltaría un «aprobaremos» fechado en un Diario de Sesiones o en una nota de Interior.
+- **Revisión 23-11-2026:** sin «aprobaremos» con fecha en la búsqueda. El RD 402/2025 (BOE-A-2025-10488) regula solo el procedimiento general de coeficientes reductores; el proyecto de Interior de 2026 y el bloqueo de la proposición del PP salen solo en prensa. Sin compromiso fechado, no hay caso.

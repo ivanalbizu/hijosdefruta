@@ -18,13 +18,6 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Justificación:** delegar la ejecución por ley orgánica (art. 150.2) no es transferir la titularidad; Marlaska insistió después en que el control de fronteras «no es susceptible de ser transferido».
 - **Notas / veredicto:** la frase de 2024 que cita la pista no es de Marlaska tal cual, y jurídicamente «exclusiva» y «delegable por 150.2» no se contradicen. Contradicción no limpia salvo que aparezca una afirmación de que tampoco se podía *delegar*. Pendiente: ¿se aprobó la ley?
 
-### arch-04 · Okupación «bajó casi un 30 %»
-- **Estado:** débil
-- **Persona / tipo propuesto:** Pedro Sánchez / falsedad (dato)
-- **Antes:** 17-07-2024 · comparecencia en el Congreso sobre el plan de regeneración: el promedio de condenas por ocupación ilegal de vivienda habitual en los cinco años del Gobierno de coalición es «casi un 30 % inferior» al del Gobierno del PP (según El Debate; pendiente: Diario de Sesiones del 17-07-2024).
-- **Después:** Interior: 78.741 allanamientos o usurpaciones registrados en 2019–2023 frente a 67.263 en 2012–2018 (prensa).
-- **Notas / veredicto:** Sánchez habló de **condenas** y la pista contrasta **denuncias**: métricas distintas, no es una contradicción. Solo sería caso si la Estadística de Condenados del INE (delitos de allanamiento de morada y usurpación) desmiente el 30 %. Comprobación concreta pendiente.
-
 ### arch-05 · Aduanas de Ceuta y Melilla
 - **Estado:** débil
 - **Persona / tipo propuesto:** José Manuel Albares (ministro de Asuntos Exteriores) / falsedad
@@ -76,13 +69,6 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Después:** sin balance público (El Independiente, 17-02-2026).
 - **Notas / veredicto:** la falta de datos no prueba el incumplimiento. Archivar en `/promesas` y pedir el dato por el Portal de Transparencia si se quiere convertir en caso.
 
-### arch-14 · Marlaska y la transparencia
-- **Estado:** débil
-- **Persona / tipo propuesto:** Fernando Grande-Marlaska / doble rasero
-- **Antes:** 04-07-2018 · la transparencia, una de sus «tres grandes claves» (no localizada en ninguna fuente; pendiente: comparecencia en la Comisión de Interior de 07-2018).
-- **Después:** Interior es el ministerio con más reclamaciones ante el CTBG (203 en 2022, 20,3 %); 88 resoluciones firmes sin ejecutar a 31-03-2022 (El Independiente) y 101 de 290 entre 2019 y 2022 (Maldita). Pendiente: Memoria del CTBG.
-- **Notas / veredicto:** si aparece la cita de 2018 y los datos del CTBG lo confirman, sería un doble rasero razonable; hoy la cita no está verificada.
-
 ### arch-15 · Ábalos y Delcy Rodríguez
 - **Estado:** ya existe — `caso-abalos-koldo-delcy-PSOE`
 
@@ -104,13 +90,7 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 - **Después:** 26-09-2018 · «voy a seguir hasta 2020» (pendiente de fuente primaria); convocó el 15-02-2019 para el 28-04-2019, tras el rechazo de los Presupuestos.
 - **Búsquedas:** DSCD 12-126 (leído; sin «cuanto antes»).
 - **Notas / veredicto:** en el Congreso no fijó plazo y condicionó las elecciones a recuperar la «normalidad»; acabó convocando a los diez meses. La contradicción no es limpia salvo que la rueda de prensa del 25-05 sea tajante. Pendiente: vídeo de esa rueda de prensa y de la frase de septiembre.
-
-### arch-21 · Armas a Israel
-- **Estado:** débil
-- **Persona / tipo propuesto:** Gobierno / Interior / promesa incumplida
-- **Antes:** 29-10-2024 · nota de Interior: inicia la rescisión del contrato de munición a una empresa israelí y la excluye de futuras licitaciones (fuente primaria pendiente: nota en interior.gob.es).
-- **Después:** 04-2025 · Interior mantiene el contrato con IMI Systems por indicación de la Abogacía del Estado; 24-04-2025 Sánchez ordena revocarlo; 09-2025 se inicia la resolución «por imposible cumplimiento».
-- **Notas / veredicto:** el Gobierno acabó rectificando a los pocos días, así que la promesa terminó cumpliéndose: no es una contradicción limpia. Pista abierta: contrato adjudicado en 12-2024 a Elbit (matriz de IMI) para piezas de mortero del Ejército de Tierra; si existe en la Plataforma de Contratación, podría ser un caso propio.
+- **Revisión 23-11-2026:** sigue pendiente el vídeo de la rueda de prensa del 25-05-2018 (/transcribir). No se ha hecho en esta tanda.
 
 ### arch-23 · RTVE independiente
 - **Estado:** débil
