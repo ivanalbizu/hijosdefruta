@@ -83,15 +83,6 @@ prensa; varias marcadas por ella misma como «solo titular» o «extracto». Uso
 ### arch-19 · Suprimir los aforamientos
 - **Estado:** ya existe — `sanchez-suprimir-aforamientos`
 
-### arch-20 · Elecciones «cuanto antes» (2018)
-- **Estado:** débil
-- **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura
-- **Antes:** 31-05-2018 · Diario de Sesiones del Congreso núm. 126, pág. 21: hoja de ruta en tres etapas: «Primero, recuperar la estabilidad, la normalidad política […]. Segundo, atender a las urgencias que tenga el país. Y, tercero, convocar elecciones generales»; pág. 55: «podremos discrepar en el tiempo, en el plazo». · https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF. La frase «cuanto antes, por supuesto» (25-05-2018) es de una rueda de prensa: fuente primaria pendiente.
-- **Después:** 26-09-2018 · «voy a seguir hasta 2020» (pendiente de fuente primaria); convocó el 15-02-2019 para el 28-04-2019, tras el rechazo de los Presupuestos.
-- **Búsquedas:** DSCD 12-126 (leído; sin «cuanto antes»).
-- **Notas / veredicto:** en el Congreso no fijó plazo y condicionó las elecciones a recuperar la «normalidad»; acabó convocando a los diez meses. La contradicción no es limpia salvo que la rueda de prensa del 25-05 sea tajante. Pendiente: vídeo de esa rueda de prensa y de la frase de septiembre.
-- **Revisión 23-11-2026:** sigue pendiente el vídeo de la rueda de prensa del 25-05-2018 (/transcribir). No se ha hecho en esta tanda.
-
 ### arch-23 · RTVE independiente
 - **Estado:** débil
 - **Persona / tipo propuesto:** Pedro Sánchez / cambio de postura
