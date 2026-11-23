@@ -1,7 +1,7 @@
 # Óscar Puente (búsqueda del usuario, 21-11-2026)
 
 Petición del usuario: nuevos indicios de casos de Óscar Puente. Ya publicado: `puente-seguir-adelante-dimision-urda`
-(arch-36). Ya registrados: arch-37 (débil), wild-19 (posible hito), iap-08 (por investigar), iap-09, iap-10, iap-11,
+(arch-36). Ya registrados: arch-37 (débil), wild-19 (posible hito), iap-08 (descartado), iap-09, iap-10, iap-11,
 nt-05 y nt-06 (cerrados).
 
 Búsquedas generales (21-11-2026): web «Puente contradicción hemeroteca», «Puente fact check Maldita Newtral»,

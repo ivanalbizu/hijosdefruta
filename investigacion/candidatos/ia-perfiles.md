@@ -29,16 +29,6 @@ Recopilaciones sin fuentes, redactadas por otra IA: fiabilidad baja. Algunos dat
 - **Búsquedas:** registro y casos (21-11-2026): sin rastro de «ni en pintura». Web (21-11-2026): «Montero Bildu "ni en pintura"», «Montero 2019 entrevista Bildu "no vamos a pactar" presupuestos» y «"ni en pintura" Bildu PSOE pactar»: nada; lo más parecido de 2019 es «No vamos a ceder a ningún chantaje y no vamos a admitir el derecho de autodeterminación» (12-02-2019, a ERC y PDeCAT, no a Bildu). La Moncloa: transcripción y PDF del 17-11-2020. Congreso: open data de votaciones del 03-12-2020 (sesión 65). BOE: Ley 11/2020, de 30 de diciembre (BOE-A-2020-17339)
 - **Notas / veredicto:** la frase del «antes» parece inventada por la otra IA. El usuario eligió llevar lo verificable como hitos de `psoe-no-pactara-con-bildu` (cronología 2020-11-17 y 2020-12-03, con recortes).
 
-### iap-08 · Puente: los insultos en X frente a pedir respeto
-- **Estado:** por investigar
-- **Origen:** puente-temporal, punto 1
-- **Persona / tipo propuesto:** Óscar Puente / doble rasero
-- **Antes:** pendiente: frase propia de Puente pidiendo respeto o rechazando los insultos en política (Diario de Sesiones, su cuenta de X)
-- **Después:** pendiente: sus mensajes en X con insultos a cargos públicos (enlace y copia en Web Archive)
-- **Justificación del político:** responde a ataques previos
-- **Búsquedas:** —
-- **Notas / veredicto:** solo mensajes dirigidos a cargos públicos; los que van contra particulares o periodistas quedan fuera (datos de terceros). La crítica del PSOE en general no sirve: hace falta su propia frase.
-
 ### iap-09 · Puente: gestión ferroviaria, Urda y nombramientos
 - **Estado:** ya existe — `puente-seguir-adelante-dimision-urda`
 - **Origen:** puente-temporal, punto 2
