@@ -1,0 +1,67 @@
+# Respuestas en X (skill /respuestas, scripts/respuestas.mjs): cuentas que se leen y etiqueta de los
+# casos que les corresponde (el nombre tal como va en `tags`).
+# Comprobadas en x.com el 23-11-2026 (salieron tuits suyos): PSOE, sanchezcastejon, mjmonteroc, jmalbares,
+# isabelrguez, Pilar_Alegria y patxilopez. El resto se escribió de memoria y no tuiteó en la ventana: sin confirmar.
+cuentas:
+  - { usuario: PSOE, etiqueta: PSOE }
+  - { usuario: sanchezcastejon, etiqueta: Pedro Sánchez }
+  - { usuario: felixbolanos, etiqueta: Félix Bolaños }
+  - { usuario: DianaMorant, etiqueta: Diana Morant }
+  - { usuario: elmasaiz, etiqueta: Elma Saiz }
+  - { usuario: AnaRedondoG, etiqueta: Ana Redondo }
+  - { usuario: marlaskagrande, etiqueta: Fernando Grande-Marlaska }
+  - { usuario: mjmonteroc, etiqueta: María Jesús Montero }
+  - { usuario: isabelrguez, etiqueta: Isabel Rodríguez }
+  - { usuario: jmalbares, etiqueta: José Manuel Albares }
+  - { usuario: Pilar_Alegria, etiqueta: Pilar Alegría }
+  - { usuario: patxilopez, etiqueta: Patxi López }
+
+# Temas: un caso solo se propone para un tuit si comparten al menos un tema. Las palabras clave se buscan
+# sin tildes ni mayúsculas, al principio de palabra («pension» vale para «pensiones»); pueden ser frases.
+# Nada genérico de campaña («derecho», «público», «educación», «elecciones»): eso es lo que mete ruido.
+# Al publicar un caso de un tema nuevo, añade aquí una línea; `npm run respuestas -- temas` lista los
+# casos que se quedan sin tema.
+temas:
+  pensiones: [pension, hucha de las pensiones, fondo de reserva, revaloriz, jubilac]
+  vivienda: [vivienda, alquiler, okupa, desahucio, expropi, inquilin]
+  empleo: [paro, desemple, contratos, indefinid, afiliad, afiliacion, epa, ocupados, empleo joven, jovenes trabajando]
+  laboral: [reforma laboral, despido, erte, jornada, salario minimo, smi]
+  agricultura: [agricultura, agricultor, agrari, ganader]
+  migracion: [migra, inmigra, irregular, frontex, retornos, devoluciones en caliente, llegadas, patera, cayuco, menores migrantes, menores no acompanados, valla de]
+  ceuta-melilla: [ceuta, melilla]
+  proces: [amnist, indult, sedicion, rebelion, puigdemont, proces, independentis, golpe de estado, golpista]
+  sahara: [sahara, marruecos, polisario]
+  israel: [israel, gaza, palestin, armas, armamento]
+  presupuestos: [presupuest]
+  legislatura: [agotar la legislatura, adelanto electoral, adelantar las elecciones, elecciones anticipadas, limitar mandatos, limitacion de mandatos, dos legislaturas, mandato del presidente, mocion de censura, habra elecciones, elecciones en 2027]
+  pactos: [bildu, asiron, populismo, gobernabilidad, no dormiria, dormir por la noche]
+  decretos: [decreto ley, decretos ley, decretazo]
+  aforamientos: [aforamient, aforad]
+  puertas-giratorias: [puertas giratorias, consejo de administracion, redeia, enagas]
+  ley-mordaza: [ley mordaza, seguridad ciudadana]
+  secretos-oficiales: [secretos oficiales, desclasific]
+  justicia: [reforma de la justicia, reformas de la justicia, fiscal general, fiscalia, poder judicial, cgpj, constitucional, jueces, lawfare]
+  democracia: [plan de accion por la democracia, grupos de interes, lobbies, transparencia]
+  rtve: [direccion de rtve, consejo de administracion de rtve, presidente de rtve, presidencia de rtve, rtve por decreto, television publica, manipulacion de rtve]
+  corrupcion: [corrupc, abalos, koldo, cerdan, delcy, mascarillas]
+  igualdad: [violencia de genero, violencia machista, machismo, maltrat, pulsera, ley de trata, trata de mujeres, trata de seres, prostituc, abolicion, solo si es si, consentimiento, agresores sexuales]
+  seguridad: [criminalidad, delincuencia, delitos]
+  educacion: [lomloe, ley celaa, universidad, docente e investigador, investigadores]
+  sanidad: [vacun, pandemia, covid, estado de alarma, creditos ico]
+  energia: [apagon, nuclear, reactor, electrica]
+  transporte: [rodalies, cercanias, tren, ferroviari, adif, renfe, urda]
+  financiacion: [financiacion singular, financiacion autonomica, concierto economico, cupo catalan, instituto publico de credito, hacienda catalana]
+  alimentacion: [nutri score, etiquetado]
+  cultura: [museo]
+  dimisiones: [dimision, dimitir, dimite, pedir perdon, pido perdon]
+  vacaciones: [vacaciones, descanso]
+  religion: [funeral, misa, oficios religiosos]
+  escraches: [escrache, acoso, jarabe democratico]
+  sueldos-de-cargos: [cesantia, codigo etico, sueldo de los cargos]
+  casas-de-cargos: [atico, aticos, chalet]
+  bosnia: [bosnia, curriculum]
+  pactos-municipales: [valls, ibarrola]
+  protestas: [rodea el congreso, rodear el congreso, soberania popular, manifestantes ante]
+  guardia-civil: [guardia civil, perez de los cobos]
+  junta-electoral: [junta electoral, neutralidad, ruedas de prensa del gobierno]
+  dejar-el-cargo: [18 meses, dejar el escano, deja el escano, dejo la politica, dejar la politica, abandona la politica, asamblea de madrid]

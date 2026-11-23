@@ -12,7 +12,8 @@
     "perfiles": "node scripts/perfiles.mjs",
     "capturas": "node scripts/capturas.mjs",
     "favicons": "node scripts/favicons.mjs",
-    "rastreo": "node scripts/rastreo.mjs"
+    "rastreo": "node scripts/rastreo.mjs",
+    "respuestas": "node scripts/respuestas.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.4.4",
