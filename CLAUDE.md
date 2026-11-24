@@ -73,7 +73,9 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
   `--color-antes`, `--color-despues`, `--tipo-<tipo>-fg/bg`, `--estado-<estado>-fg/bg`), nunca hex
   sueltos ni la paleta primitiva. El modo oscuro redefine los semánticos en `@mixin tema-oscuro`.
 - Escalas: `--text-xs…4xl`, `--space-1…20` (múltiplos de 4 px), `--radius-sm/md/lg/full`,
-  `--shadow-sm/md`, `--container`, `--measure`, `--target-min` (44 px).
+  `--shadow-sm/md`, `--container`, `--measure`, `--target-min` (44 px), `--altura-cabecera` (la cabecera
+  fija: 89 px en móvil, 65 desde md). El `scroll-padding-top` de `html` ya la descuenta para los saltos con
+  `#`, `scrollIntoView` y el foco: no pongas `scroll-margin-top` en los destinos (se sumaría).
 - Azul = antes, rojo = después. Siempre acompañados del texto "Antes"/"Después": el color nunca es la
   única pista.
 - Tipografías: Inter (interfaz) y Source Serif 4 cursiva solo para citas (clase `.cita`).

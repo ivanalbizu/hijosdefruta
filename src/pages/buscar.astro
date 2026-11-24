@@ -162,17 +162,16 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
   form.addEventListener('input', () => filtrar());
   // «Ver N casos» lleva a la lista y deja el foco en el número de resultados. Enter en el campo de texto
   // hace lo mismo solo si la lista no se ve (en el móvil); si ya se ve, el foco sigue en el campo.
-  // La cabecera es fija y en el móvil ocupa dos líneas: se descuenta su altura real al bajar.
-  const cabecera = document.querySelector<HTMLElement>('.site-header');
   form.addEventListener('submit', e => {
     e.preventDefault();
     filtrar({ anunciar: false });
-    const tapa = cabecera?.offsetHeight ?? 0;
+    // scroll-padding-top (global.scss) es lo que tapa la cabecera fija; scrollIntoView ya lo descuenta y
+    // es suave o no según prefers-reduced-motion.
+    const tapa = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
     const { top } = estado.getBoundingClientRect();
     const seVe = top >= tapa && top < window.innerHeight * 0.75;
     if (document.activeElement === control('q') && seVe) return;
-    // Sin `behavior`: suave o no según prefers-reduced-motion (scroll-behavior en global.scss).
-    if (!seVe) window.scrollTo({ top: top + window.scrollY - tapa - 16 });
+    if (!seVe) estado.scrollIntoView({ block: 'start' });
     estado.focus({ preventScroll: true });
   });
   // `reset` se dispara antes de vaciar los campos.

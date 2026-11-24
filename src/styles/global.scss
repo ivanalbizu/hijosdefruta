@@ -11,6 +11,8 @@
  *
  * Catálogo visual en /sistema-diseno. Todas las parejas texto/fondo cumplen WCAG AA.
  */
+@use 'breakpoints' as *;
+
 @layer reset, tokens, theme, base, layout, components, util;
 
 /* ───────────────────────── tokens ───────────────────────── */
@@ -102,6 +104,14 @@
 
     /* Tamaño mínimo de objetivos táctiles (WCAG 2.5.8) */
     --target-min: 2.75rem;
+
+    /* Altura de la cabecera fija (Header.astro) más su borde, para que los saltos con # y el foco no
+       queden debajo (scroll-padding-top, WCAG 2.4.11). En móvil, marca y menú van en dos filas de
+       objetivo táctil; desde md, en una de --header-height. Si cambia la cabecera, revisar esto. */
+    --altura-cabecera: calc(2 * var(--target-min) + 1px);
+    @include breakpoint(md) {
+      --altura-cabecera: calc(var(--header-height) + 1px);
+    }
   }
 }
 
@@ -276,7 +286,7 @@
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    scroll-padding-top: var(--space-6);
+    scroll-padding-top: calc(var(--altura-cabecera) + var(--space-4));
   }
   @media (prefers-reduced-motion: no-preference) {
     html {
