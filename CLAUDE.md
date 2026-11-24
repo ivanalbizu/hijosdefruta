@@ -117,7 +117,9 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
   (U+202F): «3 121 418»; las de cuatro, sin separador: «1568». Años, páginas y números de norma, nunca.
   En las citas literales (`cita`, `destacado` que sale de ella, lo que va entre «») se respeta la forma
   de la fuente: con punto si la fuente usa punto; si usa espacio, el espacio va como U+202F para que no
-  se parta. `buscar` e `incluir` de los recortes pueden llevar espacios normales.
+  se parta. `buscar` e `incluir` de los recortes pueden llevar espacios normales. El build falla si un
+  texto visible (frontmatter de casos y promesas, cuerpo de los casos) separa los miles con un espacio
+  normal (`utils/cifras.ts`).
 - npm es el único gestor (`package-lock.json`). Versiones exactas para fuentes, satori y sharp.
 - `npm run build` ejecuta `astro check`: debe terminar con 0 errores antes de commitear.
 

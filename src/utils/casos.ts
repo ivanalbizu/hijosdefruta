@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import { indiceBusqueda } from "@utils/busqueda";
+import { avisoCifraPartida, cifraPartida } from "@utils/cifras";
 
 export type Caso = CollectionEntry<"casos">;
 export type Hito = Caso["data"]["antes"];
@@ -39,6 +40,11 @@ export async function getCasos(): Promise<Caso[]> {
     "casos",
     ({ data }) => import.meta.env.DEV || !data.draft
   );
+  // El frontmatter lo comprueba el esquema; el cuerpo (tablas, notas) no pasa por él.
+  for (const caso of casos) {
+    const cifra = cifraPartida(caso.body);
+    if (cifra) throw new Error(`${caso.id}: ${avisoCifraPartida(cifra)}`);
+  }
   return casos.sort(
     (a, b) => b.data.despues.fecha.valor.valueOf() - a.data.despues.fecha.valor.valueOf()
   );

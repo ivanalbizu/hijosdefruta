@@ -1,5 +1,6 @@
 import { defineCollection, z, type SchemaContext } from 'astro:content';
 import { TIPOS } from '../consts';
+import { avisoCifraPartida, cifraPartida } from '../utils/cifras';
 
 type Tipo = keyof typeof TIPOS;
 const tipos = Object.keys(TIPOS) as [Tipo, ...Tipo[]];
@@ -45,6 +46,13 @@ function esFragmentoDe(fragmento: string, texto: string) {
 		.every(trozo => completo.includes(trozo.replace(/^[.,;:]+|[.,;:]+$/g, '').trim()));
 }
 
+/** Texto que se ve en la web: los miles, con espacio fino (utils/cifras.ts). */
+const texto = (s: z.ZodString = z.string()) =>
+	s.superRefine((t, ctx) => {
+		const cifra = cifraPartida(t);
+		if (cifra) ctx.addIssue({ code: 'custom', message: avisoCifraPartida(cifra) });
+	});
+
 /** Opcional que además acepta "" y null en campos vacíos. */
 const opcional = <T extends z.ZodTypeAny>(schema: T) =>
 	z.preprocess(v => (v === '' || v === null ? undefined : v), schema.optional());
@@ -76,7 +84,7 @@ const cambioFuente = z.object({
 	/** Dirección actual, si el documento sigue publicado. */
 	actual: opcional(z.string().url()),
 	/** Qué ha cambiado, sin valoraciones. */
-	cambio: z.string().min(1),
+	cambio: texto(z.string().min(1)),
 	/** `pendiente`: aún no se ha podido comparar el original con la versión actual. */
 	estado: z.enum(['pendiente', 'comprobado']),
 	/** Día en que se comparó el original con la versión actual (con `estado: comprobado`). */
@@ -143,16 +151,16 @@ const hito = (image: ImageFn) => z
 		fecha,
 		quien: z.string().min(1),
 		/** Palabras literales, sin comillas. */
-		cita: opcional(z.string()),
+		cita: opcional(texto()),
 		/** Lo que ocurrió, cuando el hito no es una declaración. */
-		hecho: opcional(z.string()),
+		hecho: opcional(texto()),
 		/**
 		 * Fragmento corto para la imagen de redes. Solo puede contener trozos literales
 		 * de `cita` (o de `hecho`), unidos con "[...]".
 		 */
-		destacado: opcional(z.string()),
+		destacado: opcional(texto()),
 		/** Dónde y en qué situación: "Debate electoral en RTVE", "Pleno del Senado"... */
-		contexto: z.string().min(1),
+		contexto: texto(z.string().min(1)),
 		fuente,
 		// Un vídeo sin ID (bloque vacío en el CMS) cuenta como ausente.
 		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
@@ -170,8 +178,8 @@ const casos = defineCollection({
 	schema: ({ image }) =>
 		z
 		.object({
-			title: z.string(),
-			description: z.string().min(20),
+			title: texto(),
+			description: texto(z.string().min(20)),
 			tipo: z.enum(tipos),
 			pubDate: z.coerce.date(),
 			/** Última vez que se comprobaron fechas, citas y enlaces. */
@@ -212,10 +220,10 @@ const promesa = defineCollection({
 		quien: z.string().min(1),
 		partido: z.string().min(1),
 		/** Qué se prometió, tal como lo recoge la fuente. */
-		compromiso: z.string().min(10),
+		compromiso: texto(z.string().min(10)),
 		/** Palabras literales, si la fuente las recoge. */
-		cita: opcional(z.string()),
-		contexto: z.string().min(1),
+		cita: opcional(texto()),
+		contexto: texto(z.string().min(1)),
 		tema: z.string().min(1),
 		/** Campaña o convocatoria a la que pertenece, p. ej. "Generales 29N 2026". */
 		campana: z.string().min(1),
