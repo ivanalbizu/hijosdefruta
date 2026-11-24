@@ -7,6 +7,8 @@
 ---
 
 <script>
+  import { filtroTexto, indiceBusqueda, normalizarBusqueda } from '@utils/busqueda';
+
   type Hito = { fecha: string; quien: string; cita: string | null; hecho: string | null; contexto: string; fuente: { url: string } };
   type CasoJSON = {
     slug: string; url: string; titulo: string; descripcion: string; tipo: string;
@@ -18,7 +20,6 @@
     let datos: Promise<CasoJSON[]> | undefined;
     const cargar = (): Promise<CasoJSON[]> =>
       (datos ??= fetch('/casos.json').then(r => r.json()).then(d => d.casos));
-    const normalizar = (t: string) => t.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
     const texto = (o: unknown) => ({ content: [{ type: 'text', text: JSON.stringify(o) }] });
     const anios = (c: CasoJSON) =>
       [c.antes, ...c.cronologia, c.despues].map(h => Number(h.fecha.slice(0, 4)));
@@ -41,16 +42,16 @@
         annotations: { readOnlyHint: true },
         async execute({ q, tipo, quien, anio }: { q?: string; tipo?: string; quien?: string; anio?: number }) {
           const casos = await cargar();
-          const palabras = q ? normalizar(q).split(/\s+/).filter(Boolean) : [];
-          const persona = quien ? normalizar(quien).replace(/\s+/g, '-') : '';
+          const coincide = filtroTexto(q ?? '');
+          const persona = quien ? normalizarBusqueda(quien).replace(/\s+/g, '-') : '';
           const res = casos.filter(c => {
-            const t = normalizar([c.titulo, c.descripcion, ...c.tags.map(x => x.nombre),
-              ...[c.antes, ...c.cronologia, c.despues].flatMap(h => [h.quien, h.cita ?? '', h.hecho ?? ''])].join(' '));
+            const t = indiceBusqueda([c.titulo, c.descripcion, ...c.tags.map(x => x.nombre),
+              ...[c.antes, ...c.cronologia, c.despues].flatMap(h => [h.quien, h.cita ?? '', h.hecho ?? ''])]);
             const [min, max] = [Math.min(...anios(c)), Math.max(...anios(c))];
             return (!tipo || c.tipo === tipo)
               && (!persona || c.tags.some(x => x.slug === persona))
               && (!anio || (anio >= min && anio <= max))
-              && palabras.every(p => t.includes(p));
+              && coincide(t);
           });
           return texto(res.map(c => ({ slug: c.slug, url: c.url, titulo: c.titulo, tipo: c.tipo, tags: c.tags.map(x => x.nombre) })));
         },

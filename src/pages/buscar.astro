@@ -89,20 +89,20 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
 </Default>
 
 <script>
+  import { filtroTexto } from '@utils/busqueda';
+
   const form = document.getElementById('filtros') as HTMLFormElement;
   const estado = document.getElementById('estado')!;
   const vacio = document.getElementById('vacio')!;
   const items = [...document.querySelectorAll<HTMLLIElement>('#resultados > li')];
   const campos = ['q', 'tipo', 'quien', 'anio'] as const;
 
-  const normalizar = (t: string) => t.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
   const control = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement;
 
   let temporizador: number | undefined;
 
   function filtrar({ anunciar = true } = {}) {
-    const q = normalizar(control('q').value.trim());
-    const palabras = q.split(/\s+/).filter(Boolean);
+    const coincide = filtroTexto(control('q').value);
     const tipo = control('tipo').value;
     const quien = control('quien').value;
     const anio = control('anio').value;
@@ -114,7 +114,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
         (!tipo || d.tipo === tipo) &&
         (!quien || d.quien!.split(' ').includes(quien)) &&
         (!anio || d.anio!.split(' ').includes(anio)) &&
-        palabras.every(p => d.texto!.includes(p));
+        coincide(d.texto!);
       li.hidden = !ok;
       if (ok) n++;
     }

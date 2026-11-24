@@ -44,6 +44,7 @@ src/assets/pruebas/   recortes de documentos oficiales generados por `npm run ca
 src/utils/
   casos.ts          consultas y formato: getCasos, getTags, getHitos, resumenHito…
   perfiles.ts       getPerfiles (Map por slug), getPerfil(quien), nombreSinCargo
+  busqueda.ts       índice y filtro de texto de /buscar/ y WebMCP; sinonimos.ts, sus grupos de sinónimos
   og.ts             imagen 1200×630 para redes (satori + sharp)
 src/layouts/        Base (html, skip link, header, footer) → Default (página con cabecera) y CasoPost
 src/components/     ver "Componentes"
@@ -126,3 +127,9 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 años, texto normalizado con `textoBusqueda`) y un script las filtra; sin JavaScript se ven todas.
 Los filtros van en la URL (`?q=&tipo=&quien=&anio=`) y el número de resultados se anuncia con
 `role="status"`. Si el archivo crece mucho (cientos de casos), pasar a Pagefind.
+
+La lógica de texto está en `utils/busqueda.ts`, compartida con la herramienta WebMCP: sin tildes ni
+mayúsculas, cifras sin separador de miles («1.600» = «1600»), cada palabra al principio de una palabra
+del texto («ico» no encuentra «político»), consulta en singular aproximado y cifras enteras. Los
+sinónimos y siglas van en `utils/sinonimos.ts` (solo equivalencias claras): el índice de un caso recibe
+todo el grupo si contiene uno de sus términos.

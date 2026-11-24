@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
+import { indiceBusqueda } from "@utils/busqueda";
 
 export type Caso = CollectionEntry<"casos">;
 export type Hito = Caso["data"]["antes"];
@@ -101,22 +102,16 @@ export function resumenHito(hito: Hito, max: number) {
 export const contarFuentes = (caso: Caso) =>
   new Set(getHitos(caso).map(h => h.fuente.url)).size;
 
-/** Minúsculas y sin tildes, para buscar «camara» y encontrar «Cámara». */
-export const normalizar = (texto: string) =>
-  texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
-
 /** Años en los que el caso tiene algún hito (sin rellenar los intermedios). */
 export function aniosCaso(caso: Caso): number[] {
   return [...new Set(getHitos(caso).map(h => h.fecha.valor.getUTCFullYear()))].sort((a, b) => a - b);
 }
 
-/** Texto en el que se busca: título, resumen, personas, citas y hechos de todos los hitos. */
+/** Índice de búsqueda: título, resumen, personas, citas y hechos de todos los hitos (ver utils/busqueda.ts). */
 export const textoBusqueda = (caso: Caso) =>
-  normalizar(
-    [
-      caso.data.title,
-      caso.data.description,
-      ...caso.data.tags,
-      ...getHitos(caso).flatMap(h => [h.quien, h.cita ?? "", h.hecho ?? ""]),
-    ].join(" ")
-  );
+  indiceBusqueda([
+    caso.data.title,
+    caso.data.description,
+    ...caso.data.tags,
+    ...getHitos(caso).flatMap(h => [h.quien, h.cita ?? "", h.hecho ?? ""]),
+  ]);
