@@ -8,10 +8,11 @@
 
 <script>
   import { filtroTexto, indiceBusqueda, normalizarBusqueda } from '@utils/busqueda';
+  import { TEMAS } from '../consts';
 
   type Hito = { fecha: string; quien: string; cita: string | null; hecho: string | null; contexto: string; fuente: { url: string } };
   type CasoJSON = {
-    slug: string; url: string; titulo: string; descripcion: string; tipo: string;
+    slug: string; url: string; titulo: string; descripcion: string; tipo: string; temas: string[];
     tags: { nombre: string; slug: string }[]; antes: Hito; despues: Hito; cronologia: Hito[];
   };
 
@@ -34,13 +35,18 @@
           type: 'object',
           properties: {
             q: { type: 'string', description: 'Texto a buscar en títulos, citas y hechos' },
+            tema: {
+              type: 'string',
+              enum: Object.keys(TEMAS),
+              description: Object.entries(TEMAS).map(([k, v]) => `${k}: ${v.nombre}`).join('; '),
+            },
             tipo: { type: 'string', enum: ['falsedad', 'promesa-incumplida', 'cambio-de-postura', 'doble-rasero'] },
             quien: { type: 'string', description: 'Persona o partido, p. ej. "Pedro Sánchez" o "pedro-sanchez"' },
             anio: { type: 'integer', description: 'Año que abarca el caso' },
           },
         },
         annotations: { readOnlyHint: true },
-        async execute({ q, tipo, quien, anio }: { q?: string; tipo?: string; quien?: string; anio?: number }) {
+        async execute({ q, tema, tipo, quien, anio }: { q?: string; tema?: string; tipo?: string; quien?: string; anio?: number }) {
           const casos = await cargar();
           const coincide = filtroTexto(q ?? '');
           const persona = quien ? normalizarBusqueda(quien).replace(/\s+/g, '-') : '';
@@ -48,12 +54,13 @@
             const t = indiceBusqueda([c.titulo, c.descripcion, ...c.tags.map(x => x.nombre),
               ...[c.antes, ...c.cronologia, c.despues].flatMap(h => [h.quien, h.cita ?? '', h.hecho ?? ''])]);
             const [min, max] = [Math.min(...anios(c)), Math.max(...anios(c))];
-            return (!tipo || c.tipo === tipo)
+            return (!tema || c.temas.includes(tema))
+              && (!tipo || c.tipo === tipo)
               && (!persona || c.tags.some(x => x.slug === persona))
               && (!anio || (anio >= min && anio <= max))
               && coincide(t);
           });
-          return texto(res.map(c => ({ slug: c.slug, url: c.url, titulo: c.titulo, tipo: c.tipo, tags: c.tags.map(x => x.nombre) })));
+          return texto(res.map(c => ({ slug: c.slug, url: c.url, titulo: c.titulo, tipo: c.tipo, temas: c.temas, tags: c.tags.map(x => x.nombre) })));
         },
       },
       {

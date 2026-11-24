@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCasos, isoFecha, type Hito } from '@utils/casos';
 import { slugifyStr } from '@utils/slugify';
-import { SITE_DESCRIPTION, SITE_TITLE, TIPOS } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE, TEMAS, TIPOS } from '../consts';
 
 /*
  * Todos los casos publicados en JSON, para agentes, WebMCP y cualquiera que quiera reutilizarlos.
@@ -37,12 +37,14 @@ export const GET: APIRoute = async ({ site }) => {
 		descripcion: SITE_DESCRIPTION,
 		metodologia: new URL('/metodologia/', base).href,
 		tipos: Object.fromEntries(Object.entries(TIPOS).map(([k, v]) => [k, v.descripcion])),
+		temas: Object.fromEntries(Object.entries(TEMAS).map(([k, v]) => [k, v.nombre])),
 		casos: casos.map(({ slug, data }) => ({
 			slug,
 			url: new URL(`/casos/${slug}/`, base).href,
 			titulo: data.title,
 			descripcion: data.description,
 			tipo: data.tipo,
+			temas: data.temas,
 			tags: data.tags.map(nombre => ({ nombre, slug: slugifyStr(nombre) })),
 			publicado: data.pubDate.toISOString().slice(0, 10),
 			revisado: data.revisado.toISOString().slice(0, 10),

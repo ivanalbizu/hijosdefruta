@@ -4,14 +4,18 @@ import CasoCard from '@components/CasoCard.astro';
 import { aniosCaso, getCasos, getTags, textoBusqueda } from '@utils/casos';
 import { slugifyStr } from '@utils/slugify';
 import { getPerfiles } from '@utils/perfiles';
-import { TIPOS } from '../consts';
+import { TEMAS, TIPOS } from '../consts';
 
 /*
  * Búsqueda y filtros. Todas las tarjetas se generan en el build con su índice en
  * atributos data-*; el script las muestra u oculta. Sin JavaScript se ven todos los casos.
- * Los filtros se reflejan en la URL (?q=&tipo=&quien=&anio=) para poder compartirlos.
+ * Los filtros se reflejan en la URL (?q=&tema=&tipo=&quien=&anio=) para poder compartirlos.
  */
 const casos = await getCasos();
+const temas = Object.entries(TEMAS)
+  .map(([slug, { nombre }]) => ({ slug, nombre, count: casos.filter(c => c.data.temas.includes(slug as keyof typeof TEMAS)).length }))
+  .filter(t => t.count)
+  .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 const tags = getTags(casos).sort((a, b) => a.name.localeCompare(b.name, 'es'));
 const perfiles = await getPerfiles();
 const grupos = [
@@ -23,15 +27,22 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
 
 <Default
   title="Buscar casos"
-  description="Busca entre los casos por texto, tipo de contradicción, persona o partido y año"
-  lead="Busca en los títulos, las citas y los hechos de cada caso, o filtra por tipo, persona o partido y año.">
+  description="Busca entre los casos por texto, tema, tipo de contradicción, persona o partido y año"
+  lead="Busca en los títulos, las citas y los hechos de cada caso, o filtra por tema, tipo, persona o partido y año.">
   <form class="filtros surface" id="filtros" action="/buscar/" method="get" role="search" aria-label="Buscar casos"
     toolname="buscar_casos_formulario"
-    tooldescription="Filtra los casos de contradicciones de políticos españoles por texto, tipo, persona o partido y año">
+    tooldescription="Filtra los casos de contradicciones de políticos españoles por texto, tema, tipo, persona o partido y año">
     <div class="campo campo--texto">
       <label for="q">Texto</label>
       <input id="q" name="q" type="search" autocomplete="off" placeholder="Ej.: amnistía, indulto, Cámara…"
         toolparamdescription="Texto a buscar en títulos, citas y hechos" />
+    </div>
+    <div class="campo">
+      <label for="tema">Tema</label>
+      <select id="tema" name="tema" toolparamdescription="Tema del caso">
+        <option value="">Todos</option>
+        {temas.map(t => <option value={t.slug}>{t.nombre} ({t.count})</option>)}
+      </select>
     </div>
     <div class="campo">
       <label for="tipo">Tipo</label>
@@ -61,12 +72,13 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
       </select>
     </div>
     <div class="acciones">
-      <button class="btn btn--primary" type="submit">Buscar</button>
+      <!-- Lleva a la lista, que en el móvil queda debajo del formulario. Sin JavaScript no filtra: oculto. -->
+      <button class="btn btn--primary" type="submit" id="ver" hidden>Ver {casos.length} casos</button>
       <button class="btn btn--secondary" type="reset">Limpiar</button>
     </div>
   </form>
 
-  <p class="estado" id="estado" role="status" aria-live="polite" aria-atomic="true">
+  <p class="estado" id="estado" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
     {casos.length} casos
   </p>
 
@@ -74,6 +86,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     {
       casos.map(caso => (
         <li
+          data-tema={caso.data.temas.join(' ')}
           data-tipo={caso.data.tipo}
           data-quien={caso.data.tags.map(slugifyStr).join(' ')}
           data-anio={aniosCaso(caso).join(' ')}
@@ -94,8 +107,9 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
   const form = document.getElementById('filtros') as HTMLFormElement;
   const estado = document.getElementById('estado')!;
   const vacio = document.getElementById('vacio')!;
+  const ver = document.getElementById('ver')!;
   const items = [...document.querySelectorAll<HTMLLIElement>('#resultados > li')];
-  const campos = ['q', 'tipo', 'quien', 'anio'] as const;
+  const campos = ['q', 'tema', 'tipo', 'quien', 'anio'] as const;
 
   const control = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement;
 
@@ -103,6 +117,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
 
   function filtrar({ anunciar = true } = {}) {
     const coincide = filtroTexto(control('q').value);
+    const tema = control('tema').value;
     const tipo = control('tipo').value;
     const quien = control('quien').value;
     const anio = control('anio').value;
@@ -111,6 +126,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     for (const li of items) {
       const d = li.dataset;
       const ok =
+        (!tema || d.tema!.split(' ').includes(tema)) &&
         (!tipo || d.tipo === tipo) &&
         (!quien || d.quien!.split(' ').includes(quien)) &&
         (!anio || d.anio!.split(' ').includes(anio)) &&
@@ -119,6 +135,7 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
       if (ok) n++;
     }
     vacio.hidden = n > 0;
+    ver.textContent = n ? `Ver ${n} ${n === 1 ? 'caso' : 'casos'}` : 'Ver resultados';
 
     // URL compartible sin crear entradas en el historial.
     const params = new URLSearchParams();
@@ -140,11 +157,23 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     if (v) control(c).value = v;
   }
   filtrar({ anunciar: false });
+  ver.hidden = false;
 
   form.addEventListener('input', () => filtrar());
+  // «Ver N casos» lleva a la lista y deja el foco en el número de resultados. Enter en el campo de texto
+  // hace lo mismo solo si la lista no se ve (en el móvil); si ya se ve, el foco sigue en el campo.
+  // La cabecera es fija y en el móvil ocupa dos líneas: se descuenta su altura real al bajar.
+  const cabecera = document.querySelector<HTMLElement>('.site-header');
   form.addEventListener('submit', e => {
     e.preventDefault();
-    filtrar();
+    filtrar({ anunciar: false });
+    const tapa = cabecera?.offsetHeight ?? 0;
+    const { top } = estado.getBoundingClientRect();
+    const seVe = top >= tapa && top < window.innerHeight * 0.75;
+    if (document.activeElement === control('q') && seVe) return;
+    // Sin `behavior`: suave o no según prefers-reduced-motion (scroll-behavior en global.scss).
+    if (!seVe) window.scrollTo({ top: top + window.scrollY - tapa - 16 });
+    estado.focus({ preventScroll: true });
   });
   // `reset` se dispara antes de vaciar los campos.
   form.addEventListener('reset', () => setTimeout(() => {
@@ -162,9 +191,21 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     padding: var(--space-5);
     margin-bottom: var(--space-6);
 
+    // Con cuatro desplegables, el texto ocupa su propia fila hasta que caben todos en una.
     @include breakpoint(md) {
-      grid-template-columns: 2fr repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       align-items: end;
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: 2fr repeat(4, 1fr);
+    }
+  }
+  .campo--texto {
+    @include breakpoint(md) {
+      grid-column: 1 / -1;
+    }
+    @include breakpoint(xl) {
+      grid-column: auto;
     }
   }
   .campo {
@@ -202,7 +243,8 @@ const anios = [...new Set(casos.flatMap(aniosCaso))].sort((a, b) => b - a);
     font-variant-numeric: tabular-nums;
   }
   #resultados > li[hidden],
-  .vacio[hidden] {
+  .vacio[hidden],
+  .btn[hidden] {
     display: none;
   }
   .vacio {

@@ -31,6 +31,7 @@ fecha está mal o la cronología está desordenada, el build falla**.
 title: 'Titular'
 description: 'Resumen del antes y el después'
 tipo: promesa-incumplida # falsedad | promesa-incumplida | cambio-de-postura | doble-rasero
+temas: [pactos, cataluna] # 0-2 de TEMAS (src/consts.ts), el principal primero; para filtrar en /buscar/
 pubDate: 2026-11-09
 revisado: 2026-11-09 # última comprobación de citas y enlaces
 draft: true # no se publica hasta ponerlo a false

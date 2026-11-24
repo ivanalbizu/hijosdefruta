@@ -57,6 +57,8 @@ scripts/            fuentes.mjs (comprueba enlaces), perfiles.mjs (descarga imá
 - Cada tipo de `TIPOS` (`consts.ts`) tiene su página `/tipos/<tipo>/` con la definición y sus casos,
   y el índice `/tipos/`. `TipoBadge` enlaza ahí. Los cruces persona × tipo no son páginas: van a
   `/buscar/?quien=<slug>&tipo=<tipo>`.
+- Cada caso lleva cero, uno o dos `temas` de `TEMAS` (`consts.ts`, con nombre neutro y la descripción que
+  sirve de criterio). De momento solo sirven para filtrar: `/buscar/?tema=<tema>`; no salen en la ficha.
 - Un `quien` como "Pedro Sánchez (presidente del Gobierno)" se separa en nombre y cargo con
   `nombreSinCargo`; el nombre sirve para buscar su perfil.
 - `getCasos()` ordena por la fecha de `despues` (más reciente primero) e incluye borradores solo
@@ -125,10 +127,12 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 
 ## Búsqueda
 
-`/buscar/` genera todas las tarjetas en el build con su índice en atributos `data-*` (tipo, tags,
+`/buscar/` genera todas las tarjetas en el build con su índice en atributos `data-*` (tema, tipo, tags,
 años, texto normalizado con `textoBusqueda`) y un script las filtra; sin JavaScript se ven todas.
-Los filtros van en la URL (`?q=&tipo=&quien=&anio=`) y el número de resultados se anuncia con
-`role="status"`. Si el archivo crece mucho (cientos de casos), pasar a Pagefind.
+Los filtros van en la URL (`?q=&tema=&tipo=&quien=&anio=`) y el número de resultados se anuncia con
+`role="status"`. Si el archivo crece mucho (cientos de casos), pasar a Pagefind. El botón «Ver N casos»
+lleva a la lista y deja el foco en el número de resultados (en el móvil el formulario ocupa la pantalla);
+sin JavaScript se oculta, porque entonces no hay filtro.
 
 La lógica de texto está en `utils/busqueda.ts`, compartida con la herramienta WebMCP: sin tildes ni
 mayúsculas, cifras sin separador de miles («1.600» = «1600»), cada palabra al principio de una palabra

@@ -1,9 +1,11 @@
 import { defineCollection, z, type SchemaContext } from 'astro:content';
-import { TIPOS } from '../consts';
+import { TEMAS, TIPOS } from '../consts';
 import { avisoCifraPartida, cifraPartida } from '../utils/cifras';
 
 type Tipo = keyof typeof TIPOS;
 const tipos = Object.keys(TIPOS) as [Tipo, ...Tipo[]];
+type Tema = keyof typeof TEMAS;
+const temas = Object.keys(TEMAS) as [Tema, ...Tema[]];
 
 /**
  * Fecha con la precisión que realmente se conoce:
@@ -181,6 +183,12 @@ const casos = defineCollection({
 			title: texto(),
 			description: texto(z.string().min(20)),
 			tipo: z.enum(tipos),
+			/** Uno o dos de TEMAS (consts.ts), el principal primero; vacío si no encaja en ninguno. */
+			temas: z
+				.array(z.enum(temas))
+				.max(2, 'Como mucho dos temas')
+				.refine(t => new Set(t).size === t.length, 'Tema repetido')
+				.default([]),
 			pubDate: z.coerce.date(),
 			/** Última vez que se comprobaron fechas, citas y enlaces. */
 			revisado: z.coerce.date(),

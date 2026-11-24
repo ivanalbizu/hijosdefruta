@@ -19,6 +19,9 @@ Solo con el visto bueno del usuario a un candidato investigado con /candidatos. 
   antes y el después en dos o tres frases, sin adjetivos.
 - **`tags`:** la persona y el partido al que pertenecía **en la fecha de los hechos** (Díaz en 2021 →
   Unidas Podemos, no Sumar). Si encaja con varias siglas o coaliciones, pregúntalo.
+- **`temas`:** uno o dos de `TEMAS` (`src/consts.ts`), el principal primero, según la `descripcion` de
+  cada tema y mirando cómo están clasificados casos parecidos. Si ninguno encaja de verdad, se omite (el
+  caso sigue saliendo en la búsqueda por texto); no fuerces uno ni crees un tema nuevo sin preguntar.
 - **`quien`:** nombre y cargo de entonces, «Yolanda Díaz (vicepresidenta segunda del Gobierno y ministra de
   Trabajo y Economía Social)». **`contexto`:** dónde, cuándo y lo necesario para entender la frase (la
   pregunta a la que responde, si la repite).
