@@ -6,7 +6,7 @@
  * script no se conecta a X ni publica nada.
  *
  * Uso:
- *   npm run respuestas -- url [--horas 8]     # URL de la búsqueda de X con las cuentas y la ventana
+ *   npm run respuestas -- url [--horas 8]     # URL de las búsquedas de X (varias si hay muchas cuentas)
  *   npm run respuestas -- url --cuenta Pilar_Alegria,PSOE   # solo esas cuentas (de config.yaml)
  *   npm run respuestas -- cruzar tuits.tsv    # cruza los tuits extraídos (TSV o JSON) y escribe la bandeja
  *   npm run respuestas -- cruzar tuits.json --simular   # la imprime sin escribirla
@@ -56,8 +56,18 @@ if (orden === "url") {
     const faltan = pedidas.filter(p => !elegidas.some(c => c.usuario.toLowerCase() === p));
     if (faltan.length) salir(`No están en config.yaml: ${faltan.join(", ")}`);
   }
-  const q = `(${elegidas.map(c => `from:${c.usuario}`).join(" OR ")}) since_time:${desde}`;
-  console.log(`https://x.com/search?q=${encodeURIComponent(q)}&src=typed_query&f=live`);
+  // X no acepta consultas largas (unos 500 caracteres): las cuentas se reparten en varias búsquedas.
+  const MAX = 400;
+  const grupos = [[]];
+  for (const c of elegidas) {
+    const g = grupos.at(-1);
+    if (g.length && [...g, c].map(x => `from:${x.usuario}`).join(" OR ").length > MAX) grupos.push([c]);
+    else g.push(c);
+  }
+  for (const g of grupos) {
+    const q = `(${g.map(c => `from:${c.usuario}`).join(" OR ")}) since_time:${desde}`;
+    console.log(`https://x.com/search?q=${encodeURIComponent(q)}&src=typed_query&f=live`);
+  }
   console.log(`desde=${desde}`);
   process.exit(0);
 }

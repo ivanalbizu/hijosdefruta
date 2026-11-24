@@ -1,6 +1,6 @@
 ---
 name: respuestas
-description: Lee en X (con Claude in Chrome y la sesión del usuario) los tuits de las últimas horas del PSOE y de los ministros de investigacion/respuestas/config.yaml, los cruza con los casos publicados y propone respuestas serias con el enlace al caso. Úsala cuando el usuario diga «mira X», «busca respuestas», «/respuestas» o similar. Nunca publica nada.
+description: Lee en X (con Claude in Chrome y la sesión del usuario) los tuits de las últimas horas del PSOE y de las personas con perfil (cuentas en investigacion/respuestas/config.yaml), los cruza con los casos publicados y propone respuestas serias con el enlace al caso. Úsala cuando el usuario diga «mira X», «busca respuestas», «/respuestas» o similar. Nunca publica nada.
 ---
 
 # Respuestas en X
@@ -10,12 +10,12 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
 
 ## Pasos
 
-1. **Ventana:** por defecto, 8 horas (el usuario puede pedir otra; usa la que diga). Genera la URL de
-   búsqueda: `npm run respuestas -- url` (8 h; `--horas N` para otra ventana, `--cuenta
+1. **Ventana:** por defecto, 8 horas (el usuario puede pedir otra; usa la que diga). Genera las URL de
+   búsqueda (X no acepta consultas largas, así que las cuentas se reparten en varias, una por línea): `npm run respuestas -- url` (8 h; `--horas N` para otra ventana, `--cuenta
    Pilar_Alegria,PSOE` para solo esas cuentas). Las pasadas se solapan, pero el cruce se salta los
    tuits que ya están en la bandeja de hoy o de ayer (cada pasada guarda los leídos en un comentario
    `<!-- leídos: … -->`; no lo borres). Con `--repetir`, los cruza todos.
-2. **Lectura:** abre esa URL en una pestaña nueva con Claude in Chrome (sesión del usuario; si pide
+2. **Lectura:** abre la primera URL en una pestaña nueva (las siguientes, en la misma pestaña, repitiendo este paso) con Claude in Chrome (sesión del usuario; si pide
    iniciar sesión, para y avisa). Ejecuta con `javascript_tool`, en una sola llamada, la línea que
    imprime `npm run respuestas -- vistos` (los ids ya revisados) seguida del contenido de
    [extraer.js](extraer.js): deja los tuits nuevos en `window.__tsv` (una línea por tuit, sin URL) y
@@ -23,7 +23,8 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
    bloquea los que llevan la URL de la página (no devuelvas nunca `location.href`), así que léelo por
    trozos con `window.__tsv.slice(0, 850)`, `slice(850, 1700)`…, todos en paralelo en la misma
    respuesta. Únelos tal cual (un trozo puede cortar una línea; los tabuladores van entre campos) y
-   guárdalos en `investigacion/material/respuestas/tuits-AAAA-MM-DD-HHMM.tsv`. No leas la página con
+   guárdalos en `investigacion/material/respuestas/tuits-AAAA-MM-DD-HHMM.tsv` (las líneas de todas las
+   búsquedas, en un solo archivo). No leas la página con
    capturas ni con get_page_text: gasta mucho más. Si en la ventana solo hay reposts, la pasada queda
    en 0 tuits: no amplíes la ventana salvo que el usuario lo pida.
 3. **Cruce:** `npm run respuestas -- cruzar <ese tsv>` (también acepta el JSON de `window.__tuits`). Deja la pasada en

@@ -1,20 +1,45 @@
 # Respuestas en X (skill /respuestas, scripts/respuestas.mjs): cuentas que se leen y etiqueta de los
 # casos que les corresponde (el nombre tal como va en `tags`).
-# Comprobadas en x.com el 23-11-2026 (salieron tuits suyos): PSOE, sanchezcastejon, mjmonteroc, jmalbares,
-# isabelrguez, Pilar_Alegria y patxilopez. El resto se escribió de memoria y no tuiteó en la ventana: sin confirmar.
+# Cuentas: personas con perfil (src/content/perfil) que siguen en política y los partidos del alcance, con el
+# usuario de Wikidata (P2002), comprobado el 24-11-2026; en x.com se confirmaron PSOE, sanchezcastejon, mjmonteroc,
+# jmalbares, isabelrguez, Pilar_Alegria, patxilopez, felixbolanosg, DianaMorantR, SaizElma, _anaredondo_ (no está
+# en Wikidata) y coalicion (tampoco). Fuera por decisión del usuario (24-11-2026): Ábalos y Cerdán, y quienes ya no
+# están en política (Calviño, Celaá, Campo, Carmen Calvo, Iceta, Raquel Sánchez, Pablo Iglesias, Errejón). Sin
+# cuenta: Grande-Marlaska (@MarlaskaGrande es de un particular), Griñán, Dolores Delgado (@LolaDelgadoG, cerrada),
+# Frente Amplio (@frenteamplioesp no es oficial: 0 posts) y Unidas Podemos (ya no existe). Al crear un perfil de
+# persona o partido, añade aquí su cuenta.
 cuentas:
   - { usuario: PSOE, etiqueta: PSOE }
   - { usuario: sanchezcastejon, etiqueta: Pedro Sánchez }
-  - { usuario: felixbolanos, etiqueta: Félix Bolaños }
-  - { usuario: DianaMorant, etiqueta: Diana Morant }
-  - { usuario: elmasaiz, etiqueta: Elma Saiz }
-  - { usuario: AnaRedondoG, etiqueta: Ana Redondo }
-  - { usuario: marlaskagrande, etiqueta: Fernando Grande-Marlaska }
+  - { usuario: felixbolanosg, etiqueta: Félix Bolaños }
+  - { usuario: DianaMorantR, etiqueta: Diana Morant }
+  - { usuario: SaizElma, etiqueta: Elma Saiz }
+  - { usuario: _anaredondo_, etiqueta: Ana Redondo }
   - { usuario: mjmonteroc, etiqueta: María Jesús Montero }
   - { usuario: isabelrguez, etiqueta: Isabel Rodríguez }
   - { usuario: jmalbares, etiqueta: José Manuel Albares }
   - { usuario: Pilar_Alegria, etiqueta: Pilar Alegría }
   - { usuario: patxilopez, etiqueta: Patxi López }
+  - { usuario: oscar_puente_, etiqueta: Óscar Puente }
+  - { usuario: LuisPlanas, etiqueta: Luis Planas }
+  - { usuario: ernesturtasun, etiqueta: Ernest Urtasun }
+  - { usuario: Yolanda_Diaz_, etiqueta: Yolanda Díaz }
+  - { usuario: salvadorilla, etiqueta: Salvador Illa }
+  - { usuario: carolinadarias, etiqueta: Carolina Darias }
+  - { usuario: IreneMontero, etiqueta: Irene Montero }
+  - { usuario: AdaColau, etiqueta: Ada Colau }
+  - { usuario: gabrielrufian, etiqueta: Gabriel Rufián }
+  - { usuario: KRLS, etiqueta: Carles Puigdemont }
+  - { usuario: Esquerra_ERC, etiqueta: ERC }
+  - { usuario: socialistes_cat, etiqueta: PSC }
+  - { usuario: sumar, etiqueta: Sumar }
+  - { usuario: PODEMOS, etiqueta: Podemos }
+  - { usuario: ehbildu, etiqueta: EH Bildu }
+  - { usuario: bcnencomu, etiqueta: Barcelona en Comú }
+  - { usuario: JuntsXCat, etiqueta: Junts }
+  - { usuario: eajpnv, etiqueta: PNV }
+  - { usuario: obloque, etiqueta: BNG }
+  - { usuario: coalicion, etiqueta: Coalición Canaria }
 
 # Temas: un caso solo se propone para un tuit si comparten al menos un tema. Las palabras clave se buscan
 # sin tildes ni mayúsculas, al principio de palabra («pension» vale para «pensiones»); pueden ser frases.
