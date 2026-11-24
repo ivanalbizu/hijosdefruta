@@ -8,8 +8,18 @@
 # cuenta: Grande-Marlaska (@MarlaskaGrande es de un particular), Griñán, Dolores Delgado (@LolaDelgadoG, cerrada),
 # Frente Amplio (@frenteamplioesp no es oficial: 0 posts) y Unidas Podemos (ya no existe). Al crear un perfil de
 # persona o partido, añade aquí su cuenta.
+# Federaciones del PSOE (24-11-2026), con la etiqueta PSOE: Wikidata solo da SocialistesVal, PSOE_CyL y psoeex; el
+# resto, comprobadas en x.com. Fuera: psoedeandalucia, psoe_m y PSOE_CyL (bloqueadas en la cuenta del usuario: ni
+# se le puede responder ni salen en la búsqueda), Castilla-La Mancha (@PSOE_CLM no existe; @psoeclm no se ve
+# oficial) y Galicia (@psdegpsoe no existe). @psoearagon es de otro partido: la del PSOE de Aragón es @aragonpsoe.
 cuentas:
   - { usuario: PSOE, etiqueta: PSOE }
+  - { usuario: SocialistesVal, etiqueta: PSOE }
+  - { usuario: aragonpsoe, etiqueta: PSOE }
+  - { usuario: PSOECanarias, etiqueta: PSOE }
+  - { usuario: PSNPSOE, etiqueta: PSOE }
+  - { usuario: psoeex, etiqueta: PSOE }
+  - { usuario: socialistavasco, etiqueta: PSOE }
   - { usuario: sanchezcastejon, etiqueta: Pedro Sánchez }
   - { usuario: felixbolanosg, etiqueta: Félix Bolaños }
   - { usuario: DianaMorantR, etiqueta: Diana Morant }
