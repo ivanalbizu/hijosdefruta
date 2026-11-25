@@ -19,12 +19,12 @@ de Franco de Calvo es rp-10 (débil); las armas a Israel de Robles son arch-21 (
 Ceuta y el CNI, gem-20 (descartado); la luz de 2021 está anotada en tw-03 (débil).
 
 Investigados el 25-11-2026 (cla-01 a cla-06): prometedor cla-03 (Ribera y el IVA al 5 %); débiles cla-01 y cla-02; propuestos
-para descartar cla-04, cla-05 y cla-06. Pendientes de la decisión del usuario: cla-07 y cla-08.
+para descartar cla-04, cla-05 y cla-06. Decisión del usuario (25-11-2026): cla-04 a cla-08 descartados; cla-01 y cla-02, débiles que no se publican.
 
 ## Investigados (25-11-2026)
 
 ### cla-01 · Gabilondo: «Con este Iglesias, no» (22-03-2021) y «Pablo, tenemos 12 días» (21-04-2021)
-- **Estado:** débil (propuesta: descartar)
+- **Estado:** débil; el usuario decide no publicarlo (25-11-2026)
 - **Origen:** chat sobre Ángel Gabilondo (The Objective, ESdiario)
 - **Persona / tipo propuesto:** Ángel Gabilondo (candidato del PSOE a la Comunidad de Madrid) / cambio de postura
 - **Antes:** 22-03-2021 · *Al rojo vivo* (laSexta), vídeo subido por PSOE Madrid (https://www.youtube.com/watch?v=XjpBgV8CfX0),
@@ -49,7 +49,7 @@ para descartar cla-04, cla-05 y cla-06. Pendientes de la decisión del usuario: 
   falta confirmar los tramos.
 
 ### cla-02 · José Blanco: mantener la inversión en obra pública en 2010 y el recorte de mayo de 2010
-- **Estado:** débil (el «antes» solo está en prensa)
+- **Estado:** débil (el «antes» solo está en prensa); el usuario decide no publicarlo (25-11-2026)
 - **Origen:** chat sobre José Blanco (Legal Today, Idealista)
 - **Persona / tipo propuesto:** José Blanco (ministro de Fomento) / promesa incumplida
 - **Antes:** 20-08-2009 · Reuters (en Legal Today): intención de «mantener la inversión en obra pública en 2010 dentro de la media de lo
@@ -66,61 +66,7 @@ para descartar cla-04, cla-05 y cla-06. Pendientes de la decisión del usuario: 
   que ya recoge `zapatero-no-va-a-haber-recorte-en-las-politicas-sociales`. Sin una frase de Blanco en el Diario de Sesiones o en
   La Moncloa, débil. Pista sin revisar: preguntas orales a Blanco en el Pleno del Congreso entre 10-2009 y 05-2010.
 
-### cla-04 · Robles y los Leopard: «absolutamente lamentable» (2022) y el envío de 2023
-- **Estado:** débil (propuesta: descartar)
-- **Origen:** chat sobre Margarita Robles (prensa de 08-2022)
-- **Persona / tipo propuesto:** Margarita Robles (ministra de Defensa) / cambio de postura
-- **Antes:** 02-08-2022 · declaraciones a la prensa (Vozpópuli, El Debate): los Leopard 2A4 de Zaragoza están en «una situación
-  absolutamente lamentable» y enviarlos sería un riesgo para las personas
-- **Después:** 25-01-2023 · anuncia el envío, coordinado con los aliados tras la decisión de Alemania; vuelve a decir que el estado es
-  «lamentable» y que la industria verá cuáles puede poner en condiciones; en 04-2023 llegan a Polonia seis carros reparados (Infobae)
-- **Búsquedas (25-11-2026):** web (prensa de 08-2022, 01-2023 y 04-2023). No se buscó en la primaria: no hace falta para el veredicto.
-- **Notas / veredicto:** no hay contradicción: en 2023 dice lo mismo sobre el estado y los carros se envían después de repararlos. Cambian los
-  hechos de fondo (la reparación y la decisión alemana).
-
-### cla-05 · Calvo y el Vaticano: la Almudena «obviamente» no (30-10-2018) y la nota de la Santa Sede
-- **Estado:** débil (propuesta: descartar)
-- **Origen:** chat sobre Carmen Calvo (Irish Times, prensa)
-- **Persona / tipo propuesto:** Carmen Calvo (vicepresidenta) / falsedad
-- **Antes:** 30-10-2018 · a la prensa en los pasillos del Congreso (3Cat, Público): Gobierno e Iglesia buscarán una salida que
-  «obviamente» no puede ser la Almudena. Solo en prensa.
-- **Después:** 30-10-2018 · Sala Stampa de la Santa Sede, declaración de Greg Burke (https://press.vatican.va/content/salastampa/es/bollettino/pubblico/2018/10/30/dec.pdf,
-  SHA-256 df543f58…): Parolin «no se opone a la exhumación […] pero en ningún momento se pronunció sobre el lugar de la inhumación. Es cierto que
-  la señora Carmen Calvo expresó su preocupación por la posible sepultura en la catedral de la Almudena y su deseo de explorar otras alternativas,
-  también a través del diálogo con la familia. Al Cardenal Secretario de Estado le pareció oportuna esta solución».
-- **Búsquedas (25-11-2026):** web; nota de la Santa Sede (descargada); transcripción de La Moncloa del 02-11-2018 (sin resultado con curl).
-- **Notas / veredicto:** la nota matiza más que desmiente: confirma que Calvo planteó otras alternativas y que a Parolin le pareció
-  «oportuna esta solución»; solo precisa que él no se pronunció sobre el lugar. Además, la frase de Calvo solo está en prensa.
-
-### cla-06 · Calvo: «ningún Gobierno de ninguna democracia del mundo saca presos de las cárceles» (11-2018) y los indultos de 2021
-- **Estado:** débil (propuesta: descartar)
-- **Origen:** chat sobre Carmen Calvo (OKDiario, El Ciudadano)
-- **Persona / tipo propuesto:** Carmen Calvo / cambio de postura
-- **Antes:** 11-2018 · entrevista en El Periódico (NacióDigital, 17-11-2018; OKDiario): la frase, a una pregunta sobre los
-  independentistas que pedían que se liberara a los presos. Solo en prensa.
-- **Después:** 06-2021 · defensa de los indultos
-- **Búsquedas (25-11-2026):** web.
-- **Notas / veredicto:** en noviembre de 2018 los líderes del procés estaban en prisión provisional, sin juicio (la sentencia es de
-  10-2019): hablaba de que el Gobierno no puede excarcelar a presos preventivos ni mezclar su situación judicial con la negociación
-  política. El indulto es posterior a la condena y lo prevé la ley. No es la misma cosa; además, solo hay prensa.
-
 ## Prioridad baja o necesitan la decisión del usuario
-
-### cla-07 · José Blanco, el caso Campeón y la dimisión de Camps
-- **Estado:** bloqueado (toca una causa judicial, archivada para él en 2013; decide el usuario)
-- **Persona / tipo propuesto:** José Blanco / doble rasero
-- **Antes:** pidió la dimisión de Camps antes de que se pronunciara la justicia (según Libertad Digital) · pendiente
-- **Después:** 2011-2012 · imputado ante el Supremo, sigue de ministro y diputado y dice que dimitirá si se abre juicio oral;
-  el Supremo archiva la causa (07-2013)
-- **Notas / veredicto:** obligaría a contar la acusación de un empresario contra él (que se archivó) y la causa de Camps.
-  Precedentes: ere-01 y ere-02 (exigencias de dimitir a imputados), descartados por el usuario. Propuesta: descartar.
-
-### cla-08 · Robles y Pegasus: lo niega en el Senado y lo justifica en el Congreso (04-2022)
-- **Estado:** bloqueado (el espionaje a políticos independentistas tiene causas abiertas; decide el usuario)
-- **Persona / tipo propuesto:** Margarita Robles / falsedad
-- **Notas / veredicto:** según la pista, «negó rotundamente» y menos de 24 horas después lo justificó; la directora del
-  CNI lo reconoció en la comisión de secretos oficiales (a puerta cerrada: no hay fuente primaria). Se podría contrastar
-  solo con los dos Diarios de Sesiones, pero comprobar antes si lo que negó fue el espionaje o que fuera ilegal.
 
 ### cla-09 · Gabilondo como Defensor del Pueblo: no recurre la amnistía y recurre la ley trans de Madrid y la «ley de nietos»
 - **Estado:** débil (criterios jurídicos de una institución, no una frase suya contradicha)
