@@ -27,13 +27,6 @@ Campo (gem-48), Montero y Puente (iap-02 e iap-10, descartados).
 - **Origen:** etiqueta del vídeo de The Objective
 - **Notas / veredicto:** solo habría caso propio si después del 23J defendió la ley con sus propias palabras (comprobar qué cargos tuvo desde entonces y si habló de ella). Sin investigar.
 
-### amn-04 · Adriana Lastra y la amnistía
-- **Estado:** por investigar (prioridad baja)
-- **Origen:** etiqueta del vídeo de The Objective
-- **Persona / tipo propuesto:** Adriana Lastra (vicesecretaria general del PSOE hasta 07-2022; delegada del Gobierno en Asturias desde 2023) / cambio de postura
-- **Antes / Después:** pendientes: frase suya contra la amnistía antes del 23J (Congreso, ruedas de prensa en Ferraz) y defensa posterior de la ley
-- **Búsquedas:** ninguna
-
 ### amn-05 · José Luis Ábalos y la amnistía
 - **Estado:** en espera (decisión del usuario, 21-11-2026: sigue bloqueado, como lo demás relacionado con él)
 - **Origen:** etiqueta del vídeo de The Objective
