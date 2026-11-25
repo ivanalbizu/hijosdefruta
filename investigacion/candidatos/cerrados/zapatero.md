@@ -126,3 +126,110 @@ Candidatos cerrados de [zapatero.md](../zapatero.md), en el orden original. Se c
   «Crearemos una institución», que tampoco se creó (el Consejo de Transparencia es de la Ley 19/2013). El hito de
   diciembre de 2011 (registrarla en la oposición un mes después de perder) va en la cronología, sin valorarlo.
   Precedente parecido: `psoe-ley-de-lobbies` (archivo de promesas).
+
+### zap-02 · «Sistema financiero sólido» (2008) frente a las intervenciones de cajas
+- **Estado:** descartado (decidido por el usuario, 25-11-2026)
+- **Origen:** idea; web
+- **Persona / tipo propuesto:** José Luis Rodríguez Zapatero / falsedad
+- **Antes:**
+  - 20-10-2008 · La Moncloa, «Discurso del Presidente del Gobierno en el debate de convalidación de los dos Reales
+    Decretos Leyes de medidas económico-financieras» (RDL 6/2008, Fondo para la Adquisición de Activos Financieros,
+    FAAF, y RDL 7/2008, avales) · <https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2008/prsp20081020.aspx>,
+    copia `20261125115917`: «Como en su momento afirmé, y el paso del tiempo ha corroborado, España cuenta con un
+    sólido sistema financiero. Ello, en buena medida, se debe a nuestro propio marco regulador y a la supervisión
+    ejercida, de acuerdo con él, por el Banco de España». Sobre el FAAF: «El hecho de que el Fondo vaya a invertir sólo
+    en activos de máxima calidad y que lo vaya a hacer a precios competitivos permite que el Estado tenga fundadas
+    expectativas de recuperar e, incluso, rentabilizar la inversión.»
+  - 25-09-2008 · ONU, rueda de prensa en Nueva York (resumen en inglés del Departamento de Información Pública, no
+    literal; press.un.org pide JavaScript, copia `20231026065734`): «Spain had a very sound financial system, on par
+    with the best in the industrialized world. No banks had failed.»
+- **Después:** Tribunal de Cuentas, «Informe de fiscalización del Fondo de Adquisición de Activos Financieros»
+  (aprobado el 27-06-2013), publicado con la resolución de la Comisión Mixta en el BOE de 09-12-2017
+  (BOE-A-2017-14508, <https://www.boe.es/boe/dias/2017/12/09/pdfs/BOE-A-2017-14508.pdf>, copia `20171215012456`),
+  pág. 21 del PDF: «puede indicarse que la aplicación del Fondo ha generado un resultado neto para el Tesoro Público
+  de 249,5 millones de euros» (ingresos de 1.825,9 millones menos el coste de financiación estimado, 1.571,0, y los
+  gastos de gestión). Lo posterior (CCM en marzo de 2009, FROB desde junio de 2009) es otra situación y otros
+  instrumentos.
+- **Búsquedas (25-11-2026):** La Moncloa (discurso del 20-10-2008, leído: «coste», «contribuyente», «sólido»,
+  «dinero público», «rentab»); ONU (press.un.org, copia de Web Archive); web («Fondo de Adquisición de Activos
+  Financieros no costará contribuyentes», «Tribunal de Cuentas FAAF resultado»); BOE-A-2017-14508 leído con pdftexto.
+- **Notas / veredicto:** la única afirmación comprobable (que el fondo recuperaría e incluso rentabilizaría la
+  inversión, que es lo que recoge Esdiario como «el plan no costaría dinero») se cumplió según el Tribunal de Cuentas:
+  los datos oficiales respaldan la frase (wild-03). Lo del «sólido sistema financiero» es una valoración (usr-02) que en
+  septiembre y octubre de 2008 se apoyaba en un hecho cierto (no había caído ninguna entidad). Propuesta: descartar.
+
+### zap-11 · Ayuda al desarrollo: «dedicaremos ya en 2012 el 0,7 por ciento»
+- **Estado:** publicado (25-11-2026, revisado por el usuario) — `zapatero-ayuda-al-desarrollo-0-7-en-2012` (tags PSOE y
+  Zapatero; temas exterior y economia; recortes del DS de la investidura, el programa de 2004, el III Plan Director,
+  el DS del 12-05-2010 y el PACI 2011; tabla con la serie de la OCDE, copia `20261125130947` guardada por el usuario;
+  enlace de vuelta en `zapatero-no-va-a-haber-recorte-en-las-politicas-sociales`). Copias de hoy del PACI 2011 y del
+  III Plan Director comprobadas: misma SHA-256 y terminan en %%EOF.
+- **Persona / tipo propuesto:** José Luis Rodríguez Zapatero (y el PSOE por los programas) / promesa incumplida
+- **Antes:**
+  - programa de 2004, pág. 17 (PSOE): «Incrementaremos la calidad y la cantidad de la ayuda oficial al desarrollo que
+    España proporciona para alcanzar el 0,33% en 2006 y, como mínimo, el 0,5% al final de la legislatura y de esta
+    forma hacer viable el compromiso del 0,7% en 2012.»
+  - programa de 2008, pág. 283 (PSOE): el próximo Plan Director «servirá para materializar el compromiso español con
+    el 0,7 % de la RNB»; presentación de Zapatero, pág. 15: «la ayuda cooperadora, que nuestro Gobierno ha situado en
+    el 0,7 % PIB como objetivo».
+  - 08-04-2008 · investidura, DSCD-09-PL-2, pág. 12 (comprobado en la imagen de la página: el texto extraído pierde el
+    «1» de «2012»): «Mi idea de España, señorías, es un país generoso y solidario en la lucha contra la pobreza. Por eso
+    dedicaremos ya en 2012 el 0,7 por ciento de nuestro producto interior bruto a la ayuda oficial para el desarrollo,
+    después de haber sido el país que en los últimos cuatro años ha avanzado más en la ayuda oficial de los países
+    desarrollados.» Pág. 54, réplica a Llamazares: «para mí una gran nueva frontera exterior, después de todas las que
+    hemos culminado, es que este sea el primer país de los desarrollados del mundo, de las grandes potencias
+    industriales, que llegue al 0,7 por ciento de Ayuda Oficial al Desarrollo».
+    <https://www.congreso.es/public_oficiales/L9/CONG/DS/PL/PL_002.PDF>, copia `20221006055252` (75 págs., SHA-256
+    `de9e2afa…6b4c`, termina en %%EOF).
+  - 25-09-2008 · ONU, rueda de prensa en Nueva York (resumen en inglés, no literal; solo contexto): «He said Spain had
+    now attained 0.5 per cent of gross domestic product (GDP) for official development assistance (ODA) and would reach
+    0.7 per cent by 2012.»
+  - 13-02-2009 · III Plan Director de la Cooperación Española 2009-2012, aprobado por el Consejo de Ministros (págs. 1 y
+    247), <https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Documents/Cooperacion/Planificacion/PD/III-PD-2009-2012.pdf>
+    (379 págs., SHA-256 `74a23cbe…8f39`), copia `20261125115845`. Pág. 237: «El ciclo 2009‐2012 será el del cumplimiento
+    del compromiso por parte de España de alcanzar en Ayuda Oficial al Desarrollo el 0,7% de la Renta Nacional Bruta
+    (RNB). Como meta intermedia, en el año 2010 se alcanzará el 0,56% de AOD/RNB, de acuerdo con el compromiso adquirido
+    en el seno de la UE.» Págs. 250-251 (Documento de Líneas Maestras): «Pese a las dificultades económicas, el III Plan
+    Director será el Plan Director del 0,7%.» y «La ayuda al desarrollo no es una política para tiempos de bonanza
+    económica; en los momentos difíciles es más importante que nunca mantener la ayuda prevista. La senda para el
+    crecimiento de la AOD hasta alcanzar el 0,7% tendrá que ser modulada a lo largo de estos cuatro años, para alcanzar
+    el 0,56% de la RNB en 2010 y el 0,7% en 2012.»
+- **Después:**
+  - 12-05-2010 · Zapatero en el Congreso, al anunciar el ajuste (DSCD-09-PL-162, pág. 6, el mismo DS de zap-01): «Se
+    dispone asimismo una reducción entre 2010 y 2011 de 600 millones de euros en la ayuda oficial al desarrollo.»
+  - 04-03-2011 · Plan Anual de Cooperación Internacional (PACI) 2011, «Aprobado por el Consejo de Ministros el 4 de
+    marzo de 2011» (pág. 4),
+    <https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Documents/Cooperacion/Planificacion/Plan-Anual-Cooperacion-Internacional/PACI-2011.pdf>
+    (146 págs., SHA-256 `869d77b7…239f`), copias `20250429143903` y `20261125115836`. Pág. 11: «En 2011, la previsión es
+    alcanzar el 0,4% de la RNB, con un volumen total de 4.233,71 millones de euros de AOD neta. La meta del 0,7% no se
+    alcanzará, por tanto, en 2012 como establecía el Plan Director. Se reafirma, no obstante, el objetivo de alcanzarlo
+    en 2015 —en concordancia con la meta de la Unión Europea (UE)—». Pág. 33: «Las restricciones presupuestarias han
+    obligado a aplazar el objetivo fijado en el Plan Director de alcanzar el 0,7% de la RNB en 2012. No obstante, se
+    mantiene este compromiso y, en línea con el resto de Estados miembros de la UE, se fija la meta del 0,7% para el año
+    2015. La AOD del Gobierno se redujo en 800 millones de euros (bienio 2010-2011).»
+  - Datos: OCDE, Comité de Ayuda al Desarrollo, tabla DAC1, «ODA as percent of GNI, net disbursements», España: 2004
+    0,24; 2005 0,27; 2006 0,32; 2007 0,37; 2008 0,45; 2009 0,46; 2010 0,43; 2011 0,29; 2012 0,16 (API:
+    <https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,/ESP.....PT_B5G.?startPeriod=2003&endPeriod=2012&format=csvfilewithlabels>;
+    Web Archive no la guarda; para publicar falta una fuente archivable del 0,43 % de 2010 y el 0,29 % de 2011: el IV
+    Plan Director 2013-2016, IV-PD-2013-2016.pdf en la misma carpeta que el III, no tiene texto extraíble). El 0,45 % de 2008 también en el Seguimiento PACI 2008 (MAEC), pág. 67: «la AOD neta
+    alcanzó en 2008 los 4.761.692.238 euros, representando un total del 0,45% de la AOD/RNB»
+    (<https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Documents/Cooperacion/Seguimiento-y-transparencia/Seguimiento/Seguimiento-PACI-2008.pdf>,
+    SHA-256 `b34bad0f…08e3`, copias `20220623120826` y `20261125115854`).
+- **Justificación del político:** la del PACI 2011: «Las restricciones presupuestarias han obligado a aplazar…», en «el
+  marco de los ajustes presupuestarios motivados por las presiones de los mercados sobre la deuda soberana y la
+  necesidad de disminuir los déficits públicos» (pág. 11); mantiene el objetivo para 2015.
+- **Búsquedas (25-11-2026):** DS de las investiduras de 2004 (sin cifra de ayuda) y 2008; DS del 12-05-2010; ONU
+  (copia de press.un.org); exteriores.gob.es: PACI 2010 y 2011, Seguimiento PACI 2004 y 2008, III Plan Director; el libro
+  del Seguimiento PACI 2011 ya no está (el Excel Seg-PACI-2011.xls enlaza a rutas antiguas que dan 404 y no tienen copia
+  en Web Archive); Seguimiento AOD 2013 (solo gráficos); API de la OCDE. La Moncloa (discurso en la cumbre de los ODM
+  de septiembre de 2010) no encontrado.
+- **Notas / veredicto:** prometedor. Lo prometió Zapatero en el DS con fecha (2012); su Gobierno lo repitió en un plan
+  aprobado ya en crisis (febrero de 2009) que se adelantaba a la objeción («no es una política para tiempos de
+  bonanza económica»); él mismo anunció el recorte en mayo de 2010, y su Gobierno aplazó el 0,7 % a 2015 en marzo de
+  2011. En 2011, último año de su Gobierno, la ayuda fue el 0,29 % de la RNB, menos que en 2006 (0,32 %); la meta
+  intermedia del 0,56 % para 2010 quedó en el 0,43 %. Matices: (1) 2012 ya es del Gobierno de Rajoy (0,16 %): lo que
+  cuenta es el aplazamiento de su propio Gobierno y el dato de 2011; (2) dijo «producto interior bruto» y la meta
+  oficial se mide en RNB; (3) los objetivos intermedios del programa de 2004 quedaron cerca (0,32 % en 2006 frente al
+  0,33 %; 0,45 % en 2008 frente a «como mínimo, el 0,5%»): solo en la tabla, no como incumplimientos propios; (4) la
+  crisis y la reducción del déficit. Recortes posibles: DS de la investidura (pág. 12), III Plan Director (pág. 251),
+  DS del 12-05-2010 (pág. 6) y PACI 2011 (pág. 11); tabla con la serie de la OCDE.

@@ -28,6 +28,12 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
 
 - **Opiniones y exageraciones de mitin** (usr-02, Colau y Airbnb). Una frase condicional («en este
   momento no…») no es una promesa.
+- **Objetivos que dependen de la economía:** no cumplir una meta de empleo o de paro no es una promesa
+  incumplida, porque el tipo exige que «hiciera lo contrario» y la crisis lo explica (zap-03 y zap-09, los dos
+  millones de empleos y el pleno empleo del programa de 2008: débiles, el usuario decide no publicarlos). Sí lo es
+  cuando el Gobierno decide lo contrario de lo prometido, aunque alegue la crisis: recortar la ayuda al desarrollo y
+  aplazar el 0,7 % que había fijado para 2012 (zap-11), o el SMI y la pensión mínima que fijó por real decreto
+  (zap-07, zap-08).
 - **Se precisa en el mismo acto:** si en la misma intervención aclara o corrige la cifra, publicarla sería
   sacarla de contexto (ras-03: Colau dice «de 735 euros» y once minutos después «desde 2018»; wild-02,
   corregido en directo). Lee siempre el acto completo antes de proponer.
