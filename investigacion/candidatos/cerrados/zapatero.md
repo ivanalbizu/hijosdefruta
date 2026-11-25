@@ -40,7 +40,7 @@ Candidatos cerrados de [zapatero.md](../zapatero.md), en el orden original. Se c
   `sanchez-zapatero-no-congelo-las-pensiones`. Perfil nuevo `jose-luis-rodriguez-zapatero`.
 
 ### zap-05 · La amnistía (2023)
-- **Estado:** descartado (propuesta: decide el usuario)
+- **Estado:** descartado (decidido por el usuario, 25-11-2026)
 - **Origen:** web
 - **Notas / veredicto:** desde octubre de 2023 (Onda Cero) la defiende; no aparece ninguna declaración suya
   anterior en contra (una búsqueda). Lo que choca es lo que dijo Sánchez, que ya está en
@@ -90,7 +90,7 @@ Candidatos cerrados de [zapatero.md](../zapatero.md), en el orden original. Se c
   (658 × 14 = 9212, cuantía de 2008 por comprobar en su RD).
 
 ### zap-12 · Otros compromisos de los programas, sin caso
-- **Estado:** descartado (propuesta: decide el usuario)
+- **Estado:** descartado (decidido por el usuario, 25-11-2026)
 - **Notas / veredicto:** reforma constitucional del Senado (2004, págs. 61-65; 2008, págs. 269-270): el propio
   programa la condiciona a «un amplio consenso»; 1.500.000 viviendas protegidas «en 10 años» (2008, pág. 12): el
   plazo va más allá de su mandato; SMI de 600 euros (2004): se cumplió en 2008; renta de emancipación de 210 euros
@@ -233,3 +233,10 @@ Candidatos cerrados de [zapatero.md](../zapatero.md), en el orden original. Se c
   0,33 %; 0,45 % en 2008 frente a «como mínimo, el 0,5%»): solo en la tabla, no como incumplimientos propios; (4) la
   crisis y la reducción del déficit. Recortes posibles: DS de la investidura (pág. 12), III Plan Director (pág. 251),
   DS del 12-05-2010 (pág. 6) y PACI 2011 (pág. 11); tabla con la serie de la OCDE.
+
+### zap-04 · Análisis Relevante: «desconocía» a los clientes (Senado, 2026)
+- **Estado:** descartado (decidido por el usuario, 25-11-2026: causa judicial abierta, mismo criterio que sai-06 y wild-17)
+- **Origen:** Maldita (19-06-2026), titular
+- **Persona / tipo propuesto:** José Luis Rodríguez Zapatero / falsedad
+- **Notas / veredicto:** depende de la causa de Plus Ultra (abierta, Zapatero imputado). Mismo criterio que sai-06
+  y wild-17. No se ha abierto.

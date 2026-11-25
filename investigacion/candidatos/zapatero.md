@@ -52,13 +52,6 @@ PL 137 (10-02-2010), PL 140 (17-02-2010), PL 156–159 (abril de 2010) y PL 162�
   3.704.400 asalariados temporales): si se publica, va en la tabla con esa explicación. Opciones: caso propio con
   zap-09 y una tabla de los cuatro objetivos, o hito de contexto en zap-01.
 
-### zap-04 · Análisis Relevante: «desconocía» a los clientes (Senado, 2026)
-- **Estado:** bloqueado
-- **Origen:** Maldita (19-06-2026), titular
-- **Persona / tipo propuesto:** José Luis Rodríguez Zapatero / falsedad
-- **Notas / veredicto:** depende de la causa de Plus Ultra (abierta, Zapatero imputado). Mismo criterio que sai-06
-  y wild-17. No se ha abierto.
-
 ## Programas electorales del PSOE de 2004 y 2008 (25-11-2026)
 
 Copias en la web de Juventudes Socialistas (documento público del partido):
