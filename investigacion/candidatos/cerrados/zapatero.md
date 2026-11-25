@@ -95,3 +95,34 @@ Candidatos cerrados de [zapatero.md](../zapatero.md), en el orden original. Se c
   programa la condiciona a «un amplio consenso»; 1.500.000 viviendas protegidas «en 10 años» (2008, pág. 12): el
   plazo va más allá de su mandato; SMI de 600 euros (2004): se cumplió en 2008; renta de emancipación de 210 euros
   (2008): se aprobó.
+
+### zap-10 · Ley de acceso a la información, prometida en 2004 y en 2008
+- **Estado:** publicado (25-11-2026, revisado por el usuario) — `psoe-ley-de-acceso-a-la-informacion-2004-y-2008` (tags PSOE y Zapatero; hito de diciembre de 2011 incluido, decisión del usuario)
+- **Persona / tipo propuesto:** PSOE (y José Luis Rodríguez Zapatero, presidente las dos legislaturas) / promesa incumplida
+- **Antes:**
+  - programa de 2004, pág. 42: «Por eso, desde un gobierno socialista: Impulsaremos una Ley sobre el derecho al libre
+    acceso a la Información» (copia `20261125084312`).
+  - programa de 2008, pág. 259: «Impulsaremos una Ley sobre el derecho al libre acceso a la información, que garantice
+    que todos los poderes […]» y «Crearemos una institución que garantice el derecho de acceso a la información»
+    (copia `20261125084319`).
+- **Después:**
+  - 29-07-2011 · Consejo de Ministros, «INFORME sobre el Anteproyecto de Ley de Transparencia y acceso a la Información
+    Pública» (referencia, págs. 2 y 15-16): solo un informe del ministro de la Presidencia (Jáuregui), no un proyecto
+    remitido a las Cortes. <https://www.lamoncloa.gob.es/consejodeministros/referencias/documents/2011/refc20110729.pdf>,
+    copia `20230524074540`.
+  - 27-09-2011 · Real Decreto 1329/2011 (BOE-A-2011-15160): disolución de las Cortes elegidas en 2008; el anteproyecto
+    no llegó a proyecto de ley.
+  - 21-12-2011 · ya en la oposición, el Grupo Socialista registra la «Proposición de Ley de transparencia y acceso a la
+    información pública» (122/000010, BOCG Congreso, X legislatura, serie B, núm. 10-1). Copia en Web Archive por buscar.
+  - Ley 19/2013, de 9 de diciembre (Gobierno de Rajoy): la primera ley de transparencia. Por enlazar (BOE-A-2013-12887,
+    por comprobar).
+- **Justificación del político:** el informe de 2011 la presenta como la ley que «configura, por primera vez en España,
+  el derecho universal a acceder a la información». Según prensa (pista), Jáuregui prometió en marzo de 2011 una
+  decisión en un mes. No se ha encontrado explicación oficial del retraso.
+- **Búsquedas (25-11-2026):** web en lamoncloa.gob.es («anteproyecto ley transparencia 2011»); referencia del Consejo de
+  Ministros del 29-07-2011 leída con pdftexto; BOCG X legislatura B-10-1 leído; BOE (RD 1329/2011).
+- **Notas / veredicto:** promesa incumplida limpia: dos programas, siete años y medio de Gobierno, y el texto se queda en
+  un anteproyecto dos meses antes de disolver. «Impulsaremos» es menos que «aprobaremos», pero la de 2008 añade
+  «Crearemos una institución», que tampoco se creó (el Consejo de Transparencia es de la Ley 19/2013). El hito de
+  diciembre de 2011 (registrarla en la oposición un mes después de perder) va en la cronología, sin valorarlo.
+  Precedente parecido: `psoe-ley-de-lobbies` (archivo de promesas).

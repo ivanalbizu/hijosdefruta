@@ -68,19 +68,6 @@ vivienda, impuestos y jubilación. Común a todos: la crisis desde 2008 (justifi
   habla ya de «esta coyuntura». Es un objetivo, no una medida que dependiera solo del Gobierno. Mejor como contexto o
   hito de zap-01 que como caso propio.
 
-### zap-10 · Ley de acceso a la información, prometida en 2004 y en 2008
-- **Estado:** prometedor
-- **Persona / tipo propuesto:** PSOE / promesa incumplida
-- **Antes:** programa de 2004, pág. 42: «Impulsaremos una Ley sobre el derecho al libre acceso a la Información»;
-  programa de 2008, pág. 259: «Impulsaremos una Ley sobre el derecho al libre acceso a la información, que garantice
-  que todos los poderes […]» y «Crearemos una institución que garantice el derecho de acceso a la información».
-- **Después:** no hubo ley en ocho años: la primera es la Ley 19/2013, de 9 de diciembre (Gobierno de Rajoy).
-  Pendiente: buscar si el Gobierno aprobó un anteproyecto (Consejo de Ministros, julio de 2011, según recuerdo; por
-  comprobar en las referencias de La Moncloa) y que no llegó a las Cortes (buscador de iniciativas del Congreso,
-  IX legislatura).
-- **Notas / veredicto:** «impulsaremos» es más flojo que «aprobaremos», pero dos programas y dos legislaturas con
-  mayoría para hacerlo. Si hubo anteproyecto, va en la justificación.
-
 ### zap-11 · Ayuda al desarrollo: 0,5 % al final de la legislatura y 0,7 % en 2012
 - **Estado:** por investigar
 - **Persona / tipo propuesto:** PSOE / promesa incumplida
