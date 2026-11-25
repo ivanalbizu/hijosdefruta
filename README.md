@@ -120,6 +120,16 @@ superior izquierda (una página A4 mide 595 × 842), y se revisa el recorte gene
       resaltar: [[137, 126, 566, 160]]
 ```
 
+### Capturas de tuits
+
+Cuando la fuente de un hito es un tuit de la cuenta del propio político (`fuente.url` en
+`https://x.com/<cuenta>/status/<id>`, con su copia de Web Archive), se añade `tuit: {}` al hito y
+`npm run capturas -- <slug>` abre el visor de inserción de X (sin sesión) en un Chromium sin interfaz,
+recorta la tarjeta, la guarda como `src/assets/pruebas/<slug>/tuit-<id>.png` y escribe `imagen` y
+`capturado`. La ficha la muestra bajo la cita, que sigue siendo el texto literal. El navegador se busca en
+la variable `CHROME`, en la caché de Playwright o en las rutas habituales del sistema. Solo tuits del
+propio político o de su partido, nunca de medios.
+
 ## Perfiles de políticos y partidos
 
 Cada tag puede tener una ficha en `src/content/perfil/<slug-del-tag>.yaml` (`Pedro Sánchez` →

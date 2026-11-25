@@ -27,6 +27,9 @@ Un solo error o una cita sacada de contexto desacredita toda la web.
   partidos (programas electorales, ponencias, códigos éticos). **Nunca capturas de prensa.**
   El recorte es la prueba visible; lo que la hace verificable es el enlace a la página, la copia en Web
   Archive y la huella SHA-256 del PDF.
+- Los tuits del propio político (o de su partido) pueden llevar su captura (`tuit: {}` en el hito,
+  `npm run capturas`), tomada del visor de inserción de X; la cita literal y el enlace con copia en Web
+  Archive siguen siendo obligatorios.
 - Si una fuente cambia después de publicar (404, versión corregida, documento retirado), se anota en
   `cambiosFuentes` del caso con la fecha de detección y la copia del original, sin valoraciones; sale en el
   caso y en `/cambios-en-fuentes/` (enlace en el pie). Formato en el README.
@@ -89,6 +92,7 @@ Todo en [src/styles/global.scss](src/styles/global.scss), con capas
 | --- | --- |
 | `CasoCard` | Tarjeta de caso con antes/después; `nivel` del título y `destacada` para portada. Enlace extendido desde el título. |
 | `Hito` | Una declaración o hecho: fecha, avatar, cita, recorte del documento, vídeo, contexto y fuente. |
+| `Tuit` | Captura de un tuit del propio político bajo la cita, con la fecha de la captura. |
 | `Documento` | Recorte de un documento oficial con el fragmento resaltado, enlace a la página, copia archivada y SHA-256. |
 | `Avatar` | Foto circular (persona), logo apaisado sobre blanco (partido) o iniciales. Decorativo por defecto (`alt=""`). |
 | `Tags` | Chips con mini-avatar que enlazan a `/tags/<slug>/`. |

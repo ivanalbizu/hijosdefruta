@@ -23,10 +23,20 @@
  *
  * Solo documentos de organismos oficiales o documentos públicos de los partidos
  * (programas, ponencias, códigos éticos): nunca capturas de prensa.
+ *
+ * Tuits: un hito cuya fuente es un tuit de la cuenta del propio político puede llevar
+ * `tuit: {}`. El script abre el visor de inserción de X (sin sesión) en un Chromium sin
+ * interfaz, recorta la tarjeta y escribe `imagen` y `capturado`. Busca el navegador en
+ * CHROME, en la caché de Playwright (~/.cache/ms-playwright) o en las rutas habituales.
  */
 import crypto from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import fs from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
+import { promisify } from 'node:util';
+import sharp from 'sharp';
 import { createRequire } from 'node:module';
 import { parseDocument } from 'yaml';
 import { createCanvas } from '@napi-rs/canvas';
@@ -312,6 +322,61 @@ async function procesarHito(slug, yamlDoc, nodo, etiqueta) {
 	return true;
 }
 
+const RE_TUIT = /^https:\/\/(?:www\.)?(?:x|twitter)\.com\/(\w+)\/status\/(\d+)/;
+
+/** Chromium sin interfaz: variable CHROME, caché de Playwright o instalación del sistema. */
+async function navegador() {
+	if (process.env.CHROME) return process.env.CHROME;
+	const cache = path.join(os.homedir(), '.cache/ms-playwright');
+	const dirs = (await fs.readdir(cache).catch(() => []))
+		.filter(d => d.startsWith('chromium_headless_shell-'))
+		.sort((a, b) => Number(b.split('-')[1]) - Number(a.split('-')[1]));
+	for (const d of dirs) {
+		const ruta = path.join(cache, d, 'chrome-headless-shell-linux64/chrome-headless-shell');
+		if (existsSync(ruta)) return ruta;
+	}
+	const sistema = ['/opt/google/chrome/chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser', '/usr/bin/google-chrome'];
+	const encontrado = sistema.find(r => existsSync(r));
+	if (!encontrado) throw new Error('no hay Chromium: instala uno con `npx playwright install chromium-headless-shell` o define CHROME');
+	return encontrado;
+}
+
+async function procesarTuit(slug, nodo, etiqueta) {
+	const tuit = nodo.get('tuit', true);
+	if (!tuit) return false;
+	if (tuit.get?.('imagen') && !forzar) {
+		console.log(`· ${slug} / ${etiqueta}: ya tiene captura del tuit (usa --forzar para regenerarla)`);
+		return false;
+	}
+	const url = nodo.getIn(['fuente', 'url']);
+	const m = RE_TUIT.exec(url ?? '');
+	if (!m) throw new Error(`${etiqueta}: \`tuit\` necesita que la fuente sea un tuit`);
+	const id = m[2];
+	const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'tuit-'));
+	const bruto = path.join(tmp, 'tuit.png');
+	try {
+		// Visor oficial de inserción, sin sesión ni seguimiento; la hora, en la de Madrid.
+		const visor = `https://platform.twitter.com/embed/Tweet.html?id=${id}&lang=es&dnt=true&theme=light&hideThread=true`;
+		await promisify(execFile)(
+			await navegador(),
+			['--headless=new', '--no-sandbox', '--hide-scrollbars', '--force-device-scale-factor=2', '--window-size=550,1600',
+				'--virtual-time-budget=15000', '--lang=es-ES', `--user-data-dir=${path.join(tmp, 'perfil')}`, `--screenshot=${bruto}`, visor],
+			{ env: { ...process.env, TZ: 'Europe/Madrid' }, timeout: 60_000 },
+		);
+		const { data, info } = await sharp(bruto).trim({ background: '#ffffff', threshold: 8 }).toBuffer({ resolveWithObject: true });
+		// Un tuit borrado o un fallo de carga deja una página casi vacía.
+		if (info.height < 300) throw new Error(`${etiqueta}: el visor de X no muestra el tuit ${id} (¿borrado?); usa la copia de Web Archive`);
+		const rutaPng = path.join(DIR_PRUEBAS, slug, `tuit-${id}.png`);
+		await fs.mkdir(path.dirname(rutaPng), { recursive: true });
+		await sharp(data).png({ compressionLevel: 9 }).toFile(rutaPng);
+		nodo.set('tuit', { imagen: path.relative(DIR_CASOS, rutaPng), capturado: new Date().toISOString().slice(0, 10) });
+		console.log(`✓ ${slug} / ${etiqueta}: tuit ${id} → ${rutaPng}`);
+		return true;
+	} finally {
+		await fs.rm(tmp, { recursive: true, force: true });
+	}
+}
+
 for (const slug of slugs) {
 	const ruta = path.join(DIR_CASOS, `${slug}.mdx`);
 	const texto = await fs.readFile(ruta, 'utf8');
@@ -329,13 +394,14 @@ for (const slug of slugs) {
 		if (!nodo) continue;
 		try {
 			cambios = (await procesarHito(slug, doc, nodo, etiqueta)) || cambios;
+			cambios = (await procesarTuit(slug, nodo, etiqueta)) || cambios;
 		} catch (e) {
 			console.error(`✗ ${slug} / ${e.message}`);
 			process.exitCode = 1;
 		}
 	}
 	if (cambios) {
-		await fs.writeFile(ruta, `---\n${doc.toString({ lineWidth: 0 })}---\n${texto.slice(m[0].length)}`);
+		await fs.writeFile(ruta, `---\n${doc.toString({ lineWidth: 0, flowCollectionPadding: false })}---\n${texto.slice(m[0].length)}`);
 	}
 	await limpiar(slug, doc.toString());
 }

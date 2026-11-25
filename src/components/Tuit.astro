@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import Fecha from '@components/Fecha.astro';
+import { formatFecha, type Hito } from '@utils/casos';
+
+/**
+ * Captura de un tuit del propio político, tomada del visor de inserción de X por
+ * `npm run capturas`. Es la prueba visible: la cita literal va en el texto del hito
+ * y el enlace al tuit y a su copia archivada, en «Fuente».
+ */
+interface Props {
+	tuit: NonNullable<Hito['tuit']>;
+	/** Nombre de quien lo escribió, para el texto alternativo. */
+	autor: string;
+	fecha: Hito['fecha'];
+}
+
+const { tuit, autor, fecha } = Astro.props;
+const { imagen, capturado } = tuit;
+const alt = `Captura del tuit de ${autor} del ${formatFecha(fecha)}, con el texto que se cita arriba`;
+---
+
+{
+	imagen && (
+		<figure class="tuit">
+			<Image src={imagen} alt={alt} widths={[400, 800, 1100]} sizes="(min-width: 36rem) 30rem, 100vw" />
+			{capturado && (
+				<figcaption class="meta">
+					Captura del tuit tomada el <Fecha fecha={{ valor: capturado, precision: 'dia' }} />
+				</figcaption>
+			)}
+		</figure>
+	)
+}
+
+<style>
+	.tuit {
+		max-width: 30rem;
+		margin: 0;
+	}
+	.tuit img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 1px solid var(--color-border-strong);
+		border-radius: var(--radius-md);
+		/* La captura es siempre clara; el fondo blanco tapa sus esquinas redondeadas en el tema oscuro. */
+		background: #fff;
+		box-shadow: var(--shadow-sm);
+	}
+	figcaption {
+		margin-top: var(--space-2);
+	}
+</style>

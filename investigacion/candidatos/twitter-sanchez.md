@@ -7,6 +7,8 @@ Método: búsqueda avanzada de X en Claude in Chrome (`from:sanchezcastejon sinc
 pestaña «Más reciente»), desplazando la lista y volcando fecha, texto e id de cada tuit; el volcado se mete en el
 `body` de la página y se lee con `get_page_text` (la salida de `javascript_tool` se corta hacia los 1000 caracteres).
 
+> Cerrados (descartados, publicados, duplicados…): [cerrados/twitter-sanchez.md](cerrados/twitter-sanchez.md). Búsqueda: `grep -r` sobre `investigacion/candidatos/`.
+
 ## Estado de los candidatos (las dos tandas)
 
 | Id | Tanda | Tema | Tipo | Estado | Siguiente paso |
@@ -55,49 +57,6 @@ Ya cumplido, no da caso: derogar el RD-ley 16/2012 y recuperar la sanidad univer
 cultural al 10 % (743419923305795584 y otros): lo bajó el Gobierno de Rajoy (espectáculos en 2017, cine en los PGE
 de 2018). Comparecencias de Rajoy por corrupción (855759971061043202 y otros): bloqueado por regla si se cruza con
 causas abiertas.
-
-### tw-01 · Blindar las pensiones y la sanidad en la Constitución
-- **Estado:** prometedor (pendiente: confirmar en el buscador del Congreso que no hubo ningún proyecto ni proposición de
-  reforma del art. 50 ni del 43 sobre la sanidad entre la XII y la XV; y qué hizo el PSOE con la propuesta de Navarra)
-- **Origen:** tuits 985496713015197696 (15-04-2018), 984502698212028416 (12-04-2018) y 976533324410904576 (21-03-2018)
-- **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
-- **Antes:**
-  - 12-04-2018 · tuit: «Nuestro compromiso con la sanidad pública es firme. En cuanto lleguemos al Gobierno la vamos a
-    blindar en nuestra Constitución como un derecho fundamental.» https://x.com/sanchezcastejon/status/984502698212028416 ·
-    archivo https://web.archive.org/web/20200521074622/https://twitter.com/sanchezcastejon/status/984502698212028416
-  - 15-04-2018 · tuit: «Tenéis mi compromiso: vamos a blindar las pensiones en nuestra Constitución, porque blindar las
-    pensiones, es blindar la dignidad de nuestros jubilados y jubiladas.» https://x.com/sanchezcastejon/status/985496713015197696 ·
-    archivo https://web.archive.org/web/20200521074611/https://twitter.com/sanchezcastejon/status/985496713015197696
-  - 21-03-2018 · tuit con su frase en la Asamblea Abierta de Oviedo («blindar constitucionalmente la sanidad, la
-    educación, la dependencia y las pensiones»): sin copia en Web Archive; guardarla si se usa.
-- **Hitos (la promesa se repite):**
-  - Programa del PSOE de 2023 (23J), pág. 170: «Blindaremos el poder adquisitivo de las pensiones con un cambio
-    constitucional. Garantizaremos ante cualquier circunstancia el poder adquisitivo de todas las pensiones con arreglo al
-    IPC.» https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf (psoe.es devuelve HTML a curl;
-    copia https://web.archive.org/web/20230709064011/…; 272 págs., SHA-256
-    `02d4972a848250fec9b8b2cffc5aaa78733acb0ac010e79ce1787161f91a42f2`, en `investigacion/material/tw-01/`).
-  - Programa del PSOE de 2026 (29N), compromisos 100 (pág. 40) y 365 (pág. 89): «Blindar constitucionalmente el sistema
-    público de pensiones y su revalorización conforme al IPC»; el 366: «avanzando en la protección efectiva como derechos
-    fundamentales de la salud y la vivienda» (el mismo PDF de cac-29, SHA-256 `e9c83413…`).
-  - Mitin de Gijón, octubre de 2026: «En la próxima legislatura reformaremos la Constitución para blindar las pensiones y
-    su revalorización conforme al IPC» (solo en ESdiario, 26-10-2026; buscar vídeo del PSOE o nota de psoe.es).
-- **Después:** ocho años de Gobierno sin llevar al Congreso ninguna reforma constitucional sobre pensiones ni sanidad
-  (pendiente de confirmar, arriba). En cambio, sí impulsó otras: art. 49 (aprobada en 2024), art. 69.3 (Formentera,
-  aprobada por el Congreso el 26-03-2026 y el Senado el 22-04-2026, BOCG-15-B-6) y el proyecto del art. 43 sobre el aborto
-  (Consejo de Ministros del 07-04-2026, BOCG-15-A-92), este último sin la mayoría de tres quintos asegurada.
-- **Justificación del político:** previsible: hace falta mayoría de tres quintos y el PP no la daría. Lo debilita el art.
-  43: el Gobierno presentó esa reforma sabiendo que no tenía la mayoría. La revalorización con el IPC sí la aprobó por
-  ley (Ley 21/2021): matiz obligatorio en el caso.
-- **Búsquedas (25-11-2026):** web («PSOE registra reforma constitucional blindar pensiones artículo 50», «Proyecto de
-  reforma constitucional 2026 artículo 43», «reforma del artículo 69», site:congreso.es «artículo 50 de la Constitución»);
-  ESdiario 26-10-2026 y Forbes 07-07-2023 leídos con web-fetch (pistas); programas de 2023 y 2026 leídos con pdftexto;
-  datos abiertos del Congreso (XV, proyectos y proposiciones de ley: no incluyen las reformas constitucionales, tipos
-  100/102); BOCG-12-B-259-1 y 264-1 (copias de Web Archive en `material/tw-01/`): leyes de pensiones, no reformas
-  constitucionales. Pista: el Parlamento de Navarra aprobó el 07-06-2018 una proposición de reforma del art. 50 para el
-  Congreso (parlamentodenavarra.es/eu/tramite-documento/1136035); falta su número de expediente y qué votó el PSOE.
-- **Notas / veredicto:** promesa sin plazo, pero con «en cuanto lleguemos al Gobierno» (sanidad) y repetida en 2023 y
-  2026. El paso que le tocaba al Gobierno (aprobar y enviar el proyecto) no se dio, como en mor-04. Precedente:
-  `sanchez-suprimir-aforamientos` (allí sí lo presentó). El compromiso de 2026 puede ir también a `/promesas`.
 
 ### tw-02 · «La banca pagará parte de las pensiones»
 - **Estado:** por investigar

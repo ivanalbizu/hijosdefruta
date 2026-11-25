@@ -55,6 +55,9 @@ const texto = (s: z.ZodString = z.string()) =>
 		if (cifra) ctx.addIssue({ code: 'custom', message: avisoCifraPartida(cifra) });
 	});
 
+/** URL de un tuit: x.com o twitter.com, cuenta e identificador. */
+export const RE_TUIT = /^https:\/\/(?:www\.)?(?:x|twitter)\.com\/(\w+)\/status\/(\d+)/;
+
 /** Opcional que además acepta "" y null en campos vacíos. */
 const opcional = <T extends z.ZodTypeAny>(schema: T) =>
 	z.preprocess(v => (v === '' || v === null ? undefined : v), schema.optional());
@@ -168,8 +171,23 @@ const hito = (image: ImageFn) => z
 		video: z.preprocess(v => (v && typeof v === 'object' && !('id' in v && v.id) ? undefined : v), video.optional()),
 		// Un documento sin URL (bloque vacío en el CMS) cuenta como ausente.
 		documento: z.preprocess(v => (v && typeof v === 'object' && !('url' in v && v.url) ? undefined : v), documento(image).optional()),
+		/**
+		 * Captura del tuit citado, cuando la fuente es un tuit de la cuenta del propio político.
+		 * Se escribe `tuit: {}` y `npm run capturas` rellena `imagen` y `capturado`.
+		 */
+		tuit: opcional(
+			z.object({
+				imagen: opcional(image()),
+				/** Día en que se tomó la captura. */
+				capturado: opcional(z.coerce.date()),
+			}),
+		),
 	})
 	.refine(h => h.cita || h.hecho, { message: 'Cada hito necesita `cita` o `hecho`' })
+	.refine(h => !h.tuit || RE_TUIT.test(h.fuente.url), {
+		message: '`tuit` solo vale si la fuente es un tuit (https://x.com/<cuenta>/status/<id>)',
+		path: ['tuit'],
+	})
 	.refine(h => !h.destacado || esFragmentoDe(h.destacado, h.cita ?? h.hecho ?? ''), {
 		message: '`destacado` solo puede contener trozos literales de `cita` (o `hecho`) separados por "[...]"',
 		path: ['destacado'],
