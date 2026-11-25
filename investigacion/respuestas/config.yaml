@@ -6,8 +6,10 @@
 # en Wikidata) y coalicion (tampoco). Fuera por decisión del usuario (24-11-2026): Ábalos y Cerdán, y quienes ya no
 # están en política (Calviño, Celaá, Campo, Carmen Calvo, Iceta, Raquel Sánchez, Pablo Iglesias, Errejón). Sin
 # cuenta: Grande-Marlaska (@MarlaskaGrande es de un particular), Griñán, Dolores Delgado (@LolaDelgadoG, cerrada),
-# Frente Amplio (@frenteamplioesp no es oficial: 0 posts) y Unidas Podemos (ya no existe). Al crear un perfil de
-# persona o partido, añade aquí su cuenta.
+# Frente Amplio (@frenteamplioesp no es oficial: 0 posts) y Unidas Podemos (ya no existe). Fuera también por
+# decisión del usuario (25-11-2026), aunque tengan perfil: Puigdemont (KRLS), ERC, Junts, EH Bildu, PNV, BNG,
+# Coalición Canaria y Barcelona en Comú. Al crear un perfil de persona o partido, añade aquí su cuenta salvo que
+# sea de una de estas.
 # Federaciones del PSOE (24-11-2026), con la etiqueta PSOE: Wikidata solo da SocialistesVal, PSOE_CyL y psoeex; el
 # resto, comprobadas en x.com. Fuera: psoedeandalucia, psoe_m y PSOE_CyL (bloqueadas en la cuenta del usuario: ni
 # se le puede responder ni salen en la búsqueda), Castilla-La Mancha (@PSOE_CLM no existe; @psoeclm no se ve
@@ -39,17 +41,9 @@ cuentas:
   - { usuario: IreneMontero, etiqueta: Irene Montero }
   - { usuario: AdaColau, etiqueta: Ada Colau }
   - { usuario: gabrielrufian, etiqueta: Gabriel Rufián }
-  - { usuario: KRLS, etiqueta: Carles Puigdemont }
-  - { usuario: Esquerra_ERC, etiqueta: ERC }
   - { usuario: socialistes_cat, etiqueta: PSC }
   - { usuario: sumar, etiqueta: Sumar }
   - { usuario: PODEMOS, etiqueta: Podemos }
-  - { usuario: ehbildu, etiqueta: EH Bildu }
-  - { usuario: bcnencomu, etiqueta: Barcelona en Comú }
-  - { usuario: JuntsXCat, etiqueta: Junts }
-  - { usuario: eajpnv, etiqueta: PNV }
-  - { usuario: obloque, etiqueta: BNG }
-  - { usuario: coalicion, etiqueta: Coalición Canaria }
 
 # Temas: un caso solo se propone para un tuit si comparten al menos un tema. Las palabras clave se buscan
 # sin tildes ni mayúsculas, al principio de palabra («pension» vale para «pensiones»); pueden ser frases.
@@ -68,7 +62,7 @@ temas:
   sahara: [sahara, marruecos, polisario]
   israel: [israel, gaza, palestin, armas, armamento]
   presupuestos: [presupuest]
-  legislatura: [agotar la legislatura, adelanto electoral, adelantar las elecciones, elecciones anticipadas, limitar mandatos, limitacion de mandatos, dos legislaturas, mandato del presidente, mocion de censura, habra elecciones, elecciones en 2027]
+  legislatura: [agotar la legislatura, siga gobernando, adelanto electoral, adelantar las elecciones, elecciones anticipadas, limitar mandatos, limitacion de mandatos, dos legislaturas, mandato del presidente, mocion de censura, habra elecciones, elecciones en 2027]
   pactos: [bildu, asiron, populismo, gobernabilidad, no dormiria, dormir por la noche]
   decretos: [decreto ley, decretos ley, decretazo]
   aforamientos: [aforamient, aforad]
@@ -79,7 +73,7 @@ temas:
   democracia: [plan de accion por la democracia, grupos de interes, lobbies, transparencia]
   rtve: [direccion de rtve, consejo de administracion de rtve, presidente de rtve, presidencia de rtve, rtve por decreto, television publica, manipulacion de rtve]
   corrupcion: [corrupc, abalos, koldo, cerdan, delcy, mascarillas]
-  igualdad: [violencia de genero, violencia machista, machismo, maltrat, pulsera, ley de trata, trata de mujeres, trata de seres, prostituc, abolicion, solo si es si, consentimiento, agresores sexuales]
+  igualdad: [violencia de genero, violencia machista, violencias machistas, machismo, maltrat, pulsera, ley de trata, trata de mujeres, trata de seres, prostituc, abolicion, solo si es si, consentimiento, agresores sexuales]
   seguridad: [criminalidad, delincuencia, delitos]
   educacion: [lomloe, ley celaa, universidad, docente e investigador, investigadores]
   sanidad: [vacun, pandemia, covid, estado de alarma, creditos ico]
