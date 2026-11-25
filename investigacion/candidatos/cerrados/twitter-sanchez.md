@@ -61,3 +61,16 @@ Candidatos cerrados de [twitter-sanchez.md](../twitter-sanchez.md), en el orden 
 - **Notas / veredicto:** promesa sin plazo, pero con «en cuanto lleguemos al Gobierno» (sanidad) y repetida en 2023 y
   2026. El paso que le tocaba al Gobierno (aprobar y enviar el proyecto) no se dio, como en mor-04. Precedente:
   `sanchez-suprimir-aforamientos` (allí sí lo presentó). El compromiso de 2026 puede ir también a `/promesas`.
+
+### tw-07 · Rajoy y los 17 000 refugiados
+- **Estado:** descartado (decisión del usuario, 25-11-2026)
+- **Origen:** tuit 868772463072694273 (28-05-2017)
+- **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
+- **Antes:** «@marianorajoy : cumple tu compromiso de acoger 17.000 refugiados»
+- **Después:** pendiente: reasentamientos y reubicaciones con el Gobierno de Sánchez
+- **Búsquedas (25-11-2026):** sin copia del tuit en Web Archive. Programas Nacionales de Reasentamiento aprobados por el
+  Consejo de Ministros (La Moncloa, 20-12-2019: 1200 personas en 2020; Ministerio de Inclusión: 1200 en 2019 y en 2024); el
+  Ministerio da en 2024 un cumplimiento del 90 % del programa de 2023. Sin datos de ejecución de 2019 a 2022.
+- **Notas / veredicto:** descartado por el usuario. El compromiso de 2015 era un cupo europeo con plazo de 2017; con
+  Sánchez hay cupos nacionales anuales que se cumplen en buena parte: no hay «hizo lo contrario» y las cifras no se miden
+  igual (wild-14).

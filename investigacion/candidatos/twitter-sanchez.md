@@ -14,15 +14,15 @@ pestaña «Más reciente»), desplazando la lista y volcando fecha, texto e id d
 | Id | Tanda | Tema | Tipo | Estado | Siguiente paso |
 | --- | --- | --- | --- | --- | --- |
 | tw-01 | 1.ª | Blindar pensiones y sanidad en la Constitución (2018, programas de 2023 y 2026) | promesa incumplida | **prometedor** | confirmar en el Congreso que nunca se presentó; propuesta de Navarra (2018) |
-| tw-09 | 2.ª | «Los que decían que iba a pactar con los independentistas […] ahora callan» (15-04-2016) | hito → `sanchez-gobernabilidad-partidos-independentistas` | por investigar | vídeo o nota del acto de Córdoba; copia en Web Archive |
-| tw-08 | 2.ª | Puigdemont: «fuerza moral», «peores hojas», «no es un candidato constitucional» (2017-2018) | hitos → `sanchez-traera-a-puigdemont-a-espana` / amnistía | por investigar | actos de Granada y Fórum Europa; elegir uno o dos |
-| tw-10 | 2.ª | Podemos: «jueces y fiscales a sueldo de Iglesias» (2016) | hitos → populismo / «no dormiría» | por investigar | valorar si aporta frente a los hitos de 2014 y 2016 |
-| tw-04 | 1.ª | Consejo de Ministros en funciones «para hacer publicidad y propaganda» (Lastra, 2016) | hito → `psoe-junta-electoral-neutralidad-ruedas-de-prensa` | por investigar | fuente original de Lastra |
-| tw-02 | 1.ª | «La banca pagará parte de las pensiones» (2018) | promesa incumplida | por investigar | ¿algún impuesto a la banca afectado a pensiones? |
-| tw-05 | 1.ª | El «plasma» y las comparecencias de Rajoy (2014-2015) | doble rasero | por investigar | recuento comparable en el Congreso; si no, débil |
-| tw-06 | 1.ª | Educación: +35 % de gasto, 300 000 becas, 106 000 plazas de 0-3 (2018) | promesa incumplida | por investigar | datos del Ministerio; probablemente cumplido en becas |
+| tw-09 | 2.ª | «Los que decían que iba a pactar con los independentistas […] ahora callan» (15-04-2016) | hito → `sanchez-gobernabilidad-partidos-independentistas` | hito añadido | revisión del usuario en `/casos/sanchez-gobernabilidad-partidos-independentistas/` |
+| tw-08 | 2.ª | Puigdemont: «fuerza moral», «peores hojas», «no es un candidato constitucional» (2017-2018) | hitos → `sanchez-traera-a-puigdemont-a-espana` / amnistía | hito añadido | revisión del usuario en `/casos/no-aministia-para-politicos-e-independentistas-catalanes/` |
+| tw-10 | 2.ª | Podemos: «jueces y fiscales a sueldo de Iglesias» (2016) | hitos → populismo / «no dormiría» | **débil** | — (los casos ya tienen ese «antes»; lo decide el usuario) |
+| tw-04 | 1.ª | Consejo de Ministros en funciones «para hacer publicidad y propaganda» (Lastra, 2016) | hito → `psoe-junta-electoral-neutralidad-ruedas-de-prensa` | **débil** | — (sin fuente original; lo decide el usuario) |
+| tw-02 | 1.ª | «La banca pagará parte de las pensiones» (2018) | promesa incumplida | **débil** | — (caja única: no se puede probar que el ITF no pagara pensiones; lo decide el usuario) |
+| tw-05 | 1.ª | El «plasma» y las comparecencias de Rajoy (2014-2015) | doble rasero | **débil** | — (sin recuento comparable; riesgo de causas abiertas; lo decide el usuario) |
+| tw-06 | 1.ª | Educación: +35 % de gasto, 300 000 becas, 106 000 plazas de 0-3 (2018) | promesa incumplida | **débil** | — (gasto +40,8 % y becas superados; 0-3, «más de 60 000»; lo decide el usuario) |
 | tw-03 | 1.ª | El recibo de la luz «casi el doble» (2018) | doble rasero | **débil** | — (el IPC solo medía el PVPC hasta 2023; queja, no compromiso) |
-| tw-07 | 1.ª | Rajoy y los 17 000 refugiados (2017) | doble rasero | por investigar (baja) | — |
+| tw-07 | 1.ª | Rajoy y los 17 000 refugiados (2017) | doble rasero | descartado | — (decisión del usuario) |
 
 Sin caso: sanidad universal y pensiones con el IPC (cumplido), IVA cultural (lo bajó Rajoy), Rajoy y la corrupción
 (regla de causas abiertas), «la primera llamada a Puigdemont» (2016, coherente con 2023), Artur Mas y Convergència
@@ -59,7 +59,7 @@ de 2018). Comparecencias de Rajoy por corrupción (855759971061043202 y otros): 
 causas abiertas.
 
 ### tw-02 · «La banca pagará parte de las pensiones»
-- **Estado:** por investigar
+- **Estado:** débil (decisión del usuario, 25-11-2026, tras la 2.ª pasada)
 - **Origen:** tuits 953351032129679360 (16-01-2018) y 951538248899317760 (11-01-2018)
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 16-01-2018 · «Mi compromiso es firme: cuando lleguemos al gobierno, la banca pagará parte de las
@@ -68,8 +68,24 @@ causas abiertas.
 - **Después:** pendiente: Ley 5/2020 (impuesto sobre transacciones financieras) y Ley 38/2022 (gravamen temporal a la
   banca), ¿con destino a pensiones? La financiación que se aprobó fue el MEI sobre cotizaciones
 - **Justificación del político:** pendiente
-- **Búsquedas:** solo los tuits
-- **Notas / veredicto:** riesgo de contradicción no limpia: hubo impuestos a la banca; falta ver si alguno se afectó a
+- **Búsquedas:** tuits (copia en Web Archive del 953351032129679360, 21-05-2020; el 951538248899317760 sin copia).
+  25-11-2026: textos consolidados del BOE (eli/es/l/2020/10/15/5, l/2022/12/27/38, l/2024/12/20/7): ninguno
+  destina la recaudación a la Seguridad Social ni a las pensiones; la Ley 38/2022 solo cita la revalorización de las
+  pensiones como gasto que justifica el gravamen. La Moncloa, rueda de prensa del Consejo de Ministros del 19-10-2018
+  (enlacetranscripciones2018/19102018_intermontero.aspx), Montero sobre el anteproyecto del ITF: «los ingresos generados
+  por este impuesto aportarán unos 850 millones que estarán destinados a financiar el sistema público de pensiones»; el
+  15-10-2018 (151018-transmontero.aspx): «la recaudación del Impuesto sobre Transacciones Financieras se derivará a
+  Seguridad Social». 2.ª pasada (25-11-2026, a petición del usuario): Memoria de la Administración Tributaria 2024,
+  cap. V (hacienda.gob.es/ig/memorias/memoria-tributaria-2024/05-mat-2024.pdf, p. 46): recaudación del ITF de 296 (2021),
+  196 (2022), 198 (2023) y 249 millones (2024); en el texto, 248 en 2024. PGE de 2021 (Ley 11/2020) y de 2023 (Ley
+  31/2022), textos consolidados: no mencionan el ITF; las transferencias del Estado a la Seguridad Social son las de la
+  recomendación primera del Pacto de Toledo (gastos impropios), sin ligarlas a ningún impuesto.
+- **Notas / veredicto:** débil por decisión del usuario. (1) Con la caja única no se puede probar que la recaudación del
+  ITF no financiara pensiones (el Estado transfiere cada año muchos miles de millones a la Seguridad Social). (2) El ITF
+  lo paga quien compra acciones, no la banca; los gravámenes a la banca (2022, 2024) nunca se anunciaron para
+  pensiones. (3) Recaudar menos de lo previsto (196–296 millones frente a 850) es un error de previsión, no un
+  incumplimiento. Se reabre si aparece una declaración del Gobierno de que el ITF «no irá» a las pensiones o de que se
+  destina a otra cosa. Antes: el ITF no lo paga la banca, sino quien compra acciones. Riesgo de contradicción no limpia: hubo impuestos a la banca; falta ver si alguno se afectó a
   las pensiones (los impuestos van a la caja común). Posible débil.
 
 ### tw-03 · El recibo de la luz «casi el doble»
@@ -99,18 +115,22 @@ causas abiertas.
   único sólido es la serie del INE, que mide igual 2018 y 2022 (las dos con PVPC); serviría como contexto si se reabre.
 
 ### tw-04 · Consejo de Ministros en funciones «para hacer publicidad y propaganda»
-- **Estado:** por investigar (posible hito)
+- **Estado:** débil
 - **Origen:** tuit 692672081901797376 (28-01-2016), frase atribuida a Adriana Lastra
 - **Persona / tipo propuesto:** PSOE (Lastra) / doble rasero · hito para `psoe-junta-electoral-neutralidad-ruedas-de-prensa`
 - **Antes:** 28-01-2016 · «El gobierno en funciones utiliza el #CMin para hacer publicidad y propaganda. Que vengan al
   #Congreso a comparecer»
 - **Después:** las multas de la JEC al presidente y a los ministros por ruedas de prensa en la campaña del 29N (ya en
   el caso)
-- **Búsquedas:** solo el tuit; buscar la frase en la fuente original de Lastra (rueda de prensa o Congreso)
+- **Búsquedas:** el tuit no tiene copia en Web Archive (CDX de twitter.com y x.com). Web 25-11-2026 («Lastra»
+  «publicidad y propaganda» «Consejo de Ministros» 2016): nada; CDX de psoe.es/actualidad/ del 27 al 31-01-2016: ninguna
+  nota de Lastra; YouTube: nada.
+- **Estado (25-11-2026):** débil por decisión del usuario: sin fuente original ni copia del tuit; además, es una queja fuera de campaña, no una denuncia ante la Junta Electoral. Se reabre si aparece el vídeo de la rueda de
+  prensa o el tuit de la propia Lastra.
 - **Notas / veredicto:** la frase es de Lastra citada por la cuenta de Sánchez; como hito iría a nombre de Lastra.
 
 ### tw-05 · «Un presidente del Gobierno no puede esconderse tras un plasma» y el Gobierno que más se niega a comparecer
-- **Estado:** por investigar
+- **Estado:** débil (decisión del usuario, 25-11-2026, sin hacer el recuento)
 - **Origen:** tuits 669241902911373313 (24-11-2015), 590787862901219328 (22-04-2015), 560137784309346304 (27-01-2015),
   504373454834241536 (26-08-2014)
 - **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
@@ -119,31 +139,38 @@ causas abiertas.
   (26-08-2014)
 - **Después:** pendiente: solicitudes de comparecencia de Sánchez rechazadas con los votos del PSOE y sus socios
   (Congreso, buscador de iniciativas) y ruedas de prensa sin preguntas
-- **Búsquedas:** solo los tuits
-- **Notas / veredicto:** necesita recuento comparable en el Congreso; si no, débil.
+- **Búsquedas (25-11-2026):** ninguno de los cuatro tuits tiene copia en Web Archive (CDX de twitter.com y x.com). Datos
+  abiertos del Congreso (congreso.es/es/opendata/iniciativas): solo iniciativas legislativas, no comparecencias; el
+  recuento habría que hacerlo a mano en congreso.es/busqueda-de-iniciativas (tipo «Solicitud de comparecencia del
+  Gobierno», compareciente el presidente, por legislatura y resultado).
+- **Notas / veredicto:** débil por decisión del usuario. (1) Muchas solicitudes de la XV legislatura tienen que ver con
+  causas judiciales abiertas (regla: habría que excluirlas). (2) No se mide igual: Rajoy tenía mayoría absoluta y Sánchez
+  no; las solicitudes se rechazan en la Mesa o en el Pleno con mayorías distintas. (3) Las declaraciones sin preguntas son
+  habituales en todos los presidentes: compararlas con el «plasma» sería opinión. Se reabre si alguien publica un
+  recuento oficial por legislatura.
 
 ### tw-06 · Educación: 35 % más de gasto, 300 000 becas y 106 000 plazas de 0 a 3 años
-- **Estado:** por investigar
+- **Estado:** débil (decisión del usuario, 25-11-2026)
 - **Origen:** tuit 984052176531148800 (11-04-2018)
 - **Persona / tipo propuesto:** Pedro Sánchez / promesa incumplida
 - **Antes:** 11-04-2018 · «Queremos aumentar el gasto en un 35%, que el número de becas llegue a los 300.000
   estudiantes y crear 106.000 nuevas plazas para niños y niñas de 0 a 3 años»
 - **Después:** pendiente: estadística de gasto público en educación y de becas (Ministerio de Educación) y plazas de
   0-3 creadas con el Plan de Recuperación
-- **Búsquedas:** solo el tuit
-- **Notas / veredicto:** «queremos», sin plazo; las becas probablemente se superaron. Comprobar antes de seguir.
-
-### tw-07 · Rajoy y los 17 000 refugiados
-- **Estado:** por investigar (baja prioridad)
-- **Origen:** tuit 868772463072694273 (28-05-2017)
-- **Persona / tipo propuesto:** Pedro Sánchez / doble rasero
-- **Antes:** «@marianorajoy : cumple tu compromiso de acoger 17.000 refugiados»
-- **Después:** pendiente: reasentamientos y reubicaciones con el Gobierno de Sánchez
-- **Notas / veredicto:** el compromiso de 2015 era un cupo europeo con plazo de 2017; sin un compromiso propio
-  comparable, débil.
+- **Búsquedas (25-11-2026):** La Moncloa, nota del 18-03-2026 (gasto público en educación de 2024, provisional):
+  71 348,8 millones. 2.ª pasada (a petición del usuario): Sistema Estatal de Indicadores de la Educación 2021, F1.2
+  (INEE, educacionfpydeportes.gob.es/inee/dam/jcr:551c2cd3-f9c7-43d4-bfc0-7845882b635e/2021-f1-2.pdf): «El gasto público en
+  educación se eleva a 50.660,3 millones de euros para el año 2018». Subida 2018-2024: un 40,8 % en euros corrientes (el
+  tuit no dice si es en términos reales; descontando la inflación sería bastante menor). Ministerio, balance del
+  09-09-2025 (educacionfpydeportes.gob.es/prensa/actualidad/2025/09/20250909-balanceeducativo.html): beneficiarios de
+  becas de 784 422 (2017-2018) a 1 115 334 (2025-2026); con el Plan de Recuperación, «más de 60 000 plazas de 0 a 3 años»;
+  escolarización de 0 a 3 años del 55,8 %. El tuit no tiene copia en Web Archive.
+- **Notas / veredicto:** débil. «Queremos», sin plazo; las becas se superaron de largo y el gasto, con toda
+  probabilidad, también. Solo las plazas de 0 a 3 años se quedan por debajo (más de 60 000 frente a 106 000), y son
+  competencia de las comunidades: se cumplen dos de tres objetivos.
 
 ### tw-08 · Hitos sobre Puigdemont y los independentistas (2017-2018)
-- **Estado:** por investigar (posibles hitos)
+- **Estado:** hito añadido (25-11-2026) en `no-aministia-para-politicos-e-independentistas-catalanes`: Granada, tramo 20:18–20:50 (video start 1214, end 1252), transcripción confirmada por el usuario; sin los demás tuits. Pendiente de su revisión
 - **Origen:** 2.ª tanda de búsquedas (25-11-2026)
 - **Persona / tipo propuesto:** Pedro Sánchez / hitos para `sanchez-traera-a-puigdemont-a-espana` o
   `no-aministia-para-politicos-e-independentistas-catalanes` (los dos casos culminan en la negociación con Junts de 2023)
@@ -162,22 +189,44 @@ causas abiertas.
     (923940544853790725)
   - 01-12-2017 · «Quien más ha hecho por romper la convivencia y por fracturar la cohesión social ha sido el
     independentismo.» (936675092976807942)
-- **Búsquedas:** solo los tuits. Varios llevan etiqueta de un acto (#AsambleaAbiertaGranada, #ForumEuropa): buscar el vídeo
-  o la transcripción del acto, que es mejor fuente que el tuit.
+- **Búsquedas (25-11-2026):** CDX: todos los tuits tienen copia en Web Archive del 21-05-2020 (954705405778759680 y
+  958317643819372544, también en x.com, 2025). Granada: vídeo del PSOE «Asamblea abierta de Pedro Sánchez en Granada»
+  (https://www.youtube.com/watch?v=mNESHVuCBl4, 11-01-2018; también en el canal de Sánchez, i1nXmf0vEXo), transcrito con
+  whisper el tramo 20:00–21:00: «Mirad, la posición del Partido Socialista en esta cuestión es clara, rotunda. Un
+  presidente de gobierno de una tierra tiene que vivir en esa tierra. ¿Con qué fuerza moral un presidente del gobierno
+  va a exigir el cumplimiento de sus leyes a todos los ciudadanos si es incapaz de asumir en primera persona las
+  consecuencias de sus actos políticos? El presidente de la Generalitat de Cataluña tiene que vivir en Cataluña. Esto es
+  lo que tiene que ocurrir. Por respeto a los ciudadanos y ciudadanas de Cataluña» (20:17–20:50, pendiente de
+  confirmar). Antes, en el mismo tramo: «la irresponsabilidad de los secesionistas» y un Gobierno «incapaz de resolver la
+  crisis territorial». Fórum Europa del 31-01-2018: no localizado (los vídeos de New Economy Forum con Sánchez son del
+  09-01-2018 y del 20-03-2018); el 30-01-2018, la prensa lo sitúa en Sevilla, sin vídeo localizado.
 - **Notas / veredicto:** opiniones sobre Puigdemont; como caso propio serían débiles, pero como hitos muestran el «antes» de
   la negociación de 2023. El de la «fuerza moral» y las «consecuencias de sus actos» es el que mejor choca con la amnistía.
 
 ### tw-09 · Hito: «Aquellos que decían que iba a pactar con los independentistas […] ahora callan»
-- **Estado:** por investigar (posible hito)
+- **Estado:** hito añadido (25-11-2026) en `sanchez-gobernabilidad-partidos-independentistas`: tramo 22:27–23:08 (video start 1343, end 1390), transcripción confirmada por el usuario; el «ahora callan», en el contexto. Pendiente de su revisión
 - **Origen:** 2.ª tanda de búsquedas (25-11-2026)
 - **Persona / tipo propuesto:** Pedro Sánchez / hito para `sanchez-gobernabilidad-partidos-independentistas`
 - **Antes:** 15-04-2016 · «Aquellos que decían que iba a pactar con los independentistas con tal de ser presidente, ahora
   callan. #Córdoba» (720957364397084672). Encaja entre el hito del 02-03-2016 (investidura) y los de 2019.
-- **Búsquedas:** solo el tuit; buscar el vídeo del acto de Córdoba.
-- **Notas / veredicto:** es el más limpio de la tanda como hito.
+- **Búsquedas (25-11-2026):** CDX: copias del tuit de 2019, 2020 y 2025 (x.com). Vídeo del PSOE «Pedro Sánchez mantiene un
+  encuentro con militantes en Córdoba» (https://www.youtube.com/watch?v=NgazxfKUVmI, 15-04-2016, 35:32), transcrito entero
+  con whisper. Dos tramos:
+  - 29:03–29:24 · «¿qué dicen aquellos que me acusaban de ser un político que quería todo por el poder y que estaba
+    dispuesto a pactar con los independentistas todo con tal de ser presidente del gobierno? Ahora callan» (sigue: «y
+    aquellos que me acusaban de caminar hacia la gran coalición con el Partido Popular […] han acabado votando con el
+    Partido Popular en contra de un candidato socialista»).
+  - 22:27–23:08 · «nosotros arrancamos la legislatura el 28 de diciembre con un comité federal donde dijimos dos cosas
+    bien claras. La primera, que no íbamos a apoyar a Mariano Rajoy […] y la segunda, dijimos que no íbamos a articular
+    una mayoría que basara la gobernabilidad de nuestro país en partidos independentistas. Es decir, ERC […] y Democràcia
+    i Llibertat. No porque nosotros no respetemos los votantes que están detrás de esas formaciones políticas […] sino
+    porque entendíamos que gobernar España no se puede hacer con aquellos que quieren romper precisamente España».
+- **Notas / veredicto:** es el más limpio de la tanda como hito. El segundo tramo es más fuerte que el tuit: da el
+  motivo («gobernar España no se puede hacer con aquellos que quieren romper precisamente España»). Pendiente de que el
+  usuario confirme las dos transcripciones.
 
 ### tw-10 · Hitos sobre Podemos e Iglesias (2016)
-- **Estado:** por investigar (posibles hitos)
+- **Estado:** débil (decisión del usuario, 25-11-2026: no se añade ningún hito; los casos ya cubren ese «antes» con hitos de 2014 y 2016)
 - **Origen:** 2.ª tanda de búsquedas (25-11-2026)
 - **Persona / tipo propuesto:** Pedro Sánchez / hitos para `sanchez-no-pactara-con-el-populismo` o
   `pedro-sanchez-seria-un-presidente-del-gobierno-que-no-dormiria`
@@ -188,7 +237,9 @@ causas abiertas.
     policía.» (746257738339094528, entrevista en la SER)
   - 07-03-2016 · «Debajo de todo subyace la apuesta por el derecho de autodeterminación de Cataluña. Es lo que quiere
     Podemos.» (706771245929521152, entrevista en El País)
-- **Búsquedas:** solo los tuits; las entrevistas (SER, El País) darían la cita completa.
+- **Búsquedas (25-11-2026):** CDX: los tres tuits tienen copia del 21-05-2020 (745888963274117120 también en x.com, 2025).
+  YouTube («Pedro Sánchez entrevista Cadena SER junio 2016», «jueces y fiscales a sueldo de Iglesias y Monedero»): no
+  aparece la entrevista de la SER; la de El País no se buscó.
 - **Notas / veredicto:** el del 23-06-2016 es el más concreto. Ojo: los casos ya tienen hitos de 2014 y 2016 sobre el
   populismo; valorar si aportan algo.
 
