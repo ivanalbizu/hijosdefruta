@@ -1,7 +1,9 @@
 ---
 /**
- * Enlace a una web externa. Se abre en otra pestaña y lo anuncia
- * con un icono y un texto para lectores de pantalla.
+ * Enlace a una web externa. Se abre en otra pestaña y lo anuncia con un icono cuyo
+ * aria-label forma parte del nombre del enlace. Va en el SVG y no en un texto oculto para
+ * que el modo lectura (Readability) no tome los hitos, con sus enlaces a fuentes, por
+ * bloques de navegación y los descarte.
  */
 interface Props {
 	href: string;
@@ -21,7 +23,13 @@ const { href, class: className } = Astro.props;
 </style>
 
 <a href={href} class:list={['ext', className]} target="_blank" rel="noopener noreferrer"
-	><slot /><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"
+	><slot /><svg
+		viewBox="0 0 16 16"
+		width="12"
+		height="12"
+		role="img"
+		aria-label="(se abre en otra pestaña)"
+		focusable="false"
 		><path
 			d="M6.5 3.5h-3v9h9v-3M9.5 2.5h4v4M13.5 2.5 7.5 8.5"
 			fill="none"
@@ -29,5 +37,5 @@ const { href, class: className } = Astro.props;
 			stroke-width="1.6"
 			stroke-linecap="round"
 			stroke-linejoin="round"></path></svg
-	><span class="sr-only"> (se abre en otra pestaña)</span></a
+	></a
 >

@@ -29,7 +29,8 @@ const jsonLd = {
 };
 ---
 
-<nav class="migas meta" aria-label="Migas de pan">
+{/* «breadcrumbs»: el modo lectura (Readability) descarta las migas. Sin estilos. */}
+<nav class="migas meta breadcrumbs" aria-label="Migas de pan">
 	<ol>
 		{
 			niveles.map(({ texto, href }) => (

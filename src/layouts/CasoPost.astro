@@ -68,6 +68,7 @@ const jsonLd = {
 	dateModified: revisado.toISOString().slice(0, 10),
 	genre: tipo,
 	keywords: tags.join(', '),
+	author: organizacion(Astro.site),
 	publisher: organizacion(Astro.site),
 	about: tags.map(entidad),
 	citation: getHitos(caso).map(h => ({
@@ -100,7 +101,11 @@ const jsonLd = {
 			<Compartir titulo={title} ruta={`/casos/${caso.slug}/`} compacto />
 		</header>
 
-		<section class="versus" aria-labelledby="titulo-antes-despues">
+		{/*
+			Modo lectura (Readability): «texto-caso» da peso a los paneles y al comentario para que no se
+			queden fuera del artículo, y «related» descarta «Más casos». Son clases sin estilos.
+		*/}
+		<section class="versus texto-caso" aria-labelledby="titulo-antes-despues">
 			<h2 id="titulo-antes-despues" class="sr-only">Antes y después</h2>
 			<div class="panel antes">
 				<h3 class="etiqueta">Antes</h3>
@@ -123,7 +128,7 @@ const jsonLd = {
 				)
 			}
 
-			<div class="comentario prose">
+			<div class="comentario prose texto-caso">
 				<slot />
 			</div>
 
@@ -158,7 +163,7 @@ const jsonLd = {
 
 		{
 			masCasos.length > 0 && (
-				<section class="bloque mas-casos" aria-labelledby="titulo-mas-casos">
+				<section class="bloque mas-casos related" aria-labelledby="titulo-mas-casos">
 					<h2 id="titulo-mas-casos" class="h3">Más casos</h2>
 					{masCasos.map(g => (
 						<section class="grupo" aria-labelledby={`mas-${g.slug}`}>

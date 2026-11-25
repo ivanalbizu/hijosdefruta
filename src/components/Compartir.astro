@@ -31,7 +31,8 @@ const redes = [
 ];
 ---
 
-<div class:list={['compartir', { 'compartir--compacto': compacto }]} data-titulo={titulo} data-url={url}>
+{/* «social»: el modo lectura (Readability) descarta el bloque. Sin estilos. */}
+<div class:list={['compartir', 'social', { 'compartir--compacto': compacto }]} data-titulo={titulo} data-url={url}>
 	<p class:list={['titulo-compartir', { 'sr-only': compacto }]}>{etiqueta}</p>
 	<ul class="acciones" role="list">
 		<li data-nativo hidden>
