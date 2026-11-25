@@ -39,7 +39,7 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
   corregido en directo). Lee siempre el acto completo antes de proponer.
 - **Los datos oficiales respaldan la frase o no la desmienten** (wild-03, la frase era cierta; wild-12,
   13 y 14; nt-10). Tampoco basta una diferencia mínima (gem-32: 52 centros frente a 53).
-- **Datos que no se miden igual:** una línea frente a toda la red, un ámbito frente a otro (wild-14).
+- **Datos que no se miden igual:** una línea frente a toda la red, un ámbito frente a otro (wild-14); el IPC de la electricidad, que hasta 2023 solo medía la tarifa regulada, frente a una media de todos los consumidores (tw-03).
 - **El error es de otro:** de La Moncloa y no del político, que lo había corregido (gem-08); una frase que
   dijo una diputada (gem-25) o el entrevistador (gem-14: «Digamos que la convicción era otra…» no es de
   Bolaños).
