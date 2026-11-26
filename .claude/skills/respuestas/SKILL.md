@@ -14,7 +14,8 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
    búsqueda (X no acepta consultas largas, así que las cuentas se reparten en varias, una por línea): `npm run respuestas -- url` (8 h; `--horas N` para otra ventana, `--cuenta
    Pilar_Alegria,PSOE` para solo esas cuentas). Añade siempre las de `npm run respuestas -- url --virales`
    (misma ventana): tuits de cualquier cuenta que nombran a alguien del alcance y pasan de
-   `virales.min_megusta` (config.yaml; `--megusta N` para otro umbral). Durante un debate, por bloques:
+   `virales.min_megusta` (config.yaml; `--megusta N` para otro umbral), y todos los de las cuentas de
+   `virales.cuentas` (usuarios que suelen hacerse virales) desde `virales.min_megusta_cuentas`, nombren o no a alguien. Durante un debate, por bloques:
    `--virales --horas 1 --megusta 100`, porque un tuit de hace 20 minutos aún no llega a 500. Es donde más se ve una respuesta: en las cuentas oficiales queda
    enterrada entre cientos. Las pasadas se solapan, pero el cruce se salta los
    tuits que ya están en la bandeja de hoy o de ayer (cada pasada guarda los leídos en un comentario
@@ -40,7 +41,7 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
    - **Directo:** el caso trata de lo mismo que el tuit o es del mismo autor.
    - **Tangencial:** solo comparten tema, o el caso es de otra persona. Fíjate en quién habla (no es lo
      mismo María Jesús Montero que Irene Montero).
-   - En los **virales** (de usuarios, no de políticos), el caso tiene que tratar de lo mismo que el tuit
+   - En los **virales** (de usuarios, no de políticos, también los de `virales.cuentas`), el caso tiene que tratar de lo mismo que el tuit
      (la persona y el asunto de los que habla); si no, sin borrador. Tampoco si el tuit trata de una
      causa judicial abierta (salen muchos: joyas, sumarios, imputaciones). La bandeja los ordena por
      visualizaciones: preséntalos primero.

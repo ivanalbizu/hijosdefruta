@@ -8,7 +8,7 @@
 # cuenta: Grande-Marlaska (@MarlaskaGrande es de un particular), Griñán, Dolores Delgado (@LolaDelgadoG, cerrada),
 # Frente Amplio (@frenteamplioesp no es oficial: 0 posts) y Unidas Podemos (ya no existe). Fuera también por
 # decisión del usuario (25-11-2026), aunque tengan perfil: Puigdemont (KRLS), ERC, Junts, EH Bildu, PNV, BNG,
-# Coalición Canaria y Barcelona en Comú. Al crear un perfil de persona o partido, añade aquí su cuenta salvo que
+# Coalición Canaria y Barcelona en Comú; y Ada Colau (26-11-2026: no se le puede responder). Al crear un perfil de persona o partido, añade aquí su cuenta salvo que
 # sea de una de estas.
 # Federaciones del PSOE (24-11-2026), con la etiqueta PSOE: Wikidata solo da SocialistesVal, PSOE_CyL y psoeex; el
 # resto, comprobadas en x.com. Fuera: psoedeandalucia, psoe_m y PSOE_CyL (bloqueadas en la cuenta del usuario: ni
@@ -39,7 +39,6 @@ cuentas:
   - { usuario: salvadorilla, etiqueta: Salvador Illa }
   - { usuario: carolinadarias, etiqueta: Carolina Darias }
   - { usuario: IreneMontero, etiqueta: Irene Montero }
-  - { usuario: AdaColau, etiqueta: Ada Colau }
   - { usuario: gabrielrufian, etiqueta: Gabriel Rufián }
   - { usuario: socialistes_cat, etiqueta: PSC }
   - { usuario: sumar, etiqueta: Sumar }
@@ -52,6 +51,12 @@ cuentas:
 # («Sánchez» trae fútbol mexicano; «Podemos» es un verbo): nombre y apellido entre comillas.
 virales:
   min_megusta: 500
+  # Cuentas de usuarios que suelen hacerse virales y hablan del alcance (propuestas por el usuario el
+  # 26-11-2026): sus tuits se leen nombren o no a alguien, desde `min_megusta_cuentas` (más bajo: un tuit
+  # suyo reciente aún no llega a 500 y es cuando mejor se ve una respuesta). En 24 h (25-26 nov.) publicaron
+  # 46 tuits y 20 pasaban de 100 «me gusta». Son usuarios, no políticos: se criban como virales.
+  min_megusta_cuentas: 100
+  cuentas: [entrammbasaguas, Martadpp, crpandemonium, GladiatorAstur]
   terminos:
     - '"Pedro Sánchez"'
     - sanchismo
@@ -83,7 +88,7 @@ virales:
 # casos que se quedan sin tema.
 temas:
   pensiones: [pension, hucha de las pensiones, fondo de reserva, revaloriz, jubilac]
-  vivienda: [vivienda, alquiler, okupa, desahucio, expropi, inquilin]
+  vivienda: [vivienda, alquiler, okupa, desahucio, expropi, inquilin, habitatge, lloguer, especulac, rentis, fondos buitre]
   empleo: [paro, desemple, contratos, indefinid, afiliad, afiliacion, epa, ocupados, empleo joven, jovenes trabajando]
   laboral: [reforma laboral, despido, erte, jornada, salario minimo, smi]
   agricultura: [agricultura, agricultor, agrari, ganader]
@@ -95,7 +100,7 @@ temas:
   presupuestos: [presupuest]
   legislatura: [agotar la legislatura, siga gobernando, adelanto electoral, adelantar las elecciones, elecciones anticipadas, limitar mandatos, limitacion de mandatos, dos legislaturas, mandato del presidente, mocion de censura, habra elecciones, elecciones en 2027]
   pactos: [bildu, asiron, populismo, gobernabilidad, no dormiria, dormir por la noche]
-  decretos: [decreto ley, decretos ley, decretazo]
+  decretos: [decreto ley, decretos ley, decretazo, decretos, convalid]
   aforamientos: [aforamient, aforad]
   puertas-giratorias: [puertas giratorias, consejo de administracion, redeia, enagas]
   ley-mordaza: [ley mordaza, seguridad ciudadana]
@@ -116,7 +121,7 @@ temas:
   dimisiones: [dimision, dimitir, dimite, pedir perdon, pido perdon]
   vacaciones: [vacaciones, descanso]
   religion: [funeral, misa, oficios religiosos]
-  escraches: [escrache, acoso, jarabe democratico]
+  escraches: [escrache, jarabe democratico, delante de su casa, frente a su casa]
   sueldos-de-cargos: [cesantia, codigo etico, sueldo de los cargos]
   casas-de-cargos: [atico, aticos, chalet]
   bosnia: [bosnia, curriculum]
@@ -128,3 +133,5 @@ temas:
   recortes: [recorte, recortes, recortar, tijeretazo, austeridad, escudo social, politicas sociales, cheque bebe]
   conciliacion: [permiso de paternidad, permisos de paternidad, permiso de nacimiento, permisos de nacimiento, permiso por nacimiento, permisos por nacimiento, permiso parental, conciliac, crianza, cheque bebe]
   zapatero: [zapatero]
+  dana: [dana, riada, inundacion, barranco del poyo, vega baja, vega baixa, paiporta]
+  estatut: [estatuto de cataluna, estatut de catalunya, estatut catala]

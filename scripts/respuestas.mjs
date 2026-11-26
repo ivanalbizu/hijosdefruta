@@ -61,21 +61,31 @@ if (orden === "url") {
   // X no acepta consultas largas (unos 500 caracteres): las cuentas se reparten en varias búsquedas.
   const MAX = 400;
   // Con --virales, en lugar de las cuentas, los términos de `virales` en tuits de cualquiera con muchos «me gusta»
-  // (sin respuestas: se busca el tuit que abre el hilo).
+  // y los tuits de `virales.cuentas`, con su propio umbral (sin respuestas: se busca el tuit que abre el hilo).
+  // --megusta cambia el umbral de los términos y, si es más bajo, también el de las cuentas.
   const virales = args.includes("--virales");
-  const partes = virales ? config.virales.terminos : elegidas.map(c => `from:${c.usuario}`);
-  const cola = virales
-    ? ` min_faves:${Number(opcion("--megusta", config.virales.min_megusta))} lang:es -filter:replies since_time:${desde}`
-    : ` since_time:${desde}`;
-  const lotes = [[]];
-  for (const p of partes) {
-    const l = lotes.at(-1);
-    if (l.length && [...l, p].join(" OR ").length > MAX) lotes.push([p]);
-    else l.push(p);
-  }
-  for (const l of lotes) {
-    const q = `(${l.join(" OR ")})${cola}`;
-    console.log(`https://x.com/search?q=${encodeURIComponent(q)}&src=typed_query&f=live`);
+  const megusta = Number(opcion("--megusta", config.virales.min_megusta));
+  const minimo = n => (n > 0 ? ` min_faves:${n}` : "");
+  const busquedas = virales
+    ? [
+        { partes: config.virales.terminos, cola: `${minimo(megusta)} lang:es -filter:replies since_time:${desde}` },
+        {
+          partes: (config.virales.cuentas ?? []).map(u => `from:${u}`),
+          cola: `${minimo(Math.min(megusta, Number(config.virales.min_megusta_cuentas ?? 0)))} -filter:replies since_time:${desde}`,
+        },
+      ]
+    : [{ partes: elegidas.map(c => `from:${c.usuario}`), cola: ` since_time:${desde}` }];
+  for (const { partes, cola } of busquedas) {
+    const lotes = [[]];
+    for (const p of partes) {
+      const l = lotes.at(-1);
+      if (l.length && [...l, p].join(" OR ").length > MAX) lotes.push([p]);
+      else l.push(p);
+    }
+    for (const l of lotes.filter(l => l.length)) {
+      const q = `(${l.join(" OR ")})${cola}`;
+      console.log(`https://x.com/search?q=${encodeURIComponent(q)}&src=typed_query&f=live`);
+    }
   }
   console.log(`desde=${desde}`);
   process.exit(0);
@@ -199,6 +209,13 @@ const tuits = args[1].endsWith(".tsv")
 for (const t of tuits) {
   t.url ??= `https://x.com/${t.usuario}/status/${t.id}`;
   t.id ??= t.url.match(/status\/(\d+)/)?.[1];
+}
+// Un tuit puede salir en dos búsquedas de la misma pasada (el de un político con muchos «me gusta», en la suya y en
+// la de virales; el de una cuenta de `virales.cuentas`, en las dos de virales): se queda uno, el de más visualizaciones.
+{
+  const porId = new Map();
+  for (const t of tuits) if ((t.vis ?? 0) >= (porId.get(t.id)?.vis ?? -1)) porId.set(t.id, t);
+  tuits.splice(0, tuits.length, ...porId.values());
 }
 
 // Con ventanas largas las pasadas se solapan: fuera los tuits que ya están en la bandeja de hoy o de
