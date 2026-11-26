@@ -9,6 +9,7 @@
  *   npm run respuestas -- url [--horas 8]     # URL de las búsquedas de X (varias si hay muchas cuentas)
  *   npm run respuestas -- url --cuenta Pilar_Alegria,PSOE   # solo esas cuentas (de config.yaml)
  *   npm run respuestas -- url --virales       # tuits de cualquiera, con muchos «me gusta», que nombran a alguien del alcance
+ *   npm run respuestas -- url --virales --horas 1 --megusta 100   # durante un debate: ventana corta y umbral bajo
  *   npm run respuestas -- cruzar tuits.tsv    # cruza los tuits extraídos (TSV o JSON) y escribe la bandeja
  *   npm run respuestas -- cruzar tuits.json --simular   # la imprime sin escribirla
  *   npm run respuestas -- cruzar tuits.tsv --repetir    # sin saltar los tuits que ya están en la bandeja
@@ -64,7 +65,7 @@ if (orden === "url") {
   const virales = args.includes("--virales");
   const partes = virales ? config.virales.terminos : elegidas.map(c => `from:${c.usuario}`);
   const cola = virales
-    ? ` min_faves:${config.virales.min_megusta} lang:es -filter:replies since_time:${desde}`
+    ? ` min_faves:${Number(opcion("--megusta", config.virales.min_megusta))} lang:es -filter:replies since_time:${desde}`
     : ` since_time:${desde}`;
   const lotes = [[]];
   for (const p of partes) {
@@ -95,7 +96,7 @@ if (orden === "vistos") {
 }
 
 if (!(orden === "temas" || (orden === "cruzar" && args[1])))
-  salir("Uso: respuestas.mjs url [--horas N] [--cuenta a,b] [--virales] | vistos | cruzar tuits.tsv [--simular] [--repetir] | temas");
+  salir("Uso: respuestas.mjs url [--horas N] [--cuenta a,b] [--virales [--megusta N]] | vistos | cruzar tuits.tsv [--simular] [--repetir] | temas");
 
 /* ---------- Texto ---------- */
 

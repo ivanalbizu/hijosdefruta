@@ -14,7 +14,8 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
    búsqueda (X no acepta consultas largas, así que las cuentas se reparten en varias, una por línea): `npm run respuestas -- url` (8 h; `--horas N` para otra ventana, `--cuenta
    Pilar_Alegria,PSOE` para solo esas cuentas). Añade siempre las de `npm run respuestas -- url --virales`
    (misma ventana): tuits de cualquier cuenta que nombran a alguien del alcance y pasan de
-   `virales.min_megusta` (config.yaml). Es donde más se ve una respuesta: en las cuentas oficiales queda
+   `virales.min_megusta` (config.yaml; `--megusta N` para otro umbral). Durante un debate, por bloques:
+   `--virales --horas 1 --megusta 100`, porque un tuit de hace 20 minutos aún no llega a 500. Es donde más se ve una respuesta: en las cuentas oficiales queda
    enterrada entre cientos. Las pasadas se solapan, pero el cruce se salta los
    tuits que ya están en la bandeja de hoy o de ayer (cada pasada guarda los leídos en un comentario
    `<!-- leídos: … -->`; no lo borres). Con `--repetir`, los cruza todos.
