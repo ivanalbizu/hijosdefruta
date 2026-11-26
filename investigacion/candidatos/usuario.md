@@ -77,3 +77,8 @@ del usuario: el contraste podría ser que el PSOE criticara o denunciara lo mism
 Pista: en febrero de 2019 el Gobierno aceptó y luego retiró un «relator» para el diálogo sobre Cataluña; en 2023
 el PSOE pactó con Junts un mecanismo internacional de verificación (reuniones en Suiza). Hacía falta una frase
 propia que rechazara mediadores y el hecho o la frase de después.
+
+## Origen: el usuario oye a un afectado del accidente de Urda (26-11-2026)
+
+Pista: un afectado del accidente de Urda dice que Sánchez miente sobre la cuantía de las ayudas del decreto:
+según su abogada, el dinero es el mismo y lo único que se hace es adelantar lo que pagarían las aseguradoras.
