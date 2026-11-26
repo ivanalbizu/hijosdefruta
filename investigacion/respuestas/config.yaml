@@ -45,6 +45,37 @@ cuentas:
   - { usuario: sumar, etiqueta: Sumar }
   - { usuario: PODEMOS, etiqueta: Podemos }
 
+# Virales (`npm run respuestas -- url --virales`): tuits de cualquier cuenta que nombran a alguien del alcance
+# y pasan de `min_megusta`. En un hilo con mucho tráfico una respuesta se ve más que en las cuentas
+# oficiales, donde queda enterrada entre cientos. Términos sueltos, sin tildes de
+# más: X busca la palabra exacta; frases entre comillas. Nada que sea también palabra corriente o apellido común
+# («Sánchez» trae fútbol mexicano; «Podemos» es un verbo): nombre y apellido entre comillas.
+virales:
+  min_megusta: 500
+  terminos:
+    - '"Pedro Sánchez"'
+    - sanchismo
+    - Moncloa
+    - PSOE
+    - Zapatero
+    - Sumar
+    - '"Irene Montero"'
+    - Belarra
+    - '"Yolanda Díaz"'
+    - Bolaños
+    - '"Óscar Puente"'
+    - '"María Jesús Montero"'
+    - '"Diana Morant"'
+    - '"Salvador Illa"'
+    - Albares
+    - '"Ana Redondo"'
+    - Urtasun
+    - Puigdemont
+    - Junts
+    - ERC
+    - Bildu
+    - PNV
+
 # Temas: un caso solo se propone para un tuit si comparten al menos un tema. Las palabras clave se buscan
 # sin tildes ni mayúsculas, al principio de palabra («pension» vale para «pensiones»); pueden ser frases.
 # Nada genérico de campaña («derecho», «público», «educación», «elecciones»): eso es lo que mete ruido.

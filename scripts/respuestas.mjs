@@ -8,6 +8,7 @@
  * Uso:
  *   npm run respuestas -- url [--horas 8]     # URL de las búsquedas de X (varias si hay muchas cuentas)
  *   npm run respuestas -- url --cuenta Pilar_Alegria,PSOE   # solo esas cuentas (de config.yaml)
+ *   npm run respuestas -- url --virales       # tuits de cualquiera, con muchos «me gusta», que nombran a alguien del alcance
  *   npm run respuestas -- cruzar tuits.tsv    # cruza los tuits extraídos (TSV o JSON) y escribe la bandeja
  *   npm run respuestas -- cruzar tuits.json --simular   # la imprime sin escribirla
  *   npm run respuestas -- cruzar tuits.tsv --repetir    # sin saltar los tuits que ya están en la bandeja
@@ -58,14 +59,21 @@ if (orden === "url") {
   }
   // X no acepta consultas largas (unos 500 caracteres): las cuentas se reparten en varias búsquedas.
   const MAX = 400;
-  const grupos = [[]];
-  for (const c of elegidas) {
-    const g = grupos.at(-1);
-    if (g.length && [...g, c].map(x => `from:${x.usuario}`).join(" OR ").length > MAX) grupos.push([c]);
-    else g.push(c);
+  // Con --virales, en lugar de las cuentas, los términos de `virales` en tuits de cualquiera con muchos «me gusta»
+  // (sin respuestas: se busca el tuit que abre el hilo).
+  const virales = args.includes("--virales");
+  const partes = virales ? config.virales.terminos : elegidas.map(c => `from:${c.usuario}`);
+  const cola = virales
+    ? ` min_faves:${config.virales.min_megusta} lang:es -filter:replies since_time:${desde}`
+    : ` since_time:${desde}`;
+  const lotes = [[]];
+  for (const p of partes) {
+    const l = lotes.at(-1);
+    if (l.length && [...l, p].join(" OR ").length > MAX) lotes.push([p]);
+    else l.push(p);
   }
-  for (const g of grupos) {
-    const q = `(${g.map(c => `from:${c.usuario}`).join(" OR ")}) since_time:${desde}`;
+  for (const l of lotes) {
+    const q = `(${l.join(" OR ")})${cola}`;
     console.log(`https://x.com/search?q=${encodeURIComponent(q)}&src=typed_query&f=live`);
   }
   console.log(`desde=${desde}`);
@@ -87,7 +95,7 @@ if (orden === "vistos") {
 }
 
 if (!(orden === "temas" || (orden === "cruzar" && args[1])))
-  salir("Uso: respuestas.mjs url [--horas N] [--cuenta a,b] | vistos | cruzar tuits.tsv [--simular] [--repetir] | temas");
+  salir("Uso: respuestas.mjs url [--horas N] [--cuenta a,b] [--virales] | vistos | cruzar tuits.tsv [--simular] [--repetir] | temas");
 
 /* ---------- Texto ---------- */
 
@@ -176,15 +184,15 @@ const peso = r => Math.log(casos.length / (df.get(r) ?? casos.length));
 
 /* ---------- Cruce ---------- */
 
-// JSON (array de objetos) o TSV de extraer.js: usuario, id, fecha (UTC), texto y citado, uno por línea.
+// JSON (array de objetos) o TSV de extraer.js: usuario, id, fecha (UTC), texto, citado y visualizaciones, uno por línea.
 const bruto = await fs.readFile(args[1], "utf8");
 const tuits = args[1].endsWith(".tsv")
   ? bruto
       .split("\n")
       .filter(l => l.trim())
       .map(l => {
-        const [usuario, id, fecha, texto, citado] = l.split("\t");
-        return { usuario, id, fecha: `${fecha}Z`, texto, ...(citado?.trim() && { citado }) };
+        const [usuario, id, fecha, texto, citado, vis] = l.split("\t");
+        return { usuario, id, fecha: `${fecha}Z`, texto, ...(citado?.trim() && { citado }), ...(vis?.trim() && { vis: Number(vis) }) };
       })
   : JSON.parse(bruto);
 for (const t of tuits) {
@@ -233,13 +241,15 @@ for (const t of tuits) {
 const ahora = new Date();
 const hoy = dia(ahora);
 const hora = d => new Intl.DateTimeFormat("es-ES", { timeZone: ZONA, hour: "2-digit", minute: "2-digit" }).format(d);
-const conCaso = resultados.filter(r => r.candidatos.length);
+// Primero los de más alcance: es donde una respuesta se ve.
+const conCaso = resultados.filter(r => r.candidatos.length).sort((a, b) => (b.t.vis ?? 0) - (a.t.vis ?? 0));
 
 let md = `## Pasada de las ${hora(ahora)}\n\n`;
 md += `${tuits.length} tuits nuevos${repetidos ? ` (${repetidos} ya estaban en la bandeja)` : ""}; ${conCaso.length} con algún caso posible.\n\n`;
 for (const { t, candidatos } of conCaso) {
   const cuando = t.fecha ? hora(new Date(t.fecha)) : "s. h.";
-  md += `### @${t.usuario}, ${cuando}\n\n${t.url}\n\n> ${(t.texto ?? "").replace(/\n+/g, "\n> ")}\n\n`;
+  const alcance = t.vis ? `, ${t.vis.toLocaleString("es-ES")} visualizaciones` : "";
+  md += `### @${t.usuario}, ${cuando}${alcance}\n\n${t.url}\n\n> ${(t.texto ?? "").replace(/\n+/g, "\n> ")}\n\n`;
   if (t.citado) md += `Cita o enlaza: ${t.citado}\n\n`;
   for (const { c, autor, puntos, temas, palabras } of candidatos) {
     const pistas = [`tema: ${temas.join(", ")}`, ...(palabras.length ? [palabras.join(", ")] : [])];

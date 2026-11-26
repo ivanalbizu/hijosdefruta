@@ -1,6 +1,6 @@
 ---
 name: respuestas
-description: Lee en X (con Claude in Chrome y la sesión del usuario) los tuits de las últimas horas del PSOE y de las personas con perfil (cuentas en investigacion/respuestas/config.yaml), los cruza con los casos publicados y propone respuestas serias con el enlace al caso. Úsala cuando el usuario diga «mira X», «busca respuestas», «/respuestas» o similar. Nunca publica nada.
+description: Lee en X (con Claude in Chrome y la sesión del usuario) los tuits de las últimas horas del PSOE y de las personas con perfil (cuentas en investigacion/respuestas/config.yaml) y los virales de cualquier cuenta que los nombran, los cruza con los casos publicados y propone respuestas serias con el enlace al caso. Úsala cuando el usuario diga «mira X», «busca respuestas», «/respuestas» o similar. Nunca publica nada.
 ---
 
 # Respuestas en X
@@ -12,7 +12,10 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
 
 1. **Ventana:** por defecto, 8 horas (el usuario puede pedir otra; usa la que diga). Genera las URL de
    búsqueda (X no acepta consultas largas, así que las cuentas se reparten en varias, una por línea): `npm run respuestas -- url` (8 h; `--horas N` para otra ventana, `--cuenta
-   Pilar_Alegria,PSOE` para solo esas cuentas). Las pasadas se solapan, pero el cruce se salta los
+   Pilar_Alegria,PSOE` para solo esas cuentas). Añade siempre las de `npm run respuestas -- url --virales`
+   (misma ventana): tuits de cualquier cuenta que nombran a alguien del alcance y pasan de
+   `virales.min_megusta` (config.yaml). Es donde más se ve una respuesta: en las cuentas oficiales queda
+   enterrada entre cientos. Las pasadas se solapan, pero el cruce se salta los
    tuits que ya están en la bandeja de hoy o de ayer (cada pasada guarda los leídos en un comentario
    `<!-- leídos: … -->`; no lo borres). Con `--repetir`, los cruza todos.
 2. **Lectura:** abre la primera URL en una pestaña nueva (las siguientes, en la misma pestaña, repitiendo este paso) con Claude in Chrome (sesión del usuario; si pide
@@ -36,29 +39,37 @@ automáticas van contra las normas de X y la cuenta se juega la suspensión. Sol
    - **Directo:** el caso trata de lo mismo que el tuit o es del mismo autor.
    - **Tangencial:** solo comparten tema, o el caso es de otra persona. Fíjate en quién habla (no es lo
      mismo María Jesús Montero que Irene Montero).
+   - En los **virales** (de usuarios, no de políticos), el caso tiene que tratar de lo mismo que el tuit
+     (la persona y el asunto de los que habla); si no, sin borrador. Tampoco si el tuit trata de una
+     causa judicial abierta (salen muchos: joyas, sumarios, imputaciones). La bandeja los ordena por
+     visualizaciones: preséntalos primero.
    Sin borrador, aunque comparta tema, si responder parecería aprovechar una desgracia: necrológicas,
    ataques o pintadas contra el partido, víctimas de un accidente. Dilo en la bandeja. Abre el caso
    (`src/content/casos/<slug>.mdx`, solo el frontmatter) para cada borrador.
 5. **Borradores**, debajo del tuit en la bandeja (con una línea que diga si es directo o tangencial y
    por qué) y también en la respuesta al usuario, primero los directos y luego los tangenciales, cada uno
    con el enlace al tuit:
-   - Une el tuit y el caso: la primera frase recoge lo que dice el tuit (su propuesta, cifra o
-     crítica; mejor con sus palabras entre «» o en pocas palabras, sin valorarlo) y lo que sigue cuenta
-     lo que prueba el caso enlazado. Quien lea la respuesta debe entender la relación sin abrir el
-     enlace ni el tuit original. Si el caso es de otra persona, nómbrala.
-   - Contraste y seriedad: qué dijo o hizo antes y después, con fechas, y el enlace. Sin adjetivos,
-     insultos, ironía ni «mentira». El caso habla solo.
-   - Citas literales tal como están en el caso, entre «». No añadas nada que el caso no pruebe.
+   - **Breve y con el «después»** (decisión del usuario del 26-11-2026: la gente lee poco). Una o dos
+     frases cortas, de unos 120 caracteres sin contar el enlace: el hecho que contradice al político (lo
+     que hizo, votó o aprobó, o lo que dicen los datos), con la fecha si hace falta, y el enlace. La
+     tarjeta del enlace enseña el título del caso y completa el contraste.
+   - **No abras repitiendo lo que dice el tuit** («X dice «…»»): el tuit ya está encima, y repetir su
+     frase amplifica su mensaje y parece darle la razón. Si el caso es de otra persona que la del tuit,
+     nómbrala.
+   - Quien lea el tuit y la respuesta debe ver la contradicción sin abrir el enlace.
+   - Seriedad: sin adjetivos, insultos, ironía ni «mentira». El caso habla solo. Una cita, solo si es
+     corta y es la que retrata (la promesa incumplida en tres o cuatro palabras), literal y entre «». No
+     añadas nada que el caso no pruebe.
    - Máximo 280 caracteres; el enlace cuenta como 23 y algunos signos (€, espacio fino U+202F) cuentan
      doble.
    - Una o dos variantes por tuit, como mucho. Si un caso ya se usó ese día en otra respuesta, cambia
      la redacción.
-   - Ejemplos: `«Revalorizar y blindar las pensiones», dice el PSOE de Aragón. El 20-05-2010, el Gobierno
-     de Zapatero aprobó un real decreto-ley que «suspende la revalorización de las pensiones públicas para
-     el año 2011», salvo las mínimas y las no contributivas. Fuentes: https://hijoputismo.com/casos/…/`
-     · `El PSPV propone limitar los aforamientos en el Estatut. El 17-09-2018, Sánchez propuso en el
-     Congreso «suprimir los aforamientos, con una reforma constitucional». El proyecto, que ya solo los
-     limitaba, caducó en 2019 y no se ha vuelto a presentar. Fuentes: https://hijoputismo.com/casos/…/`
+   - Ejemplos: a «Revalorizar y blindar las pensiones» (PSOE de Aragón): `En 2010, el Gobierno de
+     Zapatero suspendió por real decreto-ley la revalorización de las pensiones. Sánchez votó a favor. https://hijoputismo.com/casos/…/`
+     · al PSPV, que propone limitar los aforamientos: `Sánchez prometió en 2018 «suprimir los
+     aforamientos». El proyecto caducó en 2019 y no ha vuelto. https://hijoputismo.com/casos/…/`
+     · en un hilo viral sobre Sánchez candidato: `Prometió limitar el mandato a dos legislaturas. En
+     2026 vuelve a encabezar la lista. https://hijoputismo.com/casos/…/`
 6. Al final de la pasada: `Revisada el DD-MM: N borradores (D directos, T tangenciales); sin
    respuesta: …` (los que se dejaron sin borrador por delicados, si los hay).
 7. Muchas respuestas seguidas con el mismo dominio parecen spam para X: si salen más de diez, recuerda
