@@ -27,3 +27,15 @@ Fuentes de casos publicados que aún no tienen copia en Web Archive. Para guarda
   - casos: urtasun-smi-66-por-ciento-desde-que-diaz-es-ministra
   - Web Archive no llega a europapress.tv (error 520, dos intentos el 19-11-2026). Probar desde el navegador.
   - guardar: https://web.archive.org/save/https://www.europapress.tv/politica/1127314/1/urtasun-pregunta-feijoo-lado-insultar-milei-sanchez
+- [ ] https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2023/2023-10-30/AC_PO_30_10_23.pdf
+  - casos: sanchez-medalla-de-honor-al-gobierno-de-israel
+  - fuente del recorte del «antes» (547 640 bytes, SHA-256 86968e49033f688627b2bff980a460541c286c050dc553ce74fdf0d69c295ed6); la copia `20261127103055` está truncada (519 793 bytes, sin `%%EOF`). Volver a guardar desde el navegador más adelante (Web Archive reutiliza la captura del día) y, cuando esté completa, poner su fecha en `archivo` del caso.
+  - guardar: https://web.archive.org/save/https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2023/2023-10-30/AC_PO_30_10_23.pdf
+- [ ] https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2023/2023-10-30/RA_PO_30_10_23.pdf
+  - casos: sanchez-medalla-de-honor-al-gobierno-de-israel
+  - fuente del «antes», con la votación (187 097 bytes, SHA-256 1be4a67311af61a6adcfc2a55d58b86dde3d4264d7f27b539031d87207d29f94); la copia `20261127110819` está truncada (183 043 bytes). Volver a guardar desde el navegador más adelante (Web Archive reutiliza la captura del día) y, cuando esté completa, poner su fecha en `archivo` del caso.
+  - guardar: https://web.archive.org/save/https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2023/2023-10-30/RA_PO_30_10_23.pdf
+- [ ] https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2024/2024-04-30/AC_PO_30_04_24.pdf
+  - casos: sanchez-medalla-de-honor-al-gobierno-de-israel
+  - fuente y recorte del hito del 30-04-2024 (3 052 376 bytes, SHA-256 05ead7dbe15f168b7c56d13150dc9f32a3e2b29d72f32efd126a566e463baeda); la copia `20261127103102` está truncada (2 795 892 bytes). Volver a guardar desde el navegador más adelante (Web Archive reutiliza la captura del día) y, cuando esté completa, poner su fecha en `archivo` del caso.
+  - guardar: https://web.archive.org/save/https://transparencia.madrid.es/UnidadesDescentralizadas/UDCPleno/Actividad/Pleno/2024/2024-04-30/AC_PO_30_04_24.pdf

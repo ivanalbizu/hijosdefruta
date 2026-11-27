@@ -1,0 +1,18 @@
+fecha: 2026-11-26
+quien: Pedro Sánchez (presidente del Gobierno y candidato del PSOE)
+partido: PSOE
+compromiso: 'Destinar el 7 % del PIB a la sanidad pública.'
+cita: 'Destinar el 7 % del producto interior bruto a la sanidad pública, no el 5 % al presupuesto en defensa'
+contexto: 'Debate a cuatro con Alberto Núñez Feijóo, Santiago Abascal y Ada Colau, el último de la campaña de las elecciones del 29 de noviembre, en la lista de propuestas con la que cierra el bloque de política social, después de «Lo que queremos hacer […] es blindarlo en la Constitución», sobre las pensiones. El acuerdo de coalición de 2019 ya prometía «lograr el 7% del PIB en 2023»; en 2024 el gasto sanitario público fue del 6,4 %'
+tema: Sanidad
+campana: Generales 29N 2026
+fuente:
+  url: https://www.youtube.com/watch?v=zciNSh50M18&t=5018s
+  archivo: https://web.archive.org/web/20261127033438/https://www.youtube.com/watch?v=zciNSh50M18
+  medio: EL PAÍS (canal oficial de YouTube), minuto 1:23:38
+video:
+  id: zciNSh50M18
+  titulo: 'El debate electoral a cuatro (EL PAÍS, 26-11-2026)'
+  start: 5018
+  end: 5025
+estado: pendiente

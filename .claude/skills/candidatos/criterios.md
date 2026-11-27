@@ -42,6 +42,10 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
   13 y 14; nt-10). Tampoco basta una diferencia mínima (gem-32: 52 centros frente a 53), ni un redondeo
   que cuadra con otra suma del mismo informe cuando en el mismo acto avisa de que no tiene el detalle
   (dana-04: 7000 millones frente a 6190 abonados más 720 financiados con avales del ICO).
+- **Equivalencias con «o»:** si la frase da dos equivalencias y una cuadra con el dato oficial, no hay caso
+  aunque la otra esté mal, y menos si el error rebaja la cifra en vez de inflarla (d4-03: el recorte de
+  112 000 millones que atribuye a Vox, «el gasto anual en pensiones de jubilación o sanidad»; jubilación,
+  134 544 millones en 2025; sanidad, 101 739 en 2024).
 - **Datos que no se miden igual:** una línea frente a toda la red, un ámbito frente a otro (wild-14); el IPC de la electricidad, que hasta 2023 solo medía la tarifa regulada, frente a una media de todos los consumidores (tw-03).
 - **El error es de otro:** de La Moncloa y no del político, que lo había corregido (gem-08); una frase que
   dijo una diputada (gem-25) o el entrevistador (gem-14: «Digamos que la convicción era otra…» no es de
