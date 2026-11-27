@@ -20,6 +20,7 @@ mismo criterio y cita el precedente en el veredicto. Si una decisión nueva fija
   Sánchez y la migración irregular: sus cifras eran las de mayo).
 - **La referencia la fija el propio político:** «desde que he llegado al Gobierno […] el 13 de enero del
   año 20» hace limpia una cifra que sería correcta desde otra fecha (ras-02, Díaz y el SMI).
+- **Lo que dice un documento se comprueba en el documento:** atribuir a un programa una cifra que no contiene es una falsedad, aunque la postura del partido fuera del programa permita una lectura parecida; esa lectura va en el matiz con sus fuentes (d4-04, que reabre cac-13: Sánchez, «el señor Feijóo y el señor Abascal lo llevan en su programa electoral», el 5 % en defensa; ningún programa da cifra y Feijóo pide «mayor plazo para conseguir el 3,5»).
 - **Caso propio o hito:** si es otra persona, o la misma con otra afirmación, es un caso propio y se
   enlazan entre sí (ras-02 frente al caso de Urtasun). Si es la misma persona repitiendo lo mismo, es un
   hito del caso existente.
